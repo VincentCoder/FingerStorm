@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41cb500cf0f58e74f9a52a8af931edde, type: 3}
+  m_Name: -tk2d
+  m_EditorClassIdentifier: 
+  version: 4
+  spriteAnimationIndex: []
+  fontIndex: []
+  spriteCollectionIndex:
+  - name: TerranCrusaderCollection
+    spriteCollectionGUID: 96a25bcb1c367aa4b9dad8237bf01ef0
+    spriteCollectionDataGUID: 785d3cc16d9ff604297f690fa16d8429
+    spriteNames:
+    - Unit_Terran_Crusader_Blue_0001
+    - Unit_Terran_Crusader_Blue_0002
+    - Unit_Terran_Crusader_Blue_0003
+    - Unit_Terran_Crusader_Blue_0004
+    - Unit_Terran_Crusader_Blue_0005
+    - Unit_Terran_Crusader_Blue_0006
+    - Unit_Terran_Crusader_Blue_0007
+    - Unit_Terran_Crusader_Blue_0008
+    - Unit_Terran_Crusader_Blue_0009
+    - Unit_Terran_Crusader_Blue_0010
+    - Unit_Terran_Crusader_Blue_0011
+    - Unit_Terran_Crusader_Blue_0012
+    - Unit_Terran_Crusader_Blue_0013
+    - Unit_Terran_Crusader_Blue_0014
+    - Unit_Terran_Crusader_Blue_0015
+    - Unit_Terran_Crusader_Blue_0016
+    - Unit_Terran_Crusader_Blue_0017
+    - Unit_Terran_Crusader_Blue_0018
+    - Unit_Terran_Crusader_Red_0001
+    - Unit_Terran_Crusader_Red_0002
+    - Unit_Terran_Crusader_Red_0003
+    - Unit_Terran_Crusader_Red_0004
+    - Unit_Terran_Crusader_Red_0005
+    - Unit_Terran_Crusader_Red_0006
+    - Unit_Terran_Crusader_Red_0007
+    - Unit_Terran_Crusader_Red_0008
+    - Unit_Terran_Crusader_Red_0009
+    - Unit_Terran_Crusader_Red_0010
+    - Unit_Terran_Crusader_Red_0011
+    - Unit_Terran_Crusader_Red_0012
+    - Unit_Terran_Crusader_Red_0013
+    - Unit_Terran_Crusader_Red_0014
+    - Unit_Terran_Crusader_Red_0015
+    - Unit_Terran_Crusader_Red_0016
+    - Unit_Terran_Crusader_Red_0017
+    - Unit_Terran_Crusader_Red_0018
+    spriteTextureGUIDs:
+    - 46e0bed608d1d504f884d648587c811c
+    - c170936707bf92d4890b266ac5cb6c92
+    - 12009d6afbc43184684fff357b9dbe64
+    - 96126f6f5f0da4f4396aa2bfc61c2465
+    - 532c6dc91a025304c93ac2557d51586c
+    - 93b357c2920c7734fb9a5919de345aad
+    - 0fd42ff2001c3144ebf1b5c28cf88be6
+    - 3d807b526a34dd34ba31352453a00a45
+    - 5bc8f658e2265544ebf3574eb60d909c
+    - 7a419fa8a9f9d0b43866852ad099254d
+    - fd36964f35f1e474a8af72e1c1ecfcdc
+    - e18cbfe1278062444b5459d320c2c67a
+    - b852c9beed419f743875645355b75e72
+    - a65d9ad80788f3f419407193dca93682
+    - 0e835c8bd85a43641a928ecd1f3ba6a5
+    - a04680a0044c5ea479977917ee39be17
+    - e0f8755de8a8ad34081cbe9a5347ee9a
+    - 54c7991d38dc20843a81d44d4adf636f
+    - 29c7f01a7cb0d5e41bda438be7234536
+    - 1dffdf16e308a7a4c9393a4cf5c50190
+    - 0c9394d7d95d06c499fcc477107e9437
+    - 4ad450a64edc89c488a1146c432fde73
+    - 39257a61cb1f324418a98b852746fc62
+    - 983e98e5b23995d4dbe039ae55e6c8ed
+    - af12b9d4499fe944c8177f69143baeec
+    - cf65957b50d590940b0d032550e6fc6c
+    - 498a3ebe114955b4db790a324307a767
+    - 03db35129cf752f43b66b0c623a4d946
+    - 415b1f1883170fc43aad9538166e36dd
+    - 7dddf5ebd3f89ea4cabebc3588211865
+    - 01699381d6e8c614bb3541db092dd8e6
+    - dafb2e992c31f774dbe2fde81cda79c3
+    - 6b68e4738bc4a3f49b47c6f05889e3cf
+    - c45cc02a53290ac4396f865d37777989
+    - 077d39c6be0425f46a3292165a9f572f
+    - 3e14c16efe1645343829b8c20d355e97
+    spriteTextureTimeStamps:
+    - 1388163908
+    - 1388163908
+    - 1388163908
+    - 1388163908
+    - 1388163908
+    - 1388163908
+    - 1388163909
+    - 1388163909
+    - 1388163909
+    - 1388163909
+    - 1388163909
+    - 1388163909
+    - 1388163909
+    - 1388163909
+    - 1388163909
+    - 1388163909
+    - 1388163909
+    - 1388163909
+    - 1388164125
+    - 1388164125
+    - 1388164125
+    - 1388164125
+    - 1388164125
+    - 1388164125
+    - 1388164125
+    - 1388164126
+    - 1388164126
+    - 1388164126
+    - 1388164126
+    - 1388164126
+    - 1388164126
+    - 1388164126
+    - 1388164126
+    - 1388164126
+    - 1388164126
+    - 1388164126
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3

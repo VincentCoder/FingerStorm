@@ -1,0 +1,1407 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: TerranCrusaderCollection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d546f34a90531a14eaba82a43b05b86b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  materialIdsValid: 1
+  needMaterialInstance: 0
+  spriteDefinitions:
+  - name: Unit_Terran_Crusader_Blue_0001
+    boundsData:
+    - {x: 6.5, y: 3.5, z: 0}
+    - {x: 19, y: 25, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -3, y: -9, z: 0}
+    - {x: 16, y: -9, z: 0}
+    - {x: -3, y: 16, z: 0}
+    - {x: 16, y: 16, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .0156328119, y: .550785184}
+    - {x: .164054692, y: .550785184}
+    - {x: .0156328119, y: .648433566}
+    - {x: .164054692, y: .648433566}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: 46e0bed608d1d504f884d648587c811c
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Blue_0002
+    boundsData:
+    - {x: 7, y: 4.5, z: 0}
+    - {x: 18, y: 25, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -2, y: -8, z: 0}
+    - {x: 16, y: -8, z: 0}
+    - {x: -2, y: 17, z: 0}
+    - {x: 16, y: 17, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .0156328119, y: .781253934}
+    - {x: .156242192, y: .781253934}
+    - {x: .0156328119, y: .878902316}
+    - {x: .156242192, y: .878902316}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: c170936707bf92d4890b266ac5cb6c92
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Blue_0003
+    boundsData:
+    - {x: 7.5, y: 5, z: 0}
+    - {x: 17, y: 26, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -1, y: -8, z: 0}
+    - {x: 16, y: -8, z: 0}
+    - {x: -1, y: 18, z: 0}
+    - {x: 16, y: 18, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .406257808, y: .785160184}
+    - {x: .406257808, y: .851558566}
+    - {x: .609367192, y: .785160184}
+    - {x: .609367192, y: .851558566}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: 12009d6afbc43184684fff357b9dbe64
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Blue_0004
+    boundsData:
+    - {x: 6.5, y: 5.5, z: 0}
+    - {x: 19, y: 27, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -3, y: -8, z: 0}
+    - {x: 16, y: -8, z: 0}
+    - {x: -3, y: 19, z: 0}
+    - {x: 16, y: 19, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .507820308, y: .328128904}
+    - {x: .507820308, y: .402339846}
+    - {x: .718742192, y: .328128904}
+    - {x: .718742192, y: .402339846}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: 96126f6f5f0da4f4396aa2bfc61c2465
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Blue_0005
+    boundsData:
+    - {x: 5.5, y: 5, z: 0}
+    - {x: 21, y: 26, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -5, y: -8, z: 0}
+    - {x: 16, y: -8, z: 0}
+    - {x: -5, y: 18, z: 0}
+    - {x: 16, y: 18, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .273445308, y: .234378904}
+    - {x: .273445308, y: .316402346}
+    - {x: .476554692, y: .234378904}
+    - {x: .476554692, y: .316402346}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: 532c6dc91a025304c93ac2557d51586c
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Blue_0006
+    boundsData:
+    - {x: 6, y: 4, z: 0}
+    - {x: 20, y: 26, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -4, y: -9, z: 0}
+    - {x: 16, y: -9, z: 0}
+    - {x: -4, y: 17, z: 0}
+    - {x: 16, y: 17, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .507820308, y: .234378904}
+    - {x: .507820308, y: .312496096}
+    - {x: .710929692, y: .234378904}
+    - {x: .710929692, y: .312496096}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: 93b357c2920c7734fb9a5919de345aad
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Blue_0007
+    boundsData:
+    - {x: 6.5, y: 3.5, z: 0}
+    - {x: 19, y: 25, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -3, y: -9, z: 0}
+    - {x: 16, y: -9, z: 0}
+    - {x: -3, y: 16, z: 0}
+    - {x: 16, y: 16, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .679695308, y: .519535184}
+    - {x: .679695308, y: .593746066}
+    - {x: .874992192, y: .519535184}
+    - {x: .874992192, y: .593746066}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: 0fd42ff2001c3144ebf1b5c28cf88be6
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Blue_0008
+    boundsData:
+    - {x: 6, y: 3.5, z: 0}
+    - {x: 18, y: 25, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -3, y: -9, z: 0}
+    - {x: 15, y: -9, z: 0}
+    - {x: -3, y: 16, z: 0}
+    - {x: 15, y: 16, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .0156328119, y: .894535184}
+    - {x: .156242192, y: .894535184}
+    - {x: .0156328119, y: .992183566}
+    - {x: .156242192, y: .992183566}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: 3d807b526a34dd34ba31352453a00a45
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Blue_0009
+    boundsData:
+    - {x: 4, y: 3.5, z: 0}
+    - {x: 22, y: 25, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -7, y: -9, z: 0}
+    - {x: 15, y: -9, z: 0}
+    - {x: -7, y: 16, z: 0}
+    - {x: 15, y: 16, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .804695308, y: .00781640597}
+    - {x: .976554692, y: .00781640597}
+    - {x: .804695308, y: .105464846}
+    - {x: .976554692, y: .105464846}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: 5bc8f658e2265544ebf3574eb60d909c
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Blue_0010
+    boundsData:
+    - {x: 13, y: 3, z: 0}
+    - {x: 30, y: 26, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -2, y: -10, z: 0}
+    - {x: 28, y: -10, z: 0}
+    - {x: -2, y: 16, z: 0}
+    - {x: 28, y: 16, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .0156328119, y: .00781640597}
+    - {x: .249992192, y: .00781640597}
+    - {x: .0156328119, y: .109371096}
+    - {x: .249992192, y: .109371096}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: 7a419fa8a9f9d0b43866852ad099254d
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Blue_0011
+    boundsData:
+    - {x: 13.5, y: 3, z: 0}
+    - {x: 29, y: 26, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -1, y: -10, z: 0}
+    - {x: 28, y: -10, z: 0}
+    - {x: -1, y: 16, z: 0}
+    - {x: 28, y: 16, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .546882808, y: .00781640597}
+    - {x: .773429692, y: .00781640597}
+    - {x: .546882808, y: .109371096}
+    - {x: .773429692, y: .109371096}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: fd36964f35f1e474a8af72e1c1ecfcdc
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Blue_0012
+    boundsData:
+    - {x: 10, y: 3.5, z: 0}
+    - {x: 20, y: 25, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: 0, y: -9, z: 0}
+    - {x: 20, y: -9, z: 0}
+    - {x: 0, y: 16, z: 0}
+    - {x: 20, y: 16, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .492195308, y: .417972654}
+    - {x: .492195308, y: .496089846}
+    - {x: .687492192, y: .417972654}
+    - {x: .687492192, y: .496089846}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: e18cbfe1278062444b5459d320c2c67a
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Blue_0013
+    boundsData:
+    - {x: 7, y: 3.5, z: 0}
+    - {x: 20, y: 25, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -3, y: -9, z: 0}
+    - {x: 17, y: -9, z: 0}
+    - {x: -3, y: 16, z: 0}
+    - {x: 17, y: 16, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .234382808, y: .421878904}
+    - {x: .234382808, y: .499996096}
+    - {x: .429679692, y: .421878904}
+    - {x: .429679692, y: .499996096}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: b852c9beed419f743875645355b75e72
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Blue_0014
+    boundsData:
+    - {x: -1, y: 0, z: 0}
+    - {x: 26, y: 18, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -14, y: -9, z: 0}
+    - {x: 12, y: -9, z: 0}
+    - {x: -14, y: 9, z: 0}
+    - {x: 12, y: 9, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .0156328119, y: .664066434}
+    - {x: .0156328119, y: .765621066}
+    - {x: .156242192, y: .664066434}
+    - {x: .156242192, y: .765621066}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: a65d9ad80788f3f419407193dca93682
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Blue_0015
+    boundsData:
+    - {x: -5, y: 0, z: 0}
+    - {x: 24, y: 20, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -17, y: -10, z: 0}
+    - {x: 7, y: -10, z: 0}
+    - {x: -17, y: 10, z: 0}
+    - {x: 7, y: 10, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .460945308, y: .511722684}
+    - {x: .648429692, y: .511722684}
+    - {x: .460945308, y: .589839816}
+    - {x: .648429692, y: .589839816}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: 0e835c8bd85a43641a928ecd1f3ba6a5
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Blue_0016
+    boundsData:
+    - {x: -10, y: -4.5, z: 0}
+    - {x: 24, y: 25, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -22, y: -17, z: 0}
+    - {x: 2, y: -17, z: 0}
+    - {x: -22, y: 8, z: 0}
+    - {x: 2, y: 8, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .273445308, y: .125003904}
+    - {x: .273445308, y: .218746096}
+    - {x: .468742192, y: .125003904}
+    - {x: .468742192, y: .218746096}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: a04680a0044c5ea479977917ee39be17
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Blue_0017
+    boundsData:
+    - {x: -15, y: -5.5, z: 0}
+    - {x: 24, y: 21, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -27, y: -16, z: 0}
+    - {x: -3, y: -16, z: 0}
+    - {x: -27, y: 5, z: 0}
+    - {x: -3, y: 5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .0156328119, y: .339847654}
+    - {x: .203117192, y: .339847654}
+    - {x: .0156328119, y: .421871096}
+    - {x: .203117192, y: .421871096}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: e0f8755de8a8ad34081cbe9a5347ee9a
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Blue_0018
+    boundsData:
+    - {x: -15, y: -6.5, z: 0}
+    - {x: 24, y: 19, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -27, y: -16, z: 0}
+    - {x: -3, y: -16, z: 0}
+    - {x: -27, y: 3, z: 0}
+    - {x: -3, y: 3, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .421882808, y: .695316434}
+    - {x: .609367192, y: .695316434}
+    - {x: .421882808, y: .769527316}
+    - {x: .609367192, y: .769527316}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: 54c7991d38dc20843a81d44d4adf636f
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Red_0001
+    boundsData:
+    - {x: 6.5, y: 3.5, z: 0}
+    - {x: 19, y: 25, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -3, y: -9, z: 0}
+    - {x: 16, y: -9, z: 0}
+    - {x: -3, y: 16, z: 0}
+    - {x: 16, y: 16, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .421882808, y: .605472684}
+    - {x: .421882808, y: .679683566}
+    - {x: .617179692, y: .605472684}
+    - {x: .617179692, y: .679683566}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: 29c7f01a7cb0d5e41bda438be7234536
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Red_0002
+    boundsData:
+    - {x: 7, y: 4.5, z: 0}
+    - {x: 18, y: 25, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -2, y: -8, z: 0}
+    - {x: 16, y: -8, z: 0}
+    - {x: -2, y: 17, z: 0}
+    - {x: 16, y: 17, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .640632808, y: .695316434}
+    - {x: .640632808, y: .765621066}
+    - {x: .835929692, y: .695316434}
+    - {x: .835929692, y: .765621066}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1dffdf16e308a7a4c9393a4cf5c50190
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Red_0003
+    boundsData:
+    - {x: 7.5, y: 5, z: 0}
+    - {x: 17, y: 26, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -1, y: -8, z: 0}
+    - {x: 16, y: -8, z: 0}
+    - {x: -1, y: 18, z: 0}
+    - {x: 16, y: 18, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .187507808, y: .789066434}
+    - {x: .320304692, y: .789066434}
+    - {x: .187507808, y: .890621066}
+    - {x: .320304692, y: .890621066}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: 0c9394d7d95d06c499fcc477107e9437
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Red_0004
+    boundsData:
+    - {x: 6.5, y: 5.5, z: 0}
+    - {x: 19, y: 27, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -3, y: -8, z: 0}
+    - {x: 16, y: -8, z: 0}
+    - {x: -3, y: 19, z: 0}
+    - {x: 16, y: 19, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .250007808, y: .332035154}
+    - {x: .250007808, y: .406246096}
+    - {x: .460929692, y: .332035154}
+    - {x: .460929692, y: .406246096}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: 4ad450a64edc89c488a1146c432fde73
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Red_0005
+    boundsData:
+    - {x: 5.5, y: 5, z: 0}
+    - {x: 21, y: 26, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -5, y: -8, z: 0}
+    - {x: 16, y: -8, z: 0}
+    - {x: -5, y: 18, z: 0}
+    - {x: 16, y: 18, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .0156328119, y: .242191404}
+    - {x: .0156328119, y: .324214846}
+    - {x: .218742192, y: .242191404}
+    - {x: .218742192, y: .324214846}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: 39257a61cb1f324418a98b852746fc62
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Red_0006
+    boundsData:
+    - {x: 6, y: 4, z: 0}
+    - {x: 20, y: 26, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -4, y: -9, z: 0}
+    - {x: 16, y: -9, z: 0}
+    - {x: -4, y: 17, z: 0}
+    - {x: 16, y: 17, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .742195308, y: .234378904}
+    - {x: .742195308, y: .312496096}
+    - {x: .945304692, y: .234378904}
+    - {x: .945304692, y: .312496096}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: 983e98e5b23995d4dbe039ae55e6c8ed
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Red_0007
+    boundsData:
+    - {x: 6.5, y: 3.5, z: 0}
+    - {x: 19, y: 25, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -3, y: -9, z: 0}
+    - {x: 16, y: -9, z: 0}
+    - {x: -3, y: 16, z: 0}
+    - {x: 16, y: 16, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .195320308, y: .609378934}
+    - {x: .195320308, y: .683589816}
+    - {x: .390617192, y: .609378934}
+    - {x: .390617192, y: .683589816}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: af12b9d4499fe944c8177f69143baeec
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Red_0008
+    boundsData:
+    - {x: 6, y: 3.5, z: 0}
+    - {x: 18, y: 25, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -3, y: -9, z: 0}
+    - {x: 15, y: -9, z: 0}
+    - {x: -3, y: 16, z: 0}
+    - {x: 15, y: 16, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .640632808, y: .781253934}
+    - {x: .640632808, y: .851558566}
+    - {x: .835929692, y: .781253934}
+    - {x: .835929692, y: .851558566}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: cf65957b50d590940b0d032550e6fc6c
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Red_0009
+    boundsData:
+    - {x: 4, y: 3.5, z: 0}
+    - {x: 22, y: 25, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -7, y: -9, z: 0}
+    - {x: 15, y: -9, z: 0}
+    - {x: -7, y: 16, z: 0}
+    - {x: 15, y: 16, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .804695308, y: .121097654}
+    - {x: .976554692, y: .121097654}
+    - {x: .804695308, y: .218746096}
+    - {x: .976554692, y: .218746096}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: 498a3ebe114955b4db790a324307a767
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Red_0010
+    boundsData:
+    - {x: 13, y: 3, z: 0}
+    - {x: 30, y: 26, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -2, y: -10, z: 0}
+    - {x: 28, y: -10, z: 0}
+    - {x: -2, y: 16, z: 0}
+    - {x: 28, y: 16, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .281257808, y: .00781640597}
+    - {x: .515617192, y: .00781640597}
+    - {x: .281257808, y: .109371096}
+    - {x: .515617192, y: .109371096}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: 03db35129cf752f43b66b0c623a4d946
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Red_0011
+    boundsData:
+    - {x: 13.5, y: 3, z: 0}
+    - {x: 29, y: 26, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -1, y: -10, z: 0}
+    - {x: 28, y: -10, z: 0}
+    - {x: -1, y: 16, z: 0}
+    - {x: 28, y: 16, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .0156328119, y: .125003904}
+    - {x: .242179692, y: .125003904}
+    - {x: .0156328119, y: .226558596}
+    - {x: .242179692, y: .226558596}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: 415b1f1883170fc43aad9538166e36dd
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Red_0012
+    boundsData:
+    - {x: 10, y: 3.5, z: 0}
+    - {x: 20, y: 25, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: 0, y: -9, z: 0}
+    - {x: 20, y: -9, z: 0}
+    - {x: 0, y: 16, z: 0}
+    - {x: 20, y: 16, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .0156328119, y: .437503904}
+    - {x: .171867192, y: .437503904}
+    - {x: .0156328119, y: .535152316}
+    - {x: .171867192, y: .535152316}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: 7dddf5ebd3f89ea4cabebc3588211865
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Red_0013
+    boundsData:
+    - {x: 7, y: 3.5, z: 0}
+    - {x: 20, y: 25, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -3, y: -9, z: 0}
+    - {x: 17, y: -9, z: 0}
+    - {x: -3, y: 16, z: 0}
+    - {x: 17, y: 16, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .718757808, y: .425785154}
+    - {x: .718757808, y: .503902316}
+    - {x: .914054692, y: .425785154}
+    - {x: .914054692, y: .503902316}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: 01699381d6e8c614bb3541db092dd8e6
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Red_0014
+    boundsData:
+    - {x: -1, y: 0, z: 0}
+    - {x: 26, y: 18, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -14, y: -9, z: 0}
+    - {x: 12, y: -9, z: 0}
+    - {x: -14, y: 9, z: 0}
+    - {x: 12, y: 9, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .648445308, y: .609378934}
+    - {x: .851554692, y: .609378934}
+    - {x: .648445308, y: .679683566}
+    - {x: .851554692, y: .679683566}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: dafb2e992c31f774dbe2fde81cda79c3
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Red_0015
+    boundsData:
+    - {x: -5, y: 0, z: 0}
+    - {x: 24, y: 20, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -17, y: -10, z: 0}
+    - {x: 7, y: -10, z: 0}
+    - {x: -17, y: 10, z: 0}
+    - {x: 7, y: 10, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .203132808, y: .515628934}
+    - {x: .390617192, y: .515628934}
+    - {x: .203132808, y: .593746066}
+    - {x: .390617192, y: .593746066}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: 6b68e4738bc4a3f49b47c6f05889e3cf
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Red_0016
+    boundsData:
+    - {x: -10, y: -4.5, z: 0}
+    - {x: 24, y: 25, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -22, y: -17, z: 0}
+    - {x: 2, y: -17, z: 0}
+    - {x: -22, y: 8, z: 0}
+    - {x: 2, y: 8, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .500007808, y: .125003904}
+    - {x: .500007808, y: .218746096}
+    - {x: .695304692, y: .125003904}
+    - {x: .695304692, y: .218746096}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: c45cc02a53290ac4396f865d37777989
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Red_0017
+    boundsData:
+    - {x: -15, y: -5.5, z: 0}
+    - {x: 24, y: 21, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -27, y: -16, z: 0}
+    - {x: -3, y: -16, z: 0}
+    - {x: -27, y: 5, z: 0}
+    - {x: -3, y: 5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .750007808, y: .328128904}
+    - {x: .937492192, y: .328128904}
+    - {x: .750007808, y: .410152346}
+    - {x: .937492192, y: .410152346}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: 077d39c6be0425f46a3292165a9f572f
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: Unit_Terran_Crusader_Red_0018
+    boundsData:
+    - {x: -15, y: -6.5, z: 0}
+    - {x: 24, y: 19, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -27, y: -16, z: 0}
+    - {x: -3, y: -16, z: 0}
+    - {x: -27, y: 3, z: 0}
+    - {x: -3, y: 3, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .187507808, y: .699222684}
+    - {x: .374992192, y: .699222684}
+    - {x: .187507808, y: .773433566}
+    - {x: .374992192, y: .773433566}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+    materialId: 0
+    sourceTextureGUID: 3e14c16efe1645343829b8c20d355e97
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  premultipliedAlpha: 0
+  material: {fileID: 0}
+  materials:
+  - {fileID: 2100000, guid: ec182f281c55b4b48891af4babda1e19, type: 2}
+  textures:
+  - {fileID: 2800000, guid: edcb0ec27f296b44db54f60748f06211, type: 3}
+  allowMultipleAtlases: 0
+  spriteCollectionGUID: 96a25bcb1c367aa4b9dad8237bf01ef0
+  spriteCollectionName: TerranCrusaderCollection
+  assetName: 
+  loadable: 0
+  invOrthoSize: 1
+  halfTargetHeight: 1
+  buildKey: 639039006
+  dataGuid: 785d3cc16d9ff604297f690fa16d8429
+  managedSpriteCollection: 0
+  hasPlatformData: 0
+  spriteCollectionPlatforms: []
+  spriteCollectionPlatformGUIDs: []
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1
