@@ -14,6 +14,6 @@ public enum ActorType
     GRYPHONRIDER,                                                 //狮鹫骑士
     SENIORGRYPHONRIDER,                                 //高级狮鹫骑士
     CRUSADES,                                                           //十字军
-    PALADIN                                                                 //圣骑士
+    TEMPLARWARRIORS                                         //圣堂勇士
 }
 

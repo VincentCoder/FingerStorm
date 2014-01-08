@@ -133,3 +133,34 @@ MonoBehaviour:
     loadable: 0
     assetName: 
     version: 3
+  - name: TerranBuildingsCollection
+    spriteCollectionGUID: 9bb5ebc2e9a1f344989bc34119de077b
+    spriteCollectionDataGUID: 7f52110206776c84189eeef673035000
+    spriteNames:
+    - Terran_ArtilleryHall
+    - Terran_Barrack
+    - Terran_Church
+    - Terran_Fortress
+    - Terran_MarksmanCamp
+    - Terran_SniperHouse
+    - Terran_Temple
+    spriteTextureGUIDs:
+    - 24e895a3478e7ce49b59d002fede80c9
+    - 7c2c7698d174c684d955d0608744b002
+    - 1fa238c5ff530554fa7afd771a63d4bb
+    - da007d001e749a244baf905f5a853e2e
+    - f43e487fc2d101c4b8a6073586a75a01
+    - d81e20f518ee46e4ca6475bdc88bcdc4
+    - 809c0f72bbc20c640b80a7975ce344ea
+    spriteTextureTimeStamps:
+    - 1388962481
+    - 1388962480
+    - 1388962481
+    - 1388962480
+    - 1388962481
+    - 1388962480
+    - 1388962481
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
