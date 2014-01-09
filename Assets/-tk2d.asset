@@ -164,3 +164,16 @@ MonoBehaviour:
     loadable: 0
     assetName: 
     version: 3
+  - name: Map00Collection
+    spriteCollectionGUID: 4f60a13a8703b67429e857e6d7f538d1
+    spriteCollectionDataGUID: 4c070311a85cff741ba92c4db703e913
+    spriteNames:
+    - Map00
+    spriteTextureGUIDs:
+    - c7d838ec766b4ac47ad6f2adb6bef43b
+    spriteTextureTimeStamps:
+    - 1389224168
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3

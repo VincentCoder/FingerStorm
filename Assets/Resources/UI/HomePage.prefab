@@ -11,7 +11,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 65: {fileID: 6500000}
   - 114: {fileID: 11400002}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Options
   m_TagString: HomePageOptionsButton
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ GameObject:
   - 114: {fileID: 11400006}
   - 65: {fileID: 6500002}
   - 114: {fileID: 11400004}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: StartGameButton
   m_TagString: HomePageStartGameButton
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400004}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HomePage
   m_TagString: HomePage
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400006}
   - 114: {fileID: 11400008}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bkg
   m_TagString: Untagged
   m_Icon: {fileID: 0}

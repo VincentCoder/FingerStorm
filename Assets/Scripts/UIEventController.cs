@@ -3,6 +3,17 @@ using System.Collections;
 
 public class UIEventController : MonoBehaviour 
 {
+    private GameController _gameController;
+    public GameController GameController
+    {
+        get
+        {
+            if (this._gameController == null)
+                this._gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
+            return this._gameController;
+        }
+    }
+
     public void Register ( GameObject registerObj )
     { 
         if (registerObj != null)
@@ -71,6 +82,9 @@ public class UIEventController : MonoBehaviour
         {
             case "HomePageStartGameButton":
                 {
+                    this.GameController.ViewController.DestroyHomePage(true);
+                    GameObject gameSceneCtrl = (GameObject)Instantiate(Resources.Load("GameScene/GameSceneController"));
+                    gameSceneCtrl.transform.localPosition = new Vector3(0, 0, 0);
                     break;
                 }
             case "HomePageOptionsButton":
@@ -79,5 +93,4 @@ public class UIEventController : MonoBehaviour
                 }
         }
     }
-
 }
