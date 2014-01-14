@@ -17,9 +17,8 @@
 
     public int AttackRange { get; set; } //攻击范围
 
-    public int Dps { get; set; }
+    public int Dps { get; set; }  //每秒输出
 
     #endregion
 
-    //每秒输出
 }

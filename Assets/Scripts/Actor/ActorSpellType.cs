@@ -3,16 +3,16 @@
 public enum ActorSpellType
 {
     None,
-    DODGE,                                                                    //闪避
-    CIRTICALSTRIKE,                                                 //致命一击
-    HEADSHOT,                                                            //爆头
-    SPLASHDAMAGE,                                                //溅射伤害
-    MORTARATTACK,                                                //迫击轰炸
-    ARCANEEXPLOSION,                                         //奥术爆炸
-    BASH,                                                                      //重击
-    CHAINLIGHTNING,                                              //闪电链
-    DIVINEBLESSING,                                               //天赐祝福
-    ZAP,                                                                         //圣光术
+    Dodge,                                                                    //闪避
+    CirticalStrike,                                                 //致命一击
+    HeadShot,                                                            //爆头
+    SplashDamage,                                                //溅射伤害
+    MortarAttack,                                                //迫击轰炸
+    ArcaneExplosion,                                         //奥术爆炸
+    Bash,                                                                      //重击
+    ChainLightning,                                              //闪电链
+    DivineBlessing,                                               //天赐祝福
+    Zap,                                                                         //圣光术
 
     SMASH,                                                                    //粉碎
     RAGE,                                                                       //狂暴

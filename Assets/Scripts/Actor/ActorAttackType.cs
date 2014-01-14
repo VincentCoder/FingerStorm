@@ -6,9 +6,9 @@ using System.Text;
 public enum ActorAttackType
 { 
     Normal,                                 //普通攻击
-    PIERCE,                              //穿刺
-    SIEGE,                                 //攻城
-    CONFUSE,                         //混乱
-    MAGIC,                                //魔法
-    HEROATTACK                  //英雄攻击
+    Pierce,                              //穿刺
+    Siege,                                 //攻城
+    Confuse,                         //混乱
+    Magic,                                //魔法
+    HeroAttack                  //英雄攻击
 }

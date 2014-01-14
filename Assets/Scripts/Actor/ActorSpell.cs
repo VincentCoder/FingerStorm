@@ -26,18 +26,18 @@ public class ActorSpell
                 {
                     break;
                 }
-            case ActorSpellType.DODGE:
+            case ActorSpellType.Dodge:
                 {
                     this.EvasiveProbability = 15;
                     break;
                 }
-            case ActorSpellType.CIRTICALSTRIKE:
+            case ActorSpellType.CirticalStrike:
                 {
                     this.DamageBonus = 1.5f;
                     this.DamageBonusProbability = 10;
                     break;
                 }
-            case ActorSpellType.HEADSHOT:
+            case ActorSpellType.HeadShot:
                 {
                     this.DamageBonus = 3;
                     this.DamageBonusProbability = 40;

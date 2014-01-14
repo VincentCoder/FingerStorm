@@ -6,7 +6,7 @@ using UnityEngine;
 
 #endregion
 
-public class ActorController : MonoBehaviour
+public class ActorController : BaseGameEntity
 {
     #region Fields
 
@@ -14,9 +14,11 @@ public class ActorController : MonoBehaviour
 
     private tk2dSpriteAnimator _selfAnimator;
 
-    private float moveSpeed;
+    public float moveSpeed;
+    
+    public Transform myTransform;
 
-    private Transform myTransform;
+    private StateMachine<ActorController> m_PStateMachine; 
 
     #endregion
 
@@ -41,7 +43,7 @@ public class ActorController : MonoBehaviour
 
     #region Properties
 
-    private tk2dSpriteAnimator SelfAnimator
+    public tk2dSpriteAnimator SelfAnimator
     {
         get
         {
@@ -50,10 +52,6 @@ public class ActorController : MonoBehaviour
                 this._selfAnimator = this.gameObject.GetComponent<tk2dSpriteAnimator>();
             }
             return this._selfAnimator;
-        }
-        set
-        {
-            this._selfAnimator = value;
         }
     }
 
@@ -64,74 +62,32 @@ public class ActorController : MonoBehaviour
     private void Awake()
     {
         this.myTransform = this.gameObject.transform;
+        this.moveSpeed = 30;
     }
 
     private void InitActor()
     {
-        if (this._myActor != null)
-        {
-            StringBuilder animName = new StringBuilder("Terran_");
-            switch (this._myActor.ActorType)
-            {
-                case ActorType.CRUSADE:
-                    animName.Append("Crusader");
-                    break;
-                case ActorType.GRYPHONRIDER:
-                    animName.Append("GryphonRider");
-                    break;
-                case ActorType.HEAVYGUNNER:
-                    animName.Append("HeavyGunner");
-                    break;
-                case ActorType.INFANTRY:
-                    animName.Append("Infantry");
-                    break;
-                case ActorType.MARKSMAN:
-                    animName.Append("Marksman");
-                    break;
-                case ActorType.MOTARTEAM:
-                    animName.Append("MotarTeam");
-                    break;
-                case ActorType.SENIORGRYPHONRIDER:
-                    animName.Append("SeniorGryphonRider");
-                    break;
-                case ActorType.SNIPER:
-                    animName.Append("Sniper");
-                    break;
-                case ActorType.SUPPORTER:
-                    animName.Append("Supporter");
-                    break;
-                case ActorType.TEMPLARWARRIOR:
-                    animName.Append("TemplarWarrior");
-                    break;
-                case ActorType.WARLOCK:
-                    animName.Append("Warlock");
-                    break;
-                default:
-                    animName.Append("Infantry");
-                    break;
-            }
-            animName.Append("_Walk_");
-            switch (this._myActor.FactionType)
-            {
-                case FactionType.Blue:
-                    animName.Append("Blue");
-                    break;
-                case FactionType.Red:
-                    animName.Append("Red");
-                    break;
-                default:
-                    animName.Append("Blue");
-                    break;
-            }
-            this.SelfAnimator.Play(animName.ToString());
-        }
+        if(this._myActor == null)
+            Debug.LogError("Actor cannot be null !");
+        this.m_PStateMachine = new StateMachine<ActorController>(this);
+        this.m_PStateMachine.SetCurrentState(Actor_StateWalk.Instance());
+        this.m_PStateMachine.SetGlobalState(Actor_GlobalState.Instance());
     }
 
     private void Update()
     {
-        Vector3 moveDistance = this.moveSpeed * Time.deltaTime
-                               * (this.TargetBuilding.transform.position - this.myTransform.position).normalized;
-        this.myTransform.Translate(moveDistance, Space.World);
+        if(this.m_PStateMachine != null)
+            this.m_PStateMachine.SMUpdate();
+    }
+
+    public StateMachine<ActorController> GetFSM()
+    {
+        return this.m_PStateMachine;
+    }
+
+    public override bool HandleMessage(Telegram telegram)
+    {
+        return this.m_PStateMachine.HandleMessage(telegram);
     }
 
     #endregion

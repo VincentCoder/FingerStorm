@@ -21,12 +21,12 @@ public class StateMachine<entity_type>
     {
         this.m_pGlobalState.Enter(this.m_pOwner);
     }
-
+    
     public void SetGlobalState ( State<entity_type> GlobalState )
     {
         this.m_pGlobalState = GlobalState;
         this.m_pGlobalState.Target = this.m_pOwner;
-        this.m_pGlobalState.Enter(this.m_pOwner);
+        this.m_pGlobalState.Enter(this.m_pOwner);  
     }
 
     public void SetCurrentState ( State<entity_type> CurrentState )

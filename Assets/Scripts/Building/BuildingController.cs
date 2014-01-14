@@ -1,10 +1,12 @@
 ﻿#region
 
+using System.Text;
+
 using UnityEngine;
 
 #endregion
 
-public class BuildingController : MonoBehaviour
+public class BuildingController : BaseGameEntity
 {
     #region Fields
 
@@ -14,7 +16,11 @@ public class BuildingController : MonoBehaviour
 
     private float _dispatchIntervalCounter;
 
+    private tk2dSprite _selfSprite;
+
     private ActorsManager actorsManager;
+
+    private Transform myTransform;
 
     #endregion
 
@@ -48,11 +54,37 @@ public class BuildingController : MonoBehaviour
 
     #endregion
 
+    #region Properties
+
+    private tk2dSprite SelfSprite
+    {
+        get
+        {
+            return this._selfSprite ?? (this._selfSprite = this.gameObject.GetComponent<tk2dSprite>());
+        }
+        set
+        {
+            this._selfSprite = value;
+        }
+    }
+
+    #endregion
+
     #region Public Methods and Operators
+
+    private void Awake()
+    {
+        this.myTransform = this.transform;
+    }
 
     public void DestroySelf()
     {
         Destroy(this.gameObject);
+    }
+
+    public override bool HandleMessage(Telegram telegram)
+    {
+        return base.HandleMessage(telegram);
     }
 
     #endregion
@@ -61,92 +93,20 @@ public class BuildingController : MonoBehaviour
 
     private void DispatchActor()
     {
-        ActorType actorType;
-        switch (this.Building.BuildingType)
-        {
-            case BuildingType.Terran_Barrack:
-                actorType = ActorType.INFANTRY;
-                break;
-            case BuildingType.Terran_Fortress:
-                actorType = ActorType.SUPPORTER;
-                break;
-            case BuildingType.Terran_SniperHouse:
-                actorType = ActorType.SNIPER;
-                break;
-            case BuildingType.Terran_MarksmanCamp:
-                actorType = ActorType.MARKSMAN;
-                break;
-            case BuildingType.Terran_ArtilleryHall:
-                actorType = ActorType.HEAVYGUNNER;
-                break;
-            case BuildingType.Terran_ArtilleryLab:
-                actorType = ActorType.MOTARTEAM;
-                break;
-            case BuildingType.Terran_MysterySchool:
-                actorType = ActorType.WARLOCK;
-                break;
-            case BuildingType.Terran_Aviary:
-                actorType = ActorType.GRYPHONRIDER;
-                break;
-            case BuildingType.Terran_AdvancedAviary:
-                actorType = ActorType.SENIORGRYPHONRIDER;
-                break;
-            case BuildingType.Terran_Church:
-                actorType = ActorType.CRUSADE;
-                break;
-            case BuildingType.Terran_Temple:
-                actorType = ActorType.TEMPLARWARRIOR;
-                break;
-            default:
-                actorType = ActorType.INFANTRY;
-                break;
-        }
-        this.actorsManager.CreateNewActor(this.Building.FactionType, actorType);
+        this.actorsManager.CreateNewActor(this.Building.FactionType, this.Building.ActorType, this.myTransform.position);
     }
 
     private void InitBuilding()
     {
         if (this.Building != null)
         {
-            switch (this.Building.BuildingType)
-            {
-                case BuildingType.Terran_Barrack:
-                    this.Building.ActorType = ActorType.INFANTRY;
-                    break;
-                case BuildingType.Terran_Fortress:
-                    this.Building.ActorType = ActorType.SUPPORTER;
-                    break;
-                case BuildingType.Terran_SniperHouse:
-                    this.Building.ActorType = ActorType.SNIPER;
-                    break;
-                case BuildingType.Terran_MarksmanCamp:
-                    this.Building.ActorType = ActorType.MARKSMAN;
-                    break;
-                case BuildingType.Terran_ArtilleryHall:
-                    this.Building.ActorType = ActorType.HEAVYGUNNER;
-                    break;
-                case BuildingType.Terran_ArtilleryLab:
-                    this.Building.ActorType = ActorType.MOTARTEAM;
-                    break;
-                case BuildingType.Terran_MysterySchool:
-                    this.Building.ActorType = ActorType.WARLOCK;
-                    break;
-                case BuildingType.Terran_Aviary:
-                    this.Building.ActorType = ActorType.GRYPHONRIDER;
-                    break;
-                case BuildingType.Terran_AdvancedAviary:
-                    this.Building.ActorType = ActorType.SENIORGRYPHONRIDER;
-                    break;
-                case BuildingType.Terran_Church:
-                    this.Building.ActorType = ActorType.CRUSADE;
-                    break;
-                case BuildingType.Terran_Temple:
-                    this.Building.ActorType = ActorType.TEMPLARWARRIOR;
-                    break;
-                default:
-                    this.Building.ActorType = ActorType.INFANTRY;
-                    break;
-            }
+            this.DispatchInterval = this.Building.ProducedTime;
+
+            var spriteName = new StringBuilder("");
+            spriteName.Append(this.Building.BuildingType);
+            spriteName.Append("_");
+            spriteName.Append(this.Building.FactionType);
+            this.SelfSprite.SetSprite(spriteName.ToString());
         }
     }
 
@@ -161,6 +121,7 @@ public class BuildingController : MonoBehaviour
         if (this._dispatchIntervalCounter >= this._dispatchInterval)
         {
             this.DispatchActor();
+            this._dispatchIntervalCounter = 0.0f;
         }
     }
 
