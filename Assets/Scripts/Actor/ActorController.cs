@@ -114,6 +114,7 @@ public class ActorController : BaseGameEntity
 
     public void DestroySelf()
     {
+		ActorsManager.GetInstance().RemoveActorById(this._myActor.ActorId);
         Destroy(this.gameObject);
     }
 

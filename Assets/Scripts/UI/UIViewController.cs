@@ -32,7 +32,48 @@ public class UIViewController : MonoBehaviour
         else
             Destroy(homePage);
     }
-
+	
+	public void ShowBuildingsSelectorPanel()
+	{
+		GameObject selectorPanel = (GameObject)Instantiate(Resources.Load("UI/BuildingsSelectorPanel"));
+		selectorPanel.name = "BuildingsSelectorPanel";
+		selectorPanel.tag = "GameSceneBuildingsSelectorPanel";
+		selectorPanel.transform.parent = this._rootPanel.transform;
+		selectorPanel.transform.localScale = new Vector3(1,1,1);
+	}
+	
+	public void DestroyBuildingsSelectorPanel(bool now)
+	{
+		GameObject selectorPanel = GameObject.FindWithTag("GameSceneBuildingsSelectorPanel");
+		if(now)
+			DestroyImmediate(selectorPanel);
+		else
+			Destroy(selectorPanel);
+	}
+	
+	public void ShowBuildingDetailPanel()
+	{
+		GameObject detailPanel = (GameObject)Instantiate(Resources.Load("UI/BuildingDetailPanel"));
+		detailPanel.name = "BuildingDetailPanel";
+		detailPanel.tag = "GameSceneBuildingDetailPanel";
+		detailPanel.transform.parent = this._rootPanel.transform;
+		detailPanel.transform.localScale = new Vector3(1,1,1);
+	}
+	
+	public void DestroyBuildingDetailPanel(bool now)
+	{
+		GameObject detailPanel = GameObject.FindWithTag("GameSceneBuildingDetailPanel");
+		if(now)
+			DestroyImmediate(detailPanel);
+		else
+			Destroy(detailPanel);
+	}
+	
+	public void AddBuildingCard()
+	{
+		
+	}
+	
     public GameController GameController
     {
         get

@@ -57,7 +57,7 @@ public class StateMachine<entity_type>
 
         this.m_pCurrentState = pNewState;
         this.m_pCurrentState.Target = this.m_pOwner;
-        this.m_pCurrentState.Execute(this.m_pOwner);
+		this.m_pCurrentState.Enter(this.m_pOwner);
     }
 
     public void RevertToPreviousState ()

@@ -58,7 +58,7 @@ public class Actor_StateWalk : State<ActorController>
 {
     #region Static Fields
 
-    private static Actor_StateWalk instance;
+    //private static Actor_StateWalk instance;
 
     #endregion
 
@@ -74,11 +74,12 @@ public class Actor_StateWalk : State<ActorController>
 
     public static Actor_StateWalk Instance()
     {
-        return instance ?? (instance = new Actor_StateWalk());
+        return new Actor_StateWalk();
     }
 
     public override void Enter(ActorController entityType)
     {
+		Debug.Log("Enter Walk");
         StringBuilder animName = new StringBuilder("Terran_");
         animName.Append(entityType.MyActor.ActorType);
         animName.Append("_Walk_");
@@ -108,6 +109,7 @@ public class Actor_StateWalk : State<ActorController>
 
     public override void Exit(ActorController entityType)
     {
+		Debug.Log("Exit Walk");
         base.Exit(entityType);
     }
 
@@ -133,7 +135,7 @@ public class Actor_StateBeforeFight : State<ActorController>
 {
     #region Static Fields
 
-    private static Actor_StateBeforeFight instance;
+    //private static Actor_StateBeforeFight instance;
 
     #endregion
 
@@ -141,11 +143,13 @@ public class Actor_StateBeforeFight : State<ActorController>
 
     public static Actor_StateBeforeFight Instance()
     {
-        return instance ?? (instance = new Actor_StateBeforeFight());
+        //return instance ?? (instance = new Actor_StateBeforeFight());
+		return new Actor_StateBeforeFight();
     }
 
     public override void Enter(ActorController entityType)
     {
+		Debug.Log("Enter BeforeFight");
         List<GameObject> enemies = this.SeekEnemies(entityType);
         if (enemies == null || enemies.Count == 0)
         {
@@ -180,6 +184,7 @@ public class Actor_StateBeforeFight : State<ActorController>
 
     public override void Exit(ActorController entityType)
     {
+		Debug.Log("Exit BeforeFight");
         base.Exit(entityType);
     }
 
@@ -205,7 +210,7 @@ public class Actor_StateFight : State<ActorController>
 {
     #region Static Fields
 
-    private static Actor_StateFight instance;
+    //private static Actor_StateFight instance;
 
     #endregion
 
@@ -213,11 +218,13 @@ public class Actor_StateFight : State<ActorController>
 
     public static Actor_StateFight Instance()
     {
-        return instance ?? (instance = new Actor_StateFight());
+        //return instance ?? (instance = new Actor_StateFight());
+		return new Actor_StateFight();
     }
 
     public override void Enter(ActorController entityType)
     {
+		Debug.Log("Enter Fight");
         if (entityType.TargetEnemy == null)
         {
             entityType.GetFSM().ChangeState(Actor_StateBeforeFight.Instance());
@@ -251,6 +258,7 @@ public class Actor_StateFight : State<ActorController>
 
     public override void Exit(ActorController entityType)
     {
+		Debug.Log("Exit Fight");
         base.Exit(entityType);
     }
 
@@ -276,7 +284,7 @@ public class Actor_StateBeforeDie : State<ActorController>
 {
     #region Static Fields
 
-    private static Actor_StateBeforeDie instance;
+    //private static Actor_StateBeforeDie instance;
 
     #endregion
 
@@ -284,7 +292,8 @@ public class Actor_StateBeforeDie : State<ActorController>
 
     public static Actor_StateBeforeDie Instance()
     {
-        return instance ?? (instance = new Actor_StateBeforeDie());
+        //return instance ?? (instance = new Actor_StateBeforeDie());
+		return new Actor_StateBeforeDie();
     }
 
     public override void Enter(ActorController entityType)
@@ -322,7 +331,7 @@ public class Actor_StateDie : State<ActorController>
 {
     #region Static Fields
 
-    private static Actor_StateDie instance;
+    //private static Actor_StateDie instance;
 
     #endregion
 
@@ -330,7 +339,8 @@ public class Actor_StateDie : State<ActorController>
 
     public static Actor_StateDie Instance()
     {
-        return instance ?? (instance = new Actor_StateDie());
+        //return instance ?? (instance = new Actor_StateDie());
+		return new Actor_StateDie();
     }
 
     public override void Enter(ActorController entityType)

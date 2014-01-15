@@ -137,6 +137,12 @@ public class ActorsManager
                     (actorController.gameObject.transform.position - kv.Value.transform.position).sqrMagnitude
                     <= Mathf.Pow(distance, 2));
     }
+	
+	public void RemoveActorById(int actorId)
+	{
+		if(this.actorsDictionary.ContainsKey(actorId))
+			this.actorsDictionary.Remove(actorId);
+	}
 
     #endregion
 
