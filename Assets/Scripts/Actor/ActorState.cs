@@ -42,8 +42,11 @@ public class Actor_GlobalState : State<ActorController>
     {
         if (telegram.Msg == FSMessageType.FSMessageAttack)
         {
-            
-            return true;
+            if (telegram.Parameters.ContainsKey("Damage"))
+            {
+                entityType.TakeDamage((float)telegram.Parameters["Damage"]);
+                return true;
+            }
         }
         return false;
     }
@@ -167,7 +170,7 @@ public class Actor_StateBeforeFight : State<ActorController>
         entityType.myTransform.Translate(moveDistance, Space.World);
 
         if ((entityType.TargetEnemy.transform.position - entityType.myTransform.position).sqrMagnitude
-            <= Mathf.Max(Mathf.Pow(entityType.MyActor.ActorAttack.AttackRange, 2), 20 * 20))
+            <= Mathf.Max(Mathf.Pow(entityType.MyActor.ActorAttack.AttackRange, 2), Mathf.Pow(20,2)))
         {
             entityType.GetFSM().ChangeState(Actor_StateFight.Instance());
         }
