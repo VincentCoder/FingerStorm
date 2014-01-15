@@ -3,11 +3,14 @@ using System.Collections;
 
 public class UIBuildingCardController : MonoBehaviour 
 {
-
-	// Use this for initialization
 	void Start () 
 	{
+		UIEventListener.Get(this.gameObject).onDrag = HandleEvent;
+	}
 	
+	private void HandleEvent( GameObject eventObj, Vector2 delta )
+	{
+		Debug.Log("HandleEvent");
 	}
 	
 	// Update is called once per frame
