@@ -39,6 +39,8 @@ public class ActorController : BaseGameEntity
 
     public GameObject TargetBuilding { get; set; }
 
+    public GameObject TargetEnemy { get; set; }
+
     #endregion
 
     #region Properties
@@ -88,6 +90,31 @@ public class ActorController : BaseGameEntity
     public override bool HandleMessage(Telegram telegram)
     {
         return this.m_PStateMachine.HandleMessage(telegram);
+    }
+
+    public void TakeDamage(float damage)
+    {
+        if (this.MyActor.ActorArmor.ArmorAmount > 0f)
+        {
+            float dValue = this.MyActor.ActorArmor.ArmorAmount - damage;
+            if (dValue >= 0)
+            {
+                this.MyActor.ActorArmor.ArmorAmount = dValue;
+            }
+            else
+            {
+                this.MyActor.ActorArmor.ArmorAmount = 0f;
+                damage = Mathf.Abs(dValue);
+            }
+        }
+        this.MyActor.Hp -= damage;
+        if(this.MyActor.Hp <= 0)
+            this.m_PStateMachine.ChangeState(Actor_StateBeforeDie.Instance());
+    }
+
+    public void DestroySelf()
+    {
+        Destroy(this.gameObject);
     }
 
     #endregion

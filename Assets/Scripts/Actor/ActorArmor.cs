@@ -2,7 +2,7 @@
 {
     #region Constructors and Destructors
 
-    public ActorArmor(ActorArmorType armorType, int armorAmount)
+    public ActorArmor(ActorArmorType armorType, float armorAmount)
     {
         this.ActorArmorType = armorType;
         this.ArmorAmount = armorAmount;
@@ -14,7 +14,7 @@
 
     public ActorArmorType ActorArmorType { get; set; }
 
-    public int ArmorAmount { get; set; }
+    public float ArmorAmount { get; set; }
 
     #endregion
 }

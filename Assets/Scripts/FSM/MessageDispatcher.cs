@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+
+using UnityEngine;
 
 public class Telegram
 {
@@ -6,19 +8,19 @@ public class Telegram
 
     public BaseGameEntity Reciver;
 
-    public int Msg;
+    public FSMessageType Msg;
 
     public float DispatchTime;
 
-    public MonoBehaviour _Behaviour;
+    public Hashtable Parameters;
 
-    public Telegram ( float atime, BaseGameEntity asender, BaseGameEntity areceiver, int amsg, MonoBehaviour _Be )
+    public Telegram ( float atime, BaseGameEntity asender, BaseGameEntity areceiver, FSMessageType amsg, Hashtable parameters )
     {
         this.Sender = asender;
         this.Reciver = areceiver;
         this.Msg = amsg;
         this.DispatchTime = atime;
-        this._Behaviour = _Be;
+        this.Parameters = parameters;
     }
 
 }
@@ -36,7 +38,7 @@ public class MessageDispatcher
         }
     }
 
-    public void DispatchMessage ( float delay, BaseGameEntity sender, BaseGameEntity receiver, int msg, MonoBehaviour _be )
+    public void DispatchMessage ( float delay, BaseGameEntity sender, BaseGameEntity receiver, FSMessageType msg, Hashtable parameters )
     {
         if (sender == null || receiver == null)
         {
@@ -44,7 +46,7 @@ public class MessageDispatcher
             return;
         }
 
-        Telegram telegram = new Telegram(delay, sender, receiver, msg, _be);
+        Telegram telegram = new Telegram(delay, sender, receiver, msg, parameters);
 
         if (delay <= 0.0f)
         {

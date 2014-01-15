@@ -33,7 +33,7 @@ public class Actor
 
     public FactionType FactionType { get; set; }
 
-    public int Hp { get; set; }
+    public float Hp { get; set; }
 
     public Dictionary<ActorSpellType, ActorSpell> SpellDictionary { get; set; }
 
@@ -259,7 +259,7 @@ public class Actor
         return new ActorArmor(armorType, armorAmount);
     }
 
-    private int LoadHpFromConfig()
+    private float LoadHpFromConfig()
     {
         switch (this.ActorType)
         {

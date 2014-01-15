@@ -1,5 +1,6 @@
 ﻿#region
 
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
@@ -39,7 +40,12 @@ public class Actor_GlobalState : State<ActorController>
 
     public override bool OnMessage(ActorController entityType, Telegram telegram)
     {
-        return base.OnMessage(entityType, telegram);
+        if (telegram.Msg == FSMessageType.FSMessageAttack)
+        {
+            
+            return true;
+        }
+        return false;
     }
 
     #endregion
@@ -55,9 +61,9 @@ public class Actor_StateWalk : State<ActorController>
 
     #region Fields
 
-    private float seekEnemyInterval = 0.5f;
+    private float seekEnemyCounter;
 
-    private float seekEnemyCounter = 0.0f;
+    private float seekEnemyInterval = 0.5f;
 
     #endregion
 
@@ -90,7 +96,7 @@ public class Actor_StateWalk : State<ActorController>
         {
             if (this.SeekEnemies(entityType))
             {
-                entityType.GetFSM().ChangeState(Actor_StateFight.Instance());
+                entityType.GetFSM().ChangeState(Actor_StateBeforeFight.Instance());
             }
             this.seekEnemyCounter = 0.0f;
         }
@@ -107,9 +113,14 @@ public class Actor_StateWalk : State<ActorController>
         return base.OnMessage(entityType, telegram);
     }
 
+    #endregion
+
+    #region Methods
+
     private bool SeekEnemies(ActorController entityType)
     {
-        return ActorsManager.GetInstance().HasEnemyActorsInDistance(entityType, entityType.MyActor.ActorAttack.AttackRange);
+        return ActorsManager.GetInstance()
+            .HasEnemyActorsInDistance(entityType, entityType.MyActor.ActorAttack.ViewDistance);
     }
 
     #endregion
@@ -132,12 +143,36 @@ public class Actor_StateBeforeFight : State<ActorController>
 
     public override void Enter(ActorController entityType)
     {
-        base.Enter(entityType);
+        List<GameObject> enemies = this.SeekEnemies(entityType);
+        if (enemies == null || enemies.Count == 0)
+        {
+            entityType.GetFSM().ChangeState(Actor_StateWalk.Instance());
+            return;
+        }
+        entityType.TargetEnemy = enemies[0];
+        //base.Enter(entityType);
     }
 
     public override void Execute(ActorController entityType)
     {
-        base.Execute(entityType);
+        if (entityType.TargetEnemy == null)
+        {
+            entityType.GetFSM().ChangeState(Actor_StateWalk.Instance());
+            return;
+        }
+
+        Vector3 moveDistance = entityType.moveSpeed * Time.deltaTime
+                               * (entityType.TargetEnemy.transform.position - entityType.myTransform.position)
+                                     .normalized;
+        entityType.myTransform.Translate(moveDistance, Space.World);
+
+        if ((entityType.TargetEnemy.transform.position - entityType.myTransform.position).sqrMagnitude
+            <= Mathf.Max(Mathf.Pow(entityType.MyActor.ActorAttack.AttackRange, 2), 20 * 20))
+        {
+            entityType.GetFSM().ChangeState(Actor_StateFight.Instance());
+        }
+
+        //base.Execute(entityType);
     }
 
     public override void Exit(ActorController entityType)
@@ -151,6 +186,16 @@ public class Actor_StateBeforeFight : State<ActorController>
     }
 
     #endregion
+
+    #region Methods
+
+    private List<GameObject> SeekEnemies(ActorController entityType)
+    {
+        return ActorsManager.GetInstance()
+            .GetEnemyActorsInDistanceAndSortByDistance(entityType, entityType.MyActor.ActorAttack.ViewDistance);
+    }
+
+    #endregion
 }
 
 public class Actor_StateFight : State<ActorController>
@@ -158,8 +203,6 @@ public class Actor_StateFight : State<ActorController>
     #region Static Fields
 
     private static Actor_StateFight instance;
-
-    private List<GameObject> enemiesList; 
 
     #endregion
 
@@ -172,25 +215,35 @@ public class Actor_StateFight : State<ActorController>
 
     public override void Enter(ActorController entityType)
     {
-        this.enemiesList = this.SeekEnemies(entityType);
-        if (this.enemiesList == null || this.enemiesList.Count == 0)
+        if (entityType.TargetEnemy == null)
         {
-            entityType.GetFSM().ChangeState(Actor_StateWalk.Instance());
-            return;  
+            entityType.GetFSM().ChangeState(Actor_StateBeforeFight.Instance());
+            return;
         }
-
         StringBuilder animName = new StringBuilder("Terran_");
         animName.Append(entityType.MyActor.ActorType);
         animName.Append("_Attack_");
         animName.Append(entityType.MyActor.FactionType);
         entityType.SelfAnimator.Play(animName.ToString());
 
-        //base.Enter(entityType);
     }
 
     public override void Execute(ActorController entityType)
     {
-        base.Execute(entityType);
+        if (entityType.TargetEnemy == null)
+        {
+            entityType.GetFSM().ChangeState(Actor_StateBeforeFight.Instance());
+            return;
+        }
+        Hashtable parameters = new Hashtable();
+        parameters.Add("Damage", Time.deltaTime * entityType.MyActor.ActorAttack.Dps);
+        MessageDispatcher.Instance()
+            .DispatchMessage(
+                0f,
+                entityType,
+                entityType.TargetEnemy.GetComponent<ActorController>(),
+                FSMessageType.FSMessageAttack,
+                parameters);
     }
 
     public override void Exit(ActorController entityType)
@@ -202,6 +255,10 @@ public class Actor_StateFight : State<ActorController>
     {
         return base.OnMessage(entityType, telegram);
     }
+
+    #endregion
+
+    #region Methods
 
     private List<GameObject> SeekEnemies(ActorController entityType)
     {
@@ -234,17 +291,20 @@ public class Actor_StateBeforeDie : State<ActorController>
         animName.Append("_Die_");
         animName.Append(entityType.MyActor.FactionType);
         entityType.SelfAnimator.Play(animName.ToString());
-        //base.Enter(entityType);
+        entityType.SelfAnimator.AnimationCompleted = delegate
+            {
+                entityType.GetFSM().ChangeState(Actor_StateDie.Instance());
+            };
     }
 
     public override void Execute(ActorController entityType)
     {
-        base.Execute(entityType);
+        
     }
 
     public override void Exit(ActorController entityType)
     {
-        base.Exit(entityType);
+        
     }
 
     public override bool OnMessage(ActorController entityType, Telegram telegram)
@@ -272,7 +332,7 @@ public class Actor_StateDie : State<ActorController>
 
     public override void Enter(ActorController entityType)
     {
-        base.Enter(entityType);
+        entityType.DestroySelf();
     }
 
     public override void Execute(ActorController entityType)
