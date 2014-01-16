@@ -40,6 +40,7 @@ public class UIViewController : MonoBehaviour
 		selectorPanel.tag = "GameSceneBuildingsSelectorPanel";
 		selectorPanel.transform.parent = this._rootPanel.transform;
 		selectorPanel.transform.localScale = new Vector3(1,1,1);
+		selectorPanel.transform.localPosition = new Vector3(-125,-240, 0);
 	}
 	
 	public void DestroyBuildingsSelectorPanel(bool now)
@@ -58,6 +59,7 @@ public class UIViewController : MonoBehaviour
 		detailPanel.tag = "GameSceneBuildingDetailPanel";
 		detailPanel.transform.parent = this._rootPanel.transform;
 		detailPanel.transform.localScale = new Vector3(1,1,1);
+		detailPanel.transform.localPosition = new Vector3(355, -240, 0);
 	}
 	
 	public void DestroyBuildingDetailPanel(bool now)

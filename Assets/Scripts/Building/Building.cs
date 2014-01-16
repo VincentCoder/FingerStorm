@@ -7,12 +7,10 @@ public class Building
 
     public Building(
         int id,
-        bool isBase,
         BuildingType buildingType,
         FactionType factionType)
     {
         this.BuildingId = id;
-        this.IsBase = isBase;
         this.BuildingType = buildingType;
         this.FactionType = factionType;
         this.Race = this.GetRaceTypeFromBuildingType();
@@ -43,11 +41,6 @@ public class Building
     ///     Gets or sets the faction type.
     /// </summary>
     public FactionType FactionType { get; set; }
-
-    /// <summary>
-    ///     Gets or sets the is base.
-    /// </summary>
-    public bool IsBase { get; set; }
 
     /// <summary>
     /// Gets or sets the produced time.

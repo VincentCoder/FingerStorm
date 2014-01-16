@@ -119,6 +119,7 @@ public class ActorController : BaseGameEntity
 
     public void TakeDamage(float damage)
     {
+		Debug.Log("TakeDamage");
         ActorSpell dodgeSpell = this.MyActor.GetSpell(ActorSpellName.Dodge);
         if (dodgeSpell != null)
         {
@@ -147,6 +148,7 @@ public class ActorController : BaseGameEntity
         {
             this.m_PStateMachine.ChangeState(Actor_StateBeforeDie.Instance());
         }
+		Debug.Log(this._myActor.Hp);
     }
 
     #endregion

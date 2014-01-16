@@ -21,6 +21,8 @@ public class BuildingsManager
     private Dictionary<int, GameObject> allBuildingsDictionary = new Dictionary<int, GameObject>();
 
     private Dictionary<FactionType, GameObject> baseBuildingDictionary = new Dictionary<FactionType, GameObject>();
+	
+	private int buildingIdSeq;
 
     #endregion
 
@@ -48,20 +50,21 @@ public class BuildingsManager
         }
         return instance;
     }
-
-    public void CreateNewBuilding(Building building, Vector3 pos)
+	
+	public void CreateNewBuilding(BuildingType buildingType, FactionType factionType, Vector3 pos)
     {
         GameObject buildingObj = (GameObject)Object.Instantiate(Resources.Load("GameScene/Building"));
         buildingObj.name = "Building";
         buildingObj.transform.localScale = new Vector3(1, 1, 1);
         buildingObj.transform.position = pos;
         BuildingController buildingCtrl = buildingObj.GetComponent<BuildingController>();
-        buildingCtrl.Building = building;
-        if (building.IsBase)
+        buildingCtrl.Building = new Building(this.GenerateNewBuildingId(), buildingType, factionType);
+		string buildingTypeStr = buildingType + "";
+        if (buildingTypeStr.Contains("TheMainCity"))
         {
-            this.baseBuildingDictionary.Add(building.FactionType, buildingObj);
+            this.baseBuildingDictionary.Add(factionType, buildingObj);
         }
-        this.allBuildingsDictionary.Add(building.BuildingId, buildingObj);
+        this.allBuildingsDictionary.Add(buildingCtrl.Building.BuildingId, buildingObj);
     }
 
     public void DestroyAllBuildings()
@@ -89,6 +92,16 @@ public class BuildingsManager
             }
         }
         return baseBuilding;
+    }
+	
+	private int GenerateNewBuildingId()
+    {
+        int result;
+        lock (_lock)
+        {
+            result = (++ this.buildingIdSeq);
+        }
+        return result;
     }
 
     #endregion

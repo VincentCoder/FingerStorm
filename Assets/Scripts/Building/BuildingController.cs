@@ -39,7 +39,9 @@ public class BuildingController : BaseGameEntity
     {
         get
         {
-            return this._myTransform ?? (this._myTransform = this.transform);
+            if(this._myTransform == null)
+				this._myTransform = this.gameObject.transform;
+			return this._myTransform;
         }
         set
         {

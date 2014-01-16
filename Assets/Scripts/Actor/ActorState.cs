@@ -224,6 +224,12 @@ public class Actor_StateBeforeFight : State<ActorController>
     public override void Enter(ActorController entityType)
     {
 		Debug.Log("Enter BeforeFight");
+		
+		StringBuilder animName = new StringBuilder("Terran_");
+        animName.Append(entityType.MyActor.ActorType);
+        animName.Append("_Walk_");
+        animName.Append(entityType.MyActor.FactionType);
+        entityType.SelfAnimator.Play(animName.ToString());
 
         List<GameObject> enemies = entityType.SeekAndGetEnemies();
         if (enemies == null || enemies.Count == 0)
@@ -279,6 +285,7 @@ public class Actor_StateFight : State<ActorController>
     #region Static Fields
 
     //private static Actor_StateFight instance;
+	private float fightClipTime;
 
     #endregion
 
@@ -305,11 +312,9 @@ public class Actor_StateFight : State<ActorController>
         entityType.SelfAnimator.Play(animName.ToString());
         entityType.SelfAnimator.AnimationEventTriggered = (animator, clip, arg3) =>
             {
-                if (arg3 == 5)
-                {
-                    this.SendDamage(entityType);
-                }
+				this.SendDamage(entityType);
             };
+		this.fightClipTime = 0.5f;
     }
 
     public override void Execute(ActorController entityType)
@@ -342,6 +347,7 @@ public class Actor_StateFight : State<ActorController>
     {
         Dictionary<ActorSpellName, ActorSpell> passiveSpellDictionary =
             entityType.MyActor.GetSpellsByType(ActorSpellType.PassiveSpell);
+		bool isBaseAttackSent = false;
         if (passiveSpellDictionary != null)
         {
             foreach (KeyValuePair<ActorSpellName, ActorSpell> kv in passiveSpellDictionary)
@@ -351,13 +357,60 @@ public class Actor_StateFight : State<ActorController>
                 if (probability > 0)
                 {
                     randomIndex = Random.Range(1, 101);
+					if(randomIndex <= probability)
+					{
+						this.SendAttack(entityType, kv.Value.DamageBonusPercent * entityType.MyActor.ActorAttack.Dps * this.fightClipTime);
+						isBaseAttackSent = true;
+					}
                 }
+				int percent = kv.Value.SplashPercent;
+				if(percent > 0)
+				{
+					List<GameObject> enemies = entityType.SeekAndGetEnemiesInDistance(kv.Value.AttackRange);
+					if(enemies != null && enemies.Count != 0)
+					{
+						enemies.ForEach(enemy => 
+						{
+							ActorController actorCtrl = enemy.GetComponent<ActorController>();
+							if(actorCtrl != null && actorCtrl.gameObject != entityType.TargetEnemy)
+							{
+								this.SendAttack(entityType, actorCtrl, 0.5f * entityType.MyActor.ActorAttack.Dps * this.fightClipTime);
+							}
+						});
+					}
+				}
+				probability = kv.Value.StunProbability;
+				if(probability > 0)
+				{
+					randomIndex = Random.Range(1, 101);
+					if(randomIndex <= probability)
+					{
+						this.SendStun(entityType, kv.Value.StunDuration);
+						this.SendAttack(entityType, 0.15f * entityType.MyActor.ActorAttack.Dps * this.fightClipTime);
+					}
+				}
+				probability = kv.Value.DirectDamageProbability;
+				if(probability > 0)
+				{
+					randomIndex = Random.Range(1, 101);
+					if(randomIndex <= probability)
+					{
+						this.SendAttack(entityType, kv.Value.DirectDamage);
+						isBaseAttackSent = true;
+					}
+				}
             }
         }
-        Hashtable parameters = new Hashtable();
+		if(!isBaseAttackSent)
+        	this.SendAttack(entityType, entityType.MyActor.ActorAttack.Dps * this.fightClipTime);
+    }
+	
+	private void SendAttack(ActorController entityType, float damage)
+	{
+		Hashtable parameters = new Hashtable();
         parameters.Add(
             "Damage",
-            Time.deltaTime * entityType.MyActor.ActorAttack.Dps * entityType.SelfAnimator.ClipTimeSeconds);
+            damage);
         MessageDispatcher.Instance()
             .DispatchMessage(
                 0f,
@@ -365,7 +418,30 @@ public class Actor_StateFight : State<ActorController>
                 entityType.TargetEnemy.GetComponent<ActorController>(),
                 FSMessageType.FSMessageAttack,
                 parameters);
-    }
+	}
+						
+	private void SendAttack(ActorController entityType, ActorController targetEntity, float damage)
+	{
+		Hashtable parameters = new Hashtable();
+        parameters.Add(
+            "Damage",
+            damage);
+        MessageDispatcher.Instance()
+            .DispatchMessage(
+                0f,
+                entityType,
+                targetEntity,
+                FSMessageType.FSMessageAttack,
+                parameters);
+	}	
+	
+	private void SendStun(ActorController entityType, float duration)
+	{
+		Hashtable parameters = new Hashtable();
+		parameters.Add("StunDuration", duration);
+		MessageDispatcher.Instance().DispatchMessage(0f, entityType, entityType.TargetEnemy.GetComponent<ActorController>(),
+			FSMessageType.FSMessageStun, parameters);
+	}
 
     #endregion
 }
