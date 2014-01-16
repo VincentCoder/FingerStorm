@@ -41,6 +41,8 @@ public class UIViewController : MonoBehaviour
 		selectorPanel.transform.parent = this._rootPanel.transform;
 		selectorPanel.transform.localScale = new Vector3(1,1,1);
 		selectorPanel.transform.localPosition = new Vector3(-125,-240, 0);
+		
+		this.AddBuildingCard(BuildingType.Terran_Barrack);
 	}
 	
 	public void DestroyBuildingsSelectorPanel(bool now)
@@ -71,9 +73,21 @@ public class UIViewController : MonoBehaviour
 			Destroy(detailPanel);
 	}
 	
-	public void AddBuildingCard()
+	public void AddBuildingCard(BuildingType buildingType)
 	{
+		GameObject buildingCard = (GameObject)Instantiate(Resources.Load("UI/BuildingCard"));
+		buildingCard.name = buildingType;
+		buildingCard.tag = "GameSceneBuildingCard";
+		buildingCard.transform.parent = GameObject.FindWithTag("GameSceneBuildingsSelectorPanel").transform.FindChild("UIGrid").transform;
+		buildingCard.transform.localScale = new Vector3(1,1,1);
+		//buildingCard.transform.localPosition = new Vector3(0,0,0);
 		
+		StringBuilder spriteName = new StringBuilder(string.Empty);
+        spriteName.Append(buildingType);
+        spriteName.Append("_");
+        spriteName.Append(FactionType.Blue);
+		buildingCard.transform.FindChild("Building").gameObject.GetComponent<UISprite>().spriteName = spriteName.ToString();
+		//buildingCard.transform.FindChild("GoldCost").gameObject.GetComponent<UILabel>().text = 
 	}
 	
     public GameController GameController

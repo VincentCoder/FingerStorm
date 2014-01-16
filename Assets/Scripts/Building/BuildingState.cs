@@ -48,7 +48,7 @@ public class Building_StateBeforeBuilt : State<BuildingController>
 
     public override void Enter(BuildingController entityType)
     {
-        StringBuilder spriteName = new StringBuilder("");
+        StringBuilder spriteName = new StringBuilder(string.Empty);
         spriteName.Append(entityType.Building.BuildingType);
         spriteName.Append("_");
         spriteName.Append(entityType.Building.FactionType);

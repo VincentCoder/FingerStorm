@@ -17,7 +17,8 @@ public class UIBuildingCardController : MonoBehaviour
 		{
 			building = (GameObject)Instantiate(Resources.Load("GameScene/Building"));
 		}
-		building.transform.position = new Vector3(UICamera.currentTouch.pos.x, UICamera.currentTouch.pos.y, 0);
+		building.transform.position = new Vector3(UICamera.currentTouch.pos.x + 480, UICamera.currentTouch.pos.y + 320, 0);
+		//UICamera.currentTouch.
 	}
 	
 	private void HandleEvent_Drop(GameObject go, GameObject draggedObject)
