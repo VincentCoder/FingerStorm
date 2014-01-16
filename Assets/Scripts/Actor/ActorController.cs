@@ -1,6 +1,6 @@
 ﻿#region
 
-using System.Text;
+using System.Collections.Generic;
 
 using UnityEngine;
 
@@ -10,19 +10,47 @@ public class ActorController : BaseGameEntity
 {
     #region Fields
 
+    public float moveSpeed;
+
+    public Transform myTransform;
+
     private Actor _myActor;
 
     private tk2dSpriteAnimator _selfAnimator;
 
-    public float moveSpeed;
-    
-    public Transform myTransform;
+    private bool _isStun;
 
-    private StateMachine<ActorController> m_PStateMachine; 
+    private StateMachine<ActorController> m_PStateMachine;
 
     #endregion
 
     #region Public Properties
+
+    public bool IsStun 
+    {
+        get
+        {
+            return this._isStun;
+        }
+        set
+        {
+            this._isStun = value;
+            if (this._isStun)
+            {
+                if (!this.SelfAnimator.Paused)
+                {
+                    this.SelfAnimator.Pause();
+                }
+            }
+            else
+            {
+                if (this.SelfAnimator.Paused)
+                {
+                    this.SelfAnimator.Resume();
+                }
+            }
+        } 
+    }
 
     public Actor MyActor
     {
@@ -37,14 +65,6 @@ public class ActorController : BaseGameEntity
         }
     }
 
-    public GameObject TargetBuilding { get; set; }
-
-    public GameObject TargetEnemy { get; set; }
-
-    #endregion
-
-    #region Properties
-
     public tk2dSpriteAnimator SelfAnimator
     {
         get
@@ -54,6 +74,78 @@ public class ActorController : BaseGameEntity
                 this._selfAnimator = this.gameObject.GetComponent<tk2dSpriteAnimator>();
             }
             return this._selfAnimator;
+        }
+    }
+
+    public GameObject TargetBuilding { get; set; }
+
+    public GameObject TargetEnemy { get; set; }
+
+    #endregion
+
+    #region Public Methods and Operators
+
+    public void DestroySelf()
+    {
+    	ActorsManager.GetInstance().RemoveActorById(this._myActor.ActorId);
+        Destroy(this.gameObject);
+    }
+
+    public StateMachine<ActorController> GetFSM()
+    {
+        return this.m_PStateMachine;
+    }
+
+    public override bool HandleMessage(Telegram telegram)
+    {
+        return this.m_PStateMachine.HandleMessage(telegram);
+    }
+
+    public List<GameObject> SeekAndGetEnemies()
+    {
+        return ActorsManager.GetInstance()
+            .GetEnemyActorsInDistanceAndSortByDistance(this, this.MyActor.ActorAttack.ViewDistance);
+    }
+
+    public List<GameObject> SeekAndGetEnemiesInDistance(int distance)
+    {
+        return ActorsManager.GetInstance().GetEnemyActorsInDistanceAndSortByDistance(this, distance);
+    }
+
+    public bool SeekEnemies()
+    {
+        return ActorsManager.GetInstance().HasEnemyActorsInDistance(this, this.MyActor.ActorAttack.ViewDistance);
+    }
+
+    public void TakeDamage(float damage)
+    {
+        ActorSpell dodgeSpell = this.MyActor.GetSpell(ActorSpellName.Dodge);
+        if (dodgeSpell != null)
+        {
+            int randomIndex = Random.Range(1, 101);
+            if (randomIndex <= dodgeSpell.EvasiveProbability)
+            {
+                return;
+            }
+        }
+
+        if (this.MyActor.ActorArmor.ArmorAmount > 0f)
+        {
+            float dValue = this.MyActor.ActorArmor.ArmorAmount - damage;
+            if (dValue >= 0)
+            {
+                this.MyActor.ActorArmor.ArmorAmount = dValue;
+            }
+            else
+            {
+                this.MyActor.ActorArmor.ArmorAmount = 0f;
+                damage = Mathf.Abs(dValue);
+            }
+        }
+        this.MyActor.Hp -= damage;
+        if (this.MyActor.Hp <= 0)
+        {
+            this.m_PStateMachine.ChangeState(Actor_StateBeforeDie.Instance());
         }
     }
 
@@ -69,8 +161,10 @@ public class ActorController : BaseGameEntity
 
     private void InitActor()
     {
-        if(this._myActor == null)
+        if (this._myActor == null)
+        {
             Debug.LogError("Actor cannot be null !");
+        }
         this.m_PStateMachine = new StateMachine<ActorController>(this);
         this.m_PStateMachine.SetCurrentState(Actor_StateWalk.Instance());
         this.m_PStateMachine.SetGlobalState(Actor_GlobalState.Instance());
@@ -78,44 +172,10 @@ public class ActorController : BaseGameEntity
 
     private void Update()
     {
-        if(this.m_PStateMachine != null)
-            this.m_PStateMachine.SMUpdate();
-    }
-
-    public StateMachine<ActorController> GetFSM()
-    {
-        return this.m_PStateMachine;
-    }
-
-    public override bool HandleMessage(Telegram telegram)
-    {
-        return this.m_PStateMachine.HandleMessage(telegram);
-    }
-
-    public void TakeDamage(float damage)
-    {
-        if (this.MyActor.ActorArmor.ArmorAmount > 0f)
+        if (this.m_PStateMachine != null)
         {
-            float dValue = this.MyActor.ActorArmor.ArmorAmount - damage;
-            if (dValue >= 0)
-            {
-                this.MyActor.ActorArmor.ArmorAmount = dValue;
-            }
-            else
-            {
-                this.MyActor.ActorArmor.ArmorAmount = 0f;
-                damage = Mathf.Abs(dValue);
-            }
+            this.m_PStateMachine.SMUpdate();
         }
-        this.MyActor.Hp -= damage;
-        if(this.MyActor.Hp <= 0)
-            this.m_PStateMachine.ChangeState(Actor_StateBeforeDie.Instance());
-    }
-
-    public void DestroySelf()
-    {
-		ActorsManager.GetInstance().RemoveActorById(this._myActor.ActorId);
-        Destroy(this.gameObject);
     }
 
     #endregion

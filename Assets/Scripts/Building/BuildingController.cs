@@ -1,7 +1,5 @@
 ﻿#region
 
-using System.Text;
-
 using UnityEngine;
 
 #endregion
@@ -12,15 +10,11 @@ public class BuildingController : BaseGameEntity
 
     private Building _building;
 
-    private int _dispatchInterval;
-
-    private float _dispatchIntervalCounter;
+    private Transform _myTransform;
 
     private tk2dSprite _selfSprite;
 
-    private ActorsManager actorsManager;
-
-    private Transform myTransform;
+    private StateMachine<BuildingController> m_PStateMachine;
 
     #endregion
 
@@ -39,24 +33,21 @@ public class BuildingController : BaseGameEntity
         }
     }
 
-    public int DispatchInterval
+    public int DispatchInterval { get; set; }
+
+    public Transform MyTransform
     {
         get
         {
-            return this._dispatchInterval;
+            return this._myTransform ?? (this._myTransform = this.transform);
         }
         set
         {
-            this._dispatchInterval = value;
-            this._dispatchIntervalCounter = 0.0f;
+            this._myTransform = value;
         }
     }
 
-    #endregion
-
-    #region Properties
-
-    private tk2dSprite SelfSprite
+    public tk2dSprite SelfSprite
     {
         get
         {
@@ -72,29 +63,24 @@ public class BuildingController : BaseGameEntity
 
     #region Public Methods and Operators
 
-    private void Awake()
-    {
-        this.myTransform = this.transform;
-    }
-
     public void DestroySelf()
     {
         Destroy(this.gameObject);
     }
 
+    public StateMachine<BuildingController> GetFSM()
+    {
+        return this.m_PStateMachine;
+    }
+
     public override bool HandleMessage(Telegram telegram)
     {
-        return base.HandleMessage(telegram);
+        return this.m_PStateMachine.HandleMessage(telegram);
     }
 
     #endregion
 
     #region Methods
-
-    private void DispatchActor()
-    {
-        this.actorsManager.CreateNewActor(this.Building.FactionType, this.Building.ActorType, this.myTransform.position);
-    }
 
     private void InitBuilding()
     {
@@ -102,26 +88,17 @@ public class BuildingController : BaseGameEntity
         {
             this.DispatchInterval = this.Building.ProducedTime;
 
-            var spriteName = new StringBuilder("");
-            spriteName.Append(this.Building.BuildingType);
-            spriteName.Append("_");
-            spriteName.Append(this.Building.FactionType);
-            this.SelfSprite.SetSprite(spriteName.ToString());
+            this.m_PStateMachine = new StateMachine<BuildingController>(this);
+            this.m_PStateMachine.SetCurrentState(Building_StateBeforeBuilt.Instance());
+            this.m_PStateMachine.SetGlobalState(Building_GlobalState.Instance());
         }
-    }
-
-    private void Start()
-    {
-        this.actorsManager = ActorsManager.GetInstance();
     }
 
     private void Update()
     {
-        this._dispatchIntervalCounter += Time.deltaTime;
-        if (this._dispatchIntervalCounter >= this._dispatchInterval)
+        if (this.m_PStateMachine != null)
         {
-            this.DispatchActor();
-            this._dispatchIntervalCounter = 0.0f;
+            this.m_PStateMachine.SMUpdate();
         }
     }
 

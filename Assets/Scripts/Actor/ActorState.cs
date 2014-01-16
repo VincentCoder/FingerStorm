@@ -10,9 +10,13 @@ using UnityEngine;
 
 public class Actor_GlobalState : State<ActorController>
 {
-    #region Static Fields
+    #region Fields
 
-    private static Actor_GlobalState instance;
+    private Dictionary<ActorSpellName, ActorSpell> activeSpellDictionary;
+
+    private Dictionary<ActorSpellName, float> releaseCounterDictionary;
+
+    private float stunDuration;
 
     #endregion
 
@@ -20,22 +24,51 @@ public class Actor_GlobalState : State<ActorController>
 
     public static Actor_GlobalState Instance()
     {
-        return instance ?? (instance = new Actor_GlobalState());
+        return new Actor_GlobalState();
     }
 
     public override void Enter(ActorController entityType)
     {
-        base.Enter(entityType);
+        this.activeSpellDictionary = entityType.MyActor.GetSpellsByType(ActorSpellType.ActiveSpell);
+        if (this.activeSpellDictionary != null)
+        {
+            this.releaseCounterDictionary = new Dictionary<ActorSpellName, float>();
+            foreach (KeyValuePair<ActorSpellName, ActorSpell> kv in this.activeSpellDictionary)
+            {
+                this.releaseCounterDictionary.Add(kv.Key, 0f);
+            }
+        }
     }
 
     public override void Execute(ActorController entityType)
     {
-        base.Execute(entityType);
+        if (entityType.IsStun)
+        {
+            this.stunDuration -= Time.deltaTime;
+            if (this.stunDuration <= 0)
+            {
+                entityType.IsStun = false;
+            }
+            return;
+        }
+        if (this.releaseCounterDictionary != null && this.activeSpellDictionary != null)
+        {
+            foreach (KeyValuePair<ActorSpellName, float> kv in this.releaseCounterDictionary)
+            {
+                float temp = kv.Value + Time.deltaTime;
+                ActorSpell spell = this.activeSpellDictionary[kv.Key];
+                if (temp >= spell.ReleaseInterval)
+                {
+                    this.ReleaseActiveSpell(entityType, spell);
+                    temp = 0f;
+                }
+                this.releaseCounterDictionary[kv.Key] = temp;
+            }
+        }
     }
 
     public override void Exit(ActorController entityType)
     {
-        base.Exit(entityType);
     }
 
     public override bool OnMessage(ActorController entityType, Telegram telegram)
@@ -48,7 +81,56 @@ public class Actor_GlobalState : State<ActorController>
                 return true;
             }
         }
+        else if (telegram.Msg == FSMessageType.FSMessageStun)
+        {
+            if (telegram.Parameters.ContainsKey("StunDuration"))
+            {
+                this.stunDuration = Mathf.Max((float)telegram.Parameters["StunDuration"], this.stunDuration);
+                entityType.IsStun = true;
+                return true;
+            }
+        }
         return false;
+    }
+
+    public void ReleaseActiveSpell(ActorController entityType, ActorSpell actorSpell)
+    {
+        switch (actorSpell.ActorSpellName)
+        {
+            case ActorSpellName.MortarAttack:
+                {
+                    List<GameObject> enemies = entityType.SeekAndGetEnemiesInDistance(actorSpell.AttackRange);
+                    if (enemies != null && enemies.Count != 0)
+                    {
+                        this.SendDamage(entityType, actorSpell.DirectDamage);
+                    }
+                    break;
+                }
+            case ActorSpellName.ArcaneExplosion:
+                {
+                    List<GameObject> enemies = entityType.SeekAndGetEnemiesInDistance(actorSpell.AttackRange);
+                    if (enemies != null && enemies.Count != 0)
+                    {
+                        this.SendDamage(entityType, actorSpell.DirectDamage);
+                    }
+                    break;
+                }
+        }
+    }
+
+    private void SendDamage ( ActorController entityType, int damage )
+    {
+        Hashtable parameters = new Hashtable();
+        parameters.Add(
+            "Damage",
+            damage);
+        MessageDispatcher.Instance()
+            .DispatchMessage(
+                0f,
+                entityType,
+                entityType.TargetEnemy.GetComponent<ActorController>(),
+                FSMessageType.FSMessageAttack,
+                parameters);
     }
 
     #endregion
@@ -90,6 +172,8 @@ public class Actor_StateWalk : State<ActorController>
 
     public override void Execute(ActorController entityType)
     {
+        if(entityType.IsStun)
+            return;
         Vector3 moveDistance = entityType.moveSpeed * Time.deltaTime
                                * (entityType.TargetBuilding.transform.position - entityType.myTransform.position)
                                      .normalized;
@@ -98,7 +182,7 @@ public class Actor_StateWalk : State<ActorController>
         this.seekEnemyCounter += Time.deltaTime;
         if (this.seekEnemyCounter >= this.seekEnemyInterval)
         {
-            if (this.SeekEnemies(entityType))
+            if (entityType.SeekEnemies())
             {
                 entityType.GetFSM().ChangeState(Actor_StateBeforeFight.Instance());
             }
@@ -116,16 +200,6 @@ public class Actor_StateWalk : State<ActorController>
     public override bool OnMessage(ActorController entityType, Telegram telegram)
     {
         return base.OnMessage(entityType, telegram);
-    }
-
-    #endregion
-
-    #region Methods
-
-    private bool SeekEnemies(ActorController entityType)
-    {
-        return ActorsManager.GetInstance()
-            .HasEnemyActorsInDistance(entityType, entityType.MyActor.ActorAttack.ViewDistance);
     }
 
     #endregion
@@ -150,7 +224,8 @@ public class Actor_StateBeforeFight : State<ActorController>
     public override void Enter(ActorController entityType)
     {
 		Debug.Log("Enter BeforeFight");
-        List<GameObject> enemies = this.SeekEnemies(entityType);
+
+        List<GameObject> enemies = entityType.SeekAndGetEnemies();
         if (enemies == null || enemies.Count == 0)
         {
             entityType.GetFSM().ChangeState(Actor_StateWalk.Instance());
@@ -162,6 +237,9 @@ public class Actor_StateBeforeFight : State<ActorController>
 
     public override void Execute(ActorController entityType)
     {
+        if(entityType.IsStun)
+            return;
+
         if (entityType.TargetEnemy == null)
         {
             entityType.GetFSM().ChangeState(Actor_StateWalk.Instance());
@@ -174,7 +252,7 @@ public class Actor_StateBeforeFight : State<ActorController>
         entityType.myTransform.Translate(moveDistance, Space.World);
 
         if ((entityType.TargetEnemy.transform.position - entityType.myTransform.position).sqrMagnitude
-            <= Mathf.Max(Mathf.Pow(entityType.MyActor.ActorAttack.AttackRange, 2), Mathf.Pow(20,2)))
+            <= Mathf.Max(Mathf.Pow(entityType.MyActor.ActorAttack.AttackRange, 2), Mathf.Pow(20, 2)))
         {
             entityType.GetFSM().ChangeState(Actor_StateFight.Instance());
         }
@@ -191,16 +269,6 @@ public class Actor_StateBeforeFight : State<ActorController>
     public override bool OnMessage(ActorController entityType, Telegram telegram)
     {
         return base.OnMessage(entityType, telegram);
-    }
-
-    #endregion
-
-    #region Methods
-
-    private List<GameObject> SeekEnemies(ActorController entityType)
-    {
-        return ActorsManager.GetInstance()
-            .GetEnemyActorsInDistanceAndSortByDistance(entityType, entityType.MyActor.ActorAttack.ViewDistance);
     }
 
     #endregion
@@ -235,25 +303,24 @@ public class Actor_StateFight : State<ActorController>
         animName.Append("_Attack_");
         animName.Append(entityType.MyActor.FactionType);
         entityType.SelfAnimator.Play(animName.ToString());
-
+        entityType.SelfAnimator.AnimationEventTriggered = (animator, clip, arg3) =>
+            {
+                if (arg3 == 5)
+                {
+                    this.SendDamage(entityType);
+                }
+            };
     }
 
     public override void Execute(ActorController entityType)
     {
+        if(entityType.IsStun)
+            return;
+        
         if (entityType.TargetEnemy == null)
         {
             entityType.GetFSM().ChangeState(Actor_StateBeforeFight.Instance());
-            return;
         }
-        Hashtable parameters = new Hashtable();
-        parameters.Add("Damage", Time.deltaTime * entityType.MyActor.ActorAttack.Dps);
-        MessageDispatcher.Instance()
-            .DispatchMessage(
-                0f,
-                entityType,
-                entityType.TargetEnemy.GetComponent<ActorController>(),
-                FSMessageType.FSMessageAttack,
-                parameters);
     }
 
     public override void Exit(ActorController entityType)
@@ -271,10 +338,33 @@ public class Actor_StateFight : State<ActorController>
 
     #region Methods
 
-    private List<GameObject> SeekEnemies(ActorController entityType)
+    private void SendDamage(ActorController entityType)
     {
-        return ActorsManager.GetInstance()
-            .GetEnemyActorsInDistanceAndSortByDistance(entityType, entityType.MyActor.ActorAttack.AttackRange);
+        Dictionary<ActorSpellName, ActorSpell> passiveSpellDictionary =
+            entityType.MyActor.GetSpellsByType(ActorSpellType.PassiveSpell);
+        if (passiveSpellDictionary != null)
+        {
+            foreach (KeyValuePair<ActorSpellName, ActorSpell> kv in passiveSpellDictionary)
+            {
+                float probability = kv.Value.DamageBonusPercentProbability;
+                int randomIndex;
+                if (probability > 0)
+                {
+                    randomIndex = Random.Range(1, 101);
+                }
+            }
+        }
+        Hashtable parameters = new Hashtable();
+        parameters.Add(
+            "Damage",
+            Time.deltaTime * entityType.MyActor.ActorAttack.Dps * entityType.SelfAnimator.ClipTimeSeconds);
+        MessageDispatcher.Instance()
+            .DispatchMessage(
+                0f,
+                entityType,
+                entityType.TargetEnemy.GetComponent<ActorController>(),
+                FSMessageType.FSMessageAttack,
+                parameters);
     }
 
     #endregion
@@ -303,20 +393,16 @@ public class Actor_StateBeforeDie : State<ActorController>
         animName.Append("_Die_");
         animName.Append(entityType.MyActor.FactionType);
         entityType.SelfAnimator.Play(animName.ToString());
-        entityType.SelfAnimator.AnimationCompleted = delegate
-            {
-                entityType.GetFSM().ChangeState(Actor_StateDie.Instance());
-            };
+        entityType.SelfAnimator.AnimationCompleted =
+            delegate { entityType.GetFSM().ChangeState(Actor_StateDie.Instance()); };
     }
 
     public override void Execute(ActorController entityType)
     {
-        
     }
 
     public override void Exit(ActorController entityType)
     {
-        
     }
 
     public override bool OnMessage(ActorController entityType, Telegram telegram)

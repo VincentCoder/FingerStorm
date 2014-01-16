@@ -1,6 +1,8 @@
 ﻿#region
 
 using System.Collections.Generic;
+using System.Linq;
+using System.Security.Permissions;
 
 #endregion
 
@@ -23,11 +25,11 @@ public class Actor
 
     #region Public Properties
 
-    public int ActorId { get; set; }
-
     public ActorArmor ActorArmor { get; set; }
 
     public ActorAttack ActorAttack { get; set; }
+
+    public int ActorId { get; set; }
 
     public ActorType ActorType { get; set; }
 
@@ -35,7 +37,7 @@ public class Actor
 
     public float Hp { get; set; }
 
-    public Dictionary<ActorSpellType, ActorSpell> SpellDictionary { get; set; }
+    public Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>> SpellDictionary { get; set; }
 
     #endregion
 
@@ -314,9 +316,9 @@ public class Actor
         }
     }
 
-    private Dictionary<ActorSpellType, ActorSpell> LoadSpellsFromConfig()
+    private Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>> LoadSpellsFromConfig ()
     {
-        Dictionary<ActorSpellType, ActorSpell> dictionary = new Dictionary<ActorSpellType, ActorSpell>();
+        Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>> dictionary = new Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>>();
         string spellStr;
         switch (this.ActorType)
         {
@@ -385,48 +387,69 @@ public class Actor
         int length = spellArr.Length;
         for (int i = 0; i < length; i ++)
         {
+            ActorSpell actorSpell;
             string spell = spellArr[i];
             switch (spell)
             {
                 case "None":
-                    dictionary.Add(ActorSpellType.None, new ActorSpell(ActorSpellType.None));
+                        actorSpell = new ActorSpell(ActorSpellName.None, this.ActorType);
                     break;
                 case "Dodge":
-                    dictionary.Add(ActorSpellType.Dodge, new ActorSpell(ActorSpellType.Dodge));
+                        actorSpell = new ActorSpell(ActorSpellName.Dodge, this.ActorType);
                     break;
                 case "CirticalStrike":
-                    dictionary.Add(ActorSpellType.CirticalStrike, new ActorSpell(ActorSpellType.CirticalStrike));
+                        actorSpell = new ActorSpell(ActorSpellName.CirticalStrike, this.ActorType);
                     break;
                 case "HeadShot":
-                    dictionary.Add(ActorSpellType.HeadShot, new ActorSpell(ActorSpellType.HeadShot));
+                    actorSpell = new ActorSpell(ActorSpellName.HeadShot, this.ActorType);
                     break;
                 case "SplashDamage":
-                    dictionary.Add(ActorSpellType.SplashDamage, new ActorSpell(ActorSpellType.SplashDamage));
+                    actorSpell = new ActorSpell(ActorSpellName.SplashDamage, this.ActorType);
                     break;
                 case "MortarAttack":
-                    dictionary.Add(ActorSpellType.MortarAttack, new ActorSpell(ActorSpellType.MortarAttack));
+                    actorSpell = new ActorSpell(ActorSpellName.MortarAttack, this.ActorType);
                     break;
                 case "ArcaneExplosion":
-                    dictionary.Add(ActorSpellType.ArcaneExplosion, new ActorSpell(ActorSpellType.ArcaneExplosion));
+                    actorSpell = new ActorSpell(ActorSpellName.ArcaneExplosion, this.ActorType);
                     break;
                 case "Bash":
-                    dictionary.Add(ActorSpellType.Bash, new ActorSpell(ActorSpellType.Bash));
+                    actorSpell = new ActorSpell(ActorSpellName.Bash, this.ActorType);
                     break;
                 case "ChainLightning":
-                    dictionary.Add(ActorSpellType.ChainLightning, new ActorSpell(ActorSpellType.ChainLightning));
+                    actorSpell = new ActorSpell(ActorSpellName.ChainLightning, this.ActorType);
                     break;
                 case "DivineBlessing":
-                    dictionary.Add(ActorSpellType.DivineBlessing, new ActorSpell(ActorSpellType.DivineBlessing));
+                    actorSpell = new ActorSpell(ActorSpellName.DivineBlessing, this.ActorType);
                     break;
                 case "Zap":
-                    dictionary.Add(ActorSpellType.Zap, new ActorSpell(ActorSpellType.Zap));
+                    actorSpell = new ActorSpell(ActorSpellName.Zap, this.ActorType);
                     break;
                 default:
-                    dictionary.Add(ActorSpellType.None, new ActorSpell(ActorSpellType.None));
+                    actorSpell = new ActorSpell(ActorSpellName.None, this.ActorType);
                     break;
             }
+            if (!dictionary.ContainsKey(actorSpell.ActorSpellType))
+            {
+                dictionary.Add(actorSpell.ActorSpellType, new Dictionary<ActorSpellName, ActorSpell>());
+            }
+            dictionary[actorSpell.ActorSpellType].Add(actorSpell.ActorSpellName, actorSpell);
         }
         return dictionary;
+    }
+
+    public bool HasSpell(ActorSpellName spellName)
+    {
+        return this.SpellDictionary.Any(kv => kv.Value.ContainsKey(spellName));
+    }
+
+    public ActorSpell GetSpell(ActorSpellName spellName)
+    {
+        return (from kv in this.SpellDictionary where kv.Value.ContainsKey(spellName) select kv.Value[spellName]).FirstOrDefault();
+    }
+
+    public Dictionary<ActorSpellName, ActorSpell> GetSpellsByType ( ActorSpellType spellType )
+    {
+        return this.SpellDictionary.ContainsKey(spellType) ? this.SpellDictionary[spellType] : null;
     }
 
     #endregion

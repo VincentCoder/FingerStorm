@@ -2,5 +2,6 @@
 
 public enum FSMessageType
 { 
-    FSMessageAttack
+    FSMessageAttack,
+    FSMessageStun
 }
