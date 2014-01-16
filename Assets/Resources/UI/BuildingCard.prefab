@@ -90,6 +90,7 @@ GameObject:
   - 4: {fileID: 400010}
   - 65: {fileID: 6500000}
   - 114: {fileID: 11400010}
+  - 114: {fileID: 11400012}
   m_Layer: 8
   m_Name: BuildingCard
   m_TagString: GameSceneBuildingCard
@@ -347,6 +348,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrollView: {fileID: 0}
   draggablePanel: {fileID: 0}
+--- !u!114 &11400012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89aa25ea768494242a058690e9d63d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
