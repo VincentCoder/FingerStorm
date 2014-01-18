@@ -79,6 +79,15 @@ public class BuildingController : BaseGameEntity
     {
         return this.m_PStateMachine.HandleMessage(telegram);
     }
+	
+	public void TakeDamage(float damage)
+	{
+		this.Building.Hp -= damage;
+		if(this.Building.Hp <= 0)
+		{
+			this.m_PStateMachine.ChangeState(Building_StateBeforeDestroy.Instance());
+		}
+	}
 
     #endregion
 

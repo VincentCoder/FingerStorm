@@ -63,6 +63,7 @@ MonoBehaviour:
   forceSquareAtlas: 0
   atlasWastage: 41.5931702
   allowMultipleAtlases: 0
+  removeDuplicates: 1
   textureParams:
   - name: Actor_Terran_Crusader_Attack_Blue_001
     disableTrimming: 0
@@ -80,6 +81,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -102,6 +104,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Attack_Blue_002
     disableTrimming: 0
     additive: 0
@@ -118,6 +121,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -140,6 +144,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Attack_Blue_003
     disableTrimming: 0
     additive: 0
@@ -156,6 +161,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -178,6 +184,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Attack_Blue_004
     disableTrimming: 0
     additive: 0
@@ -194,6 +201,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -216,6 +224,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Attack_Blue_005
     disableTrimming: 0
     additive: 0
@@ -232,6 +241,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -254,6 +264,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Attack_Blue_006
     disableTrimming: 0
     additive: 0
@@ -270,6 +281,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -292,6 +304,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Attack_Red_001
     disableTrimming: 0
     additive: 0
@@ -308,6 +321,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -330,6 +344,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Attack_Red_002
     disableTrimming: 0
     additive: 0
@@ -346,6 +361,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -368,6 +384,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Attack_Red_003
     disableTrimming: 0
     additive: 0
@@ -384,6 +401,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -406,6 +424,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Attack_Red_004
     disableTrimming: 0
     additive: 0
@@ -422,6 +441,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -444,6 +464,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Attack_Red_005
     disableTrimming: 0
     additive: 0
@@ -460,6 +481,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -482,6 +504,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Attack_Red_006
     disableTrimming: 0
     additive: 0
@@ -498,6 +521,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -520,6 +544,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Die_Blue_001
     disableTrimming: 0
     additive: 0
@@ -536,6 +561,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -558,6 +584,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Die_Blue_002
     disableTrimming: 0
     additive: 0
@@ -574,6 +601,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -596,6 +624,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Die_Blue_003
     disableTrimming: 0
     additive: 0
@@ -612,6 +641,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -634,6 +664,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Die_Blue_004
     disableTrimming: 0
     additive: 0
@@ -650,6 +681,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -672,6 +704,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Die_Blue_005
     disableTrimming: 0
     additive: 0
@@ -688,6 +721,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -710,6 +744,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Die_Blue_006
     disableTrimming: 0
     additive: 0
@@ -726,6 +761,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -748,6 +784,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Die_Red_001
     disableTrimming: 0
     additive: 0
@@ -764,6 +801,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -786,6 +824,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Die_Red_002
     disableTrimming: 0
     additive: 0
@@ -802,6 +841,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -824,6 +864,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Die_Red_003
     disableTrimming: 0
     additive: 0
@@ -840,6 +881,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -862,6 +904,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Die_Red_004
     disableTrimming: 0
     additive: 0
@@ -878,6 +921,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -900,6 +944,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Die_Red_005
     disableTrimming: 0
     additive: 0
@@ -916,6 +961,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -938,6 +984,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Die_Red_006
     disableTrimming: 0
     additive: 0
@@ -954,6 +1001,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -976,6 +1024,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Walk_Blue_001
     disableTrimming: 0
     additive: 0
@@ -992,6 +1041,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -1014,6 +1064,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Walk_Blue_002
     disableTrimming: 0
     additive: 0
@@ -1030,6 +1081,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -1052,6 +1104,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Walk_Blue_003
     disableTrimming: 0
     additive: 0
@@ -1068,6 +1121,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -1090,6 +1144,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Walk_Blue_004
     disableTrimming: 0
     additive: 0
@@ -1106,6 +1161,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -1128,6 +1184,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Walk_Blue_005
     disableTrimming: 0
     additive: 0
@@ -1144,6 +1201,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -1166,6 +1224,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Walk_Blue_006
     disableTrimming: 0
     additive: 0
@@ -1182,6 +1241,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -1204,6 +1264,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Walk_Red_001
     disableTrimming: 0
     additive: 0
@@ -1220,6 +1281,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -1242,6 +1304,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Walk_Red_002
     disableTrimming: 0
     additive: 0
@@ -1258,6 +1321,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -1280,6 +1344,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Walk_Red_003
     disableTrimming: 0
     additive: 0
@@ -1296,6 +1361,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -1318,6 +1384,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Walk_Red_004
     disableTrimming: 0
     additive: 0
@@ -1334,6 +1401,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -1356,6 +1424,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Walk_Red_005
     disableTrimming: 0
     additive: 0
@@ -1372,6 +1441,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -1394,6 +1464,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Walk_Red_006
     disableTrimming: 0
     additive: 0
@@ -1410,6 +1481,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -1432,6 +1504,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Attack_Blue_001
     disableTrimming: 0
     additive: 0
@@ -1448,6 +1521,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -1470,6 +1544,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Attack_Blue_002
     disableTrimming: 0
     additive: 0
@@ -1486,6 +1561,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -1508,6 +1584,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Attack_Blue_003
     disableTrimming: 0
     additive: 0
@@ -1524,6 +1601,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -1546,6 +1624,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Attack_Blue_004
     disableTrimming: 0
     additive: 0
@@ -1562,6 +1641,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -1584,6 +1664,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Attack_Blue_005
     disableTrimming: 0
     additive: 0
@@ -1600,6 +1681,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -1622,6 +1704,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Attack_Blue_006
     disableTrimming: 0
     additive: 0
@@ -1638,6 +1721,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -1660,6 +1744,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Attack_Red_001
     disableTrimming: 0
     additive: 0
@@ -1676,6 +1761,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -1698,6 +1784,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Attack_Red_002
     disableTrimming: 0
     additive: 0
@@ -1714,6 +1801,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -1736,6 +1824,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Attack_Red_003
     disableTrimming: 0
     additive: 0
@@ -1752,6 +1841,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -1774,6 +1864,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Attack_Red_004
     disableTrimming: 0
     additive: 0
@@ -1790,6 +1881,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -1812,6 +1904,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Attack_Red_005
     disableTrimming: 0
     additive: 0
@@ -1828,6 +1921,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -1850,6 +1944,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Attack_Red_006
     disableTrimming: 0
     additive: 0
@@ -1866,6 +1961,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -1888,6 +1984,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Die_Blue_001
     disableTrimming: 0
     additive: 0
@@ -1904,6 +2001,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -1926,6 +2024,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Die_Blue_002
     disableTrimming: 0
     additive: 0
@@ -1942,6 +2041,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -1964,6 +2064,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Die_Blue_003
     disableTrimming: 0
     additive: 0
@@ -1980,6 +2081,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -2002,6 +2104,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Die_Blue_004
     disableTrimming: 0
     additive: 0
@@ -2018,6 +2121,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -2040,6 +2144,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Die_Blue_005
     disableTrimming: 0
     additive: 0
@@ -2056,6 +2161,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -2078,6 +2184,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Die_Blue_006
     disableTrimming: 0
     additive: 0
@@ -2094,6 +2201,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -2116,6 +2224,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Die_Red_001
     disableTrimming: 0
     additive: 0
@@ -2132,6 +2241,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -2154,6 +2264,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Die_Red_002
     disableTrimming: 0
     additive: 0
@@ -2170,6 +2281,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -2192,6 +2304,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Die_Red_003
     disableTrimming: 0
     additive: 0
@@ -2208,6 +2321,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -2230,6 +2344,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Die_Red_004
     disableTrimming: 0
     additive: 0
@@ -2246,6 +2361,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -2268,6 +2384,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Die_Red_005
     disableTrimming: 0
     additive: 0
@@ -2284,6 +2401,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -2306,6 +2424,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Die_Red_006
     disableTrimming: 0
     additive: 0
@@ -2322,6 +2441,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -2344,6 +2464,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Walk_Blue_001
     disableTrimming: 0
     additive: 0
@@ -2360,6 +2481,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -2382,6 +2504,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Walk_Blue_002
     disableTrimming: 0
     additive: 0
@@ -2398,6 +2521,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -2420,6 +2544,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Walk_Blue_003
     disableTrimming: 0
     additive: 0
@@ -2436,6 +2561,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -2458,6 +2584,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Walk_Blue_004
     disableTrimming: 0
     additive: 0
@@ -2474,6 +2601,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -2496,6 +2624,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Walk_Blue_005
     disableTrimming: 0
     additive: 0
@@ -2512,6 +2641,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -2534,6 +2664,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Walk_Blue_006
     disableTrimming: 0
     additive: 0
@@ -2550,6 +2681,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -2572,6 +2704,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Walk_Red_001
     disableTrimming: 0
     additive: 0
@@ -2588,6 +2721,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -2610,6 +2744,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Walk_Red_002
     disableTrimming: 0
     additive: 0
@@ -2626,6 +2761,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -2648,6 +2784,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Walk_Red_003
     disableTrimming: 0
     additive: 0
@@ -2664,6 +2801,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -2686,6 +2824,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Walk_Red_004
     disableTrimming: 0
     additive: 0
@@ -2702,6 +2841,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -2724,6 +2864,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Walk_Red_005
     disableTrimming: 0
     additive: 0
@@ -2740,6 +2881,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -2762,6 +2904,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Walk_Red_006
     disableTrimming: 0
     additive: 0
@@ -2778,6 +2921,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -2800,6 +2944,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Attack_Blue_001
     disableTrimming: 0
     additive: 0
@@ -2816,6 +2961,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -2838,6 +2984,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Attack_Blue_002
     disableTrimming: 0
     additive: 0
@@ -2854,6 +3001,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -2876,6 +3024,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Attack_Blue_003
     disableTrimming: 0
     additive: 0
@@ -2892,6 +3041,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -2914,6 +3064,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Attack_Blue_004
     disableTrimming: 0
     additive: 0
@@ -2930,6 +3081,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -2952,6 +3104,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Attack_Blue_005
     disableTrimming: 0
     additive: 0
@@ -2968,6 +3121,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -2990,6 +3144,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Attack_Blue_006
     disableTrimming: 0
     additive: 0
@@ -3006,6 +3161,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -3028,6 +3184,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Attack_Red_001
     disableTrimming: 0
     additive: 0
@@ -3044,6 +3201,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -3066,6 +3224,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Attack_Red_002
     disableTrimming: 0
     additive: 0
@@ -3082,6 +3241,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -3104,6 +3264,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Attack_Red_003
     disableTrimming: 0
     additive: 0
@@ -3120,6 +3281,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -3142,6 +3304,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Attack_Red_004
     disableTrimming: 0
     additive: 0
@@ -3158,6 +3321,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -3180,6 +3344,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Attack_Red_005
     disableTrimming: 0
     additive: 0
@@ -3196,6 +3361,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -3218,6 +3384,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Attack_Red_006
     disableTrimming: 0
     additive: 0
@@ -3234,6 +3401,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -3256,6 +3424,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Die_Blue_001
     disableTrimming: 0
     additive: 0
@@ -3272,6 +3441,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -3294,6 +3464,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Die_Blue_002
     disableTrimming: 0
     additive: 0
@@ -3310,6 +3481,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -3332,6 +3504,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Die_Blue_003
     disableTrimming: 0
     additive: 0
@@ -3348,6 +3521,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -3370,6 +3544,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Die_Blue_004
     disableTrimming: 0
     additive: 0
@@ -3386,6 +3561,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -3408,6 +3584,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Die_Blue_005
     disableTrimming: 0
     additive: 0
@@ -3424,6 +3601,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -3446,6 +3624,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Die_Blue_006
     disableTrimming: 0
     additive: 0
@@ -3462,6 +3641,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -3484,6 +3664,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Die_Red_001
     disableTrimming: 0
     additive: 0
@@ -3500,6 +3681,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -3522,6 +3704,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Die_Red_002
     disableTrimming: 0
     additive: 0
@@ -3538,6 +3721,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -3560,6 +3744,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Die_Red_003
     disableTrimming: 0
     additive: 0
@@ -3576,6 +3761,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -3598,6 +3784,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Die_Red_004
     disableTrimming: 0
     additive: 0
@@ -3614,6 +3801,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -3636,6 +3824,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Die_Red_005
     disableTrimming: 0
     additive: 0
@@ -3652,6 +3841,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -3674,6 +3864,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Die_Red_006
     disableTrimming: 0
     additive: 0
@@ -3690,6 +3881,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -3712,6 +3904,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Walk_Blue_001
     disableTrimming: 0
     additive: 0
@@ -3728,6 +3921,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -3750,6 +3944,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Walk_Blue_002
     disableTrimming: 0
     additive: 0
@@ -3766,6 +3961,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -3788,6 +3984,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Walk_Blue_003
     disableTrimming: 0
     additive: 0
@@ -3804,6 +4001,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -3826,6 +4024,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Walk_Blue_004
     disableTrimming: 0
     additive: 0
@@ -3842,6 +4041,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -3864,6 +4064,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Walk_Blue_005
     disableTrimming: 0
     additive: 0
@@ -3880,6 +4081,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -3902,6 +4104,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Walk_Blue_006
     disableTrimming: 0
     additive: 0
@@ -3918,6 +4121,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -3940,6 +4144,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Walk_Red_000
     disableTrimming: 0
     additive: 0
@@ -3956,6 +4161,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -3978,6 +4184,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Walk_Red_001
     disableTrimming: 0
     additive: 0
@@ -3994,6 +4201,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -4016,6 +4224,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Walk_Red_002
     disableTrimming: 0
     additive: 0
@@ -4032,6 +4241,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -4054,6 +4264,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Walk_Red_003
     disableTrimming: 0
     additive: 0
@@ -4070,6 +4281,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -4092,6 +4304,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Walk_Red_004
     disableTrimming: 0
     additive: 0
@@ -4108,6 +4321,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -4130,6 +4344,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Walk_Red_005
     disableTrimming: 0
     additive: 0
@@ -4146,6 +4361,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -4168,6 +4384,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Attack_Blue_001
     disableTrimming: 0
     additive: 0
@@ -4184,6 +4401,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -4206,6 +4424,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Attack_Blue_002
     disableTrimming: 0
     additive: 0
@@ -4222,6 +4441,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -4244,6 +4464,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Attack_Blue_003
     disableTrimming: 0
     additive: 0
@@ -4260,6 +4481,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -4282,6 +4504,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Attack_Blue_004
     disableTrimming: 0
     additive: 0
@@ -4298,6 +4521,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -4320,6 +4544,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Attack_Blue_005
     disableTrimming: 0
     additive: 0
@@ -4336,6 +4561,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -4358,6 +4584,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Attack_Blue_006
     disableTrimming: 0
     additive: 0
@@ -4374,6 +4601,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -4396,6 +4624,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Attack_Red_001
     disableTrimming: 0
     additive: 0
@@ -4412,6 +4641,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -4434,6 +4664,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Attack_Red_002
     disableTrimming: 0
     additive: 0
@@ -4450,6 +4681,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -4472,6 +4704,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Attack_Red_003
     disableTrimming: 0
     additive: 0
@@ -4488,6 +4721,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -4510,6 +4744,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Attack_Red_004
     disableTrimming: 0
     additive: 0
@@ -4526,6 +4761,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -4548,6 +4784,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Attack_Red_005
     disableTrimming: 0
     additive: 0
@@ -4564,6 +4801,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -4586,6 +4824,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Attack_Red_006
     disableTrimming: 0
     additive: 0
@@ -4602,6 +4841,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -4624,6 +4864,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Die_Blue_001
     disableTrimming: 0
     additive: 0
@@ -4640,6 +4881,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -4662,6 +4904,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Die_Blue_002
     disableTrimming: 0
     additive: 0
@@ -4678,6 +4921,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -4700,6 +4944,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Die_Blue_003
     disableTrimming: 0
     additive: 0
@@ -4716,6 +4961,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -4738,6 +4984,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Die_Blue_004
     disableTrimming: 0
     additive: 0
@@ -4754,6 +5001,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -4776,6 +5024,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Die_Blue_005
     disableTrimming: 0
     additive: 0
@@ -4792,6 +5041,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -4814,6 +5064,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Die_Blue_006
     disableTrimming: 0
     additive: 0
@@ -4830,6 +5081,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -4852,6 +5104,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Die_Red_001
     disableTrimming: 0
     additive: 0
@@ -4868,6 +5121,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -4890,6 +5144,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Die_Red_002
     disableTrimming: 0
     additive: 0
@@ -4906,6 +5161,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -4928,6 +5184,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Die_Red_003
     disableTrimming: 0
     additive: 0
@@ -4944,6 +5201,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -4966,6 +5224,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Die_Red_004
     disableTrimming: 0
     additive: 0
@@ -4982,6 +5241,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -5004,6 +5264,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Die_Red_005
     disableTrimming: 0
     additive: 0
@@ -5020,6 +5281,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -5042,6 +5304,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Die_Red_006
     disableTrimming: 0
     additive: 0
@@ -5058,6 +5321,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -5080,6 +5344,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Walk_Blue_001
     disableTrimming: 0
     additive: 0
@@ -5096,6 +5361,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -5118,6 +5384,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Walk_Blue_002
     disableTrimming: 0
     additive: 0
@@ -5134,6 +5401,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -5156,6 +5424,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Walk_Blue_003
     disableTrimming: 0
     additive: 0
@@ -5172,6 +5441,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -5194,6 +5464,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Walk_Blue_004
     disableTrimming: 0
     additive: 0
@@ -5210,6 +5481,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -5232,6 +5504,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Walk_Blue_005
     disableTrimming: 0
     additive: 0
@@ -5248,6 +5521,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -5270,6 +5544,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Walk_Blue_006
     disableTrimming: 0
     additive: 0
@@ -5286,6 +5561,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -5308,6 +5584,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Walk_Red_001
     disableTrimming: 0
     additive: 0
@@ -5324,6 +5601,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -5346,6 +5624,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Walk_Red_002
     disableTrimming: 0
     additive: 0
@@ -5362,6 +5641,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -5384,6 +5664,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Walk_Red_003
     disableTrimming: 0
     additive: 0
@@ -5400,6 +5681,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -5422,6 +5704,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Walk_Red_004
     disableTrimming: 0
     additive: 0
@@ -5438,6 +5721,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -5460,6 +5744,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Walk_Red_005
     disableTrimming: 0
     additive: 0
@@ -5476,6 +5761,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -5498,6 +5784,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Walk_Red_006
     disableTrimming: 0
     additive: 0
@@ -5514,6 +5801,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -5536,6 +5824,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Attack_Blue_001
     disableTrimming: 0
     additive: 0
@@ -5552,6 +5841,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -5574,6 +5864,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Attack_Blue_002
     disableTrimming: 0
     additive: 0
@@ -5590,6 +5881,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -5612,6 +5904,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Attack_Blue_003
     disableTrimming: 0
     additive: 0
@@ -5628,6 +5921,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -5650,6 +5944,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Attack_Blue_004
     disableTrimming: 0
     additive: 0
@@ -5666,6 +5961,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -5688,6 +5984,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Attack_Blue_005
     disableTrimming: 0
     additive: 0
@@ -5704,6 +6001,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -5726,6 +6024,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Attack_Blue_006
     disableTrimming: 0
     additive: 0
@@ -5742,6 +6041,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -5764,6 +6064,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Attack_Red_001
     disableTrimming: 0
     additive: 0
@@ -5780,6 +6081,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -5802,6 +6104,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Attack_Red_002
     disableTrimming: 0
     additive: 0
@@ -5818,6 +6121,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -5840,6 +6144,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Attack_Red_003
     disableTrimming: 0
     additive: 0
@@ -5856,6 +6161,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -5878,6 +6184,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Attack_Red_004
     disableTrimming: 0
     additive: 0
@@ -5894,6 +6201,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -5916,6 +6224,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Attack_Red_005
     disableTrimming: 0
     additive: 0
@@ -5932,6 +6241,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -5954,6 +6264,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Attack_Red_006
     disableTrimming: 0
     additive: 0
@@ -5970,6 +6281,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -5992,6 +6304,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Die_Blue_001
     disableTrimming: 0
     additive: 0
@@ -6008,6 +6321,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -6030,6 +6344,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Die_Blue_002
     disableTrimming: 0
     additive: 0
@@ -6046,6 +6361,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -6068,6 +6384,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Die_Blue_003
     disableTrimming: 0
     additive: 0
@@ -6084,6 +6401,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -6106,6 +6424,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Die_Blue_004
     disableTrimming: 0
     additive: 0
@@ -6122,6 +6441,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -6144,6 +6464,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Die_Blue_005
     disableTrimming: 0
     additive: 0
@@ -6160,6 +6481,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -6182,6 +6504,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Die_Blue_006
     disableTrimming: 0
     additive: 0
@@ -6198,6 +6521,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -6220,6 +6544,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Die_Red001
     disableTrimming: 0
     additive: 0
@@ -6236,6 +6561,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -6258,6 +6584,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Die_Red002
     disableTrimming: 0
     additive: 0
@@ -6274,6 +6601,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -6296,6 +6624,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Die_Red003
     disableTrimming: 0
     additive: 0
@@ -6312,6 +6641,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -6334,6 +6664,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Die_Red004
     disableTrimming: 0
     additive: 0
@@ -6350,6 +6681,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -6372,6 +6704,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Die_Red005
     disableTrimming: 0
     additive: 0
@@ -6388,6 +6721,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -6410,6 +6744,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Die_Red006
     disableTrimming: 0
     additive: 0
@@ -6426,6 +6761,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -6448,6 +6784,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Walk_Blue_001
     disableTrimming: 0
     additive: 0
@@ -6464,6 +6801,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -6486,6 +6824,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Walk_Blue_002
     disableTrimming: 0
     additive: 0
@@ -6502,6 +6841,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -6524,6 +6864,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Walk_Blue_003
     disableTrimming: 0
     additive: 0
@@ -6540,6 +6881,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -6562,6 +6904,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Walk_Blue_004
     disableTrimming: 0
     additive: 0
@@ -6578,6 +6921,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -6600,6 +6944,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Walk_Blue_005
     disableTrimming: 0
     additive: 0
@@ -6616,6 +6961,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -6638,6 +6984,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Walk_Blue_006
     disableTrimming: 0
     additive: 0
@@ -6654,6 +7001,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -6676,6 +7024,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Walk_Red_001
     disableTrimming: 0
     additive: 0
@@ -6692,6 +7041,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -6714,6 +7064,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Walk_Red_002
     disableTrimming: 0
     additive: 0
@@ -6730,6 +7081,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -6752,6 +7104,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Walk_Red_003
     disableTrimming: 0
     additive: 0
@@ -6768,6 +7121,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -6790,6 +7144,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Walk_Red_004
     disableTrimming: 0
     additive: 0
@@ -6806,6 +7161,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -6828,6 +7184,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Walk_Red_005
     disableTrimming: 0
     additive: 0
@@ -6844,6 +7201,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -6866,6 +7224,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Walk_Red_006
     disableTrimming: 0
     additive: 0
@@ -6882,6 +7241,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -6904,6 +7264,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Attack_Blue_001
     disableTrimming: 0
     additive: 0
@@ -6920,6 +7281,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -6942,6 +7304,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Attack_Blue_002
     disableTrimming: 0
     additive: 0
@@ -6958,6 +7321,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -6980,6 +7344,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Attack_Blue_003
     disableTrimming: 0
     additive: 0
@@ -6996,6 +7361,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -7018,6 +7384,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Attack_Blue_004
     disableTrimming: 0
     additive: 0
@@ -7034,6 +7401,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -7056,6 +7424,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Attack_Blue_005
     disableTrimming: 0
     additive: 0
@@ -7072,6 +7441,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -7094,6 +7464,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Attack_Blue_006
     disableTrimming: 0
     additive: 0
@@ -7110,6 +7481,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -7132,6 +7504,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Attack_Red_001
     disableTrimming: 0
     additive: 0
@@ -7148,6 +7521,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -7170,6 +7544,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Attack_Red_002
     disableTrimming: 0
     additive: 0
@@ -7186,6 +7561,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -7208,6 +7584,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Attack_Red_003
     disableTrimming: 0
     additive: 0
@@ -7224,6 +7601,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -7246,6 +7624,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Attack_Red_004
     disableTrimming: 0
     additive: 0
@@ -7262,6 +7641,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -7284,6 +7664,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Attack_Red_005
     disableTrimming: 0
     additive: 0
@@ -7300,6 +7681,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -7322,6 +7704,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Attack_Red_006
     disableTrimming: 0
     additive: 0
@@ -7338,6 +7721,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -7360,6 +7744,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Die_Blue_001
     disableTrimming: 0
     additive: 0
@@ -7376,6 +7761,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -7398,6 +7784,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Die_Blue_002
     disableTrimming: 0
     additive: 0
@@ -7414,6 +7801,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -7436,6 +7824,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Die_Blue_003
     disableTrimming: 0
     additive: 0
@@ -7452,6 +7841,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -7474,6 +7864,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Die_Blue_004
     disableTrimming: 0
     additive: 0
@@ -7490,6 +7881,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -7512,6 +7904,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Die_Blue_005
     disableTrimming: 0
     additive: 0
@@ -7528,6 +7921,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -7550,6 +7944,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Die_Blue_006
     disableTrimming: 0
     additive: 0
@@ -7566,6 +7961,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -7588,6 +7984,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Die_Red_001
     disableTrimming: 0
     additive: 0
@@ -7604,6 +8001,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -7626,6 +8024,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Die_Red_002
     disableTrimming: 0
     additive: 0
@@ -7642,6 +8041,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -7664,6 +8064,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Die_Red_003
     disableTrimming: 0
     additive: 0
@@ -7680,6 +8081,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -7702,6 +8104,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Die_Red_004
     disableTrimming: 0
     additive: 0
@@ -7718,6 +8121,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -7740,6 +8144,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Die_Red_005
     disableTrimming: 0
     additive: 0
@@ -7756,6 +8161,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -7778,6 +8184,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Die_Red_006
     disableTrimming: 0
     additive: 0
@@ -7794,6 +8201,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -7816,6 +8224,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Walk_Blue_001
     disableTrimming: 0
     additive: 0
@@ -7832,6 +8241,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -7854,6 +8264,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Walk_Blue_002
     disableTrimming: 0
     additive: 0
@@ -7870,6 +8281,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -7892,6 +8304,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Walk_Blue_003
     disableTrimming: 0
     additive: 0
@@ -7908,6 +8321,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -7930,6 +8344,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Walk_Blue_004
     disableTrimming: 0
     additive: 0
@@ -7946,6 +8361,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -7968,6 +8384,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Walk_Blue_005
     disableTrimming: 0
     additive: 0
@@ -7984,6 +8401,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -8006,6 +8424,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Walk_Blue_006
     disableTrimming: 0
     additive: 0
@@ -8022,6 +8441,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -8044,6 +8464,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Walk_Red_001
     disableTrimming: 0
     additive: 0
@@ -8060,6 +8481,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -8082,6 +8504,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Walk_Red_002
     disableTrimming: 0
     additive: 0
@@ -8098,6 +8521,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -8120,6 +8544,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Walk_Red_003
     disableTrimming: 0
     additive: 0
@@ -8136,6 +8561,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -8158,6 +8584,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Walk_Red_004
     disableTrimming: 0
     additive: 0
@@ -8174,6 +8601,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -8196,6 +8624,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Walk_Red_005
     disableTrimming: 0
     additive: 0
@@ -8212,6 +8641,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -8234,6 +8664,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Walk_Red_006
     disableTrimming: 0
     additive: 0
@@ -8250,6 +8681,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -8272,6 +8704,7 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
+    attachPoints: []
   spriteCollection: {fileID: 11400000, guid: 781e11ebc822af547a10010ea86a38c4, type: 2}
   premultipliedAlpha: 0
   altMaterials:
@@ -8283,7 +8716,15 @@ MonoBehaviour:
   useTk2dCamera: 1
   targetHeight: 640
   targetOrthoSize: 10
+  sizeDef:
+    type: 1
+    orthoSize: 10
+    pixelsPerMeter: 1
+    width: 960
+    height: 640
   globalScale: 1
+  globalTextureRescale: 1
+  attachPointTestSprites: []
   pixelPerfectPointSampled: 0
   filterMode: 1
   wrapMode: 1
@@ -8296,7 +8737,7 @@ MonoBehaviour:
   padAmount: -1
   autoUpdate: 1
   editorDisplayScale: 1
-  version: 3
+  version: 4
   assetName: 
 --- !u!1001 &100100000
 Prefab:

@@ -19,6 +19,8 @@ public class ActorController : BaseGameEntity
     private tk2dSpriteAnimator _selfAnimator;
 
     private bool _isStun;
+	
+	public ActorPath ActorPath {get; set;}
 
     private StateMachine<ActorController> m_PStateMachine;
 
@@ -40,6 +42,7 @@ public class ActorController : BaseGameEntity
                 if (!this.SelfAnimator.Paused)
                 {
                     this.SelfAnimator.Pause();
+					this.ShowTip("Stun");
                 }
             }
             else
@@ -79,7 +82,7 @@ public class ActorController : BaseGameEntity
 
     public GameObject TargetBuilding { get; set; }
 
-    public GameObject TargetEnemy { get; set; }
+    public BaseGameEntity TargetEnemy { get; set; }
 
     #endregion
 
@@ -101,15 +104,15 @@ public class ActorController : BaseGameEntity
         return this.m_PStateMachine.HandleMessage(telegram);
     }
 
-    public List<GameObject> SeekAndGetEnemies()
+    public List<GameObject> SeekAndGetEnemies(bool ignoreObstacles = true)
     {
         return ActorsManager.GetInstance()
-            .GetEnemyActorsInDistanceAndSortByDistance(this, this.MyActor.ActorAttack.ViewDistance);
+            .GetEnemyActorsInDistanceAndSortByDistance(this, this.MyActor.ActorAttack.ViewDistance, ignoreObstacles);
     }
 
-    public List<GameObject> SeekAndGetEnemiesInDistance(int distance)
+    public List<GameObject> SeekAndGetEnemiesInDistance(int distance, bool ignoreObstacles = true)
     {
-        return ActorsManager.GetInstance().GetEnemyActorsInDistanceAndSortByDistance(this, distance);
+        return ActorsManager.GetInstance().GetEnemyActorsInDistanceAndSortByDistance(this, distance, ignoreObstacles);
     }
 
     public bool SeekEnemies()
@@ -117,18 +120,112 @@ public class ActorController : BaseGameEntity
         return ActorsManager.GetInstance().HasEnemyActorsInDistance(this, this.MyActor.ActorAttack.ViewDistance);
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage, int attackType = -1, int spellName = -1)
     {
-		Debug.Log("TakeDamage");
+		if(spellName >= 0)
+		{
+			bool showCrit = false;
+			ActorSpellName actorSpellName = (ActorSpellName)spellName;
+			switch(actorSpellName)
+			{
+				case ActorSpellName.CirticalStrike:
+					showCrit = true;
+					break;
+				case ActorSpellName.HeadShot:
+					showCrit = true;
+					break;
+				case ActorSpellName.ArcaneExplosion:
+					showCrit = true;
+					break;
+				case ActorSpellName.MortarAttack:
+					showCrit = true;
+					break;
+				default:
+					showCrit = false;
+					break;
+			}
+			if(showCrit)
+				this.ShowTip("Crit");
+		}
+		
         ActorSpell dodgeSpell = this.MyActor.GetSpell(ActorSpellName.Dodge);
         if (dodgeSpell != null)
         {
             int randomIndex = Random.Range(1, 101);
             if (randomIndex <= dodgeSpell.EvasiveProbability)
             {
+				this.ShowTip("Dodge");
                 return;
             }
-        }
+		}
+		
+		if(attackType >= 0)
+		{
+			ActorAttackType actorAttackType = (ActorAttackType)attackType;
+			switch(actorAttackType)
+			{
+				case ActorAttackType.Normal:
+				{
+					if(this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.LightArmor)
+						damage *= 0.9f;
+					else if(this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.HeavyArmor)
+						damage *= 0.8f;
+					else if(this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.HeroArmor)
+						damage *= 1;
+					break;
+				}
+			case ActorAttackType.Pierce:
+				{
+					if(this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.LightArmor)
+						damage *= 2f;
+					else if(this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.HeavyArmor)
+						damage *= 0.35f;
+					else if(this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.HeroArmor)
+						damage *= 0.5f;
+					break;
+				}
+				case ActorAttackType.Siege:
+				{
+					if(this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.LightArmor)
+						damage *= 1f;
+					else if(this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.HeavyArmor)
+						damage *= 1.5f;
+					else if(this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.HeroArmor)
+						damage *= 0.5f;
+					break;
+				}
+				case ActorAttackType.Magic:
+				{
+					if(this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.LightArmor)
+						damage *= 1.25f;
+					else if(this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.HeavyArmor)
+						damage *= 2f;
+					else if(this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.HeroArmor)
+						damage *= 0.35f;
+					break;
+				}
+				case ActorAttackType.Confuse:
+				{
+					if(this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.LightArmor)
+						damage *= 1f;
+					else if(this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.HeavyArmor)
+						damage *= 1f;
+					else if(this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.HeroArmor)
+						damage *= 1f;
+					break;
+				}
+				case ActorAttackType.HeroAttack:
+				{
+					if(this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.LightArmor)
+						damage *= 1.2f;
+					else if(this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.HeavyArmor)
+						damage *= 1.2f;
+					else if(this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.HeroArmor)
+						damage *= 1f;
+					break;
+				}
+			}
+		}
 
         if (this.MyActor.ActorArmor.ArmorAmount > 0f)
         {
@@ -148,7 +245,6 @@ public class ActorController : BaseGameEntity
         {
             this.m_PStateMachine.ChangeState(Actor_StateBeforeDie.Instance());
         }
-		Debug.Log(this._myActor.Hp);
     }
 
     #endregion
@@ -179,6 +275,14 @@ public class ActorController : BaseGameEntity
             this.m_PStateMachine.SMUpdate();
         }
     }
+	
+	private void ShowTip(string tip)
+	{
+		GameObject tipObj = (GameObject)Instantiate(Resources.Load("Tips/TipsTextMesh"));
+		tipObj.transform.localPosition = this.myTransform.position + new Vector3(6, 20, -1);
+		tipObj.GetComponent<tk2dTextMesh>().text = tip;
+		tipObj.GetComponent<ActorTip>().Show();
+	}
 
     #endregion
 }

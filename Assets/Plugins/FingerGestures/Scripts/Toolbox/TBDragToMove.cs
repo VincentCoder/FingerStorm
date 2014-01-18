@@ -151,7 +151,7 @@ public class TBDragToMove : MonoBehaviour
         }
     }
 
-    void OnDrag( DragGesture gesture )
+    void OnFGDrag( DragGesture gesture )
     {
         HandleDrag( gesture );
     }

@@ -51,7 +51,7 @@ public class BuildingsManager
         return instance;
     }
 	
-	public void CreateNewBuilding(BuildingType buildingType, FactionType factionType, Vector3 pos)
+	public GameObject CreateNewBuilding(BuildingType buildingType, FactionType factionType, Vector3 pos)
     {
         GameObject buildingObj = (GameObject)Object.Instantiate(Resources.Load("GameScene/Building"));
         buildingObj.name = "Building";
@@ -63,8 +63,10 @@ public class BuildingsManager
         if (buildingTypeStr.Contains("TheMainCity"))
         {
             this.baseBuildingDictionary.Add(factionType, buildingObj);
+			buildingCtrl.Building.IsMainCity = true;
         }
         this.allBuildingsDictionary.Add(buildingCtrl.Building.BuildingId, buildingObj);
+		return buildingObj;
     }
 
     public void DestroyAllBuildings()
@@ -80,6 +82,18 @@ public class BuildingsManager
         this.allBuildingsDictionary.Clear();
         this.baseBuildingDictionary.Clear();
     }
+	
+	public void DestroyBuilding(GameObject building)
+	{
+		BuildingController buildingCtrl = building.GetComponent<BuildingController>();
+		if(buildingCtrl != null)
+		{
+			this.allBuildingsDictionary.Remove(buildingCtrl.Building.BuildingId);
+			if(this.baseBuildingDictionary.ContainsValue(building))
+				this.baseBuildingDictionary.Remove(buildingCtrl.Building.FactionType);
+			buildingCtrl.DestroySelf();
+		}
+	}
 
     public GameObject GetBaseBuildingOfFaction(FactionType faction)
     {

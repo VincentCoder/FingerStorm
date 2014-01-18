@@ -50,7 +50,7 @@ public class TBDragView : MonoBehaviour
     }
 
     // Handle Gesture Event (sent by the DragRecognizer component)
-    void OnDrag( DragGesture gesture )
+    void OnFGDrag( DragGesture gesture )
     {
         if( gesture.Phase != ContinuousGesturePhase.Ended )
             dragGesture = gesture;

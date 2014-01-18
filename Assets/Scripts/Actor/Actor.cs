@@ -248,8 +248,8 @@ public class Actor
             case "LightArmor":
                 armorType = ActorArmorType.LightArmor;
                 break;
-            case "MediumArmor":
-                armorType = ActorArmorType.MediumArmor;
+            case "HeroArmor":
+                armorType = ActorArmorType.HeroArmor;
                 break;
             case "HeavyArmor":
                 armorType = ActorArmorType.HeavyArmor;

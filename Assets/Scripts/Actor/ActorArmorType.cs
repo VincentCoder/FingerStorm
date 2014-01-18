@@ -4,7 +4,7 @@
 
     LightArmor,
 
-    MediumArmor,
-
-    HeavyArmor
+    HeavyArmor,
+	
+	HeroArmor
 }

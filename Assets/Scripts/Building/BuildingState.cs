@@ -31,6 +31,14 @@ public class Building_GlobalState : State<BuildingController>
 
     public override bool OnMessage(BuildingController entityType, Telegram telegram)
     {
+		if (telegram.Msg == FSMessageType.FSMessageAttack)
+        {
+            if (telegram.Parameters.ContainsKey("Damage"))
+            {
+                entityType.TakeDamage((float)telegram.Parameters["Damage"]);
+                return true;
+            }
+        }
         return false;
     }
 
@@ -128,6 +136,8 @@ public class Building_StateDispatching : State<BuildingController>
 
     public override void Execute(BuildingController entityType)
     {
+		if(entityType.Building.IsMainCity)
+			return;
         if (this.dispatchInterval != entityType.DispatchInterval)
         {
             this.dispatchInterval = entityType.DispatchInterval;
@@ -173,7 +183,7 @@ public class Building_StateBeforeDestroy : State<BuildingController>
 
     public override void Enter(BuildingController entityType)
     {
-        base.Enter(entityType);
+     	Debug.Log("Win !!!!!!!!!!!");   
     }
 
     public override void Execute(BuildingController entityType)

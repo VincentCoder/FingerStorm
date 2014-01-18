@@ -125,7 +125,10 @@ public class tk2dSpriteAnimator : MonoBehaviour
 		}
 	}
 	
-	[SerializeField] protected tk2dBaseSprite _sprite = null;
+	protected tk2dBaseSprite _sprite = null;
+	/// <summary>
+	/// Gets the sprite the animator is currently animating
+	/// </summary>
 	virtual public tk2dBaseSprite Sprite {
 		get {
 			if (_sprite == null) {
@@ -170,12 +173,16 @@ public class tk2dSpriteAnimator : MonoBehaviour
 
 #region Play
 	/// <summary>
-	/// Play the default clip.
+	/// Play the current / last played clip. If no clip has been played, the default clip is used.
 	/// Will not restart the clip if it is already playing.
 	/// </summary>
 	public void Play()
 	{
-		Play(DefaultClip);
+		if (currentClip == null) {
+			currentClip = DefaultClip;
+		}
+
+		Play(currentClip);
 	}
 
 	/// <summary>
@@ -198,6 +205,20 @@ public class tk2dSpriteAnimator : MonoBehaviour
 		Play(clip, 0, DefaultFps);
 	}
 	
+#region PlayFromFrame
+	/// <summary>
+	/// Play the current / last played clip. If no clip has been played, the default clip is used.
+	/// Will restart the clip at frame if called while the clip is playing.
+	/// </summary>
+	public void PlayFromFrame(int frame)
+	{
+		if (currentClip == null) {
+			currentClip = DefaultClip;
+		}
+
+		PlayFromFrame(currentClip, frame);
+	}
+
 	/// <summary>
 	/// Play the specified clip, starting at the frame specified.
 	/// Will restart the clip at frame if called while the clip is playing.
@@ -218,6 +239,21 @@ public class tk2dSpriteAnimator : MonoBehaviour
 	public void PlayFromFrame(tk2dSpriteAnimationClip clip, int frame)
 	{
 		PlayFrom(clip, (frame + 0.001f) / clip.fps); // offset ever so slightly to round down correctly
+	}
+#endregion
+
+#region PlayFrom
+	/// <summary>
+	/// Play the current / last played clip. If no clip has been played, the default clip is used.
+	/// Will restart the clip at frame if called while the clip is playing.
+	/// </summary>
+	public void PlayFrom(float clipStartTime)
+	{
+		if (currentClip == null) {
+			currentClip = DefaultClip;
+		}
+
+		PlayFrom(currentClip, clipStartTime);
 	}
 
 	/// <summary>
@@ -247,6 +283,7 @@ public class tk2dSpriteAnimator : MonoBehaviour
 	{
 		Play(clip, clipStartTime, DefaultFps);
 	}
+#endregion
 
 	/// <summary>
 	/// Play the clip specified by identifier.
@@ -686,7 +723,7 @@ public class tk2dSpriteAnimator : MonoBehaviour
 		}
 	}
 	
-	void LateUpdate() 
+	public virtual void LateUpdate() 
 	{
 		UpdateAnimation(Time.deltaTime);
 	}

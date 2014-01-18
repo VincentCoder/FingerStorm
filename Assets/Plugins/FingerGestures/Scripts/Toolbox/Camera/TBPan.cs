@@ -34,7 +34,7 @@ public class TBPan : MonoBehaviour
         }
     }
 
-    void OnDrag( DragGesture gesture )
+    void OnFGDrag( DragGesture gesture )
     {
         dragGesture = ( gesture.State == GestureRecognitionState.Ended ) ? null : gesture;
     }

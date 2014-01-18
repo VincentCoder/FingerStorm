@@ -133,7 +133,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07c4de3b4b6fe9045b059ee627c100df, type: 3}
   m_Name: 
@@ -183,7 +183,7 @@ MonoBehaviour:
   movement: 0
   dragEffect: 2
   restrictWithinPanel: 1
-  disableDragIfFits: 1
+  disableDragIfFits: 0
   smoothDragStart: 1
   iOSDragEmulation: 1
   scrollWheelFactor: .25
@@ -214,7 +214,7 @@ MonoBehaviour:
     e00: 320
     e01: 0
     e02: 0
-    e03: 125
+    e03: 124.288864
     e10: 0
     e11: 320
     e12: 0
@@ -229,7 +229,7 @@ MonoBehaviour:
     e33: 1
   mAlpha: 1
   mClipping: 4
-  mClipRange: {x: 0, y: 0, z: 710, w: 140}
+  mClipRange: {x: 0, y: 0, z: 699, w: 140}
   mClipSoftness: {x: 4, y: 4}
   mDepth: 1
 --- !u!1001 &100100000

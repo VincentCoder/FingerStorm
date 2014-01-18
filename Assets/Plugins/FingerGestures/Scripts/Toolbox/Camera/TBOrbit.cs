@@ -145,7 +145,7 @@ public class TBOrbit : MonoBehaviour
     void InstallGestureRecognizers()
     {
         List<GestureRecognizer> recogniers = new List<GestureRecognizer>( GetComponents<GestureRecognizer>() );
-        DragRecognizer drag = recogniers.Find( r => r.EventMessageName == "OnDrag" ) as DragRecognizer;
+        DragRecognizer drag = recogniers.Find( r => r.EventMessageName == "OnFGDrag" ) as DragRecognizer;
         DragRecognizer twoFingerDrag = recogniers.Find( r => r.EventMessageName == "OnTwoFingerDrag" ) as DragRecognizer;
         PinchRecognizer pinch = recogniers.Find( r => r.EventMessageName == "OnPinch" ) as PinchRecognizer;
 
@@ -196,7 +196,7 @@ public class TBOrbit : MonoBehaviour
 
     float nextDragTime;
 
-    void OnDrag( DragGesture gesture )
+    void OnFGDrag( DragGesture gesture )
     {
         // dont apply drag rotation if more than one touch is on the screen
         //if( FingerGestures.Touches.Count > 1 )

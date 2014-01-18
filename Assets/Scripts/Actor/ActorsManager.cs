@@ -63,6 +63,7 @@ public class ActorsManager
         actorCtrl.TargetBuilding =
             BuildingsManager.GetInstance()
                 .GetBaseBuildingOfFaction(actor.FactionType == FactionType.Blue ? FactionType.Red : FactionType.Blue);
+		actorCtrl.ActorPath = ActorPathManager.GetInstance().GenerateNewPath(pos, actorCtrl.TargetBuilding.transform.position);
         this.actorsDictionary.Add(actorId, actorObj);
     }
 
@@ -79,6 +80,7 @@ public class ActorsManager
         actorCtrl.TargetBuilding =
             BuildingsManager.GetInstance()
                 .GetBaseBuildingOfFaction(actor.FactionType == FactionType.Blue ? FactionType.Red : FactionType.Blue);
+		actorCtrl.ActorPath = ActorPathManager.GetInstance().GenerateNewPath(pos, actorCtrl.TargetBuilding.transform.position);
         this.actorsDictionary.Add(actorId, actorObj);
     }
 
@@ -100,18 +102,34 @@ public class ActorsManager
         return new List<GameObject>(this.actorsDictionary.Values.ToArray());
     }
 
-    public List<GameObject> GetEnemyActorsInDistance(ActorController actorController, int distance)
+    public List<GameObject> GetEnemyActorsInDistance(ActorController actorController, int distance, bool ignoreObstacles = true)
     {
-        return (from kv in this.actorsDictionary
+        List<GameObject> result = (from kv in this.actorsDictionary
                 let actorCtrl = kv.Value.GetComponent<ActorController>()
                 where actorCtrl.MyActor.FactionType != actorController.MyActor.FactionType
                 where
                     (actorController.gameObject.transform.position - kv.Value.transform.position).sqrMagnitude
                     <= Mathf.Pow(distance, 2)
                 select kv.Value).ToList();
+		if(!ignoreObstacles)
+		{
+			for(int i = 0; i < result.Count; i ++)
+			{
+				GameObject enemy = result[i];
+				RaycastHit hit;
+				if(Physics.Raycast(enemy.transform.position, actorController.gameObject.transform.position, out hit))
+				{
+					if(hit.collider.gameObject.tag.Equals("Obstacle"))
+					{
+						result.RemoveAt(i);
+					}
+				}
+			}
+		}
+		return result;
     }
 
-    public List<GameObject> GetEnemyActorsInDistanceAndSortByDistance(ActorController actorController, int distance)
+    public List<GameObject> GetEnemyActorsInDistanceAndSortByDistance(ActorController actorController, int distance, bool ignoreObstacles)
     {
         List<GameObject> result = (from kv in this.actorsDictionary
                                    let actorCtrl = kv.Value.GetComponent<ActorController>()
@@ -120,6 +138,21 @@ public class ActorsManager
                                        (actorController.gameObject.transform.position - kv.Value.transform.position)
                                            .sqrMagnitude <= Mathf.Pow(distance, 2)
                                    select kv.Value).ToList();
+		if(!ignoreObstacles)
+		{
+			for(int i = 0; i < result.Count; i ++)
+			{
+				GameObject enemy = result[i];
+				RaycastHit hit;
+				if(Physics.Raycast(enemy.transform.position, actorController.gameObject.transform.position, out hit))
+				{
+					if(hit.collider.gameObject.tag.Equals("Obstacle"))
+					{
+						result.RemoveAt(i);
+					}
+				}
+			}
+		}
         result.Sort(
             (actor1, actor2) =>
             (actor1.transform.position - actorController.gameObject.transform.position).sqrMagnitude.CompareTo(

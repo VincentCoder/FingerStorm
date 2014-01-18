@@ -46,7 +46,7 @@ public class DragRecognizer : ContinuousGestureRecognizer<DragGesture>
     
     public override string GetDefaultEventMessageName()
     {
-        return "OnDrag";
+        return "OnFGDrag";
     }
 
     protected override GameObject GetDefaultSelectionForSendMessage( DragGesture gesture )

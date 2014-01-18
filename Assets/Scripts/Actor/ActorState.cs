@@ -75,6 +75,11 @@ public class Actor_GlobalState : State<ActorController>
     {
         if (telegram.Msg == FSMessageType.FSMessageAttack)
         {
+			if (telegram.Parameters.ContainsKey("Damage") && telegram.Parameters.ContainsKey("AttackType"))
+            {
+                entityType.TakeDamage((float)telegram.Parameters["Damage"], (int)telegram.Parameters["AttackType"]);
+                return true;
+            }
             if (telegram.Parameters.ContainsKey("Damage"))
             {
                 entityType.TakeDamage((float)telegram.Parameters["Damage"]);
@@ -128,7 +133,7 @@ public class Actor_GlobalState : State<ActorController>
             .DispatchMessage(
                 0f,
                 entityType,
-                entityType.TargetEnemy.GetComponent<ActorController>(),
+                entityType.TargetEnemy,
                 FSMessageType.FSMessageAttack,
                 parameters);
     }
@@ -161,7 +166,7 @@ public class Actor_StateWalk : State<ActorController>
 
     public override void Enter(ActorController entityType)
     {
-		Debug.Log("Enter Walk");
+		//Debug.Log("Enter Walk");
         StringBuilder animName = new StringBuilder("Terran_");
         animName.Append(entityType.MyActor.ActorType);
         animName.Append("_Walk_");
@@ -175,17 +180,40 @@ public class Actor_StateWalk : State<ActorController>
         if(entityType.IsStun)
             return;
         Vector3 moveDistance = entityType.moveSpeed * Time.deltaTime
-                               * (entityType.TargetBuilding.transform.position - entityType.myTransform.position)
+                               * (entityType.ActorPath.CurrentNode() - entityType.myTransform.position)
                                      .normalized;
-        entityType.myTransform.Translate(moveDistance, Space.World);
+		entityType.myTransform.Translate(moveDistance, Space.World);
+		if(entityType.ActorPath.CurrentIndex == entityType.ActorPath.NodesCount() - 1)
+		{
+			if(Vector3.Distance(entityType.ActorPath.CurrentNode(), entityType.myTransform.position) <= entityType.MyActor.ActorAttack.AttackRange)
+			{
+				entityType.TargetEnemy = entityType.TargetBuilding.GetComponent<BuildingController>();
+				entityType.GetFSM().ChangeState(Actor_StateFight.Instance());
+				return;
+			}
+		}
+		if((entityType.ActorPath.CurrentNode() - entityType.myTransform.position).sqrMagnitude <= 0.5)
+		{
+			if(entityType.ActorPath.HasNext())
+				entityType.ActorPath.NextNode();
+		}
 
         this.seekEnemyCounter += Time.deltaTime;
         if (this.seekEnemyCounter >= this.seekEnemyInterval)
         {
-            if (entityType.SeekEnemies())
+            if (entityType.SeekAndGetEnemies(false).Count != 0)
             {
                 entityType.GetFSM().ChangeState(Actor_StateBeforeFight.Instance());
             }
+			else 
+			{	
+				List<GameObject> enemies = entityType.SeekAndGetEnemiesInDistance(entityType.MyActor.ActorAttack.AttackRange, true);
+				if(enemies.Count != 0)
+				{
+					entityType.TargetEnemy = enemies[0].GetComponent<ActorController>();
+					entityType.GetFSM().ChangeState(Actor_StateFight.Instance());
+				}
+			}
             this.seekEnemyCounter = 0.0f;
         }
         //base.Execute(entityType);
@@ -193,7 +221,7 @@ public class Actor_StateWalk : State<ActorController>
 
     public override void Exit(ActorController entityType)
     {
-		Debug.Log("Exit Walk");
+		//Debug.Log("Exit Walk");
         base.Exit(entityType);
     }
 
@@ -223,7 +251,7 @@ public class Actor_StateBeforeFight : State<ActorController>
 
     public override void Enter(ActorController entityType)
     {
-		Debug.Log("Enter BeforeFight");
+		//Debug.Log("Enter BeforeFight");
 		
 		StringBuilder animName = new StringBuilder("Terran_");
         animName.Append(entityType.MyActor.ActorType);
@@ -237,7 +265,7 @@ public class Actor_StateBeforeFight : State<ActorController>
             entityType.GetFSM().ChangeState(Actor_StateWalk.Instance());
             return;
         }
-        entityType.TargetEnemy = enemies[0];
+        entityType.TargetEnemy = enemies[0].GetComponent<ActorController>();
         //base.Enter(entityType);
     }
 
@@ -268,7 +296,7 @@ public class Actor_StateBeforeFight : State<ActorController>
 
     public override void Exit(ActorController entityType)
     {
-		Debug.Log("Exit BeforeFight");
+		//Debug.Log("Exit BeforeFight");
         base.Exit(entityType);
     }
 
@@ -299,7 +327,7 @@ public class Actor_StateFight : State<ActorController>
 
     public override void Enter(ActorController entityType)
     {
-		Debug.Log("Enter Fight");
+		//Debug.Log("Enter Fight");
         if (entityType.TargetEnemy == null)
         {
             entityType.GetFSM().ChangeState(Actor_StateBeforeFight.Instance());
@@ -330,7 +358,7 @@ public class Actor_StateFight : State<ActorController>
 
     public override void Exit(ActorController entityType)
     {
-		Debug.Log("Exit Fight");
+		//Debug.Log("Exit Fight");
         base.Exit(entityType);
     }
 
@@ -372,7 +400,7 @@ public class Actor_StateFight : State<ActorController>
 						enemies.ForEach(enemy => 
 						{
 							ActorController actorCtrl = enemy.GetComponent<ActorController>();
-							if(actorCtrl != null && actorCtrl.gameObject != entityType.TargetEnemy)
+							if(actorCtrl != null && actorCtrl.gameObject != entityType.TargetEnemy.gameObject)
 							{
 								this.SendAttack(entityType, actorCtrl, 0.5f * entityType.MyActor.ActorAttack.Dps * this.fightClipTime);
 							}
@@ -415,7 +443,7 @@ public class Actor_StateFight : State<ActorController>
             .DispatchMessage(
                 0f,
                 entityType,
-                entityType.TargetEnemy.GetComponent<ActorController>(),
+                entityType.TargetEnemy,
                 FSMessageType.FSMessageAttack,
                 parameters);
 	}
@@ -439,7 +467,7 @@ public class Actor_StateFight : State<ActorController>
 	{
 		Hashtable parameters = new Hashtable();
 		parameters.Add("StunDuration", duration);
-		MessageDispatcher.Instance().DispatchMessage(0f, entityType, entityType.TargetEnemy.GetComponent<ActorController>(),
+		MessageDispatcher.Instance().DispatchMessage(0f, entityType, entityType.TargetEnemy,
 			FSMessageType.FSMessageStun, parameters);
 	}
 

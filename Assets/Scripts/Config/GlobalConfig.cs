@@ -245,4 +245,11 @@
     public static string TerranBuildingTempleProducedActor; //人族圣殿生产的兵种
 
     #endregion
+	
+	public static object GetFieldOfName(string fieldName)
+	{
+		System.Type type = new GlobalConfig().GetType();
+		System.Reflection.FieldInfo fieldInfo = type.GetField(fieldName);
+		return fieldInfo.GetValue(null);
+	}
 }
