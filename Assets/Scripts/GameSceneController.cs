@@ -42,9 +42,9 @@ public class GameSceneController : MonoBehaviour
     #region Methods
 
     /// <summary>
-    ///     The awake.
+    ///     The start.
     /// </summary>
-    private void Awake()
+    private void Start()
     {
         this.CreateBattleFieldMap();
         BuildingsManager.GetInstance()
