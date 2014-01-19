@@ -22,7 +22,14 @@ public class FSClient : LoadBalancingClient
 		evData[(byte)1] = gameController.MyFactionType;
 		evData[(byte)2] = pos;
 		evData[(byte)3] = (int)buildingType;
-		this.loadBalancingPeer.OpRaiseEvent((byte)EventCode.CreateBuilding, evData, true, 0);
+		this.loadBalancingPeer.OpRaiseEvent((byte)1, evData, true, 0);
+	}
+	
+	public void SendGameResult()
+	{
+		HashTable evData = new HashTable();
+		evData[(byte)1] = gameController.MyFactionType;
+		this.loadBalancingPeer.OpRaiseEvent((byte)2, evData, true, 0);
 	}
 	
 	public override void OnOperationResponse(OperationResponse operationResponse)
@@ -81,11 +88,11 @@ public class FSClient : LoadBalancingClient
 
         switch (photonEvent.Code)
         {
-            case (byte)1:
-				Hashtable content = photonEvent.Parameters[ParameterCode.CustomEventContent] as Hashtable;
-                this.lastMoveEv = (Vector3)content[(byte)1];
-                this.evCount++;
-                break;
+            //case (byte)1:
+			//	Hashtable content = photonEvent.Parameters[ParameterCode.CustomEventContent] as Hashtable;
+            //    this.lastMoveEv = (Vector3)content[(byte)1];
+            //    this.evCount++;
+            //    break;
 			
 			case EventCode.PropertiesChanged:
 				var data = photonEvent.Parameters[ParameterCode.Properties] as Hashtable;
@@ -96,10 +103,10 @@ public class FSClient : LoadBalancingClient
 				//{
 				//		Debug.Log(kv.Key + " " + kv.Value);
 				//}
-				Hashtable content1 = photonEvent.Parameters[ParameterCode.PlayerProperties] as Hashtable;
-				if(content1.ContainsKey((byte)255))
+				Hashtable content = photonEvent.Parameters[ParameterCode.PlayerProperties] as Hashtable;
+				if(content.ContainsKey((byte)255))
 				{
-					string name = (string)content1[(byte)255];
+					string name = (string)content[(byte)255];
 					Debug.Log(name);
 					if(!name.Equals(SystemInfo.deviceName) || !this.isCreator && name.Equals(SystemInfo.deviceName))
 					{
@@ -108,16 +115,25 @@ public class FSClient : LoadBalancingClient
 					}
 				}
 				break;
-			case EventCode.CreateBuilding:
-				HashTable content2 = photonEvent.Parameters[ParameterCode.CustomEventContent] as HashTable;
-				FactionType faction = (FactionType)content2[(byte)1];
-				if(faction != this.gameController.MyFactionType)
+			case (byte)1:
+				HashTable content1 = photonEvent.Parameters[ParameterCode.CustomEventContent] as HashTable;
+				FactionType faction1 = (FactionType)content1[(byte)1];
+				if(faction1 != this.gameController.MyFactionType)
 				{
-					Vector3 pos = (Vector3)content2[(byte)2];
-					BuildingType buildingType = (BuildingType)content2[(byte)3];
-					GameObject building = BuildingsManager.GetInstance().CreateNewBuilding(buildingType, faction, pos);
+					Vector3 pos = (Vector3)content1[(byte)2];
+					BuildingType buildingType = (BuildingType)content1[(byte)3];
+					GameObject building = BuildingsManager.GetInstance().CreateNewBuilding(buildingType, faction1, pos);
 					BuildingController buildingCtrl = building.GetComponent<BuildingController>();
 					buildingCtrl.GetFSM().ChangeState(Building_StateBuilding.Instance());
+				}
+				break;
+			case (byte)2:
+				HashTable content2 = photonEvent.Parameters[ParameterCode.CustomEventContent] as HashTable;
+				FactionType faction2 = (FactionType)content2[(byte)1];
+				if(faction2 != this.gameController.MyFactionType)
+				{
+					this.gameController.ViewController.ShowGameResultView(false);
+					Time.timeScale = 0;
 				}
 				break;
         }

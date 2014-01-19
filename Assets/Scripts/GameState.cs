@@ -12,7 +12,7 @@ public class GameState_GlobalState : State<GameController>
 	
 	public override void Enter (GameController entityType)
 	{
-		base.Enter (entityType);
+		
 	}
 	
 	public override void Execute (GameController entityType)

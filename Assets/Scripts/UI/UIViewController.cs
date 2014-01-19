@@ -197,6 +197,28 @@ public class UIViewController : MonoBehaviour
 			Destroy(shadowCover);
 	} 
 	
+	public void ShowGameResultView(bool win)
+	{
+		GameObject gameResult = (GameObject)Instantiate(Resources.Load("UI/GameResult"));
+		gameResult.name = "GameResultView";
+		gameResult.tag = "GameResultView";
+		gameResult.transform.parent = this.RootPanel.transform;
+		gameResult.transform.localScale = new Vector3(1, 1, 1);
+		gameResult.transform.FindChild("ResultLabel").gameObject.GetComponent<UILabel>().text = win ? "胜利" : "失败";
+		
+		this.GameController.EventController.RegisterInHierarchy(gameResult);
+	}
+	
+	public void DestroyGameResultView(bool now)
+	{
+		GameObject gameResult = GameObject.FindWithTag("GameResultView");
+		this.GameController.EventController.UnRegisterInHierarchy(gameResult);
+		if(now)
+			DestroyImmediate(gameResult);
+		else
+			Destroy(gameResult);
+	}
+	
     public GameController GameController
     {
         get

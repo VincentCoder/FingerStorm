@@ -102,6 +102,12 @@ public class UIEventController : MonoBehaviour
                 {
                     break;
                 }
+			case "GameResultBackToMenuButton":
+			{
+				Time.timeScale = 1;
+				this.GameController.GetFSM().ChangeState(GameState_HomePage.Instance());
+				break;
+			}
         }
     }
 }
