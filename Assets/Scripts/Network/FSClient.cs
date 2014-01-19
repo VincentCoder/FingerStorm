@@ -14,6 +14,8 @@ public class FSClient : LoadBalancingClient
 	
 	public GameController gameController;
 	
+	private bool isCreator = false;
+	
 	public override void OnOperationResponse(OperationResponse operationResponse)
     {
         base.OnOperationResponse(operationResponse);
@@ -40,6 +42,7 @@ public class FSClient : LoadBalancingClient
                     this.ErrorMessageToShow = string.Format("The master forwarded you to a gameserver with address: {0}.\nThat address points to 'this computer' anywhere. This might be a configuration error in the game server.", this.GameServerAddress);
                     this.DebugReturn(DebugLevel.ERROR, this.ErrorMessageToShow);
                 }
+				this.isCreator = true;
                 break;
 
             case (byte)OperationCode.JoinRandomGame:
@@ -48,14 +51,14 @@ public class FSClient : LoadBalancingClient
                     this.ErrorMessageToShow = string.Format("The master forwarded you to a gameserver with address: {0}.\nThat address points to 'this computer' anywhere. This might be a configuration error in the game server.", this.GameServerAddress);
                     this.DebugReturn(DebugLevel.ERROR, this.ErrorMessageToShow);
                 }
-				Debug.Log(operationResponse.OperationCode);
+				
                 if (operationResponse.ReturnCode != 0)
                 {
                     this.OpCreateRoom(null, true, true, 2, null, null);
                 }
 				else
 				{
-					this.gameController.MyFactionType = FactionType.Red;
+					this.gameController.MyFactionType = this.isCreator ? FactionType.Blue : FactionType.Red;
 					this.gameController.GetFSM().ChangeState(GameState_BeforeStartGame.Instance());
 				}
                 break;
@@ -79,7 +82,7 @@ public class FSClient : LoadBalancingClient
 				DebugReturn(DebugLevel.ALL, "got something: " + (data["data"] as string));
 				break;
 			case EventCode.Join:
-				this.gameController.MyFactionType = FactionType.Blue;
+				this.gameController.MyFactionType = this.isCreator ? FactionType.Blue : FactionType.Red;
 				this.gameController.GetFSM().ChangeState(GameState_BeforeStartGame.Instance());
 				break;
         }

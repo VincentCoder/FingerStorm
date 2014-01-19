@@ -59,17 +59,17 @@ public class UIViewController : MonoBehaviour
 		selectorPanel.transform.localScale = new Vector3(1,1,1);
 		selectorPanel.transform.localPosition = new Vector3(-125,-240, 0);
 		
-		this.AddBuildingCard(new Building(0, BuildingType.Terran_Barrack,this.GameController.GameSceneController.MyFactionType), 0);
-		this.AddBuildingCard(new Building(0, BuildingType.Terran_Fortress,this.GameController.GameSceneController.MyFactionType), 1);
-		this.AddBuildingCard(new Building(0, BuildingType.Terran_SniperHouse,this.GameController.GameSceneController.MyFactionType), 2);
-		this.AddBuildingCard(new Building(0, BuildingType.Terran_MarksmanCamp,this.GameController.GameSceneController.MyFactionType), 3);
-		this.AddBuildingCard(new Building(0, BuildingType.Terran_ArtilleryHall,this.GameController.GameSceneController.MyFactionType), 4);
-		this.AddBuildingCard(new Building(0, BuildingType.Terran_ArtilleryLab,this.GameController.GameSceneController.MyFactionType), 5);
-		this.AddBuildingCard(new Building(0, BuildingType.Terran_MysterySchool,this.GameController.GameSceneController.MyFactionType), 6);
-		this.AddBuildingCard(new Building(0, BuildingType.Terran_Aviary,this.GameController.GameSceneController.MyFactionType), 7);
-		this.AddBuildingCard(new Building(0, BuildingType.Terran_AdvancedAviary,this.GameController.GameSceneController.MyFactionType), 8);
-		this.AddBuildingCard(new Building(0, BuildingType.Terran_Church,this.GameController.GameSceneController.MyFactionType), 9);
-		this.AddBuildingCard(new Building(0, BuildingType.Terran_Temple,this.GameController.GameSceneController.MyFactionType), 10);
+		this.AddBuildingCard(new Building(0, BuildingType.Terran_Barrack,this.GameController.MyFactionType), 0);
+		this.AddBuildingCard(new Building(0, BuildingType.Terran_Fortress,this.GameController.MyFactionType), 1);
+		this.AddBuildingCard(new Building(0, BuildingType.Terran_SniperHouse,this.GameController.MyFactionType), 2);
+		this.AddBuildingCard(new Building(0, BuildingType.Terran_MarksmanCamp,this.GameController.MyFactionType), 3);
+		this.AddBuildingCard(new Building(0, BuildingType.Terran_ArtilleryHall,this.GameController.MyFactionType), 4);
+		this.AddBuildingCard(new Building(0, BuildingType.Terran_ArtilleryLab,this.GameController.MyFactionType), 5);
+		this.AddBuildingCard(new Building(0, BuildingType.Terran_MysterySchool,this.GameController.MyFactionType), 6);
+		this.AddBuildingCard(new Building(0, BuildingType.Terran_Aviary,this.GameController.MyFactionType), 7);
+		this.AddBuildingCard(new Building(0, BuildingType.Terran_AdvancedAviary,this.GameController.MyFactionType), 8);
+		this.AddBuildingCard(new Building(0, BuildingType.Terran_Church,this.GameController.MyFactionType), 9);
+		this.AddBuildingCard(new Building(0, BuildingType.Terran_Temple,this.GameController.MyFactionType), 10);
 	}
 	
 	public void DestroyBuildingsSelectorPanel(bool now)

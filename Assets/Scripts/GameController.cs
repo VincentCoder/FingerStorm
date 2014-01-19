@@ -62,6 +62,7 @@ public class GameController : BaseGameEntity
 	
 	public void StartGame()
 	{
+		Debug.Log("StartGame");
 		this.ViewController.DestroyHomePage(true);
 		this.ViewController.DestroyShadowCover(true);
 		GameObject gameSceneCtrl = (GameObject)Instantiate(Resources.Load("GameScene/GameSceneController"));
