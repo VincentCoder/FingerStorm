@@ -79,7 +79,7 @@ public class FSClient : LoadBalancingClient
 				DebugReturn(DebugLevel.ALL, "got something: " + (data["data"] as string));
 				break;
 			case EventCode.Join:
-				this.gameController.GameSceneController.MyFactionType = FactionType.Blue;
+				this.gameController.MyFactionType = FactionType.Blue;
 				this.gameController.GetFSM().ChangeState(GameState_BeforeStartGame.Instance());
 				break;
         }
