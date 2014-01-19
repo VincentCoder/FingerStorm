@@ -83,16 +83,16 @@ public class FSClient : LoadBalancingClient
 				DebugReturn(DebugLevel.ALL, "got something: " + (data["data"] as string));
 				break;
 			case EventCode.Join:
-				//foreach(System.Collections.Generic.KeyValuePair<byte, object> kv in photonEvent.Parameters)
-				//{
-				//		Debug.Log(kv.Key + " " + kv.Value);
-				//}
+				foreach(System.Collections.Generic.KeyValuePair<byte, object> kv in photonEvent.Parameters)
+				{
+						Debug.Log(kv.Key + " " + kv.Value);
+				}
 				Hashtable content1 = photonEvent.Parameters[ParameterCode.PlayerProperties] as Hashtable;
 				if(content1.ContainsKey((byte)255))
 				{
 					string name = (string)content1[(byte)255];
 					Debug.Log(name);
-					if(!name.Equals(SystemInfo.deviceName))
+					if(!name.Equals(SystemInfo.deviceName) || !this.isCreator && name.Equals(SystemInfo.deviceName))
 					{
 						this.gameController.MyFactionType = this.isCreator ? FactionType.Blue : FactionType.Red;
 						this.gameController.GetFSM().ChangeState(GameState_BeforeStartGame.Instance());
