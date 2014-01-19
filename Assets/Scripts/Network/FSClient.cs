@@ -42,9 +42,6 @@ public class FSClient : LoadBalancingClient
                     this.ErrorMessageToShow = string.Format("The master forwarded you to a gameserver with address: {0}.\nThat address points to 'this computer' anywhere. This might be a configuration error in the game server.", this.GameServerAddress);
                     this.DebugReturn(DebugLevel.ERROR, this.ErrorMessageToShow);
                 }
-				Debug.Log(this.GameServerAddress);
-				Debug.Log("Created Room");
-				this.isCreator = true;
                 break;
 
             case (byte)OperationCode.JoinRandomGame:
@@ -57,12 +54,13 @@ public class FSClient : LoadBalancingClient
                 if (operationResponse.ReturnCode != 0)
                 {
 					Debug.Log("Create Room");
+					this.isCreator = true;
                     this.OpCreateRoom(null, true, true, 2, null, null);
                 }
 				else
 				{
-					this.gameController.MyFactionType = this.isCreator ? FactionType.Blue : FactionType.Red;
-					this.gameController.GetFSM().ChangeState(GameState_BeforeStartGame.Instance());
+					//this.gameController.MyFactionType = this.isCreator ? FactionType.Blue : FactionType.Red;
+					//this.gameController.GetFSM().ChangeState(GameState_BeforeStartGame.Instance());
 				}
                 break;
         }
@@ -85,8 +83,21 @@ public class FSClient : LoadBalancingClient
 				DebugReturn(DebugLevel.ALL, "got something: " + (data["data"] as string));
 				break;
 			case EventCode.Join:
-				this.gameController.MyFactionType = this.isCreator ? FactionType.Blue : FactionType.Red;
-				this.gameController.GetFSM().ChangeState(GameState_BeforeStartGame.Instance());
+				//foreach(System.Collections.Generic.KeyValuePair<byte, object> kv in photonEvent.Parameters)
+				//{
+				//		Debug.Log(kv.Key + " " + kv.Value);
+				//}
+				Hashtable content1 = photonEvent.Parameters[ParameterCode.PlayerProperties] as Hashtable;
+				if(content1.ContainsKey((byte)255))
+				{
+					string name = (string)content1[(byte)255];
+					Debug.Log(name);
+					if(!name.Equals(SystemInfo.deviceName))
+					{
+						this.gameController.MyFactionType = this.isCreator ? FactionType.Blue : FactionType.Red;
+						this.gameController.GetFSM().ChangeState(GameState_BeforeStartGame.Instance());
+					}
+				}
 				break;
         }
     }
