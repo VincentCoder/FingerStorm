@@ -374,6 +374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EventController: {fileID: 2022688284}
   ViewController: {fileID: 1475671013}
+  GameSceneController: {fileID: 0}
 --- !u!1 &1173719042
 GameObject:
   m_ObjectHideFlags: 0

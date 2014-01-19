@@ -42,6 +42,8 @@ public class FSClient : LoadBalancingClient
                     this.ErrorMessageToShow = string.Format("The master forwarded you to a gameserver with address: {0}.\nThat address points to 'this computer' anywhere. This might be a configuration error in the game server.", this.GameServerAddress);
                     this.DebugReturn(DebugLevel.ERROR, this.ErrorMessageToShow);
                 }
+				Debug.Log(this.GameServerAddress);
+				Debug.Log("Created Room");
 				this.isCreator = true;
                 break;
 
@@ -54,6 +56,7 @@ public class FSClient : LoadBalancingClient
 				
                 if (operationResponse.ReturnCode != 0)
                 {
+					Debug.Log("Create Room");
                     this.OpCreateRoom(null, true, true, 2, null, null);
                 }
 				else
