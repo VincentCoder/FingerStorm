@@ -18,6 +18,7 @@ public class GameController : BaseGameEntity
     {
         this.LoadGlobalConfig();
 		
+		CustomTypes.Register();
 		this.Client = new FSClient();
         this.Client.MasterServerAddress = "app-eu.exitgamescloud.com:5055";
         this.Client.AppId = "78162ccb-b912-423b-bf93-7f6ac0210adf";

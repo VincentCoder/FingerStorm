@@ -16,6 +16,15 @@ public class FSClient : LoadBalancingClient
 	
 	private bool isCreator = false;
 	
+	public void SendCreateBuilding(Vector3 pos, BuildingType buildingType)
+	{
+		Hashtable evData = new Hashtable();
+		evData[(byte)1] = gameController.MyFactionType;
+		evData[(byte)2] = pos;
+		evData[(byte)3] = (int)buildingType;
+		this.loadBalancingPeer.OpRaiseEvent((byte)EventCode.CreateBuilding, evData, true, 0);
+	}
+	
 	public override void OnOperationResponse(OperationResponse operationResponse)
     {
         base.OnOperationResponse(operationResponse);
@@ -83,10 +92,10 @@ public class FSClient : LoadBalancingClient
 				DebugReturn(DebugLevel.ALL, "got something: " + (data["data"] as string));
 				break;
 			case EventCode.Join:
-				foreach(System.Collections.Generic.KeyValuePair<byte, object> kv in photonEvent.Parameters)
-				{
-						Debug.Log(kv.Key + " " + kv.Value);
-				}
+				//foreach(System.Collections.Generic.KeyValuePair<byte, object> kv in photonEvent.Parameters)
+				//{
+				//		Debug.Log(kv.Key + " " + kv.Value);
+				//}
 				Hashtable content1 = photonEvent.Parameters[ParameterCode.PlayerProperties] as Hashtable;
 				if(content1.ContainsKey((byte)255))
 				{
@@ -97,6 +106,18 @@ public class FSClient : LoadBalancingClient
 						this.gameController.MyFactionType = this.isCreator ? FactionType.Blue : FactionType.Red;
 						this.gameController.GetFSM().ChangeState(GameState_BeforeStartGame.Instance());
 					}
+				}
+				break;
+			case EventCode.CreateBuilding:
+				HashTable content2 = photonEvent.Parameters[ParameterCode.CustomEventContent] as HashTable;
+				FactionType faction = (FactionType)content2[(byte)1];
+				if(faction != this.gameController.MyFactionType)
+				{
+					Vector3 pos = (Vector3)content2[(byte)2];
+					BuildingType buildingType = (BuildingType)content2[(byte)3];
+					GameObject building = BuildingsManager.GetInstance().CreateNewBuilding(buildingType, faction, pos);
+					BuildingController buildingCtrl = building.GetComponent<BuildingController>();
+					buildingCtrl.GetFSM().ChangeState(Building_StateBuilding.Instance());
 				}
 				break;
         }

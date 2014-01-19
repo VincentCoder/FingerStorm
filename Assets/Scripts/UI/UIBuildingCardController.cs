@@ -36,7 +36,7 @@ public class UIBuildingCardController : MonoBehaviour
 		{
 			if(this.CheckBuildingPositionValid() && BuildingsManager.GetInstance().PayForTheBuilding(this.Building.CoinCost))
 			{
-				
+				GameObject.Find("GameController").GetComponent<GameController>().Client.SendCreateBuilding(this.buildingObj.transform.position, this.Building.BuildingType);
 				this.buildingObj.GetComponent<BuildingController>().GetFSM().ChangeState(Building_StateBuilding.Instance());
 			}
 			else
@@ -76,7 +76,11 @@ public class UIBuildingCardController : MonoBehaviour
 	{
 		if(this.buildingObj != null)
 		{
-			Rect validRect = new Rect(32, 192, 231, 416);
+			Rect validRect;
+			if(this.Building.FactionType == FactionType.Blue)
+				validRect = new Rect(32, 192, 231, 416);
+			else
+				validRect = new Rect(697, 192, 231, 416);
 			return validRect.Contains(this.buildingObj.transform.position);
 		}
 		return false;

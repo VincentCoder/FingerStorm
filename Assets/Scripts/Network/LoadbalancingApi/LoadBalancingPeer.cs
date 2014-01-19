@@ -815,6 +815,7 @@ namespace ExitGames.Client.Photon.LoadBalancing
     /// <remarks>They start at 255 and go DOWN. Your own in-game events can start at 0.</remarks>
     public class EventCode
     {
+		public const byte CreateBuilding = 231;
         /// <summary>(230) Initial list of RoomInfos (in lobby on Master)</summary>
         public const byte GameList = 230;
 
