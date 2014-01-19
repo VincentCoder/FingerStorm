@@ -55,7 +55,7 @@ public class FSClient : LoadBalancingClient
                 }
 				else
 				{
-					this.gameController.GameSceneController.MyFactionType = FactionType.Red;
+					this.gameController.MyFactionType = FactionType.Red;
 					this.gameController.GetFSM().ChangeState(GameState_BeforeStartGame.Instance());
 				}
                 break;

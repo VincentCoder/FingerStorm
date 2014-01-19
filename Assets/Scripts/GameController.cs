@@ -11,6 +11,8 @@ public class GameController : BaseGameEntity
 	public FSClient Client {get;set;}
 	
 	private StateMachine<GameController> m_PStateMachine;
+	
+	public FactionType MyFactionType {get;set;}
 
     private void Awake()
     {
@@ -66,6 +68,6 @@ public class GameController : BaseGameEntity
 		gameSceneCtrl.transform.localPosition = new Vector3(0, 0, 0);
 		gameSceneCtrl.name = "GameSceneController";
 		this.GameSceneController = gameSceneCtrl.GetComponent<GameSceneController>();
-		Debug.Log("xxxxxxx");
+		this.GameSceneController.MyFactionType = this.MyFactionType;
 	}
 }
