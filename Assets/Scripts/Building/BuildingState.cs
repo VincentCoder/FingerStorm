@@ -183,7 +183,12 @@ public class Building_StateBeforeDestroy : State<BuildingController>
 
     public override void Enter(BuildingController entityType)
     {
-     	Debug.Log("Win !!!!!!!!!!!");   
+     	if(entityType.Building.IsMainCity)
+		{
+			GameController gameCtrl = GameObject.Find("GameController").GetComponent<GameController>();
+			gameCtrl.Client.SendGameResult();
+			gameCtrl.ViewController.ShowGameResultView(false);
+		}
     }
 
     public override void Execute(BuildingController entityType)

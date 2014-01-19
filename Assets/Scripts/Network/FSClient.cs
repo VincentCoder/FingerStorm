@@ -132,7 +132,7 @@ public class FSClient : LoadBalancingClient
 				FactionType faction2 = (FactionType)content2[(byte)1];
 				if(faction2 != this.gameController.MyFactionType)
 				{
-					this.gameController.ViewController.ShowGameResultView(false);
+					this.gameController.ViewController.ShowGameResultView(true);
 					Time.timeScale = 0;
 				}
 				break;
