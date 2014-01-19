@@ -8,9 +8,14 @@ public class UIViewController : MonoBehaviour
     private GameObject _loadingPage;
     private GameController _gameController;
 
-    private void Awake ()
+    private GameObject RootPanel
     {
-        this._rootPanel = GameObject.Find("PanelRoot");
+		get
+		{
+			if(this._rootPanel == null)
+				this._rootPanel = GameObject.Find("PanelRoot");
+			return this._rootPanel;
+		}
     }
 
     public void ShowHomePage ()
@@ -18,11 +23,22 @@ public class UIViewController : MonoBehaviour
         GameObject homePage = (GameObject)Instantiate(Resources.Load("UI/HomePage"));
         homePage.name = "HomePage";
         homePage.tag = "HomePage";
-        homePage.transform.parent = this._rootPanel.transform;
+        homePage.transform.parent = this.RootPanel.transform;
         homePage.transform.localScale = new Vector3(1, 1, 1);
         homePage.transform.localPosition = new Vector3(0, 0, 0);
         this.GameController.EventController.RegisterInHierarchy(homePage);
     }
+	
+	public void SetHomePageButtonStatus(bool status)
+	{
+		GameObject homePage = GameObject.FindWithTag("HomePage");
+		UIImageButton[] buttons = homePage.GetComponentsInChildren<UIImageButton>();
+		for(int i = 0; i < buttons.Length; i ++)
+		{
+			UIImageButton button = buttons[i];
+			button.enabled = status;
+		}
+	}
 
     public void DestroyHomePage (bool now)
     {
@@ -39,21 +55,21 @@ public class UIViewController : MonoBehaviour
 		GameObject selectorPanel = (GameObject)Instantiate(Resources.Load("UI/BuildingsSelectorPanel"));
 		selectorPanel.name = "BuildingsSelectorPanel";
 		selectorPanel.tag = "GameSceneBuildingsSelectorPanel";
-		selectorPanel.transform.parent = this._rootPanel.transform;
+		selectorPanel.transform.parent = this.RootPanel.transform;
 		selectorPanel.transform.localScale = new Vector3(1,1,1);
 		selectorPanel.transform.localPosition = new Vector3(-125,-240, 0);
 		
-		this.AddBuildingCard(new Building(0, BuildingType.Terran_Barrack,FactionType.Blue), 0);
-		this.AddBuildingCard(new Building(0, BuildingType.Terran_Fortress,FactionType.Blue), 1);
-		this.AddBuildingCard(new Building(0, BuildingType.Terran_SniperHouse,FactionType.Blue), 2);
-		this.AddBuildingCard(new Building(0, BuildingType.Terran_MarksmanCamp,FactionType.Blue), 3);
-		this.AddBuildingCard(new Building(0, BuildingType.Terran_ArtilleryHall,FactionType.Blue), 4);
-		this.AddBuildingCard(new Building(0, BuildingType.Terran_ArtilleryLab,FactionType.Blue), 5);
-		this.AddBuildingCard(new Building(0, BuildingType.Terran_MysterySchool,FactionType.Blue), 6);
-		this.AddBuildingCard(new Building(0, BuildingType.Terran_Aviary,FactionType.Blue), 7);
-		this.AddBuildingCard(new Building(0, BuildingType.Terran_AdvancedAviary,FactionType.Blue), 8);
-		this.AddBuildingCard(new Building(0, BuildingType.Terran_Church,FactionType.Blue), 9);
-		this.AddBuildingCard(new Building(0, BuildingType.Terran_Temple,FactionType.Blue), 10);
+		this.AddBuildingCard(new Building(0, BuildingType.Terran_Barrack,this.GameController.GameSceneController.MyFactionType), 0);
+		this.AddBuildingCard(new Building(0, BuildingType.Terran_Fortress,this.GameController.GameSceneController.MyFactionType), 1);
+		this.AddBuildingCard(new Building(0, BuildingType.Terran_SniperHouse,this.GameController.GameSceneController.MyFactionType), 2);
+		this.AddBuildingCard(new Building(0, BuildingType.Terran_MarksmanCamp,this.GameController.GameSceneController.MyFactionType), 3);
+		this.AddBuildingCard(new Building(0, BuildingType.Terran_ArtilleryHall,this.GameController.GameSceneController.MyFactionType), 4);
+		this.AddBuildingCard(new Building(0, BuildingType.Terran_ArtilleryLab,this.GameController.GameSceneController.MyFactionType), 5);
+		this.AddBuildingCard(new Building(0, BuildingType.Terran_MysterySchool,this.GameController.GameSceneController.MyFactionType), 6);
+		this.AddBuildingCard(new Building(0, BuildingType.Terran_Aviary,this.GameController.GameSceneController.MyFactionType), 7);
+		this.AddBuildingCard(new Building(0, BuildingType.Terran_AdvancedAviary,this.GameController.GameSceneController.MyFactionType), 8);
+		this.AddBuildingCard(new Building(0, BuildingType.Terran_Church,this.GameController.GameSceneController.MyFactionType), 9);
+		this.AddBuildingCard(new Building(0, BuildingType.Terran_Temple,this.GameController.GameSceneController.MyFactionType), 10);
 	}
 	
 	public void DestroyBuildingsSelectorPanel(bool now)
@@ -70,7 +86,7 @@ public class UIViewController : MonoBehaviour
 		GameObject detailPanel = (GameObject)Instantiate(Resources.Load("UI/BuildingDetailPanel"));
 		detailPanel.name = "BuildingDetailPanel";
 		detailPanel.tag = "GameSceneBuildingDetailPanel";
-		detailPanel.transform.parent = this._rootPanel.transform;
+		detailPanel.transform.parent = this.RootPanel.transform;
 		detailPanel.transform.localScale = new Vector3(1,1,1);
 		detailPanel.transform.localPosition = new Vector3(355, -240, 0);
 	}
@@ -96,13 +112,13 @@ public class UIViewController : MonoBehaviour
 		StringBuilder spriteName = new StringBuilder(string.Empty);
         spriteName.Append(building.BuildingType);
         spriteName.Append("_");
-        spriteName.Append(FactionType.Blue);
+        spriteName.Append(building.FactionType);
 		buildingCard.transform.FindChild("Building").gameObject.GetComponent<UISprite>().spriteName = spriteName.ToString();
 		buildingCard.transform.FindChild("GoldCost").gameObject.GetComponent<UILabel>().text = building.CoinCost.ToString();
 		buildingCard.transform.FindChild("BuildingName").gameObject.GetComponent<UILabel>().text = building.BuildingName;
 		
 		UIBuildingCardController buildingCardCtrl = buildingCard.GetComponent<UIBuildingCardController>();
-		buildingCardCtrl.BuildingType = building.BuildingType;
+		buildingCardCtrl.Building = building;
 		switch(building.BuildingType)
 		{
 			case BuildingType.Terran_Barrack:
@@ -141,6 +157,45 @@ public class UIViewController : MonoBehaviour
 		}
 		
 	}
+	
+	public GameObject ShowMenuBar()
+	{
+		GameObject menuBar = (GameObject)Instantiate(Resources.Load("UI/MenuBar"));
+		menuBar.name = "MenuBar";
+		menuBar.tag = "GameSceneMenuBar";
+		menuBar.transform.parent = this.RootPanel.transform;
+		menuBar.transform.localScale = new Vector3(1, 1, 1);
+		menuBar.transform.localPosition = new Vector3(414, 285, 0);
+		return menuBar;
+	}
+	
+	public void DestroyMenuBar(bool now)
+	{
+		GameObject menuBar = GameObject.FindWithTag("GameSceneMenuBar");
+		if(now)
+			DestroyImmediate(menuBar);
+		else
+			Destroy(menuBar);
+	} 
+	
+	public void ShowShadowCover()
+	{
+		GameObject shadowCover = (GameObject)Instantiate(Resources.Load("UI/ShadowCover"));
+		shadowCover.name = "ShadowCover";
+		shadowCover.tag = "ShadowCover";
+		shadowCover.transform.parent = this.RootPanel.transform;
+		shadowCover.transform.localScale = new Vector3(1, 1, 1);
+		shadowCover.transform.localPosition = new Vector3(0, 0, 0);
+	}
+	
+	public void DestroyShadowCover(bool now)
+	{
+		GameObject shadowCover = GameObject.FindWithTag("ShadowCover");
+		if(now)
+			DestroyImmediate(shadowCover);
+		else
+			Destroy(shadowCover);
+	} 
 	
     public GameController GameController
     {

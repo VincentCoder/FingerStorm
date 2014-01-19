@@ -71,27 +71,27 @@ MonoBehaviour:
     y: 18
     width: 86
     height: 38
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 21
-    paddingRight: 21
-    paddingTop: 13
-    paddingBottom: 13
+    borderLeft: 20
+    borderRight: 20
+    borderTop: 20
+    borderBottom: 20
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: UI_Button_Up
     x: 100
     y: 83
     width: 81
     height: 33
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 23
-    paddingRight: 24
-    paddingTop: 16
-    paddingBottom: 15
+    borderLeft: 20
+    borderRight: 20
+    borderTop: 20
+    borderBottom: 20
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: UI_Camp_01
     x: 210
     y: 224
@@ -162,10 +162,10 @@ MonoBehaviour:
     y: 56
     width: 60
     height: 60
-    borderLeft: 15
-    borderRight: 15
-    borderTop: 15
-    borderBottom: 15
+    borderLeft: 20
+    borderRight: 20
+    borderTop: 20
+    borderBottom: 20
     paddingLeft: 2
     paddingRight: 2
     paddingTop: 2

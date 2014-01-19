@@ -53,9 +53,22 @@ MonoBehaviour:
     paddingRight: 53
     paddingTop: 0
     paddingBottom: 51
+  - name: UI_Bg_Shadow
+    x: 319
+    y: 482
+    width: 82
+    height: 80
+    borderLeft: 50
+    borderRight: 50
+    borderTop: 50
+    borderBottom: 50
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: UI_Fighting_Menu_Continue_Down
     x: 0
-    y: 248
+    y: 458
     width: 318
     height: 104
     borderLeft: 0
@@ -68,7 +81,7 @@ MonoBehaviour:
     paddingBottom: 11
   - name: UI_Fighting_Menu_Continue_Up
     x: 409
-    y: 728
+    y: 926
     width: 316
     height: 98
     borderLeft: 0
@@ -81,7 +94,7 @@ MonoBehaviour:
     paddingBottom: 15
   - name: UI_Fighting_Menu_Surrender_Down
     x: 0
-    y: 458
+    y: 353
     width: 318
     height: 104
     borderLeft: 0
@@ -107,7 +120,7 @@ MonoBehaviour:
     paddingBottom: 15
   - name: UI_Home_Exit_Down
     x: 0
-    y: 353
+    y: 248
     width: 318
     height: 104
     borderLeft: 0
@@ -120,7 +133,7 @@ MonoBehaviour:
     paddingBottom: 11
   - name: UI_Home_Exit_Up
     x: 409
-    y: 629
+    y: 728
     width: 316
     height: 98
     borderLeft: 0
@@ -146,7 +159,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: UI_Home_Options_Up
     x: 409
-    y: 926
+    y: 629
     width: 316
     height: 98
     borderLeft: 0

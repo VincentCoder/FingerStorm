@@ -11,6 +11,10 @@ TagManager:
   - GameSceneBuildingsSelectorPanel
   - GameSceneBuildingDetailPanel
   - Obstacle
+  - GameSceneMenuBar
+  - HomePageCreateGameButton
+  - HomePageJoinGameButton
+  - ShadowCover
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

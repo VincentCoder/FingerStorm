@@ -117,6 +117,21 @@ public class BuildingsManager
         }
         return result;
     }
+	
+	public bool PayForTheBuilding(int buildingCost)
+	{
+		GameObject gameScene = GameObject.Find("GameSceneController");
+		if(gameScene != null)
+		{
+			GameSceneController gameSceneCtrl = gameScene.GetComponent<GameSceneController>();
+			if(gameSceneCtrl.CoinCount >= buildingCost)
+			{
+				gameSceneCtrl.CoinCount -= buildingCost;
+				return true;
+			}
+		}
+		return false;
+	}
 
     #endregion
 }

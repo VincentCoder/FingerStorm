@@ -3,13 +3,13 @@ using System.Collections;
 
 public class UIBuildingCardController : MonoBehaviour 
 {
-	private GameObject building;
+	private GameObject buildingObj;
 	private bool IsDragging;
 	public string Description {get;set;}
-	
-	public BuildingType BuildingType {get;set;}
+	public Building Building{get;set;}
 	
 	private UILabel buildingDescriptionLabel;
+	private GameSceneController gameSceneCtrl;
 	
 	void Start ()
 	{
@@ -20,6 +20,9 @@ public class UIBuildingCardController : MonoBehaviour
 		GameObject detailPanel = GameObject.FindWithTag("GameSceneBuildingDetailPanel");
 		if(detailPanel != null)
 			this.buildingDescriptionLabel = detailPanel.GetComponentInChildren<UILabel>();
+		GameObject gameScene = GameObject.Find("GameSceneController");
+		if(gameScene != null)
+			this.gameSceneCtrl = gameScene.GetComponent<GameSceneController>();
 	}
     
     private void HandleEvent_Press(GameObject go, bool state)
@@ -31,13 +34,14 @@ public class UIBuildingCardController : MonoBehaviour
 		}
 		else if(this.IsDragging)
 		{
-			if(this.CheckBuildingPositionValid())
+			if(this.CheckBuildingPositionValid() && BuildingsManager.GetInstance().PayForTheBuilding(this.Building.CoinCost))
 			{
-				this.building.GetComponent<BuildingController>().GetFSM().ChangeState(Building_StateBuilding.Instance());
+				
+				this.buildingObj.GetComponent<BuildingController>().GetFSM().ChangeState(Building_StateBuilding.Instance());
 			}
 			else
 			{
-				Destroy(this.building);
+				Destroy(this.buildingObj);
 			}
 			this.IsDragging = false;
 		}
@@ -49,12 +53,12 @@ public class UIBuildingCardController : MonoBehaviour
 		{
 			Vector3 pos = this.GetWorldPos(UICamera.lastTouchPosition);
 			pos = new Vector3(pos.x, pos.y, 0);
-			this.building = BuildingsManager.GetInstance().CreateNewBuilding(this.BuildingType, FactionType.Blue, pos);
+			this.buildingObj = BuildingsManager.GetInstance().CreateNewBuilding(this.Building.BuildingType, this.gameSceneCtrl.MyFactionType, pos);
 			this.IsDragging = true;
 		}
-		else if(this.building != null)
+		else if(this.buildingObj != null)
 		{
-            this.building.transform.position += ((Vector3)delta * NGUITools.FindInParents<UIRoot>(this.transform.parent).pixelSizeAdjustment);
+            this.buildingObj.transform.position += ((Vector3)delta * NGUITools.FindInParents<UIRoot>(this.transform.parent).pixelSizeAdjustment);
 		}
 	}
 	
@@ -70,10 +74,10 @@ public class UIBuildingCardController : MonoBehaviour
 	
 	private bool CheckBuildingPositionValid()
 	{
-		if(this.building != null)
+		if(this.buildingObj != null)
 		{
 			Rect validRect = new Rect(32, 192, 231, 416);
-			return validRect.Contains(this.building.transform.position);
+			return validRect.Contains(this.buildingObj.transform.position);
 		}
 		return false;
 	}

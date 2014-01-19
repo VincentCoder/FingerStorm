@@ -82,12 +82,23 @@ public class UIEventController : MonoBehaviour
         {
             case "HomePageStartGameButton":
                 {
-                    this.GameController.ViewController.DestroyHomePage(true);
-                    GameObject gameSceneCtrl = (GameObject)Instantiate(Resources.Load("GameScene/GameSceneController"));
-                    gameSceneCtrl.transform.localPosition = new Vector3(0, 0, 0);
+					if(this.GameController.Client.State == ExitGames.Client.Photon.LoadBalancing.ClientState.JoinedLobby)
+					{
+						this.GameController.GetFSM().ChangeState(GameState_Matching.Instance());
+						this.GameController.Client.OpJoinRandomRoom(null, 0);
+					}
                     break;
                 }
             case "HomePageOptionsButton":
+                {
+                    break;
+                }
+			case "HomePageCreateGameButton":
+                {
+					
+                    break;
+                }
+			case "HomePageJoinGameButton":
                 {
                     break;
                 }
