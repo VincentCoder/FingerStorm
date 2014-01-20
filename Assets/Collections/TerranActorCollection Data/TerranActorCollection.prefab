@@ -58,10 +58,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .958986342, y: .382814467}
-    - {x: .996091783, y: .382814467}
-    - {x: .958986342, y: .431638658}
-    - {x: .996091783, y: .431638658}
+    - {x: .167970702, y: .267580092}
+    - {x: .167970702, y: .304685533}
+    - {x: .216794923, y: .267580092}
+    - {x: .216794923, y: .304685533}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -71,7 +71,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 0
+    flipped: 1
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -79,6 +79,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Attack_Blue_002
     boundsData:
     - {x: 6, y: 3.5, z: 0}
@@ -95,10 +96,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .160158202, y: .429689467}
-    - {x: .160158202, y: .464841783}
-    - {x: .208982423, y: .429689467}
-    - {x: .208982423, y: .464841783}
+    - {x: .208986327, y: .380861342}
+    - {x: .208986327, y: .416013658}
+    - {x: .257810533, y: .380861342}
+    - {x: .257810533, y: .416013658}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -116,6 +117,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Attack_Blue_003
     boundsData:
     - {x: 4, y: 3.5, z: 0}
@@ -132,10 +134,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .173830077, y: .269533217}
-    - {x: .173830077, y: .312498033}
-    - {x: .222654298, y: .269533217}
-    - {x: .222654298, y: .312498033}
+    - {x: .953126967, y: .240236327}
+    - {x: .996091783, y: .240236327}
+    - {x: .953126967, y: .289060533}
+    - {x: .996091783, y: .289060533}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -145,7 +147,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 1
+    flipped: 0
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -153,6 +155,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Attack_Blue_004
     boundsData:
     - {x: 13, y: 3, z: 0}
@@ -190,6 +193,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Attack_Blue_005
     boundsData:
     - {x: 13.5, y: 3, z: 0}
@@ -227,6 +231,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Attack_Blue_006
     boundsData:
     - {x: 10, y: 3.5, z: 0}
@@ -243,10 +248,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .609376967, y: .371095717}
-    - {x: .609376967, y: .410154283}
-    - {x: .658201158, y: .371095717}
-    - {x: .658201158, y: .410154283}
+    - {x: .822267592, y: .419923842}
+    - {x: .822267592, y: .458982408}
+    - {x: .871091783, y: .419923842}
+    - {x: .871091783, y: .458982408}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -264,6 +269,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Attack_Red_001
     boundsData:
     - {x: 6.5, y: 3.5, z: 0}
@@ -280,10 +286,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .652345717, y: .464845717}
-    - {x: .652345717, y: .501951158}
-    - {x: .701169908, y: .464845717}
-    - {x: .701169908, y: .501951158}
+    - {x: .224611327, y: .287111342}
+    - {x: .224611327, y: .324216783}
+    - {x: .273435533, y: .287111342}
+    - {x: .273435533, y: .324216783}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -301,6 +307,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Attack_Red_002
     boundsData:
     - {x: 6, y: 3.5, z: 0}
@@ -317,10 +324,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .400392592, y: .373048842}
-    - {x: .400392592, y: .408201158}
-    - {x: .449216783, y: .373048842}
-    - {x: .449216783, y: .408201158}
+    - {x: .154298827, y: .408205092}
+    - {x: .189451173, y: .408205092}
+    - {x: .154298827, y: .457029283}
+    - {x: .189451173, y: .457029283}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -330,7 +337,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 1
+    flipped: 0
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -338,6 +345,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Attack_Red_003
     boundsData:
     - {x: 4, y: 3.5, z: 0}
@@ -354,10 +362,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .0585957021, y: .279298842}
-    - {x: .0585957021, y: .322263658}
-    - {x: .107419923, y: .279298842}
-    - {x: .107419923, y: .322263658}
+    - {x: .316408217, y: .230470702}
+    - {x: .316408217, y: .273435533}
+    - {x: .365232408, y: .230470702}
+    - {x: .365232408, y: .273435533}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -375,6 +383,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Attack_Red_004
     boundsData:
     - {x: 13, y: 3, z: 0}
@@ -412,6 +421,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Attack_Red_005
     boundsData:
     - {x: 13.5, y: 3, z: 0}
@@ -449,6 +459,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Attack_Red_006
     boundsData:
     - {x: 10, y: 3.5, z: 0}
@@ -465,10 +476,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .542970717, y: .373048842}
-    - {x: .542970717, y: .412107408}
-    - {x: .591794908, y: .373048842}
-    - {x: .591794908, y: .412107408}
+    - {x: .878908217, y: .423830092}
+    - {x: .878908217, y: .462888658}
+    - {x: .927732408, y: .423830092}
+    - {x: .927732408, y: .462888658}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -486,6 +497,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Die_Blue_001
     boundsData:
     - {x: 7, y: 3.5, z: 0}
@@ -502,10 +514,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .916017592, y: .335939467}
-    - {x: .916017592, y: .374998033}
-    - {x: .964841783, y: .335939467}
-    - {x: .964841783, y: .374998033}
+    - {x: .609376967, y: .419923842}
+    - {x: .609376967, y: .458982408}
+    - {x: .658201158, y: .419923842}
+    - {x: .658201158, y: .458982408}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -523,6 +535,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Die_Blue_002
     boundsData:
     - {x: -1, y: 0, z: 0}
@@ -539,10 +552,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .773439467, y: .476564467}
-    - {x: .773439467, y: .527341783}
-    - {x: .808591783, y: .476564467}
-    - {x: .808591783, y: .527341783}
+    - {x: .281251967, y: .330080092}
+    - {x: .332029283, y: .330080092}
+    - {x: .281251967, y: .365232408}
+    - {x: .332029283, y: .365232408}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -552,7 +565,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 1
+    flipped: 0
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -560,6 +573,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Die_Blue_003
     boundsData:
     - {x: -5, y: 0, z: 0}
@@ -576,10 +590,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .904298842, y: .382814467}
-    - {x: .951169908, y: .382814467}
-    - {x: .904298842, y: .421873033}
-    - {x: .951169908, y: .421873033}
+    - {x: .923830092, y: .476564467}
+    - {x: .970701158, y: .476564467}
+    - {x: .923830092, y: .515623033}
+    - {x: .970701158, y: .515623033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -597,6 +611,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Die_Blue_004
     boundsData:
     - {x: -10, y: -4.5, z: 0}
@@ -634,6 +649,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Die_Blue_005
     boundsData:
     - {x: -15, y: -5.5, z: 0}
@@ -650,10 +666,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .613283217, y: .322267592}
-    - {x: .660154283, y: .322267592}
-    - {x: .613283217, y: .363279283}
-    - {x: .660154283, y: .363279283}
+    - {x: .462892592, y: .365236342}
+    - {x: .509763658, y: .365236342}
+    - {x: .462892592, y: .406248033}
+    - {x: .509763658, y: .406248033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -671,6 +687,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Die_Blue_006
     boundsData:
     - {x: -15, y: -6.5, z: 0}
@@ -687,10 +704,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .275392592, y: .378908217}
-    - {x: .322263658, y: .378908217}
-    - {x: .275392592, y: .416013658}
-    - {x: .322263658, y: .416013658}
+    - {x: .0507832021, y: .417970717}
+    - {x: .0976542979, y: .417970717}
+    - {x: .0507832021, y: .455076158}
+    - {x: .0976542979, y: .455076158}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -708,6 +725,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Die_Red_001
     boundsData:
     - {x: 7, y: 3.5, z: 0}
@@ -724,10 +742,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .847658217, y: .371095717}
-    - {x: .847658217, y: .410154283}
-    - {x: .896482408, y: .371095717}
-    - {x: .896482408, y: .410154283}
+    - {x: .666017592, y: .419923842}
+    - {x: .705076158, y: .419923842}
+    - {x: .666017592, y: .468748033}
+    - {x: .705076158, y: .468748033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -737,7 +755,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 1
+    flipped: 0
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -745,6 +763,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Die_Red_002
     boundsData:
     - {x: -1, y: 0, z: 0}
@@ -761,10 +780,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .945314467, y: .439455092}
-    - {x: .996091783, y: .439455092}
-    - {x: .945314467, y: .474607408}
-    - {x: .996091783, y: .474607408}
+    - {x: .00390820298, y: .273439467}
+    - {x: .0546855479, y: .273439467}
+    - {x: .00390820298, y: .308591783}
+    - {x: .0546855479, y: .308591783}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -782,6 +801,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Die_Red_003
     boundsData:
     - {x: -5, y: 0, z: 0}
@@ -798,10 +818,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .833986342, y: .417970717}
-    - {x: .880857408, y: .417970717}
-    - {x: .833986342, y: .457029283}
-    - {x: .880857408, y: .457029283}
+    - {x: .00390820298, y: .226564452}
+    - {x: .0507792979, y: .226564452}
+    - {x: .00390820298, y: .265623033}
+    - {x: .0507792979, y: .265623033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -819,6 +839,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Die_Red_004
     boundsData:
     - {x: -10, y: -4.5, z: 0}
@@ -856,6 +877,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Die_Red_005
     boundsData:
     - {x: -15, y: -5.5, z: 0}
@@ -872,10 +894,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .554689467, y: .324220717}
-    - {x: .601560533, y: .324220717}
-    - {x: .554689467, y: .365232408}
-    - {x: .601560533, y: .365232408}
+    - {x: .517580092, y: .369142592}
+    - {x: .564451158, y: .369142592}
+    - {x: .517580092, y: .410154283}
+    - {x: .564451158, y: .410154283}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -893,6 +915,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Die_Red_006
     boundsData:
     - {x: -15, y: -6.5, z: 0}
@@ -909,10 +932,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .216798827, y: .396486342}
-    - {x: .263669908, y: .396486342}
-    - {x: .216798827, y: .433591783}
-    - {x: .263669908, y: .433591783}
+    - {x: .265626967, y: .373048842}
+    - {x: .312498033, y: .373048842}
+    - {x: .265626967, y: .410154283}
+    - {x: .312498033, y: .410154283}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -930,6 +953,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Walk_Blue_001
     boundsData:
     - {x: 6.5, y: 3.5, z: 0}
@@ -946,10 +970,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .888673842, y: .429689467}
-    - {x: .888673842, y: .466794908}
-    - {x: .937498033, y: .429689467}
-    - {x: .937498033, y: .466794908}
+    - {x: .167970702, y: .267580092}
+    - {x: .167970702, y: .304685533}
+    - {x: .216794923, y: .267580092}
+    - {x: .216794923, y: .304685533}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -967,6 +991,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Walk_Blue_002
     boundsData:
     - {x: 7, y: 4.5, z: 0}
@@ -983,10 +1008,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .457033217, y: .375001967}
-    - {x: .457033217, y: .410154283}
-    - {x: .505857408, y: .375001967}
-    - {x: .505857408, y: .410154283}
+    - {x: .105470702, y: .423830092}
+    - {x: .140623048, y: .423830092}
+    - {x: .105470702, y: .472654283}
+    - {x: .140623048, y: .472654283}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -996,7 +1021,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 1
+    flipped: 0
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -1004,6 +1029,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Walk_Blue_003
     boundsData:
     - {x: 7.5, y: 5, z: 0}
@@ -1020,10 +1046,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .330080092, y: .419923842}
-    - {x: .330080092, y: .453123033}
-    - {x: .380857408, y: .419923842}
-    - {x: .380857408, y: .453123033}
+    - {x: .00390820298, y: .466798842}
+    - {x: .0371074229, y: .466798842}
+    - {x: .00390820298, y: .517576158}
+    - {x: .0371074229, y: .517576158}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -1033,7 +1059,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 1
+    flipped: 0
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -1041,6 +1067,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Walk_Blue_004
     boundsData:
     - {x: 6.5, y: 5.5, z: 0}
@@ -1057,10 +1084,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .230470702, y: .335939467}
-    - {x: .267576158, y: .335939467}
-    - {x: .230470702, y: .388669908}
-    - {x: .267576158, y: .388669908}
+    - {x: .884767592, y: .378908217}
+    - {x: .884767592, y: .416013658}
+    - {x: .937498033, y: .378908217}
+    - {x: .937498033, y: .416013658}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -1070,7 +1097,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 0
+    flipped: 1
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -1078,6 +1105,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Walk_Blue_005
     boundsData:
     - {x: 5.5, y: 5, z: 0}
@@ -1094,10 +1122,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .812501967, y: .220705077}
-    - {x: .812501967, y: .261716783}
-    - {x: .863279283, y: .220705077}
-    - {x: .863279283, y: .261716783}
+    - {x: .734376967, y: .273439467}
+    - {x: .775388658, y: .273439467}
+    - {x: .734376967, y: .324216783}
+    - {x: .775388658, y: .324216783}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -1107,7 +1135,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 1
+    flipped: 0
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -1115,6 +1143,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Walk_Blue_006
     boundsData:
     - {x: 6, y: 4, z: 0}
@@ -1131,10 +1160,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .355470717, y: .326173842}
-    - {x: .355470717, y: .365232408}
-    - {x: .406248033, y: .326173842}
-    - {x: .406248033, y: .365232408}
+    - {x: .779298842, y: .341798842}
+    - {x: .818357408, y: .341798842}
+    - {x: .779298842, y: .392576158}
+    - {x: .818357408, y: .392576158}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -1144,7 +1173,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 1
+    flipped: 0
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -1152,6 +1181,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Walk_Red_001
     boundsData:
     - {x: 6.5, y: 3.5, z: 0}
@@ -1168,10 +1198,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .830080092, y: .464845717}
-    - {x: .830080092, y: .501951158}
-    - {x: .878904283, y: .464845717}
-    - {x: .878904283, y: .501951158}
+    - {x: .224611327, y: .287111342}
+    - {x: .224611327, y: .324216783}
+    - {x: .273435533, y: .287111342}
+    - {x: .273435533, y: .324216783}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -1189,6 +1219,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Walk_Red_002
     boundsData:
     - {x: 7, y: 4.5, z: 0}
@@ -1205,10 +1236,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .400392592, y: .416017592}
-    - {x: .400392592, y: .451169908}
-    - {x: .449216783, y: .416017592}
-    - {x: .449216783, y: .451169908}
+    - {x: .0507832021, y: .462892592}
+    - {x: .0859355479, y: .462892592}
+    - {x: .0507832021, y: .511716783}
+    - {x: .0859355479, y: .511716783}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -1218,7 +1249,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 1
+    flipped: 0
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -1226,6 +1257,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Walk_Red_003
     boundsData:
     - {x: 7.5, y: 5, z: 0}
@@ -1242,10 +1274,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .271486342, y: .423830092}
-    - {x: .271486342, y: .457029283}
-    - {x: .322263658, y: .423830092}
-    - {x: .322263658, y: .457029283}
+    - {x: .320314467, y: .373048842}
+    - {x: .320314467, y: .406248033}
+    - {x: .371091783, y: .373048842}
+    - {x: .371091783, y: .406248033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -1263,6 +1295,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Walk_Red_004
     boundsData:
     - {x: 6.5, y: 5.5, z: 0}
@@ -1279,10 +1312,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .171876952, y: .369142592}
-    - {x: .208982423, y: .369142592}
-    - {x: .171876952, y: .421873033}
-    - {x: .208982423, y: .421873033}
+    - {x: .945314467, y: .416017592}
+    - {x: .982419908, y: .416017592}
+    - {x: .945314467, y: .468748033}
+    - {x: .982419908, y: .468748033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -1300,6 +1333,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Walk_Red_005
     boundsData:
     - {x: 5.5, y: 5, z: 0}
@@ -1316,10 +1350,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .871095717, y: .228517577}
-    - {x: .871095717, y: .269529283}
-    - {x: .921873033, y: .228517577}
-    - {x: .921873033, y: .269529283}
+    - {x: .783205092, y: .283205092}
+    - {x: .824216783, y: .283205092}
+    - {x: .783205092, y: .333982408}
+    - {x: .824216783, y: .333982408}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -1329,7 +1363,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 1
+    flipped: 0
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -1337,6 +1371,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Crusader_Walk_Red_006
     boundsData:
     - {x: 6, y: 4, z: 0}
@@ -1353,10 +1388,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .289064467, y: .332033217}
-    - {x: .289064467, y: .371091783}
-    - {x: .339841783, y: .332033217}
-    - {x: .339841783, y: .371091783}
+    - {x: .826173842, y: .373048842}
+    - {x: .826173842, y: .412107408}
+    - {x: .876951158, y: .373048842}
+    - {x: .876951158, y: .412107408}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -1374,6 +1409,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Attack_Blue_001
     boundsData:
     - {x: 7, y: 2, z: 0}
@@ -1390,10 +1426,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .794923842, y: .558595717}
-    - {x: .794923842, y: .589841783}
-    - {x: .833982408, y: .558595717}
-    - {x: .833982408, y: .589841783}
+    - {x: .296876967, y: .505861342}
+    - {x: .296876967, y: .537107408}
+    - {x: .335935533, y: .505861342}
+    - {x: .335935533, y: .537107408}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -1411,6 +1447,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Attack_Blue_002
     boundsData:
     - {x: 5.5, y: 4.5, z: 0}
@@ -1448,6 +1485,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Attack_Blue_003
     boundsData:
     - {x: 2, y: 4.5, z: 0}
@@ -1464,10 +1502,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .00390820298, y: .328126967}
-    - {x: .0468730479, y: .328126967}
-    - {x: .00390820298, y: .376951158}
-    - {x: .0468730479, y: .376951158}
+    - {x: .242189452, y: .236330077}
+    - {x: .242189452, y: .279294908}
+    - {x: .291013658, y: .236330077}
+    - {x: .291013658, y: .279294908}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -1477,7 +1515,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 0
+    flipped: 1
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -1485,6 +1523,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Attack_Blue_004
     boundsData:
     - {x: 12.5, y: 3.5, z: 0}
@@ -1522,6 +1561,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Attack_Blue_005
     boundsData:
     - {x: 13, y: 1.5, z: 0}
@@ -1538,10 +1578,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .439455092, y: .275392592}
-    - {x: .490232408, y: .275392592}
-    - {x: .439455092, y: .316404283}
-    - {x: .490232408, y: .316404283}
+    - {x: .617189467, y: .224611327}
+    - {x: .667966783, y: .224611327}
+    - {x: .617189467, y: .265623033}
+    - {x: .667966783, y: .265623033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -1559,6 +1599,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Attack_Blue_006
     boundsData:
     - {x: 9, y: 2, z: 0}
@@ -1575,10 +1616,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .0410175771, y: .607423842}
-    - {x: .0410175771, y: .642576158}
-    - {x: .0800761729, y: .607423842}
-    - {x: .0800761729, y: .642576158}
+    - {x: .515626967, y: .464845717}
+    - {x: .515626967, y: .499998033}
+    - {x: .554685533, y: .464845717}
+    - {x: .554685533, y: .499998033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -1596,6 +1637,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Attack_Red_001
     boundsData:
     - {x: 7, y: 2, z: 0}
@@ -1612,10 +1654,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .734376967, y: .574220717}
-    - {x: .734376967, y: .605466783}
-    - {x: .773435533, y: .574220717}
-    - {x: .773435533, y: .605466783}
+    - {x: .244142577, y: .509767592}
+    - {x: .244142577, y: .541013658}
+    - {x: .283201158, y: .509767592}
+    - {x: .283201158, y: .541013658}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -1633,6 +1675,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Attack_Red_002
     boundsData:
     - {x: 5.5, y: 4.5, z: 0}
@@ -1649,10 +1692,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .00390820298, y: .542970717}
-    - {x: .0332011729, y: .542970717}
-    - {x: .00390820298, y: .591794908}
-    - {x: .0332011729, y: .591794908}
+    - {x: .806642592, y: .169923827}
+    - {x: .835935533, y: .169923827}
+    - {x: .806642592, y: .218748048}
+    - {x: .835935533, y: .218748048}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -1670,6 +1713,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Attack_Red_003
     boundsData:
     - {x: 2, y: 4.5, z: 0}
@@ -1686,10 +1730,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .115236327, y: .279298842}
-    - {x: .115236327, y: .322263658}
-    - {x: .164060548, y: .279298842}
-    - {x: .164060548, y: .322263658}
+    - {x: .675783217, y: .222658202}
+    - {x: .675783217, y: .265623033}
+    - {x: .724607408, y: .222658202}
+    - {x: .724607408, y: .265623033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -1707,6 +1751,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Attack_Red_004
     boundsData:
     - {x: 12.5, y: 3.5, z: 0}
@@ -1744,6 +1789,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Attack_Red_005
     boundsData:
     - {x: 13, y: 1.5, z: 0}
@@ -1760,10 +1806,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .373048842, y: .277345717}
-    - {x: .423826158, y: .277345717}
-    - {x: .373048842, y: .318357408}
-    - {x: .423826158, y: .318357408}
+    - {x: .500001967, y: .226564452}
+    - {x: .550779283, y: .226564452}
+    - {x: .500001967, y: .267576158}
+    - {x: .550779283, y: .267576158}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -1781,6 +1827,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Attack_Red_006
     boundsData:
     - {x: 9, y: 2, z: 0}
@@ -1797,10 +1844,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .0410175771, y: .650392592}
-    - {x: .0410175771, y: .685544908}
-    - {x: .0800761729, y: .650392592}
-    - {x: .0800761729, y: .685544908}
+    - {x: .515626967, y: .507814467}
+    - {x: .515626967, y: .542966783}
+    - {x: .554685533, y: .507814467}
+    - {x: .554685533, y: .542966783}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -1818,6 +1865,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Die_Blue_001
     boundsData:
     - {x: 7.5, y: 2, z: 0}
@@ -1834,10 +1882,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .00390820298, y: .599611342}
-    - {x: .0332011729, y: .599611342}
-    - {x: .00390820298, y: .638669908}
-    - {x: .0332011729, y: .638669908}
+    - {x: .572267592, y: .369142592}
+    - {x: .601560533, y: .369142592}
+    - {x: .572267592, y: .408201158}
+    - {x: .601560533, y: .408201158}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -1855,6 +1903,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Die_Blue_002
     boundsData:
     - {x: -1.5, y: 1, z: 0}
@@ -1871,10 +1920,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .359376967, y: .599611342}
-    - {x: .404294908, y: .599611342}
-    - {x: .359376967, y: .634763658}
-    - {x: .404294908, y: .634763658}
+    - {x: .853517592, y: .519533217}
+    - {x: .898435533, y: .519533217}
+    - {x: .853517592, y: .554685533}
+    - {x: .898435533, y: .554685533}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -1892,6 +1941,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Die_Blue_003
     boundsData:
     - {x: -5, y: .5, z: 0}
@@ -1908,10 +1958,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .380861342, y: .505861342}
-    - {x: .380861342, y: .544919908}
-    - {x: .421873033, y: .505861342}
-    - {x: .421873033, y: .544919908}
+    - {x: .658205092, y: .476564467}
+    - {x: .658205092, y: .515623033}
+    - {x: .699216783, y: .476564467}
+    - {x: .699216783, y: .515623033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -1929,6 +1979,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Die_Blue_004
     boundsData:
     - {x: -11, y: -6, z: 0}
@@ -1945,10 +1996,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .216798827, y: .441408217}
-    - {x: .216798827, y: .480466783}
-    - {x: .259763658, y: .441408217}
-    - {x: .259763658, y: .480466783}
+    - {x: .378908217, y: .373048842}
+    - {x: .378908217, y: .412107408}
+    - {x: .421873033, y: .373048842}
+    - {x: .421873033, y: .412107408}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -1966,6 +2017,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Die_Blue_005
     boundsData:
     - {x: -15.5, y: -6.5, z: 0}
@@ -1982,10 +2034,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .103517577, y: .474611342}
-    - {x: .144529298, y: .474611342}
-    - {x: .103517577, y: .511716783}
-    - {x: .144529298, y: .511716783}
+    - {x: .316408217, y: .460939467}
+    - {x: .357419908, y: .460939467}
+    - {x: .316408217, y: .498044908}
+    - {x: .357419908, y: .498044908}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -2003,6 +2055,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Die_Blue_006
     boundsData:
     - {x: -15.5, y: -6.5, z: 0}
@@ -2019,10 +2072,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .0429707021, y: .517580092}
-    - {x: .0839824229, y: .517580092}
-    - {x: .0429707021, y: .554685533}
-    - {x: .0839824229, y: .554685533}
+    - {x: .248048827, y: .464845717}
+    - {x: .289060533, y: .464845717}
+    - {x: .248048827, y: .501951158}
+    - {x: .289060533, y: .501951158}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -2040,6 +2093,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Die_Red_001
     boundsData:
     - {x: 7.5, y: 2, z: 0}
@@ -2056,10 +2110,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .00390820298, y: .646486342}
-    - {x: .0332011729, y: .646486342}
-    - {x: .00390820298, y: .685544908}
-    - {x: .0332011729, y: .685544908}
+    - {x: .572267592, y: .416017592}
+    - {x: .601560533, y: .416017592}
+    - {x: .572267592, y: .455076158}
+    - {x: .601560533, y: .455076158}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -2077,6 +2131,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Die_Red_002
     boundsData:
     - {x: -1.5, y: 1, z: 0}
@@ -2093,10 +2148,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .0507832021, y: .474611342}
-    - {x: .0957011729, y: .474611342}
-    - {x: .0507832021, y: .509763658}
-    - {x: .0957011729, y: .509763658}
+    - {x: .371095717, y: .419923842}
+    - {x: .416013658, y: .419923842}
+    - {x: .371095717, y: .455076158}
+    - {x: .416013658, y: .455076158}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -2114,6 +2169,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Die_Red_003
     boundsData:
     - {x: -5, y: .5, z: 0}
@@ -2130,10 +2186,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .318361342, y: .507814467}
-    - {x: .318361342, y: .546873033}
-    - {x: .359373033, y: .507814467}
-    - {x: .359373033, y: .546873033}
+    - {x: .607423842, y: .513673842}
+    - {x: .607423842, y: .552732408}
+    - {x: .648435533, y: .513673842}
+    - {x: .648435533, y: .552732408}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -2151,6 +2207,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Die_Red_004
     boundsData:
     - {x: -11, y: -6, z: 0}
@@ -2167,10 +2224,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .160158202, y: .472658217}
-    - {x: .160158202, y: .511716783}
-    - {x: .203123048, y: .472658217}
-    - {x: .203123048, y: .511716783}
+    - {x: .320314467, y: .414064467}
+    - {x: .320314467, y: .453123033}
+    - {x: .363279283, y: .414064467}
+    - {x: .363279283, y: .453123033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -2188,6 +2245,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Die_Red_005
     boundsData:
     - {x: -15.5, y: -6.5, z: 0}
@@ -2204,10 +2262,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .0917988271, y: .519533217}
-    - {x: .132810548, y: .519533217}
-    - {x: .0917988271, y: .556638658}
-    - {x: .132810548, y: .556638658}
+    - {x: .195314452, y: .470705092}
+    - {x: .236326173, y: .470705092}
+    - {x: .195314452, y: .507810533}
+    - {x: .236326173, y: .507810533}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -2225,6 +2283,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Die_Red_006
     boundsData:
     - {x: -15.5, y: -6.5, z: 0}
@@ -2241,10 +2300,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .0410175771, y: .562501967}
-    - {x: .0820292979, y: .562501967}
-    - {x: .0410175771, y: .599607408}
-    - {x: .0820292979, y: .599607408}
+    - {x: .906251967, y: .523439467}
+    - {x: .947263658, y: .523439467}
+    - {x: .906251967, y: .560544908}
+    - {x: .947263658, y: .560544908}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -2262,6 +2321,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Walk_Blue_001
     boundsData:
     - {x: 7, y: 2, z: 0}
@@ -2278,10 +2338,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .841798842, y: .572267592}
-    - {x: .841798842, y: .603513658}
-    - {x: .880857408, y: .572267592}
-    - {x: .880857408, y: .603513658}
+    - {x: .296876967, y: .505861342}
+    - {x: .296876967, y: .537107408}
+    - {x: .335935533, y: .505861342}
+    - {x: .335935533, y: .537107408}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -2299,6 +2359,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Walk_Blue_002
     boundsData:
     - {x: 7, y: 2.5, z: 0}
@@ -2315,10 +2376,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .464845717, y: .599611342}
-    - {x: .464845717, y: .630857408}
-    - {x: .505857408, y: .599611342}
-    - {x: .505857408, y: .630857408}
+    - {x: .648439467, y: .611330092}
+    - {x: .648439467, y: .642576158}
+    - {x: .689451158, y: .611330092}
+    - {x: .689451158, y: .642576158}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -2336,6 +2397,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Walk_Blue_003
     boundsData:
     - {x: 7, y: 3, z: 0}
@@ -2352,10 +2414,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .648439467, y: .509767592}
-    - {x: .648439467, y: .541013658}
-    - {x: .691404283, y: .509767592}
-    - {x: .691404283, y: .541013658}
+    - {x: .414064467, y: .500001967}
+    - {x: .414064467, y: .531248033}
+    - {x: .457029283, y: .500001967}
+    - {x: .457029283, y: .531248033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -2373,6 +2435,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Walk_Blue_004
     boundsData:
     - {x: 7, y: 3.5, z: 0}
@@ -2389,10 +2452,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .140626952, y: .601564467}
-    - {x: .171873048, y: .601564467}
-    - {x: .140626952, y: .646482408}
-    - {x: .171873048, y: .646482408}
+    - {x: .423830092, y: .460939467}
+    - {x: .423830092, y: .492185533}
+    - {x: .468748033, y: .460939467}
+    - {x: .468748033, y: .492185533}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -2402,7 +2465,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 0
+    flipped: 1
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -2410,6 +2473,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Walk_Blue_005
     boundsData:
     - {x: 7, y: 3, z: 0}
@@ -2426,10 +2490,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .587892592, y: .513673842}
-    - {x: .587892592, y: .544919908}
-    - {x: .630857408, y: .513673842}
-    - {x: .630857408, y: .544919908}
+    - {x: .365236342, y: .503908217}
+    - {x: .396482408, y: .503908217}
+    - {x: .365236342, y: .546873033}
+    - {x: .396482408, y: .546873033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -2439,7 +2503,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 1
+    flipped: 0
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -2447,6 +2511,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Walk_Blue_006
     boundsData:
     - {x: 7, y: 2.5, z: 0}
@@ -2463,10 +2528,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .412111342, y: .605470717}
-    - {x: .412111342, y: .636716783}
-    - {x: .453123033, y: .605470717}
-    - {x: .453123033, y: .636716783}
+    - {x: .697267592, y: .613283217}
+    - {x: .697267592, y: .644529283}
+    - {x: .738279283, y: .613283217}
+    - {x: .738279283, y: .644529283}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -2484,6 +2549,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Walk_Red_001
     boundsData:
     - {x: 7, y: 2, z: 0}
@@ -2500,10 +2566,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .781251967, y: .597658217}
-    - {x: .781251967, y: .628904283}
-    - {x: .820310533, y: .597658217}
-    - {x: .820310533, y: .628904283}
+    - {x: .244142577, y: .509767592}
+    - {x: .244142577, y: .541013658}
+    - {x: .283201158, y: .509767592}
+    - {x: .283201158, y: .541013658}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -2521,6 +2587,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Walk_Red_002
     boundsData:
     - {x: 7, y: 2.5, z: 0}
@@ -2537,10 +2604,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .746095717, y: .535158217}
-    - {x: .746095717, y: .566404283}
-    - {x: .787107408, y: .535158217}
-    - {x: .787107408, y: .566404283}
+    - {x: .404298842, y: .539064467}
+    - {x: .404298842, y: .570310533}
+    - {x: .445310533, y: .539064467}
+    - {x: .445310533, y: .570310533}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -2558,6 +2625,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Walk_Red_003
     boundsData:
     - {x: 7, y: 3, z: 0}
@@ -2574,10 +2642,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .527345717, y: .523439467}
-    - {x: .527345717, y: .554685533}
-    - {x: .570310533, y: .523439467}
-    - {x: .570310533, y: .554685533}
+    - {x: .464845717, y: .513673842}
+    - {x: .464845717, y: .544919908}
+    - {x: .507810533, y: .513673842}
+    - {x: .507810533, y: .544919908}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -2595,6 +2663,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Walk_Red_004
     boundsData:
     - {x: 7, y: 3.5, z: 0}
@@ -2611,10 +2680,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .0898457021, y: .605470717}
-    - {x: .121091798, y: .605470717}
-    - {x: .0898457021, y: .650388658}
-    - {x: .121091798, y: .650388658}
+    - {x: .476564467, y: .460939467}
+    - {x: .507810533, y: .460939467}
+    - {x: .476564467, y: .505857408}
+    - {x: .507810533, y: .505857408}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -2632,6 +2701,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Walk_Red_005
     boundsData:
     - {x: 7, y: 3, z: 0}
@@ -2648,10 +2718,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .464845717, y: .560548842}
-    - {x: .464845717, y: .591794908}
-    - {x: .507810533, y: .560548842}
-    - {x: .507810533, y: .591794908}
+    - {x: .515626967, y: .550783217}
+    - {x: .546873033, y: .550783217}
+    - {x: .515626967, y: .593748033}
+    - {x: .546873033, y: .593748033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -2661,7 +2731,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 1
+    flipped: 0
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -2669,6 +2739,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Infantry_Walk_Red_006
     boundsData:
     - {x: 7, y: 2.5, z: 0}
@@ -2685,10 +2756,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .685548842, y: .550783217}
-    - {x: .685548842, y: .582029283}
-    - {x: .726560533, y: .550783217}
-    - {x: .726560533, y: .582029283}
+    - {x: .453126967, y: .552736342}
+    - {x: .453126967, y: .583982408}
+    - {x: .494138658, y: .552736342}
+    - {x: .494138658, y: .583982408}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -2706,6 +2777,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Attack_Blue_001
     boundsData:
     - {x: 4, y: 5.5, z: 0}
@@ -2722,10 +2794,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .488283217, y: .326173842}
-    - {x: .535154283, y: .326173842}
-    - {x: .488283217, y: .367185533}
-    - {x: .535154283, y: .367185533}
+    - {x: .609376967, y: .371095717}
+    - {x: .656248033, y: .371095717}
+    - {x: .609376967, y: .412107408}
+    - {x: .656248033, y: .412107408}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -2743,6 +2815,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Attack_Blue_002
     boundsData:
     - {x: 5, y: 5.5, z: 0}
@@ -2759,10 +2832,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .296876967, y: .283205092}
-    - {x: .347654283, y: .283205092}
-    - {x: .296876967, y: .324216783}
-    - {x: .347654283, y: .324216783}
+    - {x: .373048842, y: .273439467}
+    - {x: .423826158, y: .273439467}
+    - {x: .373048842, y: .314451158}
+    - {x: .423826158, y: .314451158}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -2780,6 +2853,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Attack_Blue_003
     boundsData:
     - {x: 9.5, y: 6, z: 0}
@@ -2817,6 +2891,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Attack_Blue_004
     boundsData:
     - {x: 12, y: 6, z: 0}
@@ -2854,6 +2929,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Attack_Blue_005
     boundsData:
     - {x: 6, y: 5.5, z: 0}
@@ -2870,10 +2946,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .230470702, y: .287111342}
-    - {x: .281248033, y: .287111342}
-    - {x: .230470702, y: .328123033}
-    - {x: .281248033, y: .328123033}
+    - {x: .431642592, y: .273439467}
+    - {x: .482419908, y: .273439467}
+    - {x: .431642592, y: .314451158}
+    - {x: .482419908, y: .314451158}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -2891,6 +2967,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Attack_Blue_006
     boundsData:
     - {x: 5.5, y: 5.5, z: 0}
@@ -2907,10 +2984,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .617189467, y: .273439467}
-    - {x: .666013658, y: .273439467}
-    - {x: .617189467, y: .314451158}
-    - {x: .666013658, y: .314451158}
+    - {x: .552736342, y: .320314467}
+    - {x: .601560533, y: .320314467}
+    - {x: .552736342, y: .361326158}
+    - {x: .601560533, y: .361326158}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -2928,6 +3005,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Attack_Red_001
     boundsData:
     - {x: 4, y: 5.5, z: 0}
@@ -2944,10 +3022,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .923830092, y: .287111342}
-    - {x: .970701158, y: .287111342}
-    - {x: .923830092, y: .328123033}
-    - {x: .970701158, y: .328123033}
+    - {x: .664064467, y: .371095717}
+    - {x: .710935533, y: .371095717}
+    - {x: .664064467, y: .412107408}
+    - {x: .710935533, y: .412107408}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -2965,6 +3043,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Attack_Red_002
     boundsData:
     - {x: 5, y: 5.5, z: 0}
@@ -2981,10 +3060,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .171876952, y: .320314467}
-    - {x: .222654298, y: .320314467}
-    - {x: .171876952, y: .361326158}
-    - {x: .222654298, y: .361326158}
+    - {x: .298830092, y: .281251967}
+    - {x: .349607408, y: .281251967}
+    - {x: .298830092, y: .322263658}
+    - {x: .349607408, y: .322263658}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -3002,6 +3081,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Attack_Red_003
     boundsData:
     - {x: 9.5, y: 6, z: 0}
@@ -3039,6 +3119,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Attack_Red_004
     boundsData:
     - {x: 12, y: 6, z: 0}
@@ -3076,6 +3157,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Attack_Red_005
     boundsData:
     - {x: 6, y: 5.5, z: 0}
@@ -3092,10 +3174,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .0546894521, y: .330080092}
-    - {x: .105466798, y: .330080092}
-    - {x: .0546894521, y: .371091783}
-    - {x: .105466798, y: .371091783}
+    - {x: .617189467, y: .273439467}
+    - {x: .667966783, y: .273439467}
+    - {x: .617189467, y: .314451158}
+    - {x: .667966783, y: .314451158}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -3113,6 +3195,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Attack_Red_006
     boundsData:
     - {x: 5.5, y: 5.5, z: 0}
@@ -3129,10 +3212,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .556642592, y: .275392592}
-    - {x: .605466783, y: .275392592}
-    - {x: .556642592, y: .316404283}
-    - {x: .605466783, y: .316404283}
+    - {x: .609376967, y: .322267592}
+    - {x: .658201158, y: .322267592}
+    - {x: .609376967, y: .363279283}
+    - {x: .658201158, y: .363279283}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -3150,6 +3233,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Die_Blue_001
     boundsData:
     - {x: 4, y: 5.5, z: 0}
@@ -3166,10 +3250,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .861330092, y: .322267592}
-    - {x: .908201158, y: .322267592}
-    - {x: .861330092, y: .363279283}
-    - {x: .908201158, y: .363279283}
+    - {x: .718751967, y: .380861342}
+    - {x: .765623033, y: .380861342}
+    - {x: .718751967, y: .421873033}
+    - {x: .765623033, y: .421873033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -3187,6 +3271,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Die_Blue_002
     boundsData:
     - {x: -2, y: 4.5, z: 0}
@@ -3203,10 +3288,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .753908217, y: .269533217}
-    - {x: .808591783, y: .269533217}
-    - {x: .753908217, y: .306638658}
-    - {x: .808591783, y: .306638658}
+    - {x: .951173842, y: .353517592}
+    - {x: .951173842, y: .408201158}
+    - {x: .988279283, y: .353517592}
+    - {x: .988279283, y: .408201158}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -3216,7 +3301,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 0
+    flipped: 1
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -3224,6 +3309,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Die_Blue_003
     boundsData:
     - {x: -7, y: 1.5, z: 0}
@@ -3240,10 +3326,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .697267592, y: .169923827}
-    - {x: .697267592, y: .212888673}
-    - {x: .746091783, y: .169923827}
-    - {x: .746091783, y: .212888673}
+    - {x: .732423842, y: .222658202}
+    - {x: .732423842, y: .265623033}
+    - {x: .781248033, y: .222658202}
+    - {x: .781248033, y: .265623033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -3261,6 +3347,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Die_Blue_004
     boundsData:
     - {x: -13.5, y: -4.5, z: 0}
@@ -3298,6 +3385,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Die_Blue_005
     boundsData:
     - {x: -19.5, y: -4, z: 0}
@@ -3335,6 +3423,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Die_Blue_006
     boundsData:
     - {x: -19.5, y: -5, z: 0}
@@ -3351,10 +3440,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .119142577, y: .226564452}
-    - {x: .119142577, y: .271482408}
-    - {x: .166013673, y: .226564452}
-    - {x: .166013673, y: .271482408}
+    - {x: .751955092, y: .169923827}
+    - {x: .751955092, y: .214841798}
+    - {x: .798826158, y: .169923827}
+    - {x: .798826158, y: .214841798}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -3372,6 +3461,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Die_Red_001
     boundsData:
     - {x: 4, y: 5.5, z: 0}
@@ -3388,10 +3478,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .792970717, y: .332033217}
-    - {x: .839841783, y: .332033217}
-    - {x: .792970717, y: .373044908}
-    - {x: .839841783, y: .373044908}
+    - {x: .773439467, y: .400392592}
+    - {x: .773439467, y: .447263658}
+    - {x: .814451158, y: .400392592}
+    - {x: .814451158, y: .447263658}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -3401,7 +3491,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 0
+    flipped: 1
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -3409,6 +3499,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Die_Red_002
     boundsData:
     - {x: -2, y: 4.5, z: 0}
@@ -3425,10 +3516,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .816408217, y: .269533217}
-    - {x: .816408217, y: .324216783}
-    - {x: .853513658, y: .269533217}
-    - {x: .853513658, y: .324216783}
+    - {x: .490236342, y: .275392592}
+    - {x: .544919908, y: .275392592}
+    - {x: .490236342, y: .312498033}
+    - {x: .544919908, y: .312498033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -3438,7 +3529,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 1
+    flipped: 0
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -3446,6 +3537,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Die_Red_003
     boundsData:
     - {x: -7, y: 1.5, z: 0}
@@ -3462,10 +3554,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .753908217, y: .169923827}
-    - {x: .753908217, y: .212888673}
-    - {x: .802732408, y: .169923827}
-    - {x: .802732408, y: .212888673}
+    - {x: .789064467, y: .226564452}
+    - {x: .832029283, y: .226564452}
+    - {x: .789064467, y: .275388658}
+    - {x: .832029283, y: .275388658}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -3475,7 +3567,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 1
+    flipped: 0
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -3483,6 +3575,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Die_Red_004
     boundsData:
     - {x: -13.5, y: -4.5, z: 0}
@@ -3499,10 +3592,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .00390820298, y: .226564452}
-    - {x: .00390820298, y: .267576158}
-    - {x: .0566386729, y: .226564452}
-    - {x: .0566386729, y: .267576158}
+    - {x: .181642577, y: .218751952}
+    - {x: .181642577, y: .259763658}
+    - {x: .234373048, y: .218751952}
+    - {x: .234373048, y: .259763658}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -3520,6 +3613,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Die_Red_005
     boundsData:
     - {x: -19.5, y: -4, z: 0}
@@ -3557,6 +3651,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Die_Red_006
     boundsData:
     - {x: -19.5, y: -5, z: 0}
@@ -3573,10 +3668,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .642580092, y: .169923827}
-    - {x: .642580092, y: .214841798}
-    - {x: .689451158, y: .169923827}
-    - {x: .689451158, y: .214841798}
+    - {x: .843751967, y: .220705077}
+    - {x: .843751967, y: .265623033}
+    - {x: .890623033, y: .220705077}
+    - {x: .890623033, y: .265623033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -3594,6 +3689,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Walk_Blue_001
     boundsData:
     - {x: 4, y: 5.5, z: 0}
@@ -3610,10 +3706,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .726564467, y: .365236342}
-    - {x: .773435533, y: .365236342}
-    - {x: .726564467, y: .406248033}
-    - {x: .773435533, y: .406248033}
+    - {x: .609376967, y: .371095717}
+    - {x: .656248033, y: .371095717}
+    - {x: .609376967, y: .412107408}
+    - {x: .656248033, y: .412107408}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -3631,6 +3727,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Walk_Blue_002
     boundsData:
     - {x: 4.5, y: 6.5, z: 0}
@@ -3647,10 +3744,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .781251967, y: .380861342}
-    - {x: .826169908, y: .380861342}
-    - {x: .781251967, y: .421873033}
-    - {x: .826169908, y: .421873033}
+    - {x: .712892592, y: .429689467}
+    - {x: .757810533, y: .429689467}
+    - {x: .712892592, y: .470701158}
+    - {x: .757810533, y: .470701158}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -3668,6 +3765,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Walk_Blue_003
     boundsData:
     - {x: 4.5, y: 7, z: 0}
@@ -3684,10 +3782,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .740236342, y: .314455092}
-    - {x: .785154283, y: .314455092}
-    - {x: .740236342, y: .357419908}
-    - {x: .785154283, y: .357419908}
+    - {x: .357423842, y: .322267592}
+    - {x: .402341783, y: .322267592}
+    - {x: .357423842, y: .365232408}
+    - {x: .402341783, y: .365232408}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -3705,6 +3803,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Walk_Blue_004
     boundsData:
     - {x: 4, y: 7.5, z: 0}
@@ -3721,10 +3820,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .0644550771, y: .226564452}
-    - {x: .111326173, y: .226564452}
-    - {x: .0644550771, y: .271482408}
-    - {x: .111326173, y: .271482408}
+    - {x: .642580092, y: .119142577}
+    - {x: .689451158, y: .119142577}
+    - {x: .642580092, y: .164060548}
+    - {x: .689451158, y: .164060548}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -3742,6 +3841,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Walk_Blue_005
     boundsData:
     - {x: 3, y: 7, z: 0}
@@ -3758,10 +3858,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .257814467, y: .185548827}
-    - {x: .308591783, y: .185548827}
-    - {x: .257814467, y: .228513673}
-    - {x: .308591783, y: .228513673}
+    - {x: .388673842, y: .171876952}
+    - {x: .439451158, y: .171876952}
+    - {x: .388673842, y: .214841798}
+    - {x: .439451158, y: .214841798}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -3779,6 +3879,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Walk_Blue_006
     boundsData:
     - {x: 3.5, y: 6, z: 0}
@@ -3795,10 +3896,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .316408217, y: .232423827}
-    - {x: .365232408, y: .232423827}
-    - {x: .316408217, y: .275388658}
-    - {x: .365232408, y: .275388658}
+    - {x: .386720717, y: .222658202}
+    - {x: .435544908, y: .222658202}
+    - {x: .386720717, y: .265623033}
+    - {x: .435544908, y: .265623033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -3816,6 +3917,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Walk_Red_000
     boundsData:
     - {x: 4, y: 5.5, z: 0}
@@ -3832,10 +3934,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .667970717, y: .367189467}
-    - {x: .714841783, y: .367189467}
-    - {x: .667970717, y: .408201158}
-    - {x: .714841783, y: .408201158}
+    - {x: .664064467, y: .371095717}
+    - {x: .710935533, y: .371095717}
+    - {x: .664064467, y: .412107408}
+    - {x: .710935533, y: .412107408}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -3853,6 +3955,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Walk_Red_001
     boundsData:
     - {x: 4.5, y: 6.5, z: 0}
@@ -3869,10 +3972,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .722658217, y: .414064467}
-    - {x: .767576158, y: .414064467}
-    - {x: .722658217, y: .455076158}
-    - {x: .767576158, y: .455076158}
+    - {x: .765626967, y: .455080092}
+    - {x: .810544908, y: .455080092}
+    - {x: .765626967, y: .496091783}
+    - {x: .810544908, y: .496091783}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -3890,6 +3993,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Walk_Red_002
     boundsData:
     - {x: 4.5, y: 7, z: 0}
@@ -3906,10 +4010,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .673830092, y: .316408217}
-    - {x: .718748033, y: .316408217}
-    - {x: .673830092, y: .359373033}
-    - {x: .718748033, y: .359373033}
+    - {x: .410158217, y: .322267592}
+    - {x: .455076158, y: .322267592}
+    - {x: .410158217, y: .365232408}
+    - {x: .455076158, y: .365232408}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -3927,6 +4031,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Walk_Red_003
     boundsData:
     - {x: 4, y: 7.5, z: 0}
@@ -3943,10 +4048,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .00390820298, y: .275392592}
-    - {x: .0507792979, y: .275392592}
-    - {x: .00390820298, y: .320310533}
-    - {x: .0507792979, y: .320310533}
+    - {x: .697267592, y: .169923827}
+    - {x: .744138658, y: .169923827}
+    - {x: .697267592, y: .214841798}
+    - {x: .744138658, y: .214841798}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -3964,6 +4069,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Walk_Red_004
     boundsData:
     - {x: 3, y: 7, z: 0}
@@ -3980,10 +4086,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .181642577, y: .218751952}
-    - {x: .232419923, y: .218751952}
-    - {x: .181642577, y: .261716783}
-    - {x: .232419923, y: .261716783}
+    - {x: .328126967, y: .179689452}
+    - {x: .378904283, y: .179689452}
+    - {x: .328126967, y: .222654298}
+    - {x: .378904283, y: .222654298}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -4001,6 +4107,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Marksman_Walk_Red_005
     boundsData:
     - {x: 3.5, y: 6, z: 0}
@@ -4017,10 +4124,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .240236327, y: .236330077}
-    - {x: .289060533, y: .236330077}
-    - {x: .240236327, y: .279294908}
-    - {x: .289060533, y: .279294908}
+    - {x: .443361342, y: .222658202}
+    - {x: .492185533, y: .222658202}
+    - {x: .443361342, y: .265623033}
+    - {x: .492185533, y: .265623033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -4038,6 +4145,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Attack_Blue_001
     boundsData:
     - {x: 6, y: 5.5, z: 0}
@@ -4054,10 +4162,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .261720717, y: .511720717}
-    - {x: .261720717, y: .550779283}
-    - {x: .302732408, y: .511720717}
-    - {x: .302732408, y: .550779283}
+    - {x: .707033217, y: .478517592}
+    - {x: .707033217, y: .517576158}
+    - {x: .748044908, y: .478517592}
+    - {x: .748044908, y: .517576158}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -4075,6 +4183,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Attack_Blue_002
     boundsData:
     - {x: 7, y: 5.5, z: 0}
@@ -4091,10 +4200,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .886720717, y: .474611342}
-    - {x: .929685533, y: .474611342}
-    - {x: .886720717, y: .515623033}
-    - {x: .929685533, y: .515623033}
+    - {x: .0625019521, y: .273439467}
+    - {x: .105466798, y: .273439467}
+    - {x: .0625019521, y: .314451158}
+    - {x: .105466798, y: .314451158}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -4112,6 +4221,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Attack_Blue_003
     boundsData:
     - {x: 10.5, y: 6, z: 0}
@@ -4149,6 +4259,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Attack_Blue_004
     boundsData:
     - {x: 13, y: 6, z: 0}
@@ -4186,6 +4297,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Attack_Blue_005
     boundsData:
     - {x: 7.5, y: 5.5, z: 0}
@@ -4202,10 +4314,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .666017592, y: .416017592}
-    - {x: .710935533, y: .416017592}
-    - {x: .666017592, y: .457029283}
-    - {x: .710935533, y: .457029283}
+    - {x: .818361342, y: .466798842}
+    - {x: .863279283, y: .466798842}
+    - {x: .818361342, y: .507810533}
+    - {x: .863279283, y: .507810533}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -4223,6 +4335,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Attack_Blue_006
     boundsData:
     - {x: 7, y: 5.5, z: 0}
@@ -4239,10 +4352,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .937501967, y: .482423842}
-    - {x: .980466783, y: .482423842}
-    - {x: .937501967, y: .523435533}
-    - {x: .980466783, y: .523435533}
+    - {x: .113283202, y: .273439467}
+    - {x: .156248048, y: .273439467}
+    - {x: .113283202, y: .314451158}
+    - {x: .156248048, y: .314451158}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -4260,6 +4373,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Attack_Red_001
     boundsData:
     - {x: 6, y: 5.5, z: 0}
@@ -4276,10 +4390,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .490236342, y: .466798842}
-    - {x: .490236342, y: .505857408}
-    - {x: .531248033, y: .466798842}
-    - {x: .531248033, y: .505857408}
+    - {x: .656251967, y: .523439467}
+    - {x: .656251967, y: .562498033}
+    - {x: .697263658, y: .523439467}
+    - {x: .697263658, y: .562498033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -4297,6 +4411,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Attack_Red_002
     boundsData:
     - {x: 7, y: 5.5, z: 0}
@@ -4313,10 +4428,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .816408217, y: .509767592}
-    - {x: .859373033, y: .509767592}
-    - {x: .816408217, y: .550779283}
-    - {x: .859373033, y: .550779283}
+    - {x: .00390820298, y: .316408217}
+    - {x: .0468730479, y: .316408217}
+    - {x: .00390820298, y: .357419908}
+    - {x: .0468730479, y: .357419908}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -4334,6 +4449,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Attack_Red_003
     boundsData:
     - {x: 10.5, y: 6, z: 0}
@@ -4371,6 +4487,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Attack_Red_004
     boundsData:
     - {x: 13, y: 6, z: 0}
@@ -4408,6 +4525,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Attack_Red_005
     boundsData:
     - {x: 7.5, y: 5.5, z: 0}
@@ -4424,10 +4542,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .599611342, y: .417970717}
-    - {x: .644529283, y: .417970717}
-    - {x: .599611342, y: .458982408}
-    - {x: .644529283, y: .458982408}
+    - {x: .871095717, y: .470705092}
+    - {x: .916013658, y: .470705092}
+    - {x: .871095717, y: .511716783}
+    - {x: .916013658, y: .511716783}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -4445,6 +4563,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Attack_Red_006
     boundsData:
     - {x: 7, y: 5.5, z: 0}
@@ -4461,10 +4580,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .867189467, y: .523439467}
-    - {x: .910154283, y: .523439467}
-    - {x: .867189467, y: .564451158}
-    - {x: .910154283, y: .564451158}
+    - {x: .164064452, y: .312501967}
+    - {x: .207029298, y: .312501967}
+    - {x: .164064452, y: .353513658}
+    - {x: .207029298, y: .353513658}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -4482,6 +4601,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Die_Blue_001
     boundsData:
     - {x: 6, y: 5.5, z: 0}
@@ -4498,10 +4618,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .429689467, y: .511720717}
-    - {x: .429689467, y: .550779283}
-    - {x: .470701158, y: .511720717}
-    - {x: .470701158, y: .550779283}
+    - {x: .755861342, y: .503908217}
+    - {x: .755861342, y: .542966783}
+    - {x: .796873033, y: .503908217}
+    - {x: .796873033, y: .542966783}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -4519,6 +4639,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Die_Blue_002
     boundsData:
     - {x: -2, y: 4.5, z: 0}
@@ -4535,10 +4656,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .861330092, y: .277345717}
-    - {x: .916013658, y: .277345717}
-    - {x: .861330092, y: .314451158}
-    - {x: .916013658, y: .314451158}
+    - {x: .552736342, y: .275392592}
+    - {x: .607419908, y: .275392592}
+    - {x: .552736342, y: .312498033}
+    - {x: .607419908, y: .312498033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -4556,6 +4677,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Die_Blue_003
     boundsData:
     - {x: -7, y: 1.5, z: 0}
@@ -4572,10 +4694,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .697267592, y: .220705077}
-    - {x: .697267592, y: .263669908}
-    - {x: .746091783, y: .220705077}
-    - {x: .746091783, y: .263669908}
+    - {x: .839845717, y: .273439467}
+    - {x: .839845717, y: .316404283}
+    - {x: .888669908, y: .273439467}
+    - {x: .888669908, y: .316404283}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -4593,6 +4715,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Die_Blue_004
     boundsData:
     - {x: -14, y: -4.5, z: 0}
@@ -4630,7 +4753,46 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Die_Blue_005
+    boundsData:
+    - {x: -19.5, y: -5, z: 0}
+    - {x: 23, y: 24, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -31, y: -17, z: 0}
+    - {x: -8, y: -17, z: 0}
+    - {x: -31, y: 7, z: 0}
+    - {x: -8, y: 7, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .898439467, y: .228517577}
+    - {x: .898439467, y: .273435533}
+    - {x: .945310533, y: .228517577}
+    - {x: .945310533, y: .273435533}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2bee2b7c6709f5d45b5228f698e11b0c
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    attachPoints: []
+  - name: Actor_Terran_Sniper_Die_Blue_006
     boundsData:
     - {x: -19.5, y: -5, z: 0}
     - {x: 23, y: 24, z: 0}
@@ -4653,7 +4815,7 @@ MonoBehaviour:
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
-    sourceTextureGUID: 2bee2b7c6709f5d45b5228f698e11b0c
+    sourceTextureGUID: 47064c1ea78c75347bede08966e8180c
     extractRegion: 0
     regionX: 0
     regionY: 0
@@ -4667,7 +4829,160 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
-  - name: Actor_Terran_Sniper_Die_Blue_006
+    attachPoints: []
+  - name: Actor_Terran_Sniper_Die_Red_001
+    boundsData:
+    - {x: 6, y: 5.5, z: 0}
+    - {x: 20, y: 21, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -4, y: -5, z: 0}
+    - {x: 16, y: -5, z: 0}
+    - {x: -4, y: 16, z: 0}
+    - {x: 16, y: 16, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .705080092, y: .525392592}
+    - {x: .705080092, y: .564451158}
+    - {x: .746091783, y: .525392592}
+    - {x: .746091783, y: .564451158}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
+    materialId: 0
+    sourceTextureGUID: e098a88a84b773b4a81c0ba450b75f4c
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    attachPoints: []
+  - name: Actor_Terran_Sniper_Die_Red_002
+    boundsData:
+    - {x: -2, y: 4.5, z: 0}
+    - {x: 28, y: 19, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -16, y: -5, z: 0}
+    - {x: 12, y: -5, z: 0}
+    - {x: -16, y: 14, z: 0}
+    - {x: 12, y: 14, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .490236342, y: .320314467}
+    - {x: .544919908, y: .320314467}
+    - {x: .490236342, y: .357419908}
+    - {x: .544919908, y: .357419908}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
+    materialId: 0
+    sourceTextureGUID: a7cb6da1d6968f542875877f3f8f03d0
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    attachPoints: []
+  - name: Actor_Terran_Sniper_Die_Red_003
+    boundsData:
+    - {x: -7, y: 1.5, z: 0}
+    - {x: 22, y: 25, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -18, y: -11, z: 0}
+    - {x: 4, y: -11, z: 0}
+    - {x: -18, y: 14, z: 0}
+    - {x: 4, y: 14, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .896486342, y: .281251967}
+    - {x: .896486342, y: .324216783}
+    - {x: .945310533, y: .281251967}
+    - {x: .945310533, y: .324216783}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8fbbe66da8b648a488d8ee1d3878855e
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    attachPoints: []
+  - name: Actor_Terran_Sniper_Die_Red_004
+    boundsData:
+    - {x: -14, y: -4.5, z: 0}
+    - {x: 20, y: 27, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -24, y: -18, z: 0}
+    - {x: -4, y: -18, z: 0}
+    - {x: -24, y: 9, z: 0}
+    - {x: -4, y: 9, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .890626967, y: .332033217}
+    - {x: .890626967, y: .371091783}
+    - {x: .943357408, y: .332033217}
+    - {x: .943357408, y: .371091783}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
+    materialId: 0
+    sourceTextureGUID: 9f4a30c3e07e19149969a27c79fb45fe
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    attachPoints: []
+  - name: Actor_Terran_Sniper_Die_Red_005
     boundsData:
     - {x: -19.5, y: -5, z: 0}
     - {x: 23, y: 24, z: 0}
@@ -4690,191 +5005,6 @@ MonoBehaviour:
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
-    sourceTextureGUID: 47064c1ea78c75347bede08966e8180c
-    extractRegion: 0
-    regionX: 0
-    regionY: 0
-    regionW: 0
-    regionH: 0
-    flipped: 1
-    complexGeometry: 0
-    colliderType: 0
-    colliderVertices: []
-    colliderIndicesFwd: 
-    colliderIndicesBack: 
-    colliderConvex: 0
-    colliderSmoothSphereCollisions: 0
-  - name: Actor_Terran_Sniper_Die_Red_001
-    boundsData:
-    - {x: 6, y: 5.5, z: 0}
-    - {x: 20, y: 21, z: 0}
-    untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
-    - {x: 64, y: 64, z: 0}
-    texelSize: {x: 1, y: 1}
-    positions:
-    - {x: -4, y: -5, z: 0}
-    - {x: 16, y: -5, z: 0}
-    - {x: -4, y: 16, z: 0}
-    - {x: 16, y: 16, z: 0}
-    normals: []
-    tangents: []
-    uvs:
-    - {x: .367189467, y: .552736342}
-    - {x: .367189467, y: .591794908}
-    - {x: .408201158, y: .552736342}
-    - {x: .408201158, y: .591794908}
-    indices: 000000000300000001000000020000000300000000000000
-    material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
-    materialId: 0
-    sourceTextureGUID: e098a88a84b773b4a81c0ba450b75f4c
-    extractRegion: 0
-    regionX: 0
-    regionY: 0
-    regionW: 0
-    regionH: 0
-    flipped: 1
-    complexGeometry: 0
-    colliderType: 0
-    colliderVertices: []
-    colliderIndicesFwd: 
-    colliderIndicesBack: 
-    colliderConvex: 0
-    colliderSmoothSphereCollisions: 0
-  - name: Actor_Terran_Sniper_Die_Red_002
-    boundsData:
-    - {x: -2, y: 4.5, z: 0}
-    - {x: 28, y: 19, z: 0}
-    untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
-    - {x: 64, y: 64, z: 0}
-    texelSize: {x: 1, y: 1}
-    positions:
-    - {x: -16, y: -5, z: 0}
-    - {x: 12, y: -5, z: 0}
-    - {x: -16, y: 14, z: 0}
-    - {x: 12, y: 14, z: 0}
-    normals: []
-    tangents: []
-    uvs:
-    - {x: .677736342, y: .271486342}
-    - {x: .732419908, y: .271486342}
-    - {x: .677736342, y: .308591783}
-    - {x: .732419908, y: .308591783}
-    indices: 000000000300000001000000020000000300000000000000
-    material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
-    materialId: 0
-    sourceTextureGUID: a7cb6da1d6968f542875877f3f8f03d0
-    extractRegion: 0
-    regionX: 0
-    regionY: 0
-    regionW: 0
-    regionH: 0
-    flipped: 0
-    complexGeometry: 0
-    colliderType: 0
-    colliderVertices: []
-    colliderIndicesFwd: 
-    colliderIndicesBack: 
-    colliderConvex: 0
-    colliderSmoothSphereCollisions: 0
-  - name: Actor_Terran_Sniper_Die_Red_003
-    boundsData:
-    - {x: -7, y: 1.5, z: 0}
-    - {x: 22, y: 25, z: 0}
-    untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
-    - {x: 64, y: 64, z: 0}
-    texelSize: {x: 1, y: 1}
-    positions:
-    - {x: -18, y: -11, z: 0}
-    - {x: 4, y: -11, z: 0}
-    - {x: -18, y: 14, z: 0}
-    - {x: 4, y: 14, z: 0}
-    normals: []
-    tangents: []
-    uvs:
-    - {x: .621095717, y: .222658202}
-    - {x: .621095717, y: .265623033}
-    - {x: .669919908, y: .222658202}
-    - {x: .669919908, y: .265623033}
-    indices: 000000000300000001000000020000000300000000000000
-    material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
-    materialId: 0
-    sourceTextureGUID: 8fbbe66da8b648a488d8ee1d3878855e
-    extractRegion: 0
-    regionX: 0
-    regionY: 0
-    regionW: 0
-    regionH: 0
-    flipped: 1
-    complexGeometry: 0
-    colliderType: 0
-    colliderVertices: []
-    colliderIndicesFwd: 
-    colliderIndicesBack: 
-    colliderConvex: 0
-    colliderSmoothSphereCollisions: 0
-  - name: Actor_Terran_Sniper_Die_Red_004
-    boundsData:
-    - {x: -14, y: -4.5, z: 0}
-    - {x: 20, y: 27, z: 0}
-    untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
-    - {x: 64, y: 64, z: 0}
-    texelSize: {x: 1, y: 1}
-    positions:
-    - {x: -24, y: -18, z: 0}
-    - {x: -4, y: -18, z: 0}
-    - {x: -24, y: 9, z: 0}
-    - {x: -4, y: 9, z: 0}
-    normals: []
-    tangents: []
-    uvs:
-    - {x: .929689467, y: .240236327}
-    - {x: .929689467, y: .279294908}
-    - {x: .982419908, y: .240236327}
-    - {x: .982419908, y: .279294908}
-    indices: 000000000300000001000000020000000300000000000000
-    material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
-    materialId: 0
-    sourceTextureGUID: 9f4a30c3e07e19149969a27c79fb45fe
-    extractRegion: 0
-    regionX: 0
-    regionY: 0
-    regionW: 0
-    regionH: 0
-    flipped: 1
-    complexGeometry: 0
-    colliderType: 0
-    colliderVertices: []
-    colliderIndicesFwd: 
-    colliderIndicesBack: 
-    colliderConvex: 0
-    colliderSmoothSphereCollisions: 0
-  - name: Actor_Terran_Sniper_Die_Red_005
-    boundsData:
-    - {x: -19.5, y: -5, z: 0}
-    - {x: 23, y: 24, z: 0}
-    untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
-    - {x: 64, y: 64, z: 0}
-    texelSize: {x: 1, y: 1}
-    positions:
-    - {x: -31, y: -17, z: 0}
-    - {x: -8, y: -17, z: 0}
-    - {x: -31, y: 7, z: 0}
-    - {x: -8, y: 7, z: 0}
-    normals: []
-    tangents: []
-    uvs:
-    - {x: .445314467, y: .222658202}
-    - {x: .445314467, y: .267576158}
-    - {x: .492185533, y: .222658202}
-    - {x: .492185533, y: .267576158}
-    indices: 000000000300000001000000020000000300000000000000
-    material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
-    materialId: 0
     sourceTextureGUID: 84afb85a0196e5044847f771ef128549
     extractRegion: 0
     regionX: 0
@@ -4889,6 +5019,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Die_Red_006
     boundsData:
     - {x: -19.5, y: -5, z: 0}
@@ -4905,10 +5036,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .384767592, y: .224611327}
-    - {x: .384767592, y: .269529283}
-    - {x: .431638658, y: .224611327}
-    - {x: .431638658, y: .269529283}
+    - {x: .621095717, y: .171876952}
+    - {x: .621095717, y: .216794923}
+    - {x: .667966783, y: .171876952}
+    - {x: .667966783, y: .216794923}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -4926,6 +5057,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Walk_Blue_001
     boundsData:
     - {x: 6, y: 5.5, z: 0}
@@ -4942,10 +5074,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .310548842, y: .554689467}
-    - {x: .310548842, y: .593748033}
-    - {x: .351560533, y: .554689467}
-    - {x: .351560533, y: .593748033}
+    - {x: .707033217, y: .478517592}
+    - {x: .707033217, y: .517576158}
+    - {x: .748044908, y: .478517592}
+    - {x: .748044908, y: .517576158}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -4963,6 +5095,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Walk_Blue_002
     boundsData:
     - {x: 6, y: 6.5, z: 0}
@@ -4979,10 +5112,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .539064467, y: .476564467}
-    - {x: .539064467, y: .515623033}
-    - {x: .580076158, y: .476564467}
-    - {x: .580076158, y: .515623033}
+    - {x: .804689467, y: .515626967}
+    - {x: .804689467, y: .554685533}
+    - {x: .845701158, y: .515626967}
+    - {x: .845701158, y: .554685533}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -5000,6 +5133,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Walk_Blue_003
     boundsData:
     - {x: 6, y: 7, z: 0}
@@ -5016,10 +5150,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .457033217, y: .417970717}
-    - {x: .457033217, y: .457029283}
-    - {x: .499998033, y: .417970717}
-    - {x: .499998033, y: .457029283}
+    - {x: .265626967, y: .417970717}
+    - {x: .265626967, y: .457029283}
+    - {x: .308591783, y: .417970717}
+    - {x: .308591783, y: .457029283}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -5037,6 +5171,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Walk_Blue_004
     boundsData:
     - {x: 6, y: 7.5, z: 0}
@@ -5053,10 +5188,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .00390820298, y: .433595717}
-    - {x: .0429667979, y: .433595717}
-    - {x: .00390820298, y: .478513658}
-    - {x: .0429667979, y: .478513658}
+    - {x: .00390820298, y: .414064467}
+    - {x: .0429667979, y: .414064467}
+    - {x: .00390820298, y: .458982408}
+    - {x: .0429667979, y: .458982408}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -5074,6 +5209,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Walk_Blue_005
     boundsData:
     - {x: 6, y: 7, z: 0}
@@ -5090,10 +5226,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .388673842, y: .458986342}
-    - {x: .388673842, y: .498044908}
-    - {x: .431638658, y: .458986342}
-    - {x: .431638658, y: .498044908}
+    - {x: .197267577, y: .423830092}
+    - {x: .197267577, y: .462888658}
+    - {x: .240232423, y: .423830092}
+    - {x: .240232423, y: .462888658}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -5111,6 +5247,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Walk_Blue_006
     boundsData:
     - {x: 6, y: 6, z: 0}
@@ -5127,10 +5264,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .330080092, y: .460939467}
-    - {x: .330080092, y: .499998033}
-    - {x: .373044908, y: .460939467}
-    - {x: .373044908, y: .499998033}
+    - {x: .148439452, y: .464845717}
+    - {x: .187498048, y: .464845717}
+    - {x: .148439452, y: .507810533}
+    - {x: .187498048, y: .507810533}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -5140,7 +5277,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 1
+    flipped: 0
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -5148,6 +5285,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Walk_Red_001
     boundsData:
     - {x: 6, y: 5.5, z: 0}
@@ -5164,10 +5302,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .478517592, y: .513673842}
-    - {x: .478517592, y: .552732408}
-    - {x: .519529283, y: .513673842}
-    - {x: .519529283, y: .552732408}
+    - {x: .656251967, y: .523439467}
+    - {x: .656251967, y: .562498033}
+    - {x: .697263658, y: .523439467}
+    - {x: .697263658, y: .562498033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -5185,6 +5323,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Walk_Red_002
     boundsData:
     - {x: 6, y: 6.5, z: 0}
@@ -5201,10 +5340,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .416017592, y: .558595717}
-    - {x: .416017592, y: .597654283}
-    - {x: .457029283, y: .558595717}
-    - {x: .457029283, y: .597654283}
+    - {x: .753908217, y: .550783217}
+    - {x: .753908217, y: .589841783}
+    - {x: .794919908, y: .550783217}
+    - {x: .794919908, y: .589841783}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -5222,6 +5361,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Walk_Red_003
     boundsData:
     - {x: 6, y: 7, z: 0}
@@ -5238,10 +5378,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .267580092, y: .464845717}
-    - {x: .267580092, y: .503904283}
-    - {x: .310544908, y: .464845717}
-    - {x: .310544908, y: .503904283}
+    - {x: .0937519521, y: .480470717}
+    - {x: .0937519521, y: .519529283}
+    - {x: .136716798, y: .480470717}
+    - {x: .136716798, y: .519529283}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -5259,6 +5399,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Walk_Red_004
     boundsData:
     - {x: 6, y: 7.5, z: 0}
@@ -5275,10 +5416,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .347658217, y: .373048842}
-    - {x: .347658217, y: .412107408}
-    - {x: .392576158, y: .373048842}
-    - {x: .392576158, y: .412107408}
+    - {x: .107423827, y: .371095717}
+    - {x: .146482423, y: .371095717}
+    - {x: .107423827, y: .416013658}
+    - {x: .146482423, y: .416013658}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -5288,7 +5429,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 1
+    flipped: 0
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -5296,6 +5437,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Walk_Red_005
     boundsData:
     - {x: 6, y: 7, z: 0}
@@ -5312,10 +5454,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .210939452, y: .488283217}
-    - {x: .210939452, y: .527341783}
-    - {x: .253904283, y: .488283217}
-    - {x: .253904283, y: .527341783}
+    - {x: .0449238271, y: .519533217}
+    - {x: .0839824229, y: .519533217}
+    - {x: .0449238271, y: .562498033}
+    - {x: .0839824229, y: .562498033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -5325,7 +5467,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 1
+    flipped: 0
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -5333,6 +5475,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Sniper_Walk_Red_006
     boundsData:
     - {x: 6, y: 6, z: 0}
@@ -5349,10 +5492,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .507814467, y: .419923842}
-    - {x: .507814467, y: .458982408}
-    - {x: .550779283, y: .419923842}
-    - {x: .550779283, y: .458982408}
+    - {x: .429689467, y: .414064467}
+    - {x: .429689467, y: .453123033}
+    - {x: .472654283, y: .414064467}
+    - {x: .472654283, y: .453123033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -5370,6 +5513,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Attack_Blue_001
     boundsData:
     - {x: 7.5, y: 2, z: 0}
@@ -5386,10 +5530,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .699220717, y: .509767592}
-    - {x: .699220717, y: .542966783}
-    - {x: .738279283, y: .509767592}
-    - {x: .738279283, y: .542966783}
+    - {x: .554689467, y: .566408217}
+    - {x: .554689467, y: .599607408}
+    - {x: .593748033, y: .566408217}
+    - {x: .593748033, y: .599607408}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -5407,6 +5551,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Attack_Blue_002
     boundsData:
     - {x: 6, y: 4.5, z: 0}
@@ -5423,10 +5568,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .558595717, y: .419923842}
-    - {x: .589841783, y: .419923842}
-    - {x: .558595717, y: .468748033}
-    - {x: .589841783, y: .468748033}
+    - {x: .00390820298, y: .525392592}
+    - {x: .0351542979, y: .525392592}
+    - {x: .00390820298, y: .574216783}
+    - {x: .0351542979, y: .574216783}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -5444,6 +5589,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Attack_Blue_003
     boundsData:
     - {x: 2.5, y: 4.5, z: 0}
@@ -5481,6 +5627,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Attack_Blue_004
     boundsData:
     - {x: 12.5, y: 3.5, z: 0}
@@ -5518,6 +5665,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Attack_Blue_005
     boundsData:
     - {x: 13, y: 1.5, z: 0}
@@ -5534,10 +5682,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .113283202, y: .330080092}
-    - {x: .164060548, y: .330080092}
-    - {x: .113283202, y: .371091783}
-    - {x: .164060548, y: .371091783}
+    - {x: .675783217, y: .273439467}
+    - {x: .726560533, y: .273439467}
+    - {x: .675783217, y: .314451158}
+    - {x: .726560533, y: .314451158}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -5555,6 +5703,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Attack_Blue_006
     boundsData:
     - {x: 9, y: 2, z: 0}
@@ -5571,10 +5720,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .242189452, y: .599611342}
-    - {x: .242189452, y: .634763658}
-    - {x: .281248033, y: .599611342}
-    - {x: .281248033, y: .634763658}
+    - {x: .562501967, y: .519533217}
+    - {x: .597654283, y: .519533217}
+    - {x: .562501967, y: .558591783}
+    - {x: .597654283, y: .558591783}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -5584,7 +5733,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 1
+    flipped: 0
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -5592,6 +5741,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Attack_Red_001
     boundsData:
     - {x: 7.5, y: 2, z: 0}
@@ -5608,10 +5758,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .638673842, y: .548830092}
-    - {x: .638673842, y: .582029283}
-    - {x: .677732408, y: .548830092}
-    - {x: .677732408, y: .582029283}
+    - {x: .601564467, y: .603517592}
+    - {x: .601564467, y: .636716783}
+    - {x: .640623033, y: .603517592}
+    - {x: .640623033, y: .636716783}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -5629,6 +5779,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Attack_Red_002
     boundsData:
     - {x: 6, y: 4.5, z: 0}
@@ -5645,10 +5796,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .00390820298, y: .486330092}
-    - {x: .0351542979, y: .486330092}
-    - {x: .00390820298, y: .535154283}
-    - {x: .0351542979, y: .535154283}
+    - {x: .568361342, y: .462892592}
+    - {x: .599607408, y: .462892592}
+    - {x: .568361342, y: .511716783}
+    - {x: .599607408, y: .511716783}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -5666,6 +5817,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Attack_Red_003
     boundsData:
     - {x: 2.5, y: 4.5, z: 0}
@@ -5703,6 +5855,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Attack_Red_004
     boundsData:
     - {x: 12.5, y: 3.5, z: 0}
@@ -5740,6 +5893,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Attack_Red_005
     boundsData:
     - {x: 13, y: 1.5, z: 0}
@@ -5756,10 +5910,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .753908217, y: .220705077}
-    - {x: .804685533, y: .220705077}
-    - {x: .753908217, y: .261716783}
-    - {x: .804685533, y: .261716783}
+    - {x: .832033217, y: .324220717}
+    - {x: .882810533, y: .324220717}
+    - {x: .832033217, y: .365232408}
+    - {x: .882810533, y: .365232408}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -5777,6 +5931,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Attack_Red_006
     boundsData:
     - {x: 9, y: 2, z: 0}
@@ -5793,10 +5948,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .179689452, y: .617189467}
-    - {x: .179689452, y: .652341783}
-    - {x: .218748048, y: .617189467}
-    - {x: .218748048, y: .652341783}
+    - {x: .605470717, y: .560548842}
+    - {x: .605470717, y: .595701158}
+    - {x: .644529283, y: .560548842}
+    - {x: .644529283, y: .595701158}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -5814,6 +5969,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Die_Blue_001
     boundsData:
     - {x: 7.5, y: 2, z: 0}
@@ -5830,10 +5986,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .625001967, y: .589845717}
-    - {x: .625001967, y: .619138658}
-    - {x: .664060533, y: .589845717}
-    - {x: .664060533, y: .619138658}
+    - {x: .480470717, y: .414064467}
+    - {x: .509763658, y: .414064467}
+    - {x: .480470717, y: .453123033}
+    - {x: .509763658, y: .453123033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -5843,7 +5999,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 1
+    flipped: 0
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -5851,6 +6007,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Die_Blue_002
     boundsData:
     - {x: -1.5, y: 2, z: 0}
@@ -5867,10 +6024,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .0546894521, y: .427736342}
-    - {x: .0996074229, y: .427736342}
-    - {x: .0546894521, y: .466794908}
-    - {x: .0996074229, y: .466794908}
+    - {x: .156251952, y: .361330092}
+    - {x: .201169923, y: .361330092}
+    - {x: .156251952, y: .400388658}
+    - {x: .201169923, y: .400388658}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -5888,6 +6045,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Die_Blue_003
     boundsData:
     - {x: -5, y: 1, z: 0}
@@ -5904,10 +6062,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .597658217, y: .466798842}
-    - {x: .597658217, y: .505857408}
-    - {x: .640623033, y: .466798842}
-    - {x: .640623033, y: .505857408}
+    - {x: .517580092, y: .417970717}
+    - {x: .517580092, y: .457029283}
+    - {x: .560544908, y: .417970717}
+    - {x: .560544908, y: .457029283}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -5925,6 +6083,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Die_Blue_004
     boundsData:
     - {x: -11, y: -5, z: 0}
@@ -5941,10 +6100,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .775392592, y: .429689467}
-    - {x: .775392592, y: .468748033}
-    - {x: .822263658, y: .429689467}
-    - {x: .822263658, y: .468748033}
+    - {x: .0585957021, y: .226564452}
+    - {x: .0585957021, y: .265623033}
+    - {x: .105466798, y: .226564452}
+    - {x: .105466798, y: .265623033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -5962,6 +6121,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Die_Blue_005
     boundsData:
     - {x: -15.5, y: -5, z: 0}
@@ -5978,10 +6138,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .917970717, y: .531251967}
-    - {x: .917970717, y: .572263658}
-    - {x: .960935533, y: .531251967}
-    - {x: .960935533, y: .572263658}
+    - {x: .214845702, y: .332033217}
+    - {x: .214845702, y: .373044908}
+    - {x: .257810533, y: .332033217}
+    - {x: .257810533, y: .373044908}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -5999,6 +6159,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Die_Blue_006
     boundsData:
     - {x: -15.5, y: -5, z: 0}
@@ -6015,10 +6176,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .0546894521, y: .378908217}
-    - {x: .0546894521, y: .419919908}
-    - {x: .0976542979, y: .378908217}
-    - {x: .0976542979, y: .419919908}
+    - {x: .0546894521, y: .322267592}
+    - {x: .0546894521, y: .363279283}
+    - {x: .0976542979, y: .322267592}
+    - {x: .0976542979, y: .363279283}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -6036,6 +6197,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Die_Red001
     boundsData:
     - {x: 7.5, y: 2, z: 0}
@@ -6052,10 +6214,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .562501967, y: .593751967}
-    - {x: .562501967, y: .623044908}
-    - {x: .601560533, y: .593751967}
-    - {x: .601560533, y: .623044908}
+    - {x: .291017592, y: .544923842}
+    - {x: .291017592, y: .574216783}
+    - {x: .330076158, y: .544923842}
+    - {x: .330076158, y: .574216783}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -6073,6 +6235,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Die_Red002
     boundsData:
     - {x: -1.5, y: 2, z: 0}
@@ -6089,10 +6252,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .107423827, y: .427736342}
-    - {x: .152341798, y: .427736342}
-    - {x: .107423827, y: .466794908}
-    - {x: .152341798, y: .466794908}
+    - {x: .0546894521, y: .371095717}
+    - {x: .0996074229, y: .371095717}
+    - {x: .0546894521, y: .410154283}
+    - {x: .0996074229, y: .410154283}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -6110,6 +6273,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Die_Red003
     boundsData:
     - {x: -5, y: 1, z: 0}
@@ -6126,10 +6290,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .439455092, y: .464845717}
-    - {x: .439455092, y: .503904283}
-    - {x: .482419908, y: .464845717}
-    - {x: .482419908, y: .503904283}
+    - {x: .607423842, y: .466798842}
+    - {x: .607423842, y: .505857408}
+    - {x: .650388658, y: .466798842}
+    - {x: .650388658, y: .505857408}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -6147,6 +6311,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Die_Red004
     boundsData:
     - {x: -11, y: -5, z: 0}
@@ -6163,10 +6328,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .718751967, y: .462892592}
-    - {x: .718751967, y: .501951158}
-    - {x: .765623033, y: .462892592}
-    - {x: .765623033, y: .501951158}
+    - {x: .113283202, y: .226564452}
+    - {x: .113283202, y: .265623033}
+    - {x: .160154298, y: .226564452}
+    - {x: .160154298, y: .265623033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -6184,6 +6349,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Die_Red005
     boundsData:
     - {x: -15.5, y: -5, z: 0}
@@ -6200,10 +6366,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .00390820298, y: .384767592}
-    - {x: .00390820298, y: .425779283}
-    - {x: .0468730479, y: .384767592}
-    - {x: .0468730479, y: .425779283}
+    - {x: .00390820298, y: .365236342}
+    - {x: .00390820298, y: .406248033}
+    - {x: .0468730479, y: .365236342}
+    - {x: .0468730479, y: .406248033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -6221,6 +6387,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Die_Red006
     boundsData:
     - {x: -15.5, y: -5, z: 0}
@@ -6237,10 +6404,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .105470702, y: .378908217}
-    - {x: .105470702, y: .419919908}
-    - {x: .148435548, y: .378908217}
-    - {x: .148435548, y: .419919908}
+    - {x: .105470702, y: .322267592}
+    - {x: .105470702, y: .363279283}
+    - {x: .148435548, y: .322267592}
+    - {x: .148435548, y: .363279283}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -6258,6 +6425,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Walk_Blue_001
     boundsData:
     - {x: 7.5, y: 2, z: 0}
@@ -6274,10 +6442,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .578126967, y: .552736342}
-    - {x: .578126967, y: .585935533}
-    - {x: .617185533, y: .552736342}
-    - {x: .617185533, y: .585935533}
+    - {x: .554689467, y: .566408217}
+    - {x: .554689467, y: .599607408}
+    - {x: .593748033, y: .566408217}
+    - {x: .593748033, y: .599607408}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -6295,6 +6463,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Walk_Blue_002
     boundsData:
     - {x: 7.5, y: 2.5, z: 0}
@@ -6311,10 +6480,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .128908202, y: .654298842}
-    - {x: .128908202, y: .687498033}
-    - {x: .169919923, y: .654298842}
-    - {x: .169919923, y: .687498033}
+    - {x: .652345717, y: .570314467}
+    - {x: .652345717, y: .603513658}
+    - {x: .693357408, y: .570314467}
+    - {x: .693357408, y: .603513658}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -6332,6 +6501,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Walk_Blue_003
     boundsData:
     - {x: 7.5, y: 3, z: 0}
@@ -6348,10 +6518,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .140626952, y: .560548842}
-    - {x: .140626952, y: .593748033}
-    - {x: .183591798, y: .560548842}
-    - {x: .183591798, y: .593748033}
+    - {x: .855470717, y: .562501967}
+    - {x: .855470717, y: .595701158}
+    - {x: .898435533, y: .562501967}
+    - {x: .898435533, y: .595701158}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -6369,6 +6539,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Walk_Blue_004
     boundsData:
     - {x: 7.5, y: 3.5, z: 0}
@@ -6385,10 +6556,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .140626952, y: .519533217}
-    - {x: .140626952, y: .552732408}
-    - {x: .185544923, y: .519533217}
-    - {x: .185544923, y: .552732408}
+    - {x: .955080092, y: .523439467}
+    - {x: .988279283, y: .523439467}
+    - {x: .955080092, y: .568357408}
+    - {x: .988279283, y: .568357408}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -6398,7 +6569,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 1
+    flipped: 0
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -6406,6 +6577,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Walk_Blue_005
     boundsData:
     - {x: 7.5, y: 3, z: 0}
@@ -6422,10 +6594,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .0898457021, y: .564455092}
-    - {x: .0898457021, y: .597654283}
-    - {x: .132810548, y: .564455092}
-    - {x: .132810548, y: .597654283}
+    - {x: .906251967, y: .568361342}
+    - {x: .939451158, y: .568361342}
+    - {x: .906251967, y: .611326158}
+    - {x: .939451158, y: .611326158}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -6435,7 +6607,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 1
+    flipped: 0
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -6443,6 +6615,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Walk_Blue_006
     boundsData:
     - {x: 7.5, y: 2.5, z: 0}
@@ -6459,10 +6632,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .0878925771, y: .658205092}
-    - {x: .121091798, y: .658205092}
-    - {x: .0878925771, y: .699216783}
-    - {x: .121091798, y: .699216783}
+    - {x: .701173842, y: .572267592}
+    - {x: .701173842, y: .605466783}
+    - {x: .742185533, y: .572267592}
+    - {x: .742185533, y: .605466783}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -6472,7 +6645,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 0
+    flipped: 1
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -6480,6 +6653,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Walk_Red_001
     boundsData:
     - {x: 7.5, y: 2, z: 0}
@@ -6496,10 +6670,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .515626967, y: .562501967}
-    - {x: .515626967, y: .595701158}
-    - {x: .554685533, y: .562501967}
-    - {x: .554685533, y: .595701158}
+    - {x: .601564467, y: .603517592}
+    - {x: .601564467, y: .636716783}
+    - {x: .640623033, y: .603517592}
+    - {x: .640623033, y: .636716783}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -6517,6 +6691,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Walk_Red_002
     boundsData:
     - {x: 7.5, y: 2.5, z: 0}
@@ -6533,10 +6708,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .00390820298, y: .693361342}
-    - {x: .00390820298, y: .726560533}
-    - {x: .0449199229, y: .693361342}
-    - {x: .0449199229, y: .726560533}
+    - {x: .750001967, y: .597658217}
+    - {x: .750001967, y: .630857408}
+    - {x: .791013658, y: .597658217}
+    - {x: .791013658, y: .630857408}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -6554,6 +6729,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Walk_Red_003
     boundsData:
     - {x: 7.5, y: 3, z: 0}
@@ -6570,10 +6746,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .246095702, y: .558595717}
-    - {x: .246095702, y: .591794908}
-    - {x: .289060533, y: .558595717}
-    - {x: .289060533, y: .591794908}
+    - {x: .947267592, y: .576173842}
+    - {x: .947267592, y: .609373033}
+    - {x: .990232408, y: .576173842}
+    - {x: .990232408, y: .609373033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -6591,6 +6767,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Walk_Red_004
     boundsData:
     - {x: 7.5, y: 3.5, z: 0}
@@ -6607,10 +6784,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .193361327, y: .535158217}
-    - {x: .193361327, y: .568357408}
-    - {x: .238279298, y: .535158217}
-    - {x: .238279298, y: .568357408}
+    - {x: .802736342, y: .562501967}
+    - {x: .802736342, y: .595701158}
+    - {x: .847654283, y: .562501967}
+    - {x: .847654283, y: .595701158}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -6628,6 +6805,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Walk_Red_005
     boundsData:
     - {x: 7.5, y: 3, z: 0}
@@ -6644,10 +6822,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .191408202, y: .576173842}
-    - {x: .191408202, y: .609373033}
-    - {x: .234373048, y: .576173842}
-    - {x: .234373048, y: .609373033}
+    - {x: .947267592, y: .617189467}
+    - {x: .947267592, y: .650388658}
+    - {x: .990232408, y: .617189467}
+    - {x: .990232408, y: .650388658}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -6665,6 +6843,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_Supporter_Walk_Red_006
     boundsData:
     - {x: 7.5, y: 2.5, z: 0}
@@ -6681,10 +6860,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .289064467, y: .601564467}
-    - {x: .289064467, y: .634763658}
-    - {x: .330076158, y: .601564467}
-    - {x: .330076158, y: .634763658}
+    - {x: .365236342, y: .462892592}
+    - {x: .365236342, y: .496091783}
+    - {x: .406248033, y: .462892592}
+    - {x: .406248033, y: .496091783}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -6702,6 +6881,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Attack_Blue_001
     boundsData:
     - {x: 8.5, y: 3.5, z: 0}
@@ -6739,6 +6919,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Attack_Blue_002
     boundsData:
     - {x: 8.5, y: 3.5, z: 0}
@@ -6776,6 +6957,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Attack_Blue_003
     boundsData:
     - {x: 6.5, y: 3.5, z: 0}
@@ -6813,6 +6995,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Attack_Blue_004
     boundsData:
     - {x: 13, y: 3, z: 0}
@@ -6850,6 +7033,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Attack_Blue_005
     boundsData:
     - {x: 13.5, y: 3, z: 0}
@@ -6887,6 +7071,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Attack_Blue_006
     boundsData:
     - {x: 10.5, y: 3.5, z: 0}
@@ -6903,10 +7088,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .498048842, y: .277345717}
-    - {x: .498048842, y: .318357408}
-    - {x: .546873033, y: .277345717}
-    - {x: .546873033, y: .318357408}
+    - {x: .666017592, y: .322267592}
+    - {x: .666017592, y: .363279283}
+    - {x: .714841783, y: .322267592}
+    - {x: .714841783, y: .363279283}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -6924,6 +7109,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Attack_Red_001
     boundsData:
     - {x: 8.5, y: 3.5, z: 0}
@@ -6961,6 +7147,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Attack_Red_002
     boundsData:
     - {x: 8.5, y: 3.5, z: 0}
@@ -6998,6 +7185,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Attack_Red_003
     boundsData:
     - {x: 6.5, y: 3.5, z: 0}
@@ -7035,6 +7223,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Attack_Red_004
     boundsData:
     - {x: 13, y: 3, z: 0}
@@ -7072,6 +7261,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Attack_Red_005
     boundsData:
     - {x: 13.5, y: 3, z: 0}
@@ -7109,6 +7299,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Attack_Red_006
     boundsData:
     - {x: 10.5, y: 3.5, z: 0}
@@ -7125,10 +7316,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .431642592, y: .324220717}
-    - {x: .431642592, y: .365232408}
-    - {x: .480466783, y: .324220717}
-    - {x: .480466783, y: .365232408}
+    - {x: .722658217, y: .332033217}
+    - {x: .722658217, y: .373044908}
+    - {x: .771482408, y: .332033217}
+    - {x: .771482408, y: .373044908}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -7146,6 +7337,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Die_Blue_001
     boundsData:
     - {x: 9, y: 3.5, z: 0}
@@ -7183,6 +7375,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Die_Blue_002
     boundsData:
     - {x: -1, y: 3, z: 0}
@@ -7220,6 +7413,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Die_Blue_003
     boundsData:
     - {x: -4.5, y: 3, z: 0}
@@ -7257,6 +7451,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Die_Blue_004
     boundsData:
     - {x: -10, y: -3.5, z: 0}
@@ -7294,6 +7489,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Die_Blue_005
     boundsData:
     - {x: -14, y: -3.5, z: 0}
@@ -7331,6 +7527,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Die_Blue_006
     boundsData:
     - {x: -14, y: -3.5, z: 0}
@@ -7368,6 +7565,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Die_Red_001
     boundsData:
     - {x: 9, y: 3.5, z: 0}
@@ -7405,6 +7603,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Die_Red_002
     boundsData:
     - {x: -1, y: 3, z: 0}
@@ -7442,6 +7641,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Die_Red_003
     boundsData:
     - {x: -4.5, y: 3, z: 0}
@@ -7479,6 +7679,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Die_Red_004
     boundsData:
     - {x: -10, y: -3.5, z: 0}
@@ -7516,6 +7717,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Die_Red_005
     boundsData:
     - {x: -14, y: -3.5, z: 0}
@@ -7553,6 +7755,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Die_Red_006
     boundsData:
     - {x: -14, y: -3.5, z: 0}
@@ -7590,6 +7793,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Walk_Blue_001
     boundsData:
     - {x: 8.5, y: 3.5, z: 0}
@@ -7606,10 +7810,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .388673842, y: .171876952}
-    - {x: .388673842, y: .216794923}
-    - {x: .437498033, y: .171876952}
-    - {x: .437498033, y: .216794923}
+    - {x: .900392592, y: .171876952}
+    - {x: .945310533, y: .171876952}
+    - {x: .900392592, y: .220701173}
+    - {x: .945310533, y: .220701173}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -7619,7 +7823,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 1
+    flipped: 0
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -7627,6 +7831,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Walk_Blue_002
     boundsData:
     - {x: 9, y: 4.5, z: 0}
@@ -7643,10 +7848,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .560548842, y: .224611327}
-    - {x: .560548842, y: .267576158}
-    - {x: .609373033, y: .224611327}
-    - {x: .609373033, y: .267576158}
+    - {x: .953126967, y: .296876967}
+    - {x: .996091783, y: .296876967}
+    - {x: .953126967, y: .345701158}
+    - {x: .996091783, y: .345701158}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -7656,7 +7861,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 1
+    flipped: 0
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -7664,6 +7869,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Walk_Blue_003
     boundsData:
     - {x: 10, y: 5, z: 0}
@@ -7701,6 +7907,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Walk_Blue_004
     boundsData:
     - {x: 9, y: 5.5, z: 0}
@@ -7738,6 +7945,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Walk_Blue_005
     boundsData:
     - {x: 8, y: 5, z: 0}
@@ -7775,6 +7983,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Walk_Blue_006
     boundsData:
     - {x: 8.5, y: 4, z: 0}
@@ -7812,6 +8021,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Walk_Red_001
     boundsData:
     - {x: 8.5, y: 3.5, z: 0}
@@ -7828,10 +8038,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .328126967, y: .179689452}
-    - {x: .328126967, y: .224607423}
-    - {x: .376951158, y: .179689452}
-    - {x: .376951158, y: .224607423}
+    - {x: .509767592, y: .121095702}
+    - {x: .509767592, y: .166013673}
+    - {x: .558591783, y: .121095702}
+    - {x: .558591783, y: .166013673}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -7849,6 +8059,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Walk_Red_002
     boundsData:
     - {x: 9, y: 4.5, z: 0}
@@ -7865,10 +8076,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .500001967, y: .226564452}
-    - {x: .500001967, y: .269529283}
-    - {x: .548826158, y: .226564452}
-    - {x: .548826158, y: .269529283}
+    - {x: .560548842, y: .224611327}
+    - {x: .560548842, y: .267576158}
+    - {x: .609373033, y: .224611327}
+    - {x: .609373033, y: .267576158}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -7886,6 +8097,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Walk_Red_003
     boundsData:
     - {x: 10, y: 5, z: 0}
@@ -7902,10 +8114,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .642580092, y: .119142577}
-    - {x: .642580092, y: .162107423}
-    - {x: .693357408, y: .119142577}
-    - {x: .693357408, y: .162107423}
+    - {x: .257814467, y: .185548827}
+    - {x: .257814467, y: .228513673}
+    - {x: .308591783, y: .185548827}
+    - {x: .308591783, y: .228513673}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 78b89cb5252135744acebc0417214964, type: 2}
     materialId: 0
@@ -7923,6 +8135,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Walk_Red_004
     boundsData:
     - {x: 9, y: 5.5, z: 0}
@@ -7960,6 +8173,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Walk_Red_005
     boundsData:
     - {x: 8, y: 5, z: 0}
@@ -7997,6 +8211,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Actor_Terran_TemplarWarriors_Walk_Red_006
     boundsData:
     - {x: 8.5, y: 4, z: 0}
@@ -8034,6 +8249,7 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    attachPoints: []
   premultipliedAlpha: 0
   material: {fileID: 0}
   materials:
@@ -8045,9 +8261,9 @@ MonoBehaviour:
   spriteCollectionName: TerranActorCollection
   assetName: 
   loadable: 0
-  invOrthoSize: 1
-  halfTargetHeight: 1
-  buildKey: 1784634584
+  invOrthoSize: 2
+  halfTargetHeight: .5
+  buildKey: 319465780
   dataGuid: 781e11ebc822af547a10010ea86a38c4
   managedSpriteCollection: 0
   hasPlatformData: 0
