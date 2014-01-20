@@ -15,9 +15,9 @@ public class GameSceneController : MonoBehaviour
 
     public float MpIncreaseSpeed = 1;
 
-    private float CoinIncreaseCounter = 0f;
+    private float CoinIncreaseCounter;
 
-    private float MpIncreaseCounter = 0f;
+    private float MpIncreaseCounter;
 
     /// <summary>
     ///     The battle field map.
@@ -61,6 +61,8 @@ public class GameSceneController : MonoBehaviour
     }
 
     public FactionType MyFactionType { get; set; }
+
+    public RaceType MyRaceType { get; set; }
 
     #endregion
 

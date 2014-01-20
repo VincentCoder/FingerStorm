@@ -166,13 +166,13 @@ public class Actor_StateWalk : State<ActorController>
 
     public override void Enter(ActorController entityType)
     {
-		//Debug.Log("Enter Walk");
         StringBuilder animName = new StringBuilder("Terran_");
         animName.Append(entityType.MyActor.ActorType);
         animName.Append("_Walk_");
         animName.Append(entityType.MyActor.FactionType);
         entityType.SelfAnimator.Play(animName.ToString());
-        //base.Enter(entityType);
+
+        this.ResetRotation(entityType);
     }
 
     public override void Execute(ActorController entityType)
@@ -194,8 +194,11 @@ public class Actor_StateWalk : State<ActorController>
 		}
 		if((entityType.ActorPath.CurrentNode() - entityType.myTransform.position).sqrMagnitude <= 0.5)
 		{
-			if(entityType.ActorPath.HasNext())
-				entityType.ActorPath.NextNode();
+		    if (entityType.ActorPath.HasNext())
+		    {
+                entityType.ActorPath.NextNode();
+                this.ResetRotation(entityType);
+		    }
 		}
 
         this.seekEnemyCounter += Time.deltaTime;
@@ -228,6 +231,21 @@ public class Actor_StateWalk : State<ActorController>
     public override bool OnMessage(ActorController entityType, Telegram telegram)
     {
         return base.OnMessage(entityType, telegram);
+    }
+
+    private void ResetRotation ( ActorController entityType )
+    {
+        Quaternion newQuaternion = Quaternion.Euler(0, 0, 0);
+        if (entityType.ActorPath.CurrentNode().x > entityType.myTransform.position.x)
+        {
+            newQuaternion.eulerAngles = new Vector3(0, 180, 0);
+            entityType.gameObject.transform.rotation = newQuaternion;
+        }
+        else
+        {
+            newQuaternion.eulerAngles = new Vector3(0, 0, 0);
+            entityType.gameObject.transform.rotation = newQuaternion;
+        }
     }
 
     #endregion

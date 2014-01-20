@@ -52,6 +52,7 @@ public class GameController : BaseGameEntity
         gameSceneCtrl.name = "GameSceneController";
         this.GameSceneController = gameSceneCtrl.GetComponent<GameSceneController>();
         this.GameSceneController.MyFactionType = this.MyFactionType;
+        this.GameSceneController.MyRaceType = this.MyRaceType;
     }
 
     #endregion
@@ -63,7 +64,7 @@ public class GameController : BaseGameEntity
         this.LoadGlobalConfig();
 
         CustomTypes.Register();
-        
+        this.MyRaceType = RaceType.Terran;
     }
 
     private void LoadGlobalConfig()
