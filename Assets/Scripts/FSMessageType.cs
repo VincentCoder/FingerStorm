@@ -1,7 +1,6 @@
-﻿using UnityEngine;
-
-public enum FSMessageType
-{ 
+﻿public enum FSMessageType
+{
     FSMessageAttack,
+
     FSMessageStun
 }

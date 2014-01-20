@@ -1,6 +1,6 @@
-﻿
-public enum FactionType
+﻿public enum FactionType
 {
     Blue,
+
     Red
 }

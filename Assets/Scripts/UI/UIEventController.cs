@@ -82,24 +82,27 @@ public class UIEventController : MonoBehaviour
         {
             case "HomePageStartGameButton":
                 {
-					if(this.GameController.Client.State == ExitGames.Client.Photon.LoadBalancing.ClientState.JoinedLobby)
-					{
-						this.GameController.GetFSM().ChangeState(GameState_Matching.Instance());
-						this.GameController.Client.OpJoinRandomRoom(null, 0);
-					}
+					
                     break;
                 }
             case "HomePageOptionsButton":
                 {
                     break;
                 }
-			case "HomePageCreateGameButton":
+			case "HomePagePVEButton":
                 {
-					
+					this.GameController.GameType = GameType.PVE;
+                    this.GameController.MyFactionType = FactionType.Blue;
+                    this.GameController.GetFSM().ChangeState(GameState_BeforeStartGame.Instance());
                     break;
                 }
-			case "HomePageJoinGameButton":
+			case "HomePagePVPButton":
                 {
+                    if (this.GameController.Client.State == ExitGames.Client.Photon.LoadBalancing.ClientState.JoinedLobby)
+                    {
+                        this.GameController.GetFSM().ChangeState(GameState_Matching.Instance());
+                        this.GameController.Client.OpJoinRandomRoom(null, 0);
+                    }
                     break;
                 }
 			case "GameResultBackToMenuButton":

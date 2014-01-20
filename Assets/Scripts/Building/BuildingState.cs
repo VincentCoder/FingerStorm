@@ -1,6 +1,10 @@
-﻿using System.Text;
+﻿#region
+
+using System.Text;
 
 using UnityEngine;
+
+#endregion
 
 public class Building_GlobalState : State<BuildingController>
 {
@@ -31,7 +35,7 @@ public class Building_GlobalState : State<BuildingController>
 
     public override bool OnMessage(BuildingController entityType, Telegram telegram)
     {
-		if (telegram.Msg == FSMessageType.FSMessageAttack)
+        if (telegram.Msg == FSMessageType.FSMessageAttack)
         {
             if (telegram.Parameters.ContainsKey("Damage"))
             {
@@ -117,9 +121,13 @@ public class Building_StateBuilding : State<BuildingController>
 
 public class Building_StateDispatching : State<BuildingController>
 {
+    #region Fields
+
     private int dispatchInterval;
 
     private float dispatchIntervalCounter;
+
+    #endregion
 
     #region Public Methods and Operators
 
@@ -136,8 +144,10 @@ public class Building_StateDispatching : State<BuildingController>
 
     public override void Execute(BuildingController entityType)
     {
-		if(entityType.Building.IsMainCity)
-			return;
+        if (entityType.Building.IsMainCity)
+        {
+            return;
+        }
         if (this.dispatchInterval != entityType.DispatchInterval)
         {
             this.dispatchInterval = entityType.DispatchInterval;
@@ -164,9 +174,17 @@ public class Building_StateDispatching : State<BuildingController>
         return base.OnMessage(entityType, telegram);
     }
 
-    private void DispatchActor ( BuildingController entityType )
+    #endregion
+
+    #region Methods
+
+    private void DispatchActor(BuildingController entityType)
     {
-        ActorsManager.GetInstance().CreateNewActor(entityType.Building.FactionType, entityType.Building.ActorType, entityType.MyTransform.position);
+        ActorsManager.GetInstance()
+            .CreateNewActor(
+                entityType.Building.FactionType,
+                entityType.Building.ActorType,
+                entityType.MyTransform.position);
     }
 
     #endregion
@@ -183,12 +201,13 @@ public class Building_StateBeforeDestroy : State<BuildingController>
 
     public override void Enter(BuildingController entityType)
     {
-     	if(entityType.Building.IsMainCity)
-		{
-			GameController gameCtrl = GameObject.Find("GameController").GetComponent<GameController>();
-			gameCtrl.Client.SendGameResult();
-			gameCtrl.ViewController.ShowGameResultView(false);
-		}
+        if (entityType.Building.IsMainCity)
+        {
+            GameController gameCtrl = GameObject.Find("GameController").GetComponent<GameController>();
+            if(gameCtrl.GameType == GameType.PVP)
+                gameCtrl.Client.SendGameResult();
+            gameCtrl.ViewController.ShowGameResultView(entityType.Building.FactionType != gameCtrl.MyFactionType);
+        }
     }
 
     public override void Execute(BuildingController entityType)
