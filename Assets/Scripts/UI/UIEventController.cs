@@ -98,11 +98,8 @@ public class UIEventController : MonoBehaviour
                 }
 			case "HomePagePVPButton":
                 {
-                    if (this.GameController.Client.State == ExitGames.Client.Photon.LoadBalancing.ClientState.JoinedLobby)
-                    {
-                        this.GameController.GetFSM().ChangeState(GameState_Matching.Instance());
-                        this.GameController.Client.OpJoinRandomRoom(null, 0);
-                    }
+					this.GameController.GameType = GameType.PVP;
+                    this.GameController.GetFSM().ChangeState(GameState_Matching.Instance());
                     break;
                 }
 			case "GameResultBackToMenuButton":

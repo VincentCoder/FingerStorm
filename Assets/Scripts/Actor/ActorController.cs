@@ -253,8 +253,7 @@ public class ActorController : BaseGameEntity
 
     private void Awake()
     {
-        this.myTransform = this.gameObject.transform;
-        this.moveSpeed = 30;
+        
     }
 
     private void InitActor()
@@ -263,6 +262,10 @@ public class ActorController : BaseGameEntity
         {
             Debug.LogError("Actor cannot be null !");
         }
+		
+		this.myTransform = this.gameObject.transform;
+        this.moveSpeed = 30;
+		
         this.m_PStateMachine = new StateMachine<ActorController>(this);
         this.m_PStateMachine.SetCurrentState(Actor_StateWalk.Instance());
         this.m_PStateMachine.SetGlobalState(Actor_GlobalState.Instance());

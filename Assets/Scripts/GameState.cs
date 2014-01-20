@@ -1,4 +1,6 @@
-﻿public class GameState_GlobalState : State<GameController>
+﻿using UnityEngine;
+
+public class GameState_GlobalState : State<GameController>
 {
     #region Static Fields
 
@@ -19,7 +21,11 @@
 
     public override void Execute(GameController entityType)
     {
-        entityType.Client.Service();
+		GameController gameCtrl = GameObject.Find("GameController").GetComponent<GameController>();
+		if(gameCtrl.GameType == GameType.PVP && entityType.Client != null)
+		{
+			entityType.Client.Service();
+		}
     }
 
     public override void Exit(GameController entityType)

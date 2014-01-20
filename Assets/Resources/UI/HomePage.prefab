@@ -33,7 +33,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100004
 GameObject:
   m_ObjectHideFlags: 0
@@ -82,7 +82,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100010
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,12 +95,12 @@ GameObject:
   - 114: {fileID: 11400014}
   - 65: {fileID: 6500004}
   m_Layer: 8
-  m_Name: JoinGame
-  m_TagString: HomePageJoinGameButton
+  m_Name: PVP
+  m_TagString: HomePagePVPButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &100012
 GameObject:
   m_ObjectHideFlags: 1
@@ -145,12 +145,12 @@ GameObject:
   - 114: {fileID: 11400020}
   - 65: {fileID: 6500006}
   m_Layer: 8
-  m_Name: CreateGame
-  m_TagString: HomePageCreateGameButton
+  m_Name: PVE
+  m_TagString: HomePagePVEButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -494,7 +494,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   mFont: {fileID: 0}
-  mText: "\u52A0\u5165\u6E38\u620F"
+  mText: "\u5BF9\u6218\u6A21\u5F0F"
   mFontSize: 45
   mFontStyle: 1
   mEncoding: 1
@@ -535,7 +535,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   mFont: {fileID: 0}
-  mText: "\u521B\u5EFA\u6E38\u620F"
+  mText: "\u5355\u673A\u6A21\u5F0F"
   mFontSize: 45
   mFontStyle: 1
   mEncoding: 1

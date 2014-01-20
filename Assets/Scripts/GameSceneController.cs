@@ -102,7 +102,7 @@ public class GameSceneController : MonoBehaviour
     {
         if (this.menuBar != null)
         {
-            Transform mpLabel = this.menuBar.transform.FindChild("MPLabel");
+            Transform mpLabel = this.menuBar.transform.FindChild("MpLabel");
             if (mpLabel != null)
             {
                 mpLabel.gameObject.GetComponent<UILabel>().text = this.Mp.ToString();
@@ -134,9 +134,6 @@ public class GameSceneController : MonoBehaviour
 
                 BuildingsManager.GetInstance()
                     .CreateNewBuilding(BuildingType.Terran_MarksmanCamp, FactionType.Blue, new Vector3(250, 400, 0));
-
-                BuildingsManager.GetInstance()
-                    .CreateNewBuilding(BuildingType.Terran_TheMainCity, FactionType.Red, new Vector3(860, 400, 0));
 
                 BuildingsManager.GetInstance()
                     .CreateNewBuilding(BuildingType.Terran_ArtilleryHall, FactionType.Red, new Vector3(860, 270, 0));

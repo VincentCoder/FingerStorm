@@ -58,7 +58,6 @@ public class UIViewController : MonoBehaviour
 		selectorPanel.transform.parent = this.RootPanel.transform;
 		selectorPanel.transform.localScale = new Vector3(1,1,1);
 		selectorPanel.transform.localPosition = new Vector3(-125,-240, 0);
-		Debug.Log(this.GameController.MyFactionType);
 		this.AddBuildingCard(new Building(0, BuildingType.Terran_Barrack,this.GameController.MyFactionType), 0);
 		this.AddBuildingCard(new Building(0, BuildingType.Terran_Fortress,this.GameController.MyFactionType), 1);
 		this.AddBuildingCard(new Building(0, BuildingType.Terran_SniperHouse,this.GameController.MyFactionType), 2);
@@ -165,7 +164,7 @@ public class UIViewController : MonoBehaviour
 		menuBar.tag = "GameSceneMenuBar";
 		menuBar.transform.parent = this.RootPanel.transform;
 		menuBar.transform.localScale = new Vector3(1, 1, 1);
-		menuBar.transform.localPosition = new Vector3(414, 285, 0);
+		menuBar.transform.localPosition = new Vector3(480, 320, 0);
 		return menuBar;
 	}
 	

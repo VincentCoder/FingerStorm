@@ -52,36 +52,36 @@ public class ActorsManager
 
     public void CreateNewActor(FactionType factionType, ActorType actorType, Vector3 pos)
     {
-        var actorObj = (GameObject)Object.Instantiate(Resources.Load("GameScene/Actor"));
+        GameObject actorObj = (GameObject)Object.Instantiate(Resources.Load("GameScene/Actor"));
         int actorId = this.GenerateNewActorId();
         actorObj.transform.name = "Actor_" + actorId.ToString("D3");
         actorObj.transform.localScale = new Vector3(1, 1, 1);
         actorObj.transform.position = pos;
-        var actorCtrl = actorObj.GetComponent<ActorController>();
-        var actor = new Actor(actorId, actorType, factionType);
-        actorCtrl.MyActor = actor;
-        actorCtrl.TargetBuilding =
+        ActorController actorCtrl = actorObj.GetComponent<ActorController>();
+		Actor actor = new Actor(actorId, actorType, factionType);
+		actorCtrl.TargetBuilding =
             BuildingsManager.GetInstance()
                 .GetBaseBuildingOfFaction(actor.FactionType == FactionType.Blue ? FactionType.Red : FactionType.Blue);
 		actorCtrl.ActorPath = ActorPathManager.GetInstance().GenerateNewPath(pos, actorCtrl.TargetBuilding.transform.position);
+        actorCtrl.MyActor = actor;
         this.actorsDictionary.Add(actorId, actorObj);
     }
 
     public void CreateNewActor(Actor actor, Vector3 pos)
     {
-        var actorObj = (GameObject)Object.Instantiate(Resources.Load("GameScene/Actor"));
+        GameObject actorObj = (GameObject)Object.Instantiate(Resources.Load("GameScene/Actor"));
         int actorId = this.GenerateNewActorId();
         actorObj.transform.name = "Actor_" + actorId.ToString("D3");
         actorObj.transform.localScale = new Vector3(1, 1, 1);
         actorObj.transform.position = pos;
-        var actorCtrl = actorObj.GetComponent<ActorController>();
+        ActorController actorCtrl = actorObj.GetComponent<ActorController>();
         actor.ActorId = actorId;
-        actorCtrl.MyActor = actor;
         actorCtrl.TargetBuilding =
             BuildingsManager.GetInstance()
                 .GetBaseBuildingOfFaction(actor.FactionType == FactionType.Blue ? FactionType.Red : FactionType.Blue);
 		actorCtrl.ActorPath = ActorPathManager.GetInstance().GenerateNewPath(pos, actorCtrl.TargetBuilding.transform.position);
-        this.actorsDictionary.Add(actorId, actorObj);
+        actorCtrl.MyActor = actor;
+		this.actorsDictionary.Add(actorId, actorObj);
     }
 
     public GameObject GetActorById(int actorId)
