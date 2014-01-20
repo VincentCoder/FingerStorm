@@ -207,6 +207,7 @@ public class Building_StateBeforeDestroy : State<BuildingController>
             if(gameCtrl.GameType == GameType.PVP)
                 gameCtrl.Client.SendGameResult();
             gameCtrl.ViewController.ShowGameResultView(entityType.Building.FactionType != gameCtrl.MyFactionType);
+			Time.timeScale = 0;
         }
     }
 

@@ -35,10 +35,10 @@ public class ActorPathManager
         return instance;
     }
 	
-	private Vector3[] firstPathLeftNodes = new Vector3[3]{new Vector3(295,547,0), new Vector3(295, 504, 0), new Vector3(295,461,0)};
-	private Vector3[] firstPathRightNodes = new Vector3[3]{new Vector3(665,547,0), new Vector3(665, 504, 0), new Vector3(665,461,0)};
-	private Vector3[] secondPathLeftNodes = new Vector3[3]{new Vector3(295,253,0), new Vector3(295, 296, 0), new Vector3(295,339,0)};
-	private Vector3[] secondPathRightNodes = new Vector3[3]{new Vector3(665,253,0), new Vector3(665, 296, 0), new Vector3(665,339,0)};
+	private Vector3[] firstPathLeftNodes = new Vector3[3]{new Vector3(295,530,0), new Vector3(295, 485, 0), new Vector3(295,440,0)};
+	private Vector3[] firstPathRightNodes = new Vector3[3]{new Vector3(665,530,0), new Vector3(665, 485, 0), new Vector3(665,440,0)};
+	private Vector3[] secondPathLeftNodes = new Vector3[3]{new Vector3(295,240,0), new Vector3(295, 290, 0), new Vector3(295,340,0)};
+	private Vector3[] secondPathRightNodes = new Vector3[3]{new Vector3(665,240,0), new Vector3(665, 290, 0), new Vector3(665,340,0)};
 	
 	public ActorPath GenerateNewPath(Vector3 startPos, Vector3 endPos)
 	{
@@ -63,30 +63,49 @@ public class ActorPathManager
 		{
 			if(startPos.x < endPos.x)
 			{
-				pathNodes[1] = this.firstPathLeftNodes[Random.Range(0, 3)];
-				pathNodes[2] = this.firstPathRightNodes[Random.Range(0,3)];
+				pathNodes[1] = this.NearestPointInY(startPos, this.firstPathLeftNodes);
+				pathNodes[2] = this.NearestPointInY(startPos, this.firstPathRightNodes);
 			}
 			else
 			{
-				pathNodes[1] = this.firstPathRightNodes[Random.Range(0, 3)];
-				pathNodes[2] = this.firstPathLeftNodes[Random.Range(0, 3)];
+				pathNodes[1] = this.NearestPointInY(startPos, this.firstPathRightNodes);
+				pathNodes[2] = this.NearestPointInY(startPos, this.firstPathLeftNodes);
 			}
 		}
 		else
 		{
 			if(startPos.x < endPos.x)
 			{
-				pathNodes[1] = this.secondPathLeftNodes[Random.Range(0, 3)];
-				pathNodes[2] = this.secondPathRightNodes[Random.Range(0,3)];
+				pathNodes[1] = this.NearestPointInY(startPos, this.secondPathLeftNodes);
+				pathNodes[2] = this.NearestPointInY(startPos, this.secondPathRightNodes);
 			}
 			else
 			{
-				pathNodes[1] = this.secondPathRightNodes[Random.Range(0, 3)];
-				pathNodes[2] = this.secondPathLeftNodes[Random.Range(0, 3)];
+				pathNodes[1] = this.NearestPointInY(startPos, this.secondPathRightNodes);
+				pathNodes[2] = this.NearestPointInY(startPos, this.secondPathLeftNodes);
 			}
 		}
 		pathNodes[pathNodes.Length-1] = endPos;
 		return new ActorPath(pathNodes);
+	}
+	
+	private Vector3 NearestPointInY(Vector3 pos, Vector3[] points)
+	{
+		Vector3 result = Vector3.zero;
+		if(points != null && points.Length != 0)
+		{
+			float dValue = 9999f;
+			for(int i = 0; i < points.Length; i ++)
+			{
+				Vector3 point = points[i];
+				if(Mathf.Abs(point.y - pos.y) < dValue)
+				{
+					result = point;
+					dValue = Mathf.Abs(point.y - pos.y);
+				}
+			}
+		}
+		return result;
 	}
 	
 }

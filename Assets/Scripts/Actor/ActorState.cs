@@ -236,7 +236,7 @@ public class Actor_StateWalk : State<ActorController>
     private void ResetRotation ( ActorController entityType )
     {
         Quaternion newQuaternion = Quaternion.Euler(0, 0, 0);
-        if (entityType.ActorPath.CurrentNode().x > entityType.myTransform.position.x)
+        if (entityType.ActorPath.CurrentNode().x < entityType.myTransform.position.x)
         {
             newQuaternion.eulerAngles = new Vector3(0, 180, 0);
             entityType.gameObject.transform.rotation = newQuaternion;

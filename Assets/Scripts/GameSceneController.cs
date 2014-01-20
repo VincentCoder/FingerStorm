@@ -147,6 +147,7 @@ public class GameSceneController : MonoBehaviour
 
             gameCtrl.ViewController.ShowBuildingsSelectorPanel();
             gameCtrl.ViewController.ShowBuildingDetailPanel();
+			gameCtrl.ViewController.ShowPlayerSkillPanel();
             this.menuBar = gameCtrl.ViewController.ShowMenuBar();
         }
 

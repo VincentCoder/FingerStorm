@@ -177,6 +177,27 @@ public class UIViewController : MonoBehaviour
 			Destroy(menuBar);
 	} 
 	
+	public void ShowPlayerSkillPanel()
+	{
+		GameObject playerSkillPanel = (GameObject)Instantiate(Resources.Load("UI/PlayerSkillPanel"));
+		playerSkillPanel.name = "PlayerSkillPanel";
+		playerSkillPanel.tag = "GameScenePlayerSkillPanel";
+		playerSkillPanel.transform.parent = this.RootPanel.transform;
+		playerSkillPanel.transform.localScale = new Vector3(1, 1, 1);
+		playerSkillPanel.transform.localPosition = new Vector3(-155, 290, 0);
+		
+		this.GameController.EventController.RegisterInHierarchy(playerSkillPanel);
+	}
+	
+	public void DestroyPlayerSkillPanel(bool now)
+	{
+		GameObject playerSkillPanel = GameObject.FindWithTag("GameScenePlayerSkillPanel");
+		if(now)
+			DestroyImmediate(playerSkillPanel);
+		else
+			Destroy(playerSkillPanel);
+	}
+	
 	public void ShowShadowCover()
 	{
 		GameObject shadowCover = (GameObject)Instantiate(Resources.Load("UI/ShadowCover"));
