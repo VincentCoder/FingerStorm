@@ -14,6 +14,9 @@ public enum ActorSpellName
     DivineBlessing,                                               //天赐祝福
     Zap,                                                                         //圣光术
 
+    Parry,                                                                        //格挡
+    Bleed,                                                                       //流血
+
     SMASH,                                                                    //粉碎
     RAGE,                                                                       //狂暴
     SNARES,                                                                 //诱捕

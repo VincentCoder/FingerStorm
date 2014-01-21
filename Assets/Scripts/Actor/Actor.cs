@@ -17,7 +17,8 @@ public class Actor
         this.ActorArmor = this.LoadArmorFromConfig();
         this.ActorAttack = this.LoadActorAttackFromConfig();
         this.FactionType = faction;
-        this.Hp = this.LoadHpFromConfig();
+        this.TotalHp = this.LoadHpFromConfig();
+        this.LoadLevelFromConfig();
         this.SpellDictionary = this.LoadSpellsFromConfig();
     }
 
@@ -35,7 +36,11 @@ public class Actor
 
     public FactionType FactionType { get; set; }
 
-    public float Hp { get; set; }
+    public float TotalHp { get; set; }
+
+    public float CurrentHp { get; set; }
+
+    public ActorLevel ActorLevel { get; set; }
 
     public Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>> SpellDictionary { get; set; }
 
@@ -261,52 +266,130 @@ public class Actor
         return new ActorArmor(armorType, armorAmount);
     }
 
+    private void LoadLevelFromConfig ()
+    {
+        switch (this.ActorType)
+        {
+            case ActorType.Infantry:
+                {
+                    this.ActorLevel = ActorLevel.Normal;
+                    break;
+                }
+            case ActorType.Supporter:
+                {
+                    this.ActorLevel = ActorLevel.Senior;
+                    break;
+                }
+            case ActorType.Sniper:
+                {
+                    this.ActorLevel = ActorLevel.Normal;
+                    break;
+                }
+            case ActorType.Marksman:
+                {
+                    this.ActorLevel = ActorLevel.Senior;
+                    break;
+                }
+            case ActorType.HeavyGunner:
+                {
+                    this.ActorLevel = ActorLevel.Normal;
+                    break;
+                }
+            case ActorType.MortarTeam:
+                {
+                    this.ActorLevel = ActorLevel.Senior;
+                    break;
+                }
+            case ActorType.Warlock:
+                {
+                    this.ActorLevel = ActorLevel.Normal;
+                    break;
+                }
+            case ActorType.GryphonRider:
+                {
+                    this.ActorLevel = ActorLevel.Normal;
+                    break;
+                }
+            case ActorType.SeniorGryphonRider:
+                {
+                    this.ActorLevel = ActorLevel.Senior;
+                    break;
+                }
+            case ActorType.Crusader:
+                {
+                    this.ActorLevel = ActorLevel.Normal;
+                    break;
+                }
+            case ActorType.TemplarWarrior:
+                {
+                    this.ActorLevel = ActorLevel.Senior;
+                    break;
+                }
+            default:
+                {
+                    this.ActorLevel = ActorLevel.Normal;
+                    break;
+                }
+        }
+    }
+
     private float LoadHpFromConfig()
     {
         switch (this.ActorType)
         {
             case ActorType.Infantry:
                 {
+                    this.CurrentHp = GlobalConfig.TerranActorInfantryHp;
                     return GlobalConfig.TerranActorInfantryHp;
                 }
             case ActorType.Supporter:
                 {
+                    this.CurrentHp = GlobalConfig.TerranActorSupporterHp;
                     return GlobalConfig.TerranActorSupporterHp;
                 }
             case ActorType.Sniper:
                 {
+                    this.CurrentHp = GlobalConfig.TerranActorSniperHp;
                     return GlobalConfig.TerranActorSniperHp;
                 }
             case ActorType.Marksman:
                 {
+                    this.CurrentHp = GlobalConfig.TerranActorMarksmanHp;
                     return GlobalConfig.TerranActorMarksmanHp;
                 }
             case ActorType.HeavyGunner:
                 {
+                    this.CurrentHp = GlobalConfig.TerranActorHeavyGunnerHp;
                     return GlobalConfig.TerranActorHeavyGunnerHp;
                 }
             case ActorType.MortarTeam:
                 {
+                    this.CurrentHp = GlobalConfig.TerranActorMortarTeamHp;
                     return GlobalConfig.TerranActorMortarTeamHp;
                 }
             case ActorType.Warlock:
                 {
+                    this.CurrentHp = GlobalConfig.TerranActorWarlockHp;
                     return GlobalConfig.TerranActorWarlockHp;
                 }
             case ActorType.GryphonRider:
                 {
+                    this.CurrentHp = GlobalConfig.TerranActorGryphonRiderHp;
                     return GlobalConfig.TerranActorGryphonRiderHp;
                 }
             case ActorType.SeniorGryphonRider:
                 {
+                    this.CurrentHp = GlobalConfig.TerranActorSeniorGryphonRiderHp;
                     return GlobalConfig.TerranActorSeniorGryphonRiderHp;
                 }
             case ActorType.Crusader:
                 {
+                    this.CurrentHp = GlobalConfig.TerranActorCrusaderHp;
                     return GlobalConfig.TerranActorCrusaderHp;
                 }
             case ActorType.TemplarWarrior:
                 {
+                    this.CurrentHp = GlobalConfig.TerranActorTemplarWarriorHp;
                     return GlobalConfig.TerranActorTemplarWarriorHp;
                 }
             default:

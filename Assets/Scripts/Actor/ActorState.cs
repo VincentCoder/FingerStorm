@@ -553,6 +553,56 @@ public class Actor_StateDie : State<ActorController>
 
     public override void Enter(ActorController entityType)
     {
+        GameController gameCtrl = GameObject.Find("GameController").GetComponent<GameController>();
+        if (gameCtrl != null)
+        {
+            if (gameCtrl.GameType == GameType.PVE)
+            {
+                if (entityType.MyActor.FactionType != gameCtrl.MyFactionType)
+                {
+                    GameSceneController gameSceneCtrl =
+                        GameObject.Find("GameSceneController").GetComponent<GameSceneController>();
+                    if (gameSceneCtrl != null)
+                    {
+                        switch (entityType.MyActor.ActorLevel)
+                        {
+                            case ActorLevel.Normal:
+                                gameSceneCtrl.CoinCount += 5;
+                                break;
+                            case ActorLevel.Senior:
+                                gameSceneCtrl.CoinCount += 10;
+                                break;
+                            case ActorLevel.Hero:
+                                gameSceneCtrl.CoinCount += 50;
+                                break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                if (entityType.MyActor.FactionType != gameCtrl.MyFactionType)
+                {
+                    GameSceneController gameSceneCtrl =
+                        GameObject.Find("GameSceneController").GetComponent<GameSceneController>();
+                    if (gameSceneCtrl != null)
+                    {
+                        switch (entityType.MyActor.ActorLevel)
+                        {
+                            case ActorLevel.Normal:
+                                gameSceneCtrl.CoinCount += 5;
+                                break;
+                            case ActorLevel.Senior:
+                                gameSceneCtrl.CoinCount += 10;
+                                break;
+                            case ActorLevel.Hero:
+                                gameSceneCtrl.CoinCount += 50;
+                                break;
+                        }
+                    }
+                }
+            }
+        }
         entityType.DestroySelf();
     }
 

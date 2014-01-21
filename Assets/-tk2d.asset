@@ -1428,3 +1428,58 @@ MonoBehaviour:
     loadable: 0
     assetName: 
     version: 3
+  - name: PlayerSkillFireBallCollection
+    spriteCollectionGUID: c696a6ead54e76747a26e261775734be
+    spriteCollectionDataGUID: 20e03e1248a326445bd8110515006128
+    spriteNames:
+    - PlayersSkills_Fireball_0001
+    - PlayersSkills_Fireball_0002
+    - PlayersSkills_Fireball_0003
+    - PlayersSkills_Fireball_0004
+    - PlayersSkills_Fireball_0005
+    - PlayersSkills_Fireball_0006
+    - PlayersSkills_Fireball_0007
+    - PlayersSkills_Fireball_0008
+    - PlayersSkills_Fireball_0009
+    - PlayersSkills_Fireball_0010
+    - PlayersSkills_Fireball_0011
+    - PlayersSkills_Fireball_0012
+    - PlayersSkills_Fireball_0013
+    - PlayersSkills_Fireball_0014
+    - PlayersSkills_Fireball_0015
+    spriteTextureGUIDs:
+    - f340b08947eeb44a78aab4b2a9a94213
+    - 5b93ff6db92394cdaaa49430cdc14ef6
+    - 16b15b6ff88d546ea8bb7842661aa98a
+    - 6c988e5ee1352400881b6ef68f571fd7
+    - c2befa6ac1e314025bef52593fe501c7
+    - 9ca444b9e05674dff95b03a9d473dc4f
+    - a6cf913ca21c14e618f65de091d95e29
+    - 3b4ab7e09c98b4c4cbc595f2a05eb217
+    - 093145f3771824fc9ad24d5b09bbfc1d
+    - b1a6ad982445c46409fce6ce64978a4e
+    - d03a37d452f5a46ea8c4e7d6116c67ea
+    - d610e91648b774eb7a404b9a0177d87e
+    - 60aa8d7bc95b044f6b3298a07cf18cd6
+    - eaf339ffa750c4e1cb0b712e3e05936f
+    - 9cd60fd6665a54509a93c48433c029a7
+    spriteTextureTimeStamps:
+    - 1390298292.90722
+    - 1390298292.90722
+    - 1390298292.92285
+    - 1390298292.92285
+    - 1390298292.92285
+    - 1390298292.92285
+    - 1390298292.92285
+    - 1390298292.92285
+    - 1390298292.92285
+    - 1390298292.92285
+    - 1390298292.92285
+    - 1390298292.92285
+    - 1390298292.92285
+    - 1390298292.93848
+    - 1390298292.93848
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3

@@ -82,8 +82,8 @@ public class BuildingController : BaseGameEntity
 	
 	public void TakeDamage(float damage)
 	{
-		this.Building.Hp -= damage;
-		if(this.Building.Hp <= 0)
+		this.Building.CurrentHp -= damage;
+        if (this.Building.CurrentHp <= 0)
 		{
 			this.m_PStateMachine.ChangeState(Building_StateBeforeDestroy.Instance());
 		}

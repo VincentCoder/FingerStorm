@@ -60,9 +60,13 @@ public class Building
     /// <summary>
     /// Gets or sets the hp.
     /// </summary>
-    public float Hp { get; set; }
+    public float TotalHp { get; set; }
+
+    public float CurrentHp { get; set; }
 	
 	public bool IsMainCity {get;set;}
+
+    public BuildingLevel BuildingLevel { get; set; }
 
     #endregion
 
@@ -134,76 +138,77 @@ public class Building
         {
             case BuildingType.Terran_Barrack:
                 this.ProducedTime = GlobalConfig.TerranBuildingBarrackProduceTime;
-                this.Hp = GlobalConfig.TerranBuildingBarrackHp;
+                this.TotalHp = GlobalConfig.TerranBuildingBarrackHp;
 				this.CoinCost = GlobalConfig.TerranBuildingBarrackCoinCost;
 				this.BuildingName = "兵营";
                 break;
             case BuildingType.Terran_Fortress:
                 this.ProducedTime = GlobalConfig.TerranBuildingFortressProduceTime;
-                this.Hp = GlobalConfig.TerranBuildingFortressHp;
+                this.TotalHp = GlobalConfig.TerranBuildingFortressHp;
 				this.CoinCost = GlobalConfig.TerranBuildingFortressCoinCost;
 			this.BuildingName = "要塞";
                 break;
             case BuildingType.Terran_SniperHouse:
                 this.ProducedTime = GlobalConfig.TerranBuildingSniperHouseProduceTime;
-                this.Hp = GlobalConfig.TerranBuildingSniperHouseHp;
+                this.TotalHp = GlobalConfig.TerranBuildingSniperHouseHp;
 			this.CoinCost = GlobalConfig.TerranBuildingSniperHouseCoinCost;
 			this.BuildingName = "狙击兵小屋";
                 break;
             case BuildingType.Terran_MarksmanCamp:
                 this.ProducedTime = GlobalConfig.TerranBuildingMarksmanCampProduceTime;
-                this.Hp = GlobalConfig.TerranBuildingMarksmanCampHp;
+                this.TotalHp = GlobalConfig.TerranBuildingMarksmanCampHp;
 			this.CoinCost = GlobalConfig.TerranBuildingMarksmanCampCoinCost;
 			this.BuildingName = "神射手营地";
                 break;
             case BuildingType.Terran_ArtilleryHall:
                 this.ProducedTime = GlobalConfig.TerranBuildingArtilleryHallProduceTime;
-                this.Hp = GlobalConfig.TerranBuildingArtilleryHallHp;
+                this.TotalHp = GlobalConfig.TerranBuildingArtilleryHallHp;
 			this.CoinCost = GlobalConfig.TerranBuildingArtilleryHallCoinCost;
 			this.BuildingName = "炮兵大厅";
                 break;
             case BuildingType.Terran_ArtilleryLab:
                 this.ProducedTime = GlobalConfig.TerranBuildingArtilleryLabProduceTime;
-                this.Hp = GlobalConfig.TerranBuildingArtilleryLabHp;
+                this.TotalHp = GlobalConfig.TerranBuildingArtilleryLabHp;
 			this.CoinCost = GlobalConfig.TerranBuildingArtilleryLabCoinCost;
 			this.BuildingName = "火炮实验室";
                 break;
             case BuildingType.Terran_MysterySchool:
                 this.ProducedTime = GlobalConfig.TerranBuildingMysterySchoolProduceTime;
-                this.Hp = GlobalConfig.TerranBuildingMysterySchoolHp;
+                this.TotalHp = GlobalConfig.TerranBuildingMysterySchoolHp;
 			this.CoinCost = GlobalConfig.TerranBuildingMysterySchoolCoinCost;
 			this.BuildingName = "神秘学院";
                 break;
             case BuildingType.Terran_Aviary:
                 this.ProducedTime = GlobalConfig.TerranBuildingAviaryProduceTime;
-                this.Hp = GlobalConfig.TerranBuildingAviaryHp;
+                this.TotalHp = GlobalConfig.TerranBuildingAviaryHp;
 			this.CoinCost = GlobalConfig.TerranBuildingAviaryCoinCost;
 			this.BuildingName = "狮鹫笼";
                 break;
             case BuildingType.Terran_AdvancedAviary:
                 this.ProducedTime = GlobalConfig.TerranBuildingAdvancedAviaryProduceTime;
-                this.Hp = GlobalConfig.TerranBuildingAdvancedAviaryHp;
+                this.TotalHp = GlobalConfig.TerranBuildingAdvancedAviaryHp;
 			this.CoinCost = GlobalConfig.TerranBuildingAdvancedAviaryCoinCost;
 			this.BuildingName = "高级狮鹫笼";
                 break;
             case BuildingType.Terran_Church:
                 this.ProducedTime = GlobalConfig.TerranBuildingChurchProduceTime;
-                this.Hp = GlobalConfig.TerranBuildingChurchHp;
+                this.TotalHp = GlobalConfig.TerranBuildingChurchHp;
 			this.CoinCost = GlobalConfig.TerranBuildingChurchCoinCost;
 			this.BuildingName = "教堂";
                 break;
             case BuildingType.Terran_Temple:
                 this.ProducedTime = GlobalConfig.TerranBuildingTempleProduceTime;
-                this.Hp = GlobalConfig.TerranBuildingTempleHp;
+                this.TotalHp = GlobalConfig.TerranBuildingTempleHp;
 			this.CoinCost = GlobalConfig.TerranBuildingTempleCoinCost;
 			this.BuildingName = "圣殿";
                 break;
             default:
                 this.ProducedTime = GlobalConfig.TerranBuildingBarrackProduceTime;
-                this.Hp = GlobalConfig.TerranBuildingBarrackHp;
+                this.TotalHp = GlobalConfig.TerranBuildingBarrackHp;
 				this.CoinCost = GlobalConfig.TerranBuildingBarrackCoinCost;
 				this.BuildingName = "兵营";
                 break;
         }
+        this.CurrentHp = this.TotalHp;
     }
 }

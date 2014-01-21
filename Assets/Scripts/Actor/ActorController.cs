@@ -144,8 +144,9 @@ public class ActorController : BaseGameEntity
 					showCrit = false;
 					break;
 			}
+
 			if(showCrit)
-				this.ShowTip("Crit");
+				this.ShowTip(damage.ToString());
 		}
 		
         ActorSpell dodgeSpell = this.MyActor.GetSpell(ActorSpellName.Dodge);
@@ -240,21 +241,17 @@ public class ActorController : BaseGameEntity
                 damage = Mathf.Abs(dValue);
             }
         }
-        this.MyActor.Hp -= damage;
-        if (this.MyActor.Hp <= 0)
+        this.MyActor.CurrentHp -= damage;
+        if (this.MyActor.CurrentHp <= 0)
         {
             this.m_PStateMachine.ChangeState(Actor_StateBeforeDie.Instance());
         }
+        this.RefreshHpBar();
     }
 
     #endregion
 
     #region Methods
-
-    private void Awake()
-    {
-        
-    }
 
     private void InitActor()
     {
@@ -265,6 +262,7 @@ public class ActorController : BaseGameEntity
 		
 		this.myTransform = this.gameObject.transform;
         this.moveSpeed = 30;
+        this.RefreshHpBar();
 		
         this.m_PStateMachine = new StateMachine<ActorController>(this);
         this.m_PStateMachine.SetCurrentState(Actor_StateWalk.Instance());
@@ -286,6 +284,16 @@ public class ActorController : BaseGameEntity
 		tipObj.GetComponent<tk2dTextMesh>().text = tip;
 		tipObj.GetComponent<ActorTip>().Show();
 	}
+
+    private void RefreshHpBar()
+    {
+        Transform hpBarTran = this.transform.FindChild("HpBar");
+        if (hpBarTran != null)
+        {
+            tk2dSprite barSprite = hpBarTran.gameObject.GetComponent<tk2dSprite>();
+            barSprite.scale = new Vector3(this.MyActor.CurrentHp / this.MyActor.TotalHp, 1f, 1f);
+        }
+    }
 
     #endregion
 }
