@@ -108,6 +108,30 @@ public class BuildingsManager
         return baseBuilding;
     }
 	
+	public List<GameObject> GetAllEnemyBuildings(FactionType factionType)
+	{
+		List<GameObject> result = new List<GameObject>(this.allBuildingsDictionary.Values);
+		for(int i = 0; i < result.Count; i ++)
+		{
+			BuildingController buildingCtrl = result[i].GetComponent<BuildingController>();
+			if(buildingCtrl.Building.FactionType == factionType)
+				result.RemoveAt(i);
+		}
+		return result;
+	}
+	
+	public List<GameObject> GetBuildingsOfFaction(FactionType factionType)
+	{
+		List<GameObject> result = new List<GameObject>(this.allBuildingsDictionary.Values);
+		for(int i = 0; i < result.Count; i ++)
+		{
+			BuildingController buildingCtrl = result[i].GetComponent<BuildingController>();
+			if(buildingCtrl.Building.FactionType != factionType)
+				result.RemoveAt(i);
+		}
+		return result;
+	}
+	
 	private int GenerateNewBuildingId()
     {
         int result;

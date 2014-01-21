@@ -29,6 +29,26 @@ MonoBehaviour:
     dataGUID: 
     managed: 0
     loadable: 0
+  - assetGUID: 2b2a8bfe83b1f44e59a5a395a28016b3
+    dataGUID: 
+    managed: 0
+    loadable: 0
+  - assetGUID: 52fb1792afef24725aabdd8388ed2df1
+    dataGUID: 
+    managed: 0
+    loadable: 0
+  - assetGUID: 02335820b8b9c4f0382b505ae1f04e00
+    dataGUID: 
+    managed: 0
+    loadable: 0
+  - assetGUID: 0cfb86106147c45f6bdf56c1609cd107
+    dataGUID: 
+    managed: 0
+    loadable: 0
+  - assetGUID: 0e1fec4ba3d9b42c09c80a57beedc12d
+    dataGUID: 
+    managed: 0
+    loadable: 0
   fontIndex:
   - assetGUID: 063b15d80dbb4604d890600a64c79cf8
     dataGUID: e7a6b09a73c6b2b4f8060096ddbd3b5e
@@ -1464,21 +1484,239 @@ MonoBehaviour:
     - eaf339ffa750c4e1cb0b712e3e05936f
     - 9cd60fd6665a54509a93c48433c029a7
     spriteTextureTimeStamps:
-    - 1390298292.90722
-    - 1390298292.90722
-    - 1390298292.92285
-    - 1390298292.92285
-    - 1390298292.92285
-    - 1390298292.92285
-    - 1390298292.92285
-    - 1390298292.92285
-    - 1390298292.92285
-    - 1390298292.92285
-    - 1390298292.92285
-    - 1390298292.92285
-    - 1390298292.92285
-    - 1390298292.93848
-    - 1390298292.93848
+    - 1389003999
+    - 1389003999
+    - 1389004000
+    - 1389004000
+    - 1389004000
+    - 1389004000
+    - 1389004000
+    - 1389004000
+    - 1389004000
+    - 1389004000
+    - 1389004000
+    - 1389004000
+    - 1389004000
+    - 1389004000
+    - 1389004000
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: PlayerSkillLightningBoltCollection
+    spriteCollectionGUID: e36d6811d8cd44bdfbd616a21417f8c9
+    spriteCollectionDataGUID: f8ae38d8beef64aa4a6dce695d442406
+    spriteNames:
+    - PlayersSkills_LightningBolt_0001
+    - PlayersSkills_LightningBolt_0002
+    - PlayersSkills_LightningBolt_0003
+    - PlayersSkills_LightningBolt_0004
+    - PlayersSkills_LightningBolt_0005
+    - PlayersSkills_LightningBolt_0006
+    - PlayersSkills_LightningBolt_0007
+    - PlayersSkills_LightningBolt_0008
+    - PlayersSkills_LightningBolt_0009
+    - PlayersSkills_LightningBolt_0010
+    spriteTextureGUIDs:
+    - fa4de793e0db04cf38e2786c73658a0c
+    - e775e7d39379844ff84899c65aadc062
+    - a6bb2a652bd834099b0f648ba216cfde
+    - 584fac041ffd04757aa48702d7739e64
+    - cbdcd120dd5e8442ea57c06c8ab2968c
+    - 4e9cda0303f4c4f24bad332971b65e84
+    - 8023f74e7f7d24ac2bc2cf349d86fec7
+    - fc26ac3e1882f4dbcb6c482f2b4e39b8
+    - f32df4248569a451799787bb742d6f65
+    - 3ea111401ec904bdd8b32ccd35ae7e4a
+    spriteTextureTimeStamps:
+    - 1389004234
+    - 1389004413
+    - 1389004413
+    - 1389004413
+    - 1389004413
+    - 1389004413
+    - 1389004413
+    - 1389004413
+    - 1389004413
+    - 1389004413
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: PlayerSkillRoadblocksSurgeryCollection
+    spriteCollectionGUID: b697fdaee2c0d486596808dba1d0e9ec
+    spriteCollectionDataGUID: bed1ad19281ad455091732834711a3c9
+    spriteNames:
+    - PlayersSkills_RoadblocksSurgery_0001
+    - PlayersSkills_RoadblocksSurgery_0002
+    - PlayersSkills_RoadblocksSurgery_0003
+    - PlayersSkills_RoadblocksSurgery_0004
+    - PlayersSkills_RoadblocksSurgery_0005
+    - PlayersSkills_RoadblocksSurgery_0006
+    - PlayersSkills_RoadblocksSurgery_0007
+    - PlayersSkills_RoadblocksSurgery_0008
+    - PlayersSkills_RoadblocksSurgery_0009
+    - PlayersSkills_RoadblocksSurgery_0010
+    - PlayersSkills_RoadblocksSurgery_0011
+    - PlayersSkills_RoadblocksSurgery_0012
+    - PlayersSkills_RoadblocksSurgery_0013
+    - PlayersSkills_RoadblocksSurgery_0014
+    - PlayersSkills_RoadblocksSurgery_0015
+    spriteTextureGUIDs:
+    - 75e3a10905bbd44489464514c0af46c7
+    - 7f62692e01af9400f99d92ead3957884
+    - 34ff436a19fe74b0ca80b1a95c495f02
+    - 01d227a1df5d947e483b27d5b9bf8e71
+    - ef559b3cb47d24bfd88c199d76dfb1e3
+    - ab7dced4efcb6455fb4b8f3ad9c7d3df
+    - 020e1030f339645adbbed05bc5728a50
+    - 70ddcb6709fa34bd8a9a5995a309d2c2
+    - 3fa93631c9d6a49569dc34a385a2b6c9
+    - ec247b91f7c654f40bde30409556c883
+    - cc93c8fcd5a7f4fb0802dbf297046d65
+    - ddc886b0e66b2496e854fc0343e16869
+    - f55c3852abe2949c483dc3a67b9c1a26
+    - 4851d9d7df108494b86ed5d74c11b741
+    - a496dda1e49bc4be2989508a12520645
+    spriteTextureTimeStamps:
+    - 1389004903
+    - 1389004904
+    - 1389004904
+    - 1389004904
+    - 1389004904
+    - 1389004904
+    - 1389004904
+    - 1389004904
+    - 1389004904
+    - 1389004904
+    - 1389004904
+    - 1389004904
+    - 1389004904
+    - 1389004905
+    - 1389004677
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: PlayerSkillHealCollection
+    spriteCollectionGUID: 27681a21271f446c0aad651ace276137
+    spriteCollectionDataGUID: 04ca499ab794842ffadf8f3ad1535e4a
+    spriteNames:
+    - PlayersSkills_Heal_0001
+    - PlayersSkills_Heal_0002
+    - PlayersSkills_Heal_0003
+    - PlayersSkills_Heal_0004
+    - PlayersSkills_Heal_0005
+    - PlayersSkills_Heal_0006
+    - PlayersSkills_Heal_0007
+    - PlayersSkills_Heal_0008
+    - PlayersSkills_Heal_0009
+    - PlayersSkills_Heal_0010
+    - PlayersSkills_Heal_0011
+    - PlayersSkills_Heal_0012
+    - PlayersSkills_Heal_0013
+    - PlayersSkills_Heal_0014
+    - PlayersSkills_Heal_0015
+    spriteTextureGUIDs:
+    - 7a3c763344e4848ff8fe2029da20f5d3
+    - aa91658fc0e884067a826e7262a61be9
+    - 1fd99ea08caef4ad2a5e886531f5a086
+    - 3c1cec66732d34a8e9c36a10ac09aab6
+    - 4b3af920137bd4d09ba0251db6e51920
+    - ac063880763424cc5b3fbb57ca421401
+    - 194efbd9536ec47cd895a028909b556b
+    - d8f8fba2dc0bf4b3f9b36f2eb8698bbd
+    - b6523a7c1ee494912aafc7ea61570176
+    - 014dd13fce8134cc5bab53f0896603fb
+    - 745274af0aae34296b0f4f488144099c
+    - cf0ce70ec70774db1ae93cdcbf29b670
+    - 167a5eec161d4472c910429e4c2c7e2c
+    - f1f172532a81e4748ab1a50df48bcb6e
+    - 30ff90802070c4836b9ecffb553cd657
+    spriteTextureTimeStamps:
+    - 1389004676
+    - 1389004676
+    - 1389004676
+    - 1389004676
+    - 1389004676
+    - 1389004676
+    - 1389004676
+    - 1389004677
+    - 1389004677
+    - 1389004677
+    - 1389004677
+    - 1389004677
+    - 1389004677
+    - 1389004677
+    - 1389004677
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: PlayerSkillBloodlustCollection
+    spriteCollectionGUID: a8ad878c42dab48a58ce82e13921106a
+    spriteCollectionDataGUID: 3029991702167490e9f39ddba3b9a481
+    spriteNames:
+    - PlayersSkills_Bloodlust_Buff_0001
+    - PlayersSkills_Bloodlust_Buff_0002
+    - PlayersSkills_Bloodlust_Buff_0003
+    - PlayersSkills_Bloodlust_Buff_0004
+    - PlayersSkills_Bloodlust_Buff_0005
+    - PlayersSkills_Bloodlust_Buff_0006
+    - PlayersSkills_Bloodlust_Buff_0007
+    - PlayersSkills_Bloodlust_Buff_0008
+    - PlayersSkills_Bloodlust_Buff_0009
+    - PlayersSkills_Bloodlust_Buff_0010
+    - PlayersSkills_Bloodlust_Buff_0011
+    - PlayersSkills_Bloodlust_Buff_0012
+    - PlayersSkills_Bloodlust_Buff_0013
+    - PlayersSkills_Bloodlust_Buff_0014
+    - PlayersSkills_Bloodlust_Buff_0015
+    spriteTextureGUIDs:
+    - 0e04500397ae340e4aca6ceeb77b415a
+    - 586bec03ecc7247679b9aa7bdf144856
+    - 19314ec1b76fa4cfd9c1737be2383b0f
+    - d6a9cebe76c4d43f2946460fe46ffb31
+    - 6dc51ff129e254bc5a1eb897eebf6406
+    - 0b4a09d4812304514b511c614366a818
+    - c5a5b2f4cf04f44969d87e2d77634a18
+    - d84122780b3f44fb496103e6fc1f4f69
+    - 0acfae872eafd4483a399a1d9e947e12
+    - 1c4b3cea4c9924b69a156808c83c6236
+    - e16e75927b1fa47b385566422cbaf34e
+    - b4e24e0a055cc40f79cd1a3b90551caa
+    - e1662a1467be5477e9fd10a21751535a
+    - bc8b2ac9a71a5405c8d639e638117f96
+    - 859e3c8ba00044559b4acf981d8fbc46
+    spriteTextureTimeStamps:
+    - 1389006284
+    - 1389006284
+    - 1389006284
+    - 1389006284
+    - 1389006284
+    - 1389006285
+    - 1389006285
+    - 1389006285
+    - 1389006285
+    - 1389006285
+    - 1389006285
+    - 1389006285
+    - 1389006285
+    - 1389006285
+    - 1389006284
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: OtherCollection
+    spriteCollectionGUID: 2b20ee65f47034555adca2f13d54aed1
+    spriteCollectionDataGUID: a1b56397373964b558efc2c123c4c4a4
+    spriteNames:
+    - HpBar
+    spriteTextureGUIDs:
+    - 553ada1490abe4594be4769ef3a64c01
+    spriteTextureTimeStamps:
+    - 1390348109
     managedSpriteCollection: 0
     loadable: 0
     assetName: 

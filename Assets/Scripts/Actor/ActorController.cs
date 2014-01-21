@@ -120,9 +120,9 @@ public class ActorController : BaseGameEntity
         return ActorsManager.GetInstance().HasEnemyActorsInDistance(this, this.MyActor.ActorAttack.ViewDistance);
     }
 
-    public void TakeDamage(float damage, int attackType = -1, int spellName = -1)
+    public void TakeDamage(float damage, int attackType = -1, int spellName = -1, bool showCrit = false)
     {
-		if(spellName >= 0)
+		/*if(spellName >= 0)
 		{
 			bool showCrit = false;
 			ActorSpellName actorSpellName = (ActorSpellName)spellName;
@@ -144,10 +144,10 @@ public class ActorController : BaseGameEntity
 					showCrit = false;
 					break;
 			}
-
+		 */
 			if(showCrit)
-				this.ShowTip(damage.ToString());
-		}
+				this.ShowTip((-damage).ToString());
+		//}
 		
         ActorSpell dodgeSpell = this.MyActor.GetSpell(ActorSpellName.Dodge);
         if (dodgeSpell != null)

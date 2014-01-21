@@ -24,9 +24,21 @@ public class ActorSpell
         this.DirectDamageProbability = 0;
         this.SplashPercent = 0;
         this.EvasiveProbability = 0;
+		this.ParryAttackType = ActorAttackType.Normal;
+		this.ParryPercent = 0;
+		this.BleedDuration = 0;
+		this.BleedProbability = 0;
+		this.BleedDps = 0;
+		this.IncreaseOneFriendlyUnitHp = 0;
 
         switch (actorType)
         {
+			case ActorType.Infantry:
+                {
+                    this.ParryAttackType = ActorAttackType.Pierce;
+					this.ParryPercent = 30;
+                    break;
+                }
             case ActorType.Supporter:
                 {
                     this.EvasiveProbability = 15;
@@ -68,71 +80,53 @@ public class ActorSpell
                 }
             case ActorType.GryphonRider:
                 {
-                    if (spellName == ActorSpellName.Bash)
-                    {
-                        this.StunDuration = 2;
-                        this.StunProbability = 25;
-                        this.AdditionalDamage = 15;
-                    }
-                    else if (spellName == ActorSpellName.ChainLightning)
-                    {
-                        this.DirectDamage = 150;
-                        this.DirectDamageProbability = 10;
-                    }
+                    this.BleedProbability = 25;
+					this.BleedDps = 15;
+					this.BleedDuration = 3;
                     break;
                 }
             case ActorType.SeniorGryphonRider:
                 {
-                    if (spellName == ActorSpellName.Bash)
-                    {
-                        this.StunDuration = 2;
-                        this.StunProbability = 30;
-                        this.AdditionalDamage = 25;
-                    }
-                    else if (spellName == ActorSpellName.ChainLightning)
-                    {
-                        this.DirectDamage = 200;
-                        this.DirectDamageProbability = 25;
-                    }
+                    this.BleedProbability = 30;
+					this.BleedDps = 20;
+					this.BleedDuration = 5;
                     break;
                 }
             case ActorType.Crusader:
                 {
-                    if (spellName == ActorSpellName.Bash)
-                    {
                         this.StunDuration = 2;
                         this.StunProbability = 20;
                         this.AdditionalDamage = 25;
-                    }
-                    else if (spellName == ActorSpellName.DivineBlessing)
-                    {
-                        this.AttackRange = 40;
-                        this.IncreaseFriendlyForcesArmor = 6;
-                        this.ActorSpellType = ActorSpellType.BuffSpell;
-                    }
                     break;
                 }
             case ActorType.TemplarWarrior:
                 {
-                    if (spellName == ActorSpellName.Bash)
-                    {
-                        this.StunDuration = 2;
-                        this.StunProbability = 20;
-                        this.AdditionalDamage = 25;
-                    }
-                    else if (spellName == ActorSpellName.DivineBlessing)
-                    {
-                        this.AttackRange = 40;
-                        this.IncreaseFriendlyForcesArmor = 9;
-                        this.ActorSpellType = ActorSpellType.BuffSpell;
-                    }
-                    else if (spellName == ActorSpellName.Zap)
-                    {
-                        this.AttackRange = 100;
-                        this.Resurrection = true;
-                        this.ReleaseInterval = 60;
-                        this.ActorSpellType = ActorSpellType.ActiveSpell;
-                    }
+                    this.StunDuration = 2;
+					this.StunProbability = 25;
+					this.AdditionalDamage = 30;
+                    break;
+                }
+			case ActorType.Priest:
+                {
+                    this.IncreaseOneFriendlyUnitHp = 300;
+                    break;
+                }
+			case ActorType.Oracle:
+                {
+                    this.DirectDamageProbability = 25;
+					this.DirectDamage = 200;
+                    break;
+                }
+			case ActorType.Knight:
+                {
+                    this.IncreaseFriendlyForcesArmor = 6;
+					this.AttackRange = 40;
+                    break;
+                }
+			case ActorType.Paladin:
+                {
+                    this.IncreaseFriendlyForcesArmor = 9;
+					this.AttackRange = 40;
                     break;
                 }
         }
@@ -175,6 +169,18 @@ public class ActorSpell
     public int SplashPercent { get; set; } //溅射伤害百分比
 
     public int EvasiveProbability { get; set; } //躲避几率
-
+	
+	public ActorAttackType ParryAttackType {get; set;} //格挡攻击类型
+	
+	public int ParryPercent {get;set;} //格挡百分比
+	
+	public int BleedDuration {get;set;} //流血持续时间
+	
+	public int BleedDps {get; set;} //流血每秒伤害
+	
+	public int BleedProbability {get;set;} //流血几率
+	
+	public int IncreaseOneFriendlyUnitHp {get; set;} //增加某友军单位血量
+	
     #endregion
 }

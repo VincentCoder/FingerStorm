@@ -101,6 +101,18 @@ public class ActorsManager
     {
         return new List<GameObject>(this.actorsDictionary.Values.ToArray());
     }
+	
+	public List<GameObject> GetAllEnemyActors(FactionType factionType)
+	{
+		List<GameObject> result = new List<GameObject>(this.actorsDictionary.Values.ToArray());
+		for(int i = 0; i < result.Count; i ++)
+		{
+			ActorController actorCtrl = result[i].GetComponent<ActorController>();
+			if(actorCtrl.MyActor.FactionType == factionType)
+				result.RemoveAt(i);
+		}
+		return result;
+	}
 
     public List<GameObject> GetEnemyActorsInDistance(ActorController actorController, int distance, bool ignoreObstacles = true)
     {
@@ -118,6 +130,33 @@ public class ActorsManager
 				GameObject enemy = result[i];
 				RaycastHit hit;
 				if(Physics.Raycast(enemy.transform.position, actorController.gameObject.transform.position, out hit))
+				{
+					if(hit.collider.gameObject.tag.Equals("Obstacle"))
+					{
+						result.RemoveAt(i);
+					}
+				}
+			}
+		}
+		return result;
+    }
+	
+	public List<GameObject> GetEnemyActorsInDistance(FactionType factionType, Vector3 position, int distance, bool ignoreObstacles = true)
+    {
+        List<GameObject> result = (from kv in this.actorsDictionary
+                let actorCtrl = kv.Value.GetComponent<ActorController>()
+                where actorCtrl.MyActor.FactionType != factionType
+                where
+                    (position - kv.Value.transform.position).sqrMagnitude
+                    <= Mathf.Pow(distance, 2)
+                select kv.Value).ToList();
+		if(!ignoreObstacles)
+		{
+			for(int i = 0; i < result.Count; i ++)
+			{
+				GameObject enemy = result[i];
+				RaycastHit hit;
+				if(Physics.Raycast(enemy.transform.position, position, out hit))
 				{
 					if(hit.collider.gameObject.tag.Equals("Obstacle"))
 					{
