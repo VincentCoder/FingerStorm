@@ -11,6 +11,8 @@ public class RoadBlockController : BaseGameEntity
     private float currentHp;
 
     private tk2dSlicedSprite hpBarSprite;
+	
+	private float hpBarLength;
 
     private StateMachine<RoadBlockController> m_PStateMachine;
 
@@ -58,13 +60,18 @@ public class RoadBlockController : BaseGameEntity
         if (this.hpBarSprite == null)
         {
             Transform hpBarTran = this.transform.FindChild("HpBar");
-            this.hpBarSprite = hpBarTran.gameObject.GetComponent<tk2dSlicedSprite>();
-        }
+            this.hpBarSprite = hpBarTran.gameObject.GetComponent<tk2dSlicedSprite>();			
+		}
+		else
+		{
+			this.hpBarSprite.dimensions = new Vector2(this.CurrentHp/this.TotalHp*this.hpBarLength, this.hpBarSprite.dimensions.y);
+		}
     }
 
     private void Start()
     {
         this.SelfAnimator = this.gameObject.GetComponent<tk2dSpriteAnimator>();
+		this.hpBarLength = 400;
 
         this.m_PStateMachine = new StateMachine<RoadBlockController>(this);
         this.m_PStateMachine.SetCurrentState(RoadBlock_StateBuilding.Instance());
@@ -92,5 +99,9 @@ public class RoadBlockController : BaseGameEntity
         }
     }
 
+	public void ResetHp()
+	{
+		this.CurrentHp = this.TotalHp;
+	}
     #endregion
 }

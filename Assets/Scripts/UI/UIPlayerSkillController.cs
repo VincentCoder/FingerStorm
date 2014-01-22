@@ -41,26 +41,29 @@ public class UIPlayerSkillController : MonoBehaviour
 					tk2dSpriteAnimator animator = lightningBolt.GetComponent<tk2dSpriteAnimator>();
 					animator.AnimationCompleted = delegate 
 					{
+						Damage lightningBoltDamage = new Damage();
+							lightningBoltDamage.DamageValue = 300;
+							lightningBoltDamage.ShowCrit = true;
 						List<GameObject> enemyActors = ActorsManager.GetInstance().GetAllEnemyActors(this.gameSceneController.MyFactionType);
 						enemyActors.ForEach(enemyActor => 
 						{
-							ActorController actorCtrl = enemyActor.GetComponent<ActorController>();			
-							actorCtrl.TakeDamage(300, -1, -1, true);
+							ActorController actorCtrl = enemyActor.GetComponent<ActorController>();		
+							actorCtrl.TakeDamage(lightningBoltDamage);
 						});
 						List<GameObject> enemyBuildings = BuildingsManager.GetInstance().GetAllEnemyBuildings(this.gameSceneController.MyFactionType);
 						enemyBuildings.ForEach(enemyBuilding => 
 						{
 							BuildingController buildingCtrl = enemyBuilding.GetComponent<BuildingController>();
-							buildingCtrl.TakeDamage(300);
+							buildingCtrl.TakeDamage(lightningBoltDamage);
 						});
 					};
 				}
 				break;
 			case "RoadblocksSurgery":
 		        {
-		            if (this.gameSceneController.Mp >= 60)
+		            if (this.gameSceneController.Mp >= 0)
 		            {
-		                this.gameSceneController.Mp -= 60;
+		                this.gameSceneController.Mp -= 0;
                         GameObject roadblocksSurgery =
 		                (GameObject)Instantiate(Resources.Load("GameScene/PlayerSkillRoadblocksSurgery"));
                         roadblocksSurgery.transform.position = new Vector3(Screen.width / 2, Screen.height / 2, 0);
@@ -70,8 +73,18 @@ public class UIPlayerSkillController : MonoBehaviour
                                 Vector3[] positionArr = new Vector3[4]{new Vector3(295, 485, 0), new Vector3(665, 485, 0), new Vector3(295, 290, 0), new Vector3(665, 290, 0)};
 		                        for (int i = 0; i < 4; i ++)
 		                        {
-		                            GameObject roadBlock = (GameObject)Instantiate(Resources.Load("GameScene/RoadBlock"));
-		                            roadBlock.transform.position = positionArr[i];
+									GameObject roadBlock = GameObject.Find("RoadBlock"+i);
+									if(roadBlock == null)
+									{
+										roadBlock = (GameObject)Instantiate(Resources.Load("GameScene/RoadBlock"));
+										roadBlock.name = "RoadBlock" + i;
+		                            	roadBlock.transform.position = positionArr[i];
+									}
+									else
+									{
+										RoadBlockController roadBlockCtrl = roadBlock.GetComponent<RoadBlockController>();
+										roadBlockCtrl.ResetHp();
+									}
 		                        }
 		                    };
 		            }
@@ -123,11 +136,14 @@ public class UIPlayerSkillController : MonoBehaviour
 				tk2dSpriteAnimator animator = fireBall.GetComponent<tk2dSpriteAnimator>();
 				animator.AnimationCompleted = delegate 
 				{
+					Damage fireBallDamage = new Damage();
+					fireBallDamage.DamageValue = 1000;
+					fireBallDamage.ShowCrit = true;
 					List<GameObject> enemies = ActorsManager.GetInstance().GetEnemyActorsInDistance(this.gameSceneController.MyFactionType, (Vector3)gesture.Position, 50);
 					enemies.ForEach(enemy => 
 					{
 						ActorController actorCtrl = enemy.GetComponent<ActorController>();
-						actorCtrl.TakeDamage(1000, -1, -1, true);
+						actorCtrl.TakeDamage(fireBallDamage);
 					});
 					Destroy(fireBall);
 				};

@@ -39,7 +39,7 @@ public class Building_GlobalState : State<BuildingController>
         {
             if (telegram.Parameters.ContainsKey("Damage"))
             {
-                entityType.TakeDamage((float)telegram.Parameters["Damage"]);
+                entityType.TakeDamage((Damage)telegram.Parameters["Damage"]);
                 return true;
             }
         }

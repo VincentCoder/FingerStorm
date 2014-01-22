@@ -133,12 +133,6 @@ public class GameSceneController : MonoBehaviour
                     .CreateNewBuilding(BuildingType.Terran_Fortress, FactionType.Blue, new Vector3(100, 270, 0));
 
                 BuildingsManager.GetInstance()
-                    .CreateNewBuilding(BuildingType.Terran_MarksmanCamp, FactionType.Blue, new Vector3(250, 400, 0));
-
-                BuildingsManager.GetInstance()
-                    .CreateNewBuilding(BuildingType.Terran_ArtilleryHall, FactionType.Red, new Vector3(860, 270, 0));
-
-                BuildingsManager.GetInstance()
                     .CreateNewBuilding(BuildingType.Terran_Church, FactionType.Red, new Vector3(710, 400, 0));
 
                 BuildingsManager.GetInstance()

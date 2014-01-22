@@ -107,6 +107,8 @@ public static class BuildingsConfig
                     return buildingLevel == BuildingLevel.BuildingLevel1 ? TerranBuildingChurchConfig.HpLevel1 : TerranBuildingChurchConfig.HpLevel2;
                 case BuildingType.Terran_Temple:
                     return buildingLevel == BuildingLevel.BuildingLevel1 ? TerranBuildingTempleConfig.HpLevel1 : TerranBuildingTempleConfig.HpLevel2;
+				case BuildingType.Terran_TheMainCity:
+					return 5000;
             }
         }
         return 0;

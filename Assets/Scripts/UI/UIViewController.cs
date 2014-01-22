@@ -136,24 +136,24 @@ public class UIViewController : MonoBehaviour
 			case BuildingType.Terran_SniperHouse:
 				buildingCardCtrl.Description = "狙击兵小屋：\n    生产兵种：狙击兵\n    生产时间：22秒/个\n    血量：1200\n狙击兵：\n    攻击类型：穿刺\n    攻击力：22\n    防御力：轻甲0\n    技能：致命一击";
 				break;
-			case BuildingType.Terran_MarksmanCamp:
-				buildingCardCtrl.Description = "神射手营地：\n    生产兵种：神射手\n    生产时间：32秒/个\n    血量：1300\n神射手：\n    攻击类型：穿刺\n    攻击力：61\n    防御力：轻甲1\n    技能：爆头";
-				break;
+			//case BuildingType.Terran_MarksmanCamp:
+			//	buildingCardCtrl.Description = "神射手营地：\n    生产兵种：神射手\n    生产时间：32秒/个\n    血量：1300\n神射手：\n    攻击类型：穿刺\n    攻击力：61\n    防御力：轻甲1\n    技能：爆头";
+			//	break;
 			case BuildingType.Terran_MysterySchool:
 				buildingCardCtrl.Description = "神秘学院：\n    生产兵种：术士\n    生产时间：30秒/个\n    血量：1300\n术士：\n    攻击类型：混乱\n    攻击力：17\n    防御力：轻甲1\n    技能：奥术爆炸";
 				break;
-			case BuildingType.Terran_ArtilleryHall:
-				buildingCardCtrl.Description = "炮兵大厅：\n    生产兵种：重装炮兵\n    生产时间：31秒/个\n    血量：1300\n重装炮兵：\n    攻击类型：穿刺\n    攻击力：53\n    防御力：轻甲3\n    技能：溅射伤害";
-				break;
+			//case BuildingType.Terran_ArtilleryHall:
+			//	buildingCardCtrl.Description = "炮兵大厅：\n    生产兵种：重装炮兵\n    生产时间：31秒/个\n    血量：1300\n重装炮兵：\n    攻击类型：穿刺\n    攻击力：53\n    防御力：轻甲3\n    技能：溅射伤害";
+			//	break;
 			case BuildingType.Terran_ArtilleryLab:
 				buildingCardCtrl.Description = "火炮实验室：\n    生产兵种：迫击炮小队\n    生产时间：25秒/个\n    血量：1200\n迫击炮小队：\n    攻击类型：攻城\n    攻击力：21\n    防御力：轻甲0\n    技能：迫击轰炸";
 				break;
 			case BuildingType.Terran_Aviary:
 				buildingCardCtrl.Description = "狮鹫笼：\n    生产兵种：狮鹫骑士\n    生产时间：28秒/个\n    血量：1200\n狮鹫骑士：\n    攻击类型：魔法\n    攻击力：23\n    防御力：轻甲2\n    技能：重击/闪电链";
 				break;
-			case BuildingType.Terran_AdvancedAviary:
-				buildingCardCtrl.Description = "高级狮鹫笼：\n    生产兵种：高级狮鹫骑士\n    生产时间：32秒/个\n    血量：1400\n高级狮鹫骑士：\n    攻击类型：魔法\n    攻击力：30\n    防御力：轻甲5\n    技能：重击/闪电链";
-				break;
+			//case BuildingType.Terran_AdvancedAviary:
+			//	buildingCardCtrl.Description = "高级狮鹫笼：\n    生产兵种：高级狮鹫骑士\n    生产时间：32秒/个\n    血量：1400\n高级狮鹫骑士：\n    攻击类型：魔法\n    攻击力：30\n    防御力：轻甲5\n    技能：重击/闪电链";
+			//	break;
 			case BuildingType.Terran_Church:
 				buildingCardCtrl.Description = "教堂：\n    生产兵种：十字军\n    生产时间：29秒/个\n    血量：1200\n十字军：\n    攻击类型：普通近战\n    攻击力：42\n    防御力：重甲6\n    技能：重击/天赐祝福";
 				break;

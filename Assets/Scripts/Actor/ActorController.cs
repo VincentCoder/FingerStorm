@@ -24,8 +24,12 @@ public class ActorController : BaseGameEntity
     private tk2dSpriteAnimator _selfAnimator;
 
     private tk2dSlicedSprite hpBarSprite;
-
+	
+	private float hpbarLength;
+	
     private StateMachine<ActorController> m_PStateMachine;
+	
+	private bool isBleed;
 
     #endregion
 
@@ -36,6 +40,12 @@ public class ActorController : BaseGameEntity
     public float AttackPlusRatio { get; set; }
 
     public int BloodSuckingRatio { get; set; }
+	
+	public bool IsBleed {get;set;}
+	
+	public float BleedDps {get;set;}
+	
+	public float BleedDuration {get;set;}
 
     public bool IsStun
     {
@@ -99,12 +109,15 @@ public class ActorController : BaseGameEntity
 
     #region Public Methods and Operators
 
-    public Damage CalculateCommonAttackDamageToActor(ActorController targetActor)
+    public Damage CalculateCommonAttackDamage(BaseGameEntity targetEntity)
     {
         Damage damage = new Damage();
         damage.DamageValue = this.MyActor.ActorAttack.Dps / this.AttackSpeed;
         damage.DamageValue *= this.AttackPlusRatio;
-
+		if(!targetEntity.GetType().IsInstanceOfType(typeof(ActorController)))
+			return damage;
+		
+		ActorController targetActor = (ActorController)targetEntity;
         ActorSpell dodgeSpell = targetActor.MyActor.GetSpell(ActorSpellName.Dodge);
         if (dodgeSpell != null)
         {
@@ -366,132 +379,28 @@ public class ActorController : BaseGameEntity
         MessageDispatcher.Instance().DispatchMessage(0f, this, targeEntity, FSMessageType.FSMessageAttack, parameters);
     }
 
-    public void TakeDamage(float damage, int attackType = -1, int spellName = -1, bool showCrit = false)
+    public void TakeDamage(Damage damage)
     {
-        
-        if (showCrit)
+        if (damage.ShowCrit)
         {
-            this.ShowTip((-damage).ToString());
+            this.ShowTip((-damage.DamageValue).ToString());
         }
-
-        ActorSpell dodgeSpell = this.MyActor.GetSpell(ActorSpellName.Dodge);
-        if (dodgeSpell != null)
-        {
-            int randomIndex = Random.Range(1, 101);
-            if (randomIndex <= dodgeSpell.EvasiveProbability)
-            {
-                this.ShowTip("Dodge");
-                return;
-            }
-        }
-
-        if (attackType >= 0)
-        {
-            ActorAttackType actorAttackType = (ActorAttackType)attackType;
-            switch (actorAttackType)
-            {
-                case ActorAttackType.Normal:
-                    {
-                        if (this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.LightArmor)
-                        {
-                            damage *= 0.9f;
-                        }
-                        else if (this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.HeavyArmor)
-                        {
-                            damage *= 0.8f;
-                        }
-                        else if (this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.HeroArmor)
-                        {
-                            damage *= 1;
-                        }
-                        break;
-                    }
-                case ActorAttackType.Pierce:
-                    {
-                        if (this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.LightArmor)
-                        {
-                            damage *= 2f;
-                        }
-                        else if (this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.HeavyArmor)
-                        {
-                            damage *= 0.35f;
-                        }
-                        else if (this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.HeroArmor)
-                        {
-                            damage *= 0.5f;
-                        }
-                        break;
-                    }
-                case ActorAttackType.Siege:
-                    {
-                        if (this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.LightArmor)
-                        {
-                            damage *= 1f;
-                        }
-                        else if (this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.HeavyArmor)
-                        {
-                            damage *= 1.5f;
-                        }
-                        else if (this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.HeroArmor)
-                        {
-                            damage *= 0.5f;
-                        }
-                        break;
-                    }
-                case ActorAttackType.Magic:
-                    {
-                        if (this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.LightArmor)
-                        {
-                            damage *= 1.25f;
-                        }
-                        else if (this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.HeavyArmor)
-                        {
-                            damage *= 2f;
-                        }
-                        else if (this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.HeroArmor)
-                        {
-                            damage *= 0.35f;
-                        }
-                        break;
-                    }
-                case ActorAttackType.Confuse:
-                    {
-                        if (this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.LightArmor)
-                        {
-                            damage *= 1f;
-                        }
-                        else if (this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.HeavyArmor)
-                        {
-                            damage *= 1f;
-                        }
-                        else if (this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.HeroArmor)
-                        {
-                            damage *= 1f;
-                        }
-                        break;
-                    }
-                case ActorAttackType.HeroAttack:
-                    {
-                        if (this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.LightArmor)
-                        {
-                            damage *= 1.2f;
-                        }
-                        else if (this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.HeavyArmor)
-                        {
-                            damage *= 1.2f;
-                        }
-                        else if (this.MyActor.ActorArmor.ActorArmorType == ActorArmorType.HeroArmor)
-                        {
-                            damage *= 1f;
-                        }
-                        break;
-                    }
-            }
-        }
+		
+		if(damage.Stun)
+		{
+			this.IsStun = true;
+			this.StunDuration = Mathf.Max(damage.StunDuration, this.StunDuration);
+		}
+		if(damage.Bleed)
+		{
+			this.IsBleed = true;
+			this.BleedDps = Mathf.Max(damage.BleedDps, this.BleedDps);
+			this.BleedDuration = Mathf.Max(damage.BleedDuration, this.BleedDuration);
+		}
 
         if (this.MyActor.ActorArmor.ArmorAmount > 0f)
         {
-            float dValue = this.MyActor.ActorArmor.ArmorAmount - damage;
+            float dValue = this.MyActor.ActorArmor.ArmorAmount - damage.DamageValue;
             if (dValue >= 0)
             {
                 this.MyActor.ActorArmor.ArmorAmount = dValue;
@@ -499,14 +408,20 @@ public class ActorController : BaseGameEntity
             else
             {
                 this.MyActor.ActorArmor.ArmorAmount = 0f;
-                damage = Mathf.Abs(dValue);
+                damage.DamageValue = Mathf.Abs(dValue);
             }
         }
-        this.MyActor.CurrentHp -= damage;
-        if (this.MyActor.CurrentHp <= 0)
+        
+        if (this.MyActor.CurrentHp <= damage.DamageValue)
         {
+			this.MyActor.CurrentHp = 0;
             this.m_PStateMachine.ChangeState(Actor_StateBeforeDie.Instance());
         }
+		else
+		{
+			this.MyActor.CurrentHp -= damage.DamageValue;
+		}
+		this.MyActor.CurrentHp = Mathf.Min(this.MyActor.CurrentHp, this.MyActor.TotalHp);
         this.RefreshHpBar();
     }
 
@@ -526,6 +441,7 @@ public class ActorController : BaseGameEntity
         this.AttackPlusRatio = 1;
         this.BloodSuckingRatio = 0;
         this.AttackSpeed = 1;
+		this.hpbarLength = 200;
         this.RefreshHpBar();
 
         this.m_PStateMachine = new StateMachine<ActorController>(this);
@@ -540,6 +456,10 @@ public class ActorController : BaseGameEntity
             Transform hpBarTran = this.transform.FindChild("HpBar");
             this.hpBarSprite = hpBarTran.gameObject.GetComponent<tk2dSlicedSprite>();
         }
+		else
+		{
+			this.hpBarSprite.dimensions = new Vector2(this.MyActor.CurrentHp/this.MyActor.TotalHp*this.hpbarLength, this.hpBarSprite.dimensions.y);
+		}
     }
 
     private void ShowTip(string tip)

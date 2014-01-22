@@ -66,9 +66,61 @@ MonoBehaviour:
     paddingRight: 1
     paddingTop: 9
     paddingBottom: 10
+  - name: Terran_ArtilleryLab_Blue
+    x: 127
+    y: 5
+    width: 48
+    height: 45
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 6
+    paddingRight: 10
+    paddingTop: 11
+    paddingBottom: 8
+  - name: Terran_ArtilleryLab_Red
+    x: 178
+    y: 6
+    width: 48
+    height: 45
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 6
+    paddingRight: 10
+    paddingTop: 11
+    paddingBottom: 8
+  - name: Terran_Aviary_Blue
+    x: 63
+    y: 147
+    width: 48
+    height: 53
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 4
+    paddingRight: 12
+    paddingTop: 8
+    paddingBottom: 3
+  - name: Terran_Aviary_Red
+    x: 112
+    y: 147
+    width: 48
+    height: 53
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 4
+    paddingRight: 12
+    paddingTop: 8
+    paddingBottom: 3
   - name: Terran_Barrack_Blue
-    x: 165
-    y: 115
+    x: 178
+    y: 52
     width: 51
     height: 45
     borderLeft: 0
@@ -80,8 +132,8 @@ MonoBehaviour:
     paddingTop: 12
     paddingBottom: 7
   - name: Terran_Barrack_Red
-    x: 113
-    y: 114
+    x: 63
+    y: 11
     width: 51
     height: 46
     borderLeft: 0
@@ -93,7 +145,7 @@ MonoBehaviour:
     paddingTop: 16
     paddingBottom: 2
   - name: Terran_Church_Blue
-    x: 63
+    x: 161
     y: 161
     width: 63
     height: 39
@@ -106,8 +158,8 @@ MonoBehaviour:
     paddingTop: 12
     paddingBottom: 13
   - name: Terran_Church_Red
-    x: 127
-    y: 161
+    x: 63
+    y: 107
     width: 63
     height: 39
     borderLeft: 0
@@ -170,9 +222,35 @@ MonoBehaviour:
     paddingRight: 1
     paddingTop: 9
     paddingBottom: 10
+  - name: Terran_MysterySchool_Blue
+    x: 127
+    y: 51
+    width: 50
+    height: 46
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 6
+    paddingRight: 8
+    paddingTop: 10
+    paddingBottom: 8
+  - name: Terran_MysterySchool_Red
+    x: 176
+    y: 100
+    width: 50
+    height: 46
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 6
+    paddingRight: 8
+    paddingTop: 10
+    paddingBottom: 8
   - name: Terran_SniperHouse_Blue
     x: 63
-    y: 112
+    y: 58
     width: 49
     height: 48
     borderLeft: 0
@@ -184,8 +262,8 @@ MonoBehaviour:
     paddingTop: 12
     paddingBottom: 4
   - name: Terran_SniperHouse_Red
-    x: 63
-    y: 63
+    x: 127
+    y: 98
     width: 48
     height: 48
     borderLeft: 0
@@ -197,7 +275,7 @@ MonoBehaviour:
     paddingTop: 8
     paddingBottom: 8
   - name: Terran_Temple_Blue
-    x: 0
+    x: 64
     y: 201
     width: 63
     height: 55
@@ -210,7 +288,7 @@ MonoBehaviour:
     paddingTop: 4
     paddingBottom: 5
   - name: Terran_Temple_Red
-    x: 64
+    x: 0
     y: 201
     width: 63
     height: 55

@@ -44,17 +44,17 @@ MonoBehaviour:
   spriteDefinitions:
   - name: PlayersSkills_RoadblocksSurgery_0001
     boundsData:
-    - {x: -90, y: 177, z: 0}
+    - {x: -95, y: 160, z: 0}
     - {x: 34, y: 34.0000153, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: -5, y: -17, z: 0}
     - {x: 300, y: 400, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -107, y: 159.999985, z: 0}
-    - {x: -73, y: 159.999985, z: 0}
-    - {x: -107, y: 194, z: 0}
-    - {x: -73, y: 194, z: 0}
+    - {x: -112, y: 142.999985, z: 0}
+    - {x: -78, y: 142.999985, z: 0}
+    - {x: -112, y: 177, z: 0}
+    - {x: -78, y: 177, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -82,17 +82,17 @@ MonoBehaviour:
     attachPoints: []
   - name: PlayersSkills_RoadblocksSurgery_0002
     boundsData:
-    - {x: -5.50000381, y: 150.5, z: 0}
+    - {x: -10.5000038, y: 133.5, z: 0}
     - {x: 213, y: 99, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: -5, y: -17, z: 0}
     - {x: 300, y: 400, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -112, y: 101, z: 0}
-    - {x: 100.999992, y: 101, z: 0}
-    - {x: -112, y: 200, z: 0}
-    - {x: 100.999992, y: 200, z: 0}
+    - {x: -117, y: 84, z: 0}
+    - {x: 95.9999924, y: 84, z: 0}
+    - {x: -117, y: 183, z: 0}
+    - {x: 95.9999924, y: 183, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -120,17 +120,17 @@ MonoBehaviour:
     attachPoints: []
   - name: PlayersSkills_RoadblocksSurgery_0003
     boundsData:
-    - {x: -7.00000381, y: 116, z: 0}
+    - {x: -12.0000038, y: 99, z: 0}
     - {x: 218, y: 168, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: -5, y: -17, z: 0}
     - {x: 300, y: 400, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -116, y: 31.9999924, z: 0}
-    - {x: 101.999992, y: 31.9999924, z: 0}
-    - {x: -116, y: 200, z: 0}
-    - {x: 101.999992, y: 200, z: 0}
+    - {x: -121, y: 14.9999933, z: 0}
+    - {x: 96.9999924, y: 14.9999933, z: 0}
+    - {x: -121, y: 183, z: 0}
+    - {x: 96.9999924, y: 183, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -158,17 +158,17 @@ MonoBehaviour:
     attachPoints: []
   - name: PlayersSkills_RoadblocksSurgery_0004
     boundsData:
-    - {x: -3.81469727e-06, y: 82.5, z: 0}
+    - {x: -5.00000381, y: 65.5, z: 0}
     - {x: 238, y: 235, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: -5, y: -17, z: 0}
     - {x: 300, y: 400, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -119, y: -35.0000038, z: 0}
-    - {x: 118.999992, y: -35.0000038, z: 0}
-    - {x: -119, y: 200, z: 0}
-    - {x: 118.999992, y: 200, z: 0}
+    - {x: -124, y: -52.0000038, z: 0}
+    - {x: 113.999992, y: -52.0000038, z: 0}
+    - {x: -124, y: 183, z: 0}
+    - {x: 113.999992, y: 183, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -196,17 +196,17 @@ MonoBehaviour:
     attachPoints: []
   - name: PlayersSkills_RoadblocksSurgery_0005
     boundsData:
-    - {x: -.499996185, y: 51.9999962, z: 0}
+    - {x: -5.49999619, y: 34.9999962, z: 0}
     - {x: 247, y: 294, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: -5, y: -17, z: 0}
     - {x: 300, y: 400, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -124, y: -95.0000076, z: 0}
-    - {x: 123.000008, y: -95.0000076, z: 0}
-    - {x: -124, y: 199, z: 0}
-    - {x: 123.000008, y: 199, z: 0}
+    - {x: -129, y: -112.000008, z: 0}
+    - {x: 118.000008, y: -112.000008, z: 0}
+    - {x: -129, y: 182, z: 0}
+    - {x: 118.000008, y: 182, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -234,17 +234,17 @@ MonoBehaviour:
     attachPoints: []
   - name: PlayersSkills_RoadblocksSurgery_0006
     boundsData:
-    - {x: -2.50000381, y: 35, z: 0}
+    - {x: -7.50000381, y: 18, z: 0}
     - {x: 245, y: 322, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: -5, y: -17, z: 0}
     - {x: 300, y: 400, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -125, y: -126, z: 0}
-    - {x: 119.999992, y: -126, z: 0}
-    - {x: -125, y: 196, z: 0}
-    - {x: 119.999992, y: 196, z: 0}
+    - {x: -130, y: -143, z: 0}
+    - {x: 114.999992, y: -143, z: 0}
+    - {x: -130, y: 179, z: 0}
+    - {x: 114.999992, y: 179, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -272,17 +272,17 @@ MonoBehaviour:
     attachPoints: []
   - name: PlayersSkills_RoadblocksSurgery_0007
     boundsData:
-    - {x: -3.5, y: 16.4999924, z: 0}
+    - {x: -8.5, y: -.500007629, z: 0}
     - {x: 239, y: 341, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: -5, y: -17, z: 0}
     - {x: 300, y: 400, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -123, y: -154, z: 0}
-    - {x: 116, y: -154, z: 0}
-    - {x: -123, y: 186.999985, z: 0}
-    - {x: 116, y: 186.999985, z: 0}
+    - {x: -128, y: -171, z: 0}
+    - {x: 111, y: -171, z: 0}
+    - {x: -128, y: 169.999985, z: 0}
+    - {x: 111, y: 169.999985, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -310,17 +310,17 @@ MonoBehaviour:
     attachPoints: []
   - name: PlayersSkills_RoadblocksSurgery_0008
     boundsData:
-    - {x: -6.99999619, y: 8.49999237, z: 0}
+    - {x: -11.9999962, y: -8.50000763, z: 0}
     - {x: 228, y: 357, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: -5, y: -17, z: 0}
     - {x: 300, y: 400, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -121, y: -170, z: 0}
-    - {x: 107.000008, y: -170, z: 0}
-    - {x: -121, y: 186.999985, z: 0}
-    - {x: 107.000008, y: 186.999985, z: 0}
+    - {x: -126, y: -187, z: 0}
+    - {x: 102.000008, y: -187, z: 0}
+    - {x: -126, y: 169.999985, z: 0}
+    - {x: 102.000008, y: 169.999985, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -348,17 +348,17 @@ MonoBehaviour:
     attachPoints: []
   - name: PlayersSkills_RoadblocksSurgery_0009
     boundsData:
-    - {x: -6.49999619, y: 2.5, z: 0}
+    - {x: -11.4999962, y: -14.5, z: 0}
     - {x: 227, y: 345, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: -5, y: -17, z: 0}
     - {x: 300, y: 400, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -120, y: -170, z: 0}
-    - {x: 107.000008, y: -170, z: 0}
-    - {x: -120, y: 175, z: 0}
-    - {x: 107.000008, y: 175, z: 0}
+    - {x: -125, y: -187, z: 0}
+    - {x: 102.000008, y: -187, z: 0}
+    - {x: -125, y: 158, z: 0}
+    - {x: 102.000008, y: 158, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -386,17 +386,17 @@ MonoBehaviour:
     attachPoints: []
   - name: PlayersSkills_RoadblocksSurgery_0010
     boundsData:
-    - {x: 9.00000381, y: -2.5, z: 0}
+    - {x: 4.00000381, y: -19.5, z: 0}
     - {x: 198, y: 345, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: -5, y: -17, z: 0}
     - {x: 300, y: 400, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -90, y: -175, z: 0}
-    - {x: 108.000008, y: -175, z: 0}
-    - {x: -90, y: 170, z: 0}
-    - {x: 108.000008, y: 170, z: 0}
+    - {x: -95, y: -192, z: 0}
+    - {x: 103.000008, y: -192, z: 0}
+    - {x: -95, y: 153, z: 0}
+    - {x: 103.000008, y: 153, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -424,17 +424,17 @@ MonoBehaviour:
     attachPoints: []
   - name: PlayersSkills_RoadblocksSurgery_0011
     boundsData:
-    - {x: .5, y: -3.5, z: 0}
+    - {x: -4.5, y: -20.5, z: 0}
     - {x: 181, y: 347, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: -5, y: -17, z: 0}
     - {x: 300, y: 400, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -90, y: -177, z: 0}
-    - {x: 91, y: -177, z: 0}
-    - {x: -90, y: 170, z: 0}
-    - {x: 91, y: 170, z: 0}
+    - {x: -95, y: -194, z: 0}
+    - {x: 86, y: -194, z: 0}
+    - {x: -95, y: 153, z: 0}
+    - {x: 86, y: 153, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -462,17 +462,17 @@ MonoBehaviour:
     attachPoints: []
   - name: PlayersSkills_RoadblocksSurgery_0012
     boundsData:
-    - {x: .5, y: -4.5, z: 0}
+    - {x: -4.5, y: -21.5, z: 0}
     - {x: 181, y: 347, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: -5, y: -17, z: 0}
     - {x: 300, y: 400, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -90, y: -178, z: 0}
-    - {x: 91, y: -178, z: 0}
-    - {x: -90, y: 169, z: 0}
-    - {x: 91, y: 169, z: 0}
+    - {x: -95, y: -195, z: 0}
+    - {x: 86, y: -195, z: 0}
+    - {x: -95, y: 152, z: 0}
+    - {x: 86, y: 152, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -500,17 +500,17 @@ MonoBehaviour:
     attachPoints: []
   - name: PlayersSkills_RoadblocksSurgery_0013
     boundsData:
-    - {x: -9, y: -62, z: 0}
+    - {x: -14, y: -79, z: 0}
     - {x: 94, y: 228, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: -5, y: -17, z: 0}
     - {x: 300, y: 400, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -56, y: -176, z: 0}
-    - {x: 38, y: -176, z: 0}
-    - {x: -56, y: 52, z: 0}
-    - {x: 38, y: 52, z: 0}
+    - {x: -61, y: -193, z: 0}
+    - {x: 33, y: -193, z: 0}
+    - {x: -61, y: 35, z: 0}
+    - {x: 33, y: 35, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -538,17 +538,17 @@ MonoBehaviour:
     attachPoints: []
   - name: PlayersSkills_RoadblocksSurgery_0014
     boundsData:
-    - {x: -12.9999962, y: -99, z: 0}
+    - {x: -17.9999962, y: -116, z: 0}
     - {x: 86.0000076, y: 156, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: -5, y: -17, z: 0}
     - {x: 300, y: 400, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -56, y: -177, z: 0}
-    - {x: 30.0000076, y: -177, z: 0}
-    - {x: -56, y: -21.0000038, z: 0}
-    - {x: 30.0000076, y: -21.0000038, z: 0}
+    - {x: -61, y: -194, z: 0}
+    - {x: 25.0000076, y: -194, z: 0}
+    - {x: -61, y: -38.0000038, z: 0}
+    - {x: 25.0000076, y: -38.0000038, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -576,17 +576,17 @@ MonoBehaviour:
     attachPoints: []
   - name: PlayersSkills_RoadblocksSurgery_0015
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: -4.50000048, y: -16.5, z: 0}
+    - {x: .999999046, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: -5, y: -17, z: 0}
     - {x: 300, y: 400, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: -5, y: -17, z: 0}
+    - {x: -4.00000095, y: -17, z: 0}
+    - {x: -5, y: -16, z: 0}
+    - {x: -4.00000095, y: -16, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -625,7 +625,7 @@ MonoBehaviour:
   loadable: 0
   invOrthoSize: 2
   halfTargetHeight: .5
-  buildKey: 1140637675
+  buildKey: 1410871126
   dataGuid: bed1ad19281ad455091732834711a3c9
   managedSpriteCollection: 0
   hasPlatformData: 0

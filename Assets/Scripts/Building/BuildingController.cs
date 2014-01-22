@@ -13,6 +13,10 @@ public class BuildingController : BaseGameEntity
     private Transform _myTransform;
 
     private tk2dSprite _selfSprite;
+	
+	private tk2dSlicedSprite hpBarSprite;
+	
+	private float hpbarLength;
 
     private StateMachine<BuildingController> m_PStateMachine;
 
@@ -81,16 +85,16 @@ public class BuildingController : BaseGameEntity
         return this.m_PStateMachine.HandleMessage(telegram);
     }
 	
-	public void TakeDamage(float damage)
+	public void TakeDamage(Damage damage)
 	{
-        if (this.Building.CurrentHp <= damage)
+        if (this.Building.CurrentHp <= damage.DamageValue)
         {
             this.Building.CurrentHp = 0;
 			this.m_PStateMachine.ChangeState(Building_StateBeforeDestroy.Instance());
 		}
         else
         {
-            this.Building.CurrentHp -= damage;
+            this.Building.CurrentHp -= damage.DamageValue;
         }
 	}
 
@@ -100,6 +104,7 @@ public class BuildingController : BaseGameEntity
 
     private void InitBuilding()
     {
+		this.hpbarLength = 600;
         if (this.Building != null)
         {
             this.DispatchIntervalLevel1 = this.Building.ProducedTimeLevel1;
@@ -117,6 +122,19 @@ public class BuildingController : BaseGameEntity
         {
             this.m_PStateMachine.SMUpdate();
         }
+    }
+	
+	private void RefreshHpBar()
+    {
+        if (this.hpBarSprite == null)
+        {
+            Transform hpBarTran = this.transform.FindChild("HpBar");
+            this.hpBarSprite = hpBarTran.gameObject.GetComponent<tk2dSlicedSprite>();
+        }
+		else
+		{
+			this.hpBarSprite.dimensions = new Vector2(this.Building.CurrentHp/this.Building.TotalHp*this.hpbarLength, this.hpBarSprite.dimensions.y);
+		}
     }
 
     #endregion

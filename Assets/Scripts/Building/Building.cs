@@ -10,6 +10,7 @@
         this.CurrentLevel = BuildingLevel.BuildingLevel1;
         this.Race = BuildingsConfig.GetBuildingRaceType(this.BuildingType);
         this.MaxLevel = BuildingsConfig.GetMaxLevel(this.Race, this.BuildingType);
+		this.BuildingName = BuildingsConfig.GetBuildingName(this.Race, this.BuildingType);
         this.CoinCostLevel1 = BuildingsConfig.GetCoinCost(this.Race, this.BuildingType, BuildingLevel.BuildingLevel1);
         this.CoinCostLevel2 = BuildingsConfig.GetCoinCost(this.Race, this.BuildingType, BuildingLevel.BuildingLevel2);
         this.TotalHpLevel1 = BuildingsConfig.GetHp(this.Race, this.BuildingType, BuildingLevel.BuildingLevel1);
