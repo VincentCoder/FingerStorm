@@ -16,8 +16,6 @@ public class Actor_GlobalState : State<ActorController>
 
     private Dictionary<ActorSpellName, float> releaseCounterDictionary;
 
-    private float stunDuration;
-
     #endregion
 
     #region Public Methods and Operators
@@ -44,8 +42,8 @@ public class Actor_GlobalState : State<ActorController>
     {
         if (entityType.IsStun)
         {
-            this.stunDuration -= Time.deltaTime;
-            if (this.stunDuration <= 0)
+            entityType.StunDuration -= Time.deltaTime;
+            if (entityType.StunDuration <= 0)
             {
                 entityType.IsStun = false;
             }
@@ -90,7 +88,7 @@ public class Actor_GlobalState : State<ActorController>
         {
             if (telegram.Parameters.ContainsKey("StunDuration"))
             {
-                this.stunDuration = Mathf.Max((float)telegram.Parameters["StunDuration"], this.stunDuration);
+                entityType.StunDuration = Mathf.Max((float)telegram.Parameters["StunDuration"], entityType.StunDuration);
                 entityType.IsStun = true;
                 return true;
             }
@@ -107,7 +105,7 @@ public class Actor_GlobalState : State<ActorController>
                     List<GameObject> enemies = entityType.SeekAndGetEnemiesInDistance(actorSpell.AttackRange);
                     if (enemies != null && enemies.Count != 0)
                     {
-                        this.SendDamage(entityType, actorSpell.DirectDamage);
+                        this.SendDamage(entityType, actorSpell.DirectDamage * entityType.AttackPlusRatio);
                     }
                     break;
                 }
@@ -116,14 +114,14 @@ public class Actor_GlobalState : State<ActorController>
                     List<GameObject> enemies = entityType.SeekAndGetEnemiesInDistance(actorSpell.AttackRange);
                     if (enemies != null && enemies.Count != 0)
                     {
-                        this.SendDamage(entityType, actorSpell.DirectDamage);
+                        this.SendDamage(entityType, actorSpell.DirectDamage * entityType.AttackPlusRatio);
                     }
                     break;
                 }
         }
     }
 
-    private void SendDamage ( ActorController entityType, int damage )
+    private void SendDamage ( ActorController entityType, float damage )
     {
         Hashtable parameters = new Hashtable();
         parameters.Add(
@@ -331,7 +329,7 @@ public class Actor_StateFight : State<ActorController>
     #region Static Fields
 
     //private static Actor_StateFight instance;
-	private float fightClipTime;
+    private float attackSpeedCounter;
 
     #endregion
 
@@ -345,7 +343,7 @@ public class Actor_StateFight : State<ActorController>
 
     public override void Enter(ActorController entityType)
     {
-		//Debug.Log("Enter Fight");
+        this.attackSpeedCounter = 0.0f;
         if (entityType.TargetEnemy == null)
         {
             entityType.GetFSM().ChangeState(Actor_StateBeforeFight.Instance());
@@ -356,21 +354,33 @@ public class Actor_StateFight : State<ActorController>
         animName.Append("_Attack_");
         animName.Append(entityType.MyActor.FactionType);
         entityType.SelfAnimator.Play(animName.ToString());
-        entityType.SelfAnimator.AnimationEventTriggered = (animator, clip, arg3) =>
+        entityType.SelfAnimator.AnimationCompleted = delegate 
             {
+                entityType.SelfAnimator.SetFrame(0);
 				this.SendDamage(entityType);
             };
-		this.fightClipTime = 0.5f;
     }
 
     public override void Execute(ActorController entityType)
     {
         if(entityType.IsStun)
             return;
-        
         if (entityType.TargetEnemy == null)
         {
             entityType.GetFSM().ChangeState(Actor_StateBeforeFight.Instance());
+            return;
+        }
+
+        this.attackSpeedCounter += Time.deltaTime;
+        if (this.attackSpeedCounter >= entityType.AttackSpeed)
+        {
+            entityType.SelfAnimator.Play();
+            entityType.SelfAnimator.AnimationCompleted = delegate
+                {
+                    entityType.SelfAnimator.SetFrame(0);
+                    this.SendDamage(entityType);
+                };
+            this.attackSpeedCounter = 0f;
         }
     }
 
@@ -398,6 +408,30 @@ public class Actor_StateFight : State<ActorController>
         {
             foreach (KeyValuePair<ActorSpellName, ActorSpell> kv in passiveSpellDictionary)
             {
+                switch (kv.Key)
+                {
+                    case ActorSpellName.None:
+                        {
+                            this.SendAttack(
+                                entityType,
+                                entityType.CalculateCommonAttackDamageToActor((ActorController)entityType.TargetEnemy));
+                            break;
+                        }
+                    case ActorSpellName.CirticalStrike:
+                        {
+                            if (Random.Range(1, 101) <= 10)
+                            {
+                            }
+                            break;
+                        }
+
+                }
+
+
+
+
+
+
                 float probability = kv.Value.DamageBonusPercentProbability;
                 int randomIndex;
                 if (probability > 0)
@@ -405,7 +439,6 @@ public class Actor_StateFight : State<ActorController>
                     randomIndex = Random.Range(1, 101);
 					if(randomIndex <= probability)
 					{
-						this.SendAttack(entityType, kv.Value.DamageBonusPercent * entityType.MyActor.ActorAttack.Dps * this.fightClipTime);
 						isBaseAttackSent = true;
 					}
                 }
@@ -420,7 +453,7 @@ public class Actor_StateFight : State<ActorController>
 							ActorController actorCtrl = enemy.GetComponent<ActorController>();
 							if(actorCtrl != null && actorCtrl.gameObject != entityType.TargetEnemy.gameObject)
 							{
-								this.SendAttack(entityType, actorCtrl, 0.5f * entityType.MyActor.ActorAttack.Dps * this.fightClipTime);
+								this.SendAttack(entityType, actorCtrl, 0.5f * entityType.MyActor.ActorAttack.Dps);
 							}
 						});
 					}
@@ -432,7 +465,6 @@ public class Actor_StateFight : State<ActorController>
 					if(randomIndex <= probability)
 					{
 						this.SendStun(entityType, kv.Value.StunDuration);
-						this.SendAttack(entityType, 0.15f * entityType.MyActor.ActorAttack.Dps * this.fightClipTime);
 					}
 				}
 				probability = kv.Value.DirectDamageProbability;
@@ -441,17 +473,14 @@ public class Actor_StateFight : State<ActorController>
 					randomIndex = Random.Range(1, 101);
 					if(randomIndex <= probability)
 					{
-						this.SendAttack(entityType, kv.Value.DirectDamage);
 						isBaseAttackSent = true;
 					}
 				}
             }
         }
-		if(!isBaseAttackSent)
-        	this.SendAttack(entityType, entityType.MyActor.ActorAttack.Dps * this.fightClipTime);
     }
 	
-	private void SendAttack(ActorController entityType, float damage)
+	private void SendAttack(ActorController entityType, Damage damage)
 	{
 		Hashtable parameters = new Hashtable();
         parameters.Add(

@@ -23,7 +23,7 @@ public class State<entity_type>
         
     }
 
-    public virtual bool OnMessage ( entity_type entityType, Telegram telegram )
+    public virtual bool OnMessage (entity_type entityType, Telegram telegram)
     {
         return false;
     }

@@ -57,10 +57,27 @@ public class UIPlayerSkillController : MonoBehaviour
 				}
 				break;
 			case "RoadblocksSurgery":
-				GameObject roadblocksSurgery = (GameObject)Instantiate(Resources.Load("GameScene/PlayerSkillRoadblocksSurgery"));
-				roadblocksSurgery.transform.position = new Vector3(Screen.width/2, Screen.height/2, 0);
-				break;
-			case "Heal":
+		        {
+		            if (this.gameSceneController.Mp >= 60)
+		            {
+		                this.gameSceneController.Mp -= 60;
+                        GameObject roadblocksSurgery =
+		                (GameObject)Instantiate(Resources.Load("GameScene/PlayerSkillRoadblocksSurgery"));
+                        roadblocksSurgery.transform.position = new Vector3(Screen.width / 2, Screen.height / 2, 0);
+		                tk2dSpriteAnimator animator = roadblocksSurgery.GetComponent<tk2dSpriteAnimator>();
+		                animator.AnimationCompleted = delegate
+		                    {
+                                Vector3[] positionArr = new Vector3[4]{new Vector3(295, 485, 0), new Vector3(665, 485, 0), new Vector3(295, 290, 0), new Vector3(665, 290, 0)};
+		                        for (int i = 0; i < 4; i ++)
+		                        {
+		                            GameObject roadBlock = (GameObject)Instantiate(Resources.Load("GameScene/RoadBlock"));
+		                            roadBlock.transform.position = positionArr[i];
+		                        }
+		                    };
+		            }
+		            break;
+		        }
+		    case "Heal":
 				if(this.gameSceneController.Mp >= 100)
 				{
 					this.gameSceneController.Mp -= 100;
