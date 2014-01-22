@@ -61,7 +61,7 @@ MonoBehaviour:
   atlasWidth: 256
   atlasHeight: 512
   forceSquareAtlas: 0
-  atlasWastage: 52.6283264
+  atlasWastage: 40.0978088
   allowMultipleAtlases: 0
   removeDuplicates: 1
   textureParams:
@@ -72,15 +72,15 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 8b7a71b44a9dc874fa32d376791029de, type: 3}
     materialId: 0
     anchor: 4
-    anchorX: 32
-    anchorY: 32
+    anchorX: 0
+    anchorY: 0
     overrideMesh: {fileID: 0}
     doubleSidedSprite: 0
     customSpriteGeometry: 0
     geometryIslands: []
     dice: 0
     diceUnitX: 64
-    diceUnitY: 0
+    diceUnitY: 64
     diceFilter: 0
     pad: 0
     extraPadding: 0
@@ -112,15 +112,175 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: f83dd61ef8a317f40a2f76b1cf621be5, type: 3}
     materialId: 0
     anchor: 4
-    anchorX: 32
-    anchorY: 32
+    anchorX: 0
+    anchorY: 0
     overrideMesh: {fileID: 0}
     doubleSidedSprite: 0
     customSpriteGeometry: 0
     geometryIslands: []
     dice: 0
     diceUnitX: 64
-    diceUnitY: 0
+    diceUnitY: 64
+    diceFilter: 0
+    pad: 0
+    extraPadding: 0
+    source: 0
+    fromSpriteSheet: 0
+    hasSpriteSheetId: 0
+    spriteSheetId: 0
+    spriteSheetX: 0
+    spriteSheetY: 0
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    regionId: 0
+    colliderType: 0
+    boxColliderMin: {x: 0, y: 0}
+    boxColliderMax: {x: 0, y: 0}
+    polyColliderIslands: []
+    polyColliderCap: 1
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    colliderColor: 0
+    attachPoints: []
+  - name: Terran_ArtilleryLab_Blue
+    disableTrimming: 0
+    additive: 0
+    scale: {x: 1, y: 1, z: 1}
+    texture: {fileID: 2800000, guid: b3ce21c125eea034089957bc901b7570, type: 3}
+    materialId: 0
+    anchor: 4
+    anchorX: 0
+    anchorY: 0
+    overrideMesh: {fileID: 0}
+    doubleSidedSprite: 0
+    customSpriteGeometry: 0
+    geometryIslands: []
+    dice: 0
+    diceUnitX: 64
+    diceUnitY: 64
+    diceFilter: 0
+    pad: 0
+    extraPadding: 0
+    source: 0
+    fromSpriteSheet: 0
+    hasSpriteSheetId: 0
+    spriteSheetId: 0
+    spriteSheetX: 0
+    spriteSheetY: 0
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    regionId: 0
+    colliderType: 0
+    boxColliderMin: {x: 0, y: 0}
+    boxColliderMax: {x: 0, y: 0}
+    polyColliderIslands: []
+    polyColliderCap: 1
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    colliderColor: 0
+    attachPoints: []
+  - name: Terran_ArtilleryLab_Red
+    disableTrimming: 0
+    additive: 0
+    scale: {x: 1, y: 1, z: 1}
+    texture: {fileID: 2800000, guid: 69e86439f5b0c9c42961a231c41db6d1, type: 3}
+    materialId: 0
+    anchor: 4
+    anchorX: 0
+    anchorY: 0
+    overrideMesh: {fileID: 0}
+    doubleSidedSprite: 0
+    customSpriteGeometry: 0
+    geometryIslands: []
+    dice: 0
+    diceUnitX: 64
+    diceUnitY: 64
+    diceFilter: 0
+    pad: 0
+    extraPadding: 0
+    source: 0
+    fromSpriteSheet: 0
+    hasSpriteSheetId: 0
+    spriteSheetId: 0
+    spriteSheetX: 0
+    spriteSheetY: 0
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    regionId: 0
+    colliderType: 0
+    boxColliderMin: {x: 0, y: 0}
+    boxColliderMax: {x: 0, y: 0}
+    polyColliderIslands: []
+    polyColliderCap: 1
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    colliderColor: 0
+    attachPoints: []
+  - name: Terran_Aviary_Blue
+    disableTrimming: 0
+    additive: 0
+    scale: {x: 1, y: 1, z: 1}
+    texture: {fileID: 2800000, guid: 84aea00bae349ca42855e23ac7499b96, type: 3}
+    materialId: 0
+    anchor: 4
+    anchorX: 0
+    anchorY: 0
+    overrideMesh: {fileID: 0}
+    doubleSidedSprite: 0
+    customSpriteGeometry: 0
+    geometryIslands: []
+    dice: 0
+    diceUnitX: 64
+    diceUnitY: 64
+    diceFilter: 0
+    pad: 0
+    extraPadding: 0
+    source: 0
+    fromSpriteSheet: 0
+    hasSpriteSheetId: 0
+    spriteSheetId: 0
+    spriteSheetX: 0
+    spriteSheetY: 0
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    regionId: 0
+    colliderType: 0
+    boxColliderMin: {x: 0, y: 0}
+    boxColliderMax: {x: 0, y: 0}
+    polyColliderIslands: []
+    polyColliderCap: 1
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    colliderColor: 0
+    attachPoints: []
+  - name: Terran_Aviary_Red
+    disableTrimming: 0
+    additive: 0
+    scale: {x: 1, y: 1, z: 1}
+    texture: {fileID: 2800000, guid: f7ced18c52edbaf40977068b58745a25, type: 3}
+    materialId: 0
+    anchor: 4
+    anchorX: 0
+    anchorY: 0
+    overrideMesh: {fileID: 0}
+    doubleSidedSprite: 0
+    customSpriteGeometry: 0
+    geometryIslands: []
+    dice: 0
+    diceUnitX: 64
+    diceUnitY: 64
     diceFilter: 0
     pad: 0
     extraPadding: 0
@@ -152,15 +312,15 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 657addf0e30cffd47bc554fcc822339e, type: 3}
     materialId: 0
     anchor: 4
-    anchorX: 32
-    anchorY: 32
+    anchorX: 0
+    anchorY: 0
     overrideMesh: {fileID: 0}
     doubleSidedSprite: 0
     customSpriteGeometry: 0
     geometryIslands: []
     dice: 0
     diceUnitX: 64
-    diceUnitY: 0
+    diceUnitY: 64
     diceFilter: 0
     pad: 0
     extraPadding: 0
@@ -192,15 +352,15 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 24bcdf62c46aaad428beefa32da4ec78, type: 3}
     materialId: 0
     anchor: 4
-    anchorX: 32
-    anchorY: 32
+    anchorX: 0
+    anchorY: 0
     overrideMesh: {fileID: 0}
     doubleSidedSprite: 0
     customSpriteGeometry: 0
     geometryIslands: []
     dice: 0
     diceUnitX: 64
-    diceUnitY: 0
+    diceUnitY: 64
     diceFilter: 0
     pad: 0
     extraPadding: 0
@@ -232,15 +392,15 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 4ceaf33a1c35367479363f9da47fba48, type: 3}
     materialId: 0
     anchor: 4
-    anchorX: 32
-    anchorY: 32
+    anchorX: 0
+    anchorY: 0
     overrideMesh: {fileID: 0}
     doubleSidedSprite: 0
     customSpriteGeometry: 0
     geometryIslands: []
     dice: 0
     diceUnitX: 64
-    diceUnitY: 0
+    diceUnitY: 64
     diceFilter: 0
     pad: 0
     extraPadding: 0
@@ -272,15 +432,15 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: e879f45f97c6d684a8e9744bf5b9b8a0, type: 3}
     materialId: 0
     anchor: 4
-    anchorX: 32
-    anchorY: 32
+    anchorX: 0
+    anchorY: 0
     overrideMesh: {fileID: 0}
     doubleSidedSprite: 0
     customSpriteGeometry: 0
     geometryIslands: []
     dice: 0
     diceUnitX: 64
-    diceUnitY: 0
+    diceUnitY: 64
     diceFilter: 0
     pad: 0
     extraPadding: 0
@@ -312,15 +472,15 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: bd1dda4ed17815742bd502c8bd98b545, type: 3}
     materialId: 0
     anchor: 4
-    anchorX: 32
-    anchorY: 32
+    anchorX: 0
+    anchorY: 0
     overrideMesh: {fileID: 0}
     doubleSidedSprite: 0
     customSpriteGeometry: 0
     geometryIslands: []
     dice: 0
     diceUnitX: 64
-    diceUnitY: 0
+    diceUnitY: 64
     diceFilter: 0
     pad: 0
     extraPadding: 0
@@ -352,15 +512,15 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 20d912ae47a09f9468c35fe61f167d89, type: 3}
     materialId: 0
     anchor: 4
-    anchorX: 32
-    anchorY: 32
+    anchorX: 0
+    anchorY: 0
     overrideMesh: {fileID: 0}
     doubleSidedSprite: 0
     customSpriteGeometry: 0
     geometryIslands: []
     dice: 0
     diceUnitX: 64
-    diceUnitY: 0
+    diceUnitY: 64
     diceFilter: 0
     pad: 0
     extraPadding: 0
@@ -392,15 +552,15 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 0eb9a7510ca764643b1e0aff58856e03, type: 3}
     materialId: 0
     anchor: 4
-    anchorX: 32
-    anchorY: 32
+    anchorX: 0
+    anchorY: 0
     overrideMesh: {fileID: 0}
     doubleSidedSprite: 0
     customSpriteGeometry: 0
     geometryIslands: []
     dice: 0
     diceUnitX: 64
-    diceUnitY: 0
+    diceUnitY: 64
     diceFilter: 0
     pad: 0
     extraPadding: 0
@@ -432,15 +592,95 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 32bb52c5e3b3c97448537e732591d57d, type: 3}
     materialId: 0
     anchor: 4
-    anchorX: 32
-    anchorY: 32
+    anchorX: 0
+    anchorY: 0
     overrideMesh: {fileID: 0}
     doubleSidedSprite: 0
     customSpriteGeometry: 0
     geometryIslands: []
     dice: 0
     diceUnitX: 64
-    diceUnitY: 0
+    diceUnitY: 64
+    diceFilter: 0
+    pad: 0
+    extraPadding: 0
+    source: 0
+    fromSpriteSheet: 0
+    hasSpriteSheetId: 0
+    spriteSheetId: 0
+    spriteSheetX: 0
+    spriteSheetY: 0
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    regionId: 0
+    colliderType: 0
+    boxColliderMin: {x: 0, y: 0}
+    boxColliderMax: {x: 0, y: 0}
+    polyColliderIslands: []
+    polyColliderCap: 1
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    colliderColor: 0
+    attachPoints: []
+  - name: Terran_MysterySchool_Blue
+    disableTrimming: 0
+    additive: 0
+    scale: {x: 1, y: 1, z: 1}
+    texture: {fileID: 2800000, guid: 8cbff117f8160014c85f187d8eb56102, type: 3}
+    materialId: 0
+    anchor: 4
+    anchorX: 0
+    anchorY: 0
+    overrideMesh: {fileID: 0}
+    doubleSidedSprite: 0
+    customSpriteGeometry: 0
+    geometryIslands: []
+    dice: 0
+    diceUnitX: 64
+    diceUnitY: 64
+    diceFilter: 0
+    pad: 0
+    extraPadding: 0
+    source: 0
+    fromSpriteSheet: 0
+    hasSpriteSheetId: 0
+    spriteSheetId: 0
+    spriteSheetX: 0
+    spriteSheetY: 0
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    regionId: 0
+    colliderType: 0
+    boxColliderMin: {x: 0, y: 0}
+    boxColliderMax: {x: 0, y: 0}
+    polyColliderIslands: []
+    polyColliderCap: 1
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    colliderColor: 0
+    attachPoints: []
+  - name: Terran_MysterySchool_Red
+    disableTrimming: 0
+    additive: 0
+    scale: {x: 1, y: 1, z: 1}
+    texture: {fileID: 2800000, guid: 2e7139968fb9b4d43b5b6378d4c936f5, type: 3}
+    materialId: 0
+    anchor: 4
+    anchorX: 0
+    anchorY: 0
+    overrideMesh: {fileID: 0}
+    doubleSidedSprite: 0
+    customSpriteGeometry: 0
+    geometryIslands: []
+    dice: 0
+    diceUnitX: 64
+    diceUnitY: 64
     diceFilter: 0
     pad: 0
     extraPadding: 0
@@ -472,15 +712,15 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 6cd7af7a69b9050408e98e689a7b0eb9, type: 3}
     materialId: 0
     anchor: 4
-    anchorX: 32
-    anchorY: 32
+    anchorX: 0
+    anchorY: 0
     overrideMesh: {fileID: 0}
     doubleSidedSprite: 0
     customSpriteGeometry: 0
     geometryIslands: []
     dice: 0
     diceUnitX: 64
-    diceUnitY: 0
+    diceUnitY: 64
     diceFilter: 0
     pad: 0
     extraPadding: 0
@@ -512,15 +752,15 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: f2997e178d364e845961226bf1bbdf6c, type: 3}
     materialId: 0
     anchor: 4
-    anchorX: 32
-    anchorY: 32
+    anchorX: 0
+    anchorY: 0
     overrideMesh: {fileID: 0}
     doubleSidedSprite: 0
     customSpriteGeometry: 0
     geometryIslands: []
     dice: 0
     diceUnitX: 64
-    diceUnitY: 0
+    diceUnitY: 64
     diceFilter: 0
     pad: 0
     extraPadding: 0
@@ -552,15 +792,15 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: efcabeaced0af2b4baf51961234b668d, type: 3}
     materialId: 0
     anchor: 4
-    anchorX: 32
-    anchorY: 32
+    anchorX: 0
+    anchorY: 0
     overrideMesh: {fileID: 0}
     doubleSidedSprite: 0
     customSpriteGeometry: 0
     geometryIslands: []
     dice: 0
     diceUnitX: 64
-    diceUnitY: 0
+    diceUnitY: 64
     diceFilter: 0
     pad: 0
     extraPadding: 0
@@ -592,15 +832,15 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 820fcaa664377ec47a4a7202d7ac42d2, type: 3}
     materialId: 0
     anchor: 4
-    anchorX: 32
-    anchorY: 32
+    anchorX: 0
+    anchorY: 0
     overrideMesh: {fileID: 0}
     doubleSidedSprite: 0
     customSpriteGeometry: 0
     geometryIslands: []
     dice: 0
     diceUnitX: 64
-    diceUnitY: 0
+    diceUnitY: 64
     diceFilter: 0
     pad: 0
     extraPadding: 0
@@ -632,15 +872,15 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: d602c02cf77ac0f41906518f235cc120, type: 3}
     materialId: 0
     anchor: 4
-    anchorX: 64
-    anchorY: 64
+    anchorX: 0
+    anchorY: 0
     overrideMesh: {fileID: 0}
     doubleSidedSprite: 0
     customSpriteGeometry: 0
     geometryIslands: []
     dice: 0
     diceUnitX: 64
-    diceUnitY: 0
+    diceUnitY: 64
     diceFilter: 0
     pad: 0
     extraPadding: 0
@@ -672,15 +912,15 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 879ec2414062f0c40b2cc34104ec307e, type: 3}
     materialId: 0
     anchor: 4
-    anchorX: 64
-    anchorY: 64
+    anchorX: 0
+    anchorY: 0
     overrideMesh: {fileID: 0}
     doubleSidedSprite: 0
     customSpriteGeometry: 0
     geometryIslands: []
     dice: 0
     diceUnitX: 64
-    diceUnitY: 0
+    diceUnitY: 64
     diceFilter: 0
     pad: 0
     extraPadding: 0

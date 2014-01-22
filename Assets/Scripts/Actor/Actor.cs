@@ -14,12 +14,17 @@ public class Actor
     {
         this.ActorId = actorId;
         this.ActorType = type;
-        this.ActorArmor = this.LoadArmorFromConfig();
-        this.ActorAttack = this.LoadActorAttackFromConfig();
         this.FactionType = faction;
-        this.TotalHp = this.LoadHpFromConfig();
-        this.LoadLevelFromConfig();
-        this.SpellDictionary = this.LoadSpellsFromConfig();
+        this.RaceType = ActorsConfig.GetActorRaceType(this.ActorType);
+        this.ActorArmor = ActorsConfig.GetActorArmor(this.RaceType, this.ActorType);
+        this.ActorAttack = ActorsConfig.GetActorAttack(this.RaceType, this.ActorType);
+        this.AttackAirForce = ActorsConfig.GetAttackAirForce(this.RaceType, this.ActorType);
+        this.IsAirForce = ActorsConfig.GetIsAirForce(this.RaceType, this.ActorType);
+        this.TotalHp = ActorsConfig.GetHp(this.RaceType, this.ActorType);
+        this.ActorLevel = ActorsConfig.GetActorLevel(this.RaceType, this.ActorType);
+        this.SpellDictionary = ActorsConfig.GetSpellDictionary(this.RaceType, this.ActorType);
+
+        this.CurrentHp = this.TotalHp;
     }
 
     #endregion
@@ -36,11 +41,17 @@ public class Actor
 
     public FactionType FactionType { get; set; }
 
+    public bool AttackAirForce { get; set; }
+
+    public bool IsAirForce { get; set; }
+
     public float TotalHp { get; set; }
 
     public float CurrentHp { get; set; }
 
     public ActorLevel ActorLevel { get; set; }
+
+    public RaceType RaceType { get; set; }
 
     public Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>> SpellDictionary { get; set; }
 

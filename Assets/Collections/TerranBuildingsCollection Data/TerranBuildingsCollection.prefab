@@ -118,6 +118,158 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     attachPoints: []
+  - name: Terran_ArtilleryLab_Blue
+    boundsData:
+    - {x: -2, y: -1.5, z: 0}
+    - {x: 48, y: 45, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -26, y: -24, z: 0}
+    - {x: 22, y: -24, z: 0}
+    - {x: -26, y: 21, z: 0}
+    - {x: 22, y: 21, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .00781640597, y: .589845717}
+    - {x: .195308596, y: .589845717}
+    - {x: .00781640597, y: .677732408}
+    - {x: .195308596, y: .677732408}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 0d7587ec9b1ec9c4ab28cc0f6245c9bf, type: 2}
+    materialId: 0
+    sourceTextureGUID: b3ce21c125eea034089957bc901b7570
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    attachPoints: []
+  - name: Terran_ArtilleryLab_Red
+    boundsData:
+    - {x: -2, y: -1.5, z: 0}
+    - {x: 48, y: 45, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -26, y: -24, z: 0}
+    - {x: 22, y: -24, z: 0}
+    - {x: -26, y: 21, z: 0}
+    - {x: 22, y: 21, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .656253934, y: .537111342}
+    - {x: .843746066, y: .537111342}
+    - {x: .656253934, y: .624998033}
+    - {x: .843746066, y: .624998033}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 0d7587ec9b1ec9c4ab28cc0f6245c9bf, type: 2}
+    materialId: 0
+    sourceTextureGUID: 69e86439f5b0c9c42961a231c41db6d1
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    attachPoints: []
+  - name: Terran_Aviary_Blue
+    boundsData:
+    - {x: -4, y: -2.5, z: 0}
+    - {x: 48, y: 53, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -28, y: -29, z: 0}
+    - {x: 20, y: -29, z: 0}
+    - {x: -28, y: 24, z: 0}
+    - {x: 20, y: 24, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .507816434, y: .306642592}
+    - {x: .695308566, y: .306642592}
+    - {x: .507816434, y: .410154283}
+    - {x: .695308566, y: .410154283}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 0d7587ec9b1ec9c4ab28cc0f6245c9bf, type: 2}
+    materialId: 0
+    sourceTextureGUID: 84aea00bae349ca42855e23ac7499b96
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    attachPoints: []
+  - name: Terran_Aviary_Red
+    boundsData:
+    - {x: -4, y: -2.5, z: 0}
+    - {x: 48, y: 53, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -28, y: -29, z: 0}
+    - {x: 20, y: -29, z: 0}
+    - {x: -28, y: 24, z: 0}
+    - {x: 20, y: 24, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .00781640597, y: .386720717}
+    - {x: .00781640597, y: .480466783}
+    - {x: .214839846, y: .386720717}
+    - {x: .214839846, y: .480466783}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 0d7587ec9b1ec9c4ab28cc0f6245c9bf, type: 2}
+    materialId: 0
+    sourceTextureGUID: f7ced18c52edbaf40977068b58745a25
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Terran_Barrack_Blue
     boundsData:
     - {x: -2.5, y: -2.5, z: 0}
@@ -134,10 +286,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .175785154, y: .490236342}
-    - {x: .175785154, y: .589841783}
-    - {x: .351558596, y: .490236342}
-    - {x: .351558596, y: .589841783}
+    - {x: .210941404, y: .570314467}
+    - {x: .410152346, y: .570314467}
+    - {x: .210941404, y: .658201158}
+    - {x: .410152346, y: .658201158}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 0d7587ec9b1ec9c4ab28cc0f6245c9bf, type: 2}
     materialId: 0
@@ -147,7 +299,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 1
+    flipped: 0
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -172,10 +324,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .675785184, y: .355470717}
-    - {x: .874996066, y: .355470717}
-    - {x: .675785184, y: .445310533}
-    - {x: .874996066, y: .445310533}
+    - {x: .230472654, y: .472658217}
+    - {x: .429683596, y: .472658217}
+    - {x: .230472654, y: .562498033}
+    - {x: .429683596, y: .562498033}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 0d7587ec9b1ec9c4ab28cc0f6245c9bf, type: 2}
     materialId: 0
@@ -210,10 +362,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .507816434, y: .306642592}
-    - {x: .507816434, y: .429685533}
-    - {x: .660152316, y: .306642592}
-    - {x: .660152316, y: .429685533}
+    - {x: .230472654, y: .388673842}
+    - {x: .476558596, y: .388673842}
+    - {x: .230472654, y: .464841783}
+    - {x: .476558596, y: .464841783}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 0d7587ec9b1ec9c4ab28cc0f6245c9bf, type: 2}
     materialId: 0
@@ -223,7 +375,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 1
+    flipped: 0
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -248,10 +400,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .00781640597, y: .386720717}
-    - {x: .00781640597, y: .509763658}
-    - {x: .160152346, y: .386720717}
-    - {x: .160152346, y: .509763658}
+    - {x: .710941434, y: .355470717}
+    - {x: .957027316, y: .355470717}
+    - {x: .710941434, y: .431638658}
+    - {x: .957027316, y: .431638658}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 0d7587ec9b1ec9c4ab28cc0f6245c9bf, type: 2}
     materialId: 0
@@ -261,7 +413,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 0
     regionH: 0
-    flipped: 1
+    flipped: 0
     complexGeometry: 0
     colliderType: 0
     colliderVertices: []
@@ -422,6 +574,82 @@ MonoBehaviour:
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     attachPoints: []
+  - name: Terran_MysterySchool_Blue
+    boundsData:
+    - {x: -1, y: -1, z: 0}
+    - {x: 50, y: 46, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -26, y: -24, z: 0}
+    - {x: 24, y: -24, z: 0}
+    - {x: -26, y: 22, z: 0}
+    - {x: 24, y: 22, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .699222684, y: .439455092}
+    - {x: .894527316, y: .439455092}
+    - {x: .699222684, y: .529294908}
+    - {x: .894527316, y: .529294908}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 0d7587ec9b1ec9c4ab28cc0f6245c9bf, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8cbff117f8160014c85f187d8eb56102
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    attachPoints: []
+  - name: Terran_MysterySchool_Red
+    boundsData:
+    - {x: -1, y: -1, z: 0}
+    - {x: 50, y: 46, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -26, y: -24, z: 0}
+    - {x: 24, y: -24, z: 0}
+    - {x: -26, y: 22, z: 0}
+    - {x: 24, y: 22, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .445316404, y: .519533217}
+    - {x: .640621066, y: .519533217}
+    - {x: .445316404, y: .609373033}
+    - {x: .640621066, y: .609373033}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 0d7587ec9b1ec9c4ab28cc0f6245c9bf, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2e7139968fb9b4d43b5b6378d4c936f5
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    attachPoints: []
   - name: Terran_SniperHouse_Blue
     boundsData:
     - {x: -5.5, y: -4, z: 0}
@@ -438,10 +666,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .175785154, y: .388673842}
-    - {x: .367183596, y: .388673842}
-    - {x: .175785154, y: .482419908}
-    - {x: .367183596, y: .482419908}
+    - {x: .492191404, y: .417970717}
+    - {x: .683589816, y: .417970717}
+    - {x: .492191404, y: .511716783}
+    - {x: .683589816, y: .511716783}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 0d7587ec9b1ec9c4ab28cc0f6245c9bf, type: 2}
     materialId: 0
@@ -476,10 +704,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: .382816404, y: .437501967}
-    - {x: .570308566, y: .437501967}
-    - {x: .382816404, y: .531248033}
-    - {x: .570308566, y: .531248033}
+    - {x: .00781640597, y: .488283217}
+    - {x: .195308596, y: .488283217}
+    - {x: .00781640597, y: .582029283}
+    - {x: .195308596, y: .582029283}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 0d7587ec9b1ec9c4ab28cc0f6245c9bf, type: 2}
     materialId: 0
@@ -663,7 +891,7 @@ MonoBehaviour:
   loadable: 0
   invOrthoSize: 2
   halfTargetHeight: .5
-  buildKey: 1430684250
+  buildKey: 870716280
   dataGuid: 7f52110206776c84189eeef673035000
   managedSpriteCollection: 0
   hasPlatformData: 0

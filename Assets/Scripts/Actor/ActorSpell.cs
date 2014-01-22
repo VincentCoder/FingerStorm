@@ -106,12 +106,12 @@ public class ActorSpell
 					this.AdditionalDamage = 30;
                     break;
                 }
-			case ActorType.Priest:
+			case ActorType.Pastor:
                 {
                     this.IncreaseOneFriendlyUnitHp = 300;
                     break;
                 }
-			case ActorType.Oracle:
+			case ActorType.Sage:
                 {
                     this.DirectDamageProbability = 25;
 					this.DirectDamage = 200;

@@ -33,7 +33,8 @@ public class BuildingController : BaseGameEntity
         }
     }
 
-    public int DispatchInterval { get; set; }
+    public int DispatchIntervalLevel1 { get; set; }
+    public int DispatchIntervalLevel2 { get; set; }
 
     public Transform MyTransform
     {
@@ -97,7 +98,8 @@ public class BuildingController : BaseGameEntity
     {
         if (this.Building != null)
         {
-            this.DispatchInterval = this.Building.ProducedTime;
+            this.DispatchIntervalLevel1 = this.Building.ProducedTimeLevel1;
+            this.DispatchIntervalLevel2 = this.Building.ProducedTimeLevel2;
 
             this.m_PStateMachine = new StateMachine<BuildingController>(this);
             this.m_PStateMachine.SetCurrentState(Building_StateBeforeBuilt.Instance());

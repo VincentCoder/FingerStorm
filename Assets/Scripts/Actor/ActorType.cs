@@ -15,9 +15,9 @@ public enum ActorType
     SeniorGryphonRider,                                 //高级狮鹫骑士
     Crusader,                                                             //十字军
     TemplarWarrior,                                          //圣堂勇士
-    Oracle,                                                         //贤者
+    Sage,                                                         //贤者
     Knight,                                                            //骑士
     Paladin,                                                             //圣骑士
-    Priest                                                                  //牧师
+    Pastor                                                                  //牧师
 }
 

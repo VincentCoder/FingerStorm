@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+
+using UnityEngine;
 using System.Collections;
 using System.Text;
 
@@ -58,7 +60,12 @@ public class UIViewController : MonoBehaviour
 		selectorPanel.transform.parent = this.RootPanel.transform;
 		selectorPanel.transform.localScale = new Vector3(1,1,1);
 		selectorPanel.transform.localPosition = new Vector3(-125,-240, 0);
-		this.AddBuildingCard(new Building(0, BuildingType.Terran_Barrack,this.GameController.MyFactionType), 0);
+	    List<BuildingType> buildingTypes = BuildingsConfig.GetAllBuildingTypesOfRaceType(this.GameController.MyRaceType);
+	    for (int i = 0; i < buildingTypes.Count; i ++)
+	    {
+	        this.AddBuildingCard(new Building(0, buildingTypes[i], this.GameController.MyFactionType), i);
+	    }
+		/*this.AddBuildingCard(new Building(0, BuildingType.Terran_Barrack,this.GameController.MyFactionType), 0);
 		this.AddBuildingCard(new Building(0, BuildingType.Terran_Fortress,this.GameController.MyFactionType), 1);
 		this.AddBuildingCard(new Building(0, BuildingType.Terran_SniperHouse,this.GameController.MyFactionType), 2);
 		this.AddBuildingCard(new Building(0, BuildingType.Terran_MarksmanCamp,this.GameController.MyFactionType), 3);
@@ -68,7 +75,7 @@ public class UIViewController : MonoBehaviour
 		this.AddBuildingCard(new Building(0, BuildingType.Terran_Aviary,this.GameController.MyFactionType), 7);
 		this.AddBuildingCard(new Building(0, BuildingType.Terran_AdvancedAviary,this.GameController.MyFactionType), 8);
 		this.AddBuildingCard(new Building(0, BuildingType.Terran_Church,this.GameController.MyFactionType), 9);
-		this.AddBuildingCard(new Building(0, BuildingType.Terran_Temple,this.GameController.MyFactionType), 10);
+		this.AddBuildingCard(new Building(0, BuildingType.Terran_Temple,this.GameController.MyFactionType), 10);*/
 	}
 	
 	public void DestroyBuildingsSelectorPanel(bool now)
@@ -113,7 +120,7 @@ public class UIViewController : MonoBehaviour
         spriteName.Append("_");
         spriteName.Append(building.FactionType);
 		buildingCard.transform.FindChild("Building").gameObject.GetComponent<UISprite>().spriteName = spriteName.ToString();
-		buildingCard.transform.FindChild("GoldCost").gameObject.GetComponent<UILabel>().text = building.CoinCost.ToString();
+		buildingCard.transform.FindChild("GoldCost").gameObject.GetComponent<UILabel>().text = building.CoinCostLevel1.ToString();
 		buildingCard.transform.FindChild("BuildingName").gameObject.GetComponent<UILabel>().text = building.BuildingName;
 		
 		UIBuildingCardController buildingCardCtrl = buildingCard.GetComponent<UIBuildingCardController>();

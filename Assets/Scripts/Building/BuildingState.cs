@@ -123,9 +123,13 @@ public class Building_StateDispatching : State<BuildingController>
 {
     #region Fields
 
-    private int dispatchInterval;
+    private int dispatchIntervalLevel1;
 
-    private float dispatchIntervalCounter;
+    private float dispatchIntervalCounterLevel1;
+
+    private int dispatchIntervalLevel2;
+
+    private float dispatchIntervalCounterLevel2;
 
     #endregion
 
@@ -138,8 +142,10 @@ public class Building_StateDispatching : State<BuildingController>
 
     public override void Enter(BuildingController entityType)
     {
-        this.dispatchInterval = entityType.DispatchInterval;
-        this.dispatchIntervalCounter = 0f;
+        this.dispatchIntervalLevel1 = entityType.DispatchIntervalLevel1;
+        this.dispatchIntervalCounterLevel1 = 0f;
+        this.dispatchIntervalLevel2 = entityType.DispatchIntervalLevel2;
+        this.dispatchIntervalCounterLevel2 = 0f;
     }
 
     public override void Execute(BuildingController entityType)
@@ -148,18 +154,36 @@ public class Building_StateDispatching : State<BuildingController>
         {
             return;
         }
-        if (this.dispatchInterval != entityType.DispatchInterval)
+        if (this.dispatchIntervalLevel1 != entityType.DispatchIntervalLevel1)
         {
-            this.dispatchInterval = entityType.DispatchInterval;
-            this.dispatchIntervalCounter = 0f;
+            this.dispatchIntervalLevel1 = entityType.DispatchIntervalLevel1;
+            this.dispatchIntervalCounterLevel1 = 0f;
         }
         else
         {
-            this.dispatchIntervalCounter += Time.deltaTime;
-            if (this.dispatchIntervalCounter >= this.dispatchInterval)
+            this.dispatchIntervalCounterLevel1 += Time.deltaTime;
+            if (this.dispatchIntervalCounterLevel1 >= this.dispatchIntervalLevel1)
             {
-                this.DispatchActor(entityType);
-                this.dispatchIntervalCounter = 0f;
+                this.DispatchActor(entityType, BuildingLevel.BuildingLevel1);
+                this.dispatchIntervalCounterLevel1 = 0f;
+            }
+        }
+
+        if (entityType.Building.CurrentLevel == BuildingLevel.BuildingLevel2)
+        {
+            if (this.dispatchIntervalLevel2 != entityType.DispatchIntervalLevel2)
+            {
+                this.dispatchIntervalLevel2 = entityType.DispatchIntervalLevel2;
+                this.dispatchIntervalCounterLevel2 = 0f;
+            }
+            else
+            {
+                this.dispatchIntervalCounterLevel2 += Time.deltaTime;
+                if (this.dispatchIntervalCounterLevel2 >= this.dispatchIntervalLevel2)
+                {
+                    this.DispatchActor(entityType, BuildingLevel.BuildingLevel2);
+                    this.dispatchIntervalCounterLevel2 = 0f;
+                }
             }
         }
     }
@@ -178,12 +202,12 @@ public class Building_StateDispatching : State<BuildingController>
 
     #region Methods
 
-    private void DispatchActor(BuildingController entityType)
+    private void DispatchActor(BuildingController entityType, BuildingLevel buildingLevel)
     {
         ActorsManager.GetInstance()
             .CreateNewActor(
                 entityType.Building.FactionType,
-                entityType.Building.ActorType,
+                buildingLevel == BuildingLevel.BuildingLevel1 ? entityType.Building.ProducedActorTypeLevel1 : entityType.Building.ProducedActorTypeLevel2,
                 entityType.MyTransform.position);
     }
 
