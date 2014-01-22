@@ -61,9 +61,9 @@ public class UIPlayerSkillController : MonoBehaviour
 				break;
 			case "RoadblocksSurgery":
 		        {
-		            if (this.gameSceneController.Mp >= 0)
+		            if (this.gameSceneController.Mp >= 60)
 		            {
-		                this.gameSceneController.Mp -= 0;
+		                this.gameSceneController.Mp -= 60;
                         GameObject roadblocksSurgery =
 		                (GameObject)Instantiate(Resources.Load("GameScene/PlayerSkillRoadblocksSurgery"));
                         roadblocksSurgery.transform.position = new Vector3(Screen.width / 2, Screen.height / 2, 0);
