@@ -117,8 +117,32 @@ public class UIPlayerSkillController : MonoBehaviour
 				
 				break;
 			case "Bloodlust":
-				GameObject bloodlust = (GameObject)Instantiate(Resources.Load("GameScene/PlayerSkillBloodlust"));
-			bloodlust.transform.position = new Vector3(Screen.width/2, Screen.height/2, 0);
+		        {
+		            if (this.gameSceneController.Mp >= 120)
+		            {
+		                this.gameSceneController.Mp -= 120;
+                        GameObject bloodlust = (GameObject)Instantiate(Resources.Load("GameScene/PlayerSkillBloodlust"));
+                        bloodlust.transform.position = new Vector3(Screen.width/2, Screen.height/2, 0);
+		                tk2dSpriteAnimator animator = bloodlust.GetComponent<tk2dSpriteAnimator>();
+                        animator.Play("Release");
+		                animator.AnimationCompleted = delegate
+		                    {
+		                        List<GameObject> myActors =
+		                            ActorsManager.GetInstance().GetActorsOfFaction(this.gameSceneController.MyFactionType);
+                                myActors.ForEach(
+                                    actor =>
+                                        {
+                                            ActorController actorCtrl = actor.GetComponent<ActorController>();
+                                            actorCtrl.BloodSuckingRatio = 30;
+                                            actorCtrl.AttackPlusRatio = 1.5f;
+                                            GameObject bloodBustHalo = (GameObject)Instantiate(Resources.Load("GameScene/PlayerSkillBloodlust"));
+                                            bloodBustHalo.transform.parent = actor.transform;
+                                            bloodBustHalo.GetComponent<tk2dSpriteAnimator>().Play("Halo");
+                                        });
+		                    };
+		            }
+		        }
+		        
 				break;
 		}
 	}

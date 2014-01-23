@@ -377,6 +377,11 @@ public class ActorController : BaseGameEntity
         Hashtable parameters = new Hashtable();
         parameters.Add("Damage", damage);
         MessageDispatcher.Instance().DispatchMessage(0f, this, targeEntity, FSMessageType.FSMessageAttack, parameters);
+        if (damage.DamageValue > 0)
+        {
+            float bloodSuck = damage.DamageValue * this.BloodSuckingRatio * 0.01f;
+            this.MyActor.CurrentHp = Mathf.Min(this.MyActor.CurrentHp + bloodSuck, this.MyActor.TotalHp);
+        }
     }
 
     public void TakeDamage(Damage damage)

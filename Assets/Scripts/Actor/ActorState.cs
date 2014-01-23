@@ -349,6 +349,8 @@ public class Actor_StateFight : State<ActorController>
     //private static Actor_StateFight instance;
     private float attackSpeedCounter;
 
+    private GameObject bloodBustVampire;
+
     #endregion
 
     #region Public Methods and Operators
@@ -377,6 +379,7 @@ public class Actor_StateFight : State<ActorController>
                 entityType.SelfAnimator.SetFrame(0);
 				entityType.SendDamage(entityType.TargetEnemy, entityType.CalculateCommonAttackDamage(entityType.TargetEnemy));
             };
+        this.PlayVampireAnimation(entityType);
     }
 
     public override void Execute(ActorController entityType)
@@ -398,6 +401,7 @@ public class Actor_StateFight : State<ActorController>
                     entityType.SelfAnimator.SetFrame(0);
 					entityType.SendDamage(entityType.TargetEnemy, entityType.CalculateCommonAttackDamage(entityType.TargetEnemy));
                 };
+            this.PlayVampireAnimation(entityType);
             this.attackSpeedCounter = 0f;
         }
     }
@@ -411,6 +415,27 @@ public class Actor_StateFight : State<ActorController>
     public override bool OnMessage(ActorController entityType, Telegram telegram)
     {
         return base.OnMessage(entityType, telegram);
+    }
+
+    private void PlayVampireAnimation(ActorController entityType)
+    {
+        if (entityType.BloodSuckingRatio > 0)
+        {
+            if (this.bloodBustVampire == null)
+                bloodBustVampire = (GameObject)Object.Instantiate(Resources.Load("GameScene/PlayerSkillBloodlust"));
+            bloodBustVampire.SetActive(true);
+            bloodBustVampire.transform.parent = entityType.myTransform;
+            tk2dSpriteAnimator vampireAnimator = bloodBustVampire.GetComponent<tk2dSpriteAnimator>();
+            vampireAnimator.Play("Vampire");
+            vampireAnimator.AnimationCompleted = delegate
+            {
+                bloodBustVampire.SetActive(false);
+            };
+        }
+        else
+        {
+            Object.Destroy(this.bloodBustVampire);
+        }
     }
 
     #endregion
