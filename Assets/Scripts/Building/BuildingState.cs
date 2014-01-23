@@ -272,12 +272,8 @@ public class Building_StateBeforeDestroy : State<BuildingController>
             if(gameCtrl.GameType == GameType.PVP)
                 gameCtrl.Client.SendGameResult();
             gameCtrl.ViewController.ShowGameResultView(entityType.Building.FactionType != gameCtrl.MyFactionType);
-			Time.timeScale = 0;
         }
-        else
-        {
-            entityType.GetFSM().ChangeState(Building_StateDestroy.Instance());
-        }
+        entityType.GetFSM().ChangeState(Building_StateDestroy.Instance());
     }
 
     public override void Execute(BuildingController entityType)
@@ -309,7 +305,8 @@ public class Building_StateDestroy : State<BuildingController>
 
     public override void Enter(BuildingController entityType)
     {
-        Object.Destroy(entityType.gameObject);
+		BuildingsManager.GetInstance().DestroyBuilding(entityType.gameObject);
+        //Object.Destroy(entityType.gameObject);
     }
 
     public override void Execute(BuildingController entityType)

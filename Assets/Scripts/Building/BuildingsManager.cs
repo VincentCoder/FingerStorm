@@ -83,6 +83,7 @@ public class BuildingsManager
         }
         this.allBuildingsDictionary.Clear();
         this.baseBuildingDictionary.Clear();
+		this.buildingIdSeq = 0;
     }
 	
 	public void DestroyBuilding(GameObject building)

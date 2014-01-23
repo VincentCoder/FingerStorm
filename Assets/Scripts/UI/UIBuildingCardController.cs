@@ -102,7 +102,7 @@ public class UIBuildingCardController : MonoBehaviour
             }
             else
             {
-                Destroy(this.buildingObj);
+                BuildingsManager.GetInstance().DestroyBuilding(this.buildingObj);
             }
             this.IsDragging = false;
         }

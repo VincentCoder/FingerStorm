@@ -90,7 +90,11 @@ public class BuildingController : BaseGameEntity
         if (this.Building.CurrentHp <= damage.DamageValue)
         {
             this.Building.CurrentHp = 0;
-			this.m_PStateMachine.ChangeState(Building_StateBeforeDestroy.Instance());
+			if(!this.m_PStateMachine.CurrentState().GetType().IsInstanceOfType(typeof(Building_StateBeforeDestroy)) 
+				&& !this.m_PStateMachine.CurrentState().GetType().IsInstanceOfType(typeof(Building_StateDestroy)))
+			{
+				this.m_PStateMachine.ChangeState(Building_StateBeforeDestroy.Instance());
+			}
 		}
         else
         {

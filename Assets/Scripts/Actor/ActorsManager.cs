@@ -215,6 +215,20 @@ public class ActorsManager
 		if(this.actorsDictionary.ContainsKey(actorId))
 			this.actorsDictionary.Remove(actorId);
 	}
+	
+	public void DestroyAllActors()
+	{
+		foreach(KeyValuePair<int, GameObject> kv in this.actorsDictionary)
+		{
+			if(kv.Value != null)
+			{
+				ActorController actorCtrl = kv.Value.GetComponent<ActorController>();
+				actorCtrl.DestroySelf();
+			}
+		}
+		this.actorsDictionary.Clear();
+		actorIdSeq = 0;
+	}
 
     #endregion
 

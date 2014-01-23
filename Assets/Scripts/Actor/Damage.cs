@@ -9,6 +9,7 @@
         this.BleedDuration = 0f;
         this.BleedDps = 0;
         this.ShowCrit = false;
+		this.ActorSpellName = ActorSpellName.None;
     }
 
     public float DamageValue { get; set; }
@@ -24,4 +25,6 @@
     public float BleedDps { get; set; }
 
     public bool ShowCrit { get; set; }
+	
+	public ActorSpellName ActorSpellName {get;set;}
 }

@@ -119,7 +119,8 @@ public class Actor_GlobalState : State<ActorController>
                                 {
                                     GameObject maEffect =
                                         (GameObject)Object.Instantiate(Resources.Load("GameScene/ActorSkillEffect"));
-                                    maEffect.transform.position = enemy.transform.position + new Vector3(0, 0, -1);
+									maEffect.transform.parent = enemy.transform;
+									maEffect.transform.localPosition = new Vector3(0, 0, 0);
                                     tk2dSpriteAnimator animator = maEffect.GetComponent<tk2dSpriteAnimator>();
                                     animator.Play("Bombard");
                                     animator.AnimationCompleted = delegate
@@ -145,14 +146,18 @@ public class Actor_GlobalState : State<ActorController>
                                 {
                                     GameObject aeEffect =
                                         (GameObject)Object.Instantiate(Resources.Load("GameScene/ActorSkillEffect"));
-                                    aeEffect.transform.position = enemy.transform.position + new Vector3(0, 0, -1);
+									aeEffect.transform.parent = enemy.transform;
+									aeEffect.transform.localPosition = new Vector3(0, 0, 0);
                                     tk2dSpriteAnimator animator = aeEffect.GetComponent<tk2dSpriteAnimator>();
                                     animator.Play("ArcaneExplosion");
                                     animator.AnimationCompleted = delegate
                                         {
-                                            ActorController actorCtrl = enemy.GetComponent<ActorController>();
-                                            entityType.SendDamage(actorCtrl, motarAttackDamage);
-                                            Object.Destroy(aeEffect);
+											if(enemy != null)
+											{
+                                            	ActorController actorCtrl = enemy.GetComponent<ActorController>();
+                                            	entityType.SendDamage(actorCtrl, motarAttackDamage);
+                                            	Object.Destroy(aeEffect);
+											}
                                         };
                                 });
                     }
@@ -170,7 +175,8 @@ public class Actor_GlobalState : State<ActorController>
 
                         GameObject hlEffect =
                                         (GameObject)Object.Instantiate(Resources.Load("GameScene/ActorSkillEffect"));
-                        hlEffect.transform.position = targetActor.transform.position + new Vector3(0, 0, -1);
+						hlEffect.transform.parent = targetActor.transform;
+						hlEffect.transform.localPosition = new Vector3(0, 0, 0);
                         tk2dSpriteAnimator animator = hlEffect.GetComponent<tk2dSpriteAnimator>();
                         animator.Play("HolyLight");
                         animator.AnimationCompleted = delegate
@@ -232,8 +238,11 @@ public class Actor_StateWalk : State<ActorController>
             if (Vector3.Distance(entityType.ActorPath.CurrentNode(), entityType.myTransform.position)
                 <= entityType.MyActor.ActorAttack.AttackRange)
             {
-                entityType.TargetEnemy = entityType.TargetBuilding.GetComponent<BuildingController>();
-                entityType.GetFSM().ChangeState(Actor_StateFight.Instance());
+				if(entityType.TargetBuilding != null)
+				{
+					entityType.TargetEnemy = entityType.TargetBuilding.GetComponent<BuildingController>();
+                	entityType.GetFSM().ChangeState(Actor_StateFight.Instance());
+				}
                 return;
             }
         }
@@ -256,7 +265,7 @@ public class Actor_StateWalk : State<ActorController>
             else
             {
                 List<GameObject> enemies =
-                    entityType.SeekAndGetEnemiesInDistance(entityType.MyActor.ActorAttack.AttackRange, true);
+                    entityType.SeekAndGetEnemiesInDistance(entityType.MyActor.ActorAttack.AttackRange, false);
                 if (enemies.Count != 0)
                 {
                     entityType.TargetEnemy = enemies[0].GetComponent<ActorController>();
@@ -284,15 +293,27 @@ public class Actor_StateWalk : State<ActorController>
     private void ResetRotation(ActorController entityType)
     {
         Quaternion newQuaternion = Quaternion.Euler(0, 0, 0);
+		Transform hpBarTran = entityType.transform.FindChild("HpBar");
+		Transform hpBarBkgTran = entityType.transform.FindChild("HpBarBkg");
         if (entityType.ActorPath.CurrentNode().x < entityType.myTransform.position.x)
         {
             newQuaternion.eulerAngles = new Vector3(0, 180, 0);
             entityType.gameObject.transform.rotation = newQuaternion;
+			if(hpBarTran != null && hpBarBkgTran != null)
+			{
+				hpBarTran.localPosition = new Vector3(hpBarTran.localPosition.x, hpBarTran.localPosition.y, 0);
+				hpBarBkgTran.localPosition = new Vector3(hpBarBkgTran.localPosition.x, hpBarBkgTran.localPosition.y, -1);
+			}
         }
         else
         {
             newQuaternion.eulerAngles = new Vector3(0, 0, 0);
             entityType.gameObject.transform.rotation = newQuaternion;
+			if(hpBarTran != null && hpBarBkgTran != null)
+			{
+				hpBarTran.localPosition = new Vector3(hpBarTran.localPosition.x, hpBarTran.localPosition.y, -1);
+				hpBarBkgTran.localPosition = new Vector3(hpBarBkgTran.localPosition.x, hpBarBkgTran.localPosition.y, 0);
+			}
         }
     }
 
@@ -324,7 +345,10 @@ public class Actor_StateBeforeFight : State<ActorController>
             {
                 entityType.GetFSM().ChangeState(Actor_StateWalk.Instance());
             }
-            entityType.TargetEnemy = enemies[0].GetComponent<BuildingController>();
+			else
+			{
+				entityType.TargetEnemy = enemies[0].GetComponent<BuildingController>();
+			}
         }
         else
         {

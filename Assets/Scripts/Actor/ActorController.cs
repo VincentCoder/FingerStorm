@@ -194,6 +194,7 @@ public class ActorController : BaseGameEntity
                             {
                                 damage.DamageValue *= 1.5f;
                                 damage.ShowCrit = true;
+								damage.ActorSpellName = ActorSpellName.CirticalStrike;
                             }
                             break;
                         }
@@ -203,6 +204,7 @@ public class ActorController : BaseGameEntity
                             {
                                 damage.DamageValue *= 3f;
                                 damage.ShowCrit = true;
+								damage.ActorSpellName = ActorSpellName.HeadShot;
                             }
                             break;
                         }
@@ -481,6 +483,18 @@ public class ActorController : BaseGameEntity
         {
             this.ShowTip((-damage.DamageValue).ToString());
         }
+		
+		if(damage.ActorSpellName == ActorSpellName.CirticalStrike || damage.ActorSpellName == ActorSpellName.HeadShot)
+		{
+			GameObject shortRangeEffect = (GameObject)Instantiate(Resources.Load("GameScene/ActorSkillEffect"));
+            shortRangeEffect.name = "ShortRangeWeaponDamageEffect";
+			shortRangeEffect.transform.position = this.myTransform.position;
+            tk2dSpriteAnimator animator = shortRangeEffect.GetComponent<tk2dSpriteAnimator>();
+            animator.Play("ShortRangeWeaponDamage"); 
+			animator.AnimationCompleted = delegate {
+				Destroy(shortRangeEffect);
+			};
+		}
 
         if (damage.Stun)
         {

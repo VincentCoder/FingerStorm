@@ -109,6 +109,8 @@ public class UIEventController : MonoBehaviour
 				this.GameController.ViewController.DestroyBuildingDetailPanel(true);
 				this.GameController.ViewController.DestroyBuildingsSelectorPanel(true);
 				this.GameController.ViewController.DestroyGameResultView(true);
+				GameSceneController gameSceneCtrl = GameObject.Find("GameSceneController").GetComponent<GameSceneController>();
+				gameSceneCtrl.ClearGameScene();
 				this.GameController.GetFSM().ChangeState(GameState_HomePage.Instance());
 				break;
 			}

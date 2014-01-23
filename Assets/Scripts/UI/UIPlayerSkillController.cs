@@ -51,9 +51,12 @@ public class UIPlayerSkillController : MonoBehaviour
                                     tk2dSpriteAnimator animator = lightningBolt.GetComponent<tk2dSpriteAnimator>();
                                     animator.AnimationCompleted = delegate
                                         {
-                                            ActorController actorCtrl = enemyActor.GetComponent<ActorController>();
-                                            actorCtrl.TakeDamage(lightningBoltDamage);
-                                            Destroy(lightningBolt);
+											if(enemyActor != null)
+											{
+												ActorController actorCtrl = enemyActor.GetComponent<ActorController>();
+                                            	actorCtrl.TakeDamage(lightningBoltDamage);
+                                            	Destroy(lightningBolt);
+											}
                                         };
                                 });
                         //List<GameObject> enemyBuildings = BuildingsManager.GetInstance().GetAllEnemyBuildings(this.gameSceneController.MyFactionType);
