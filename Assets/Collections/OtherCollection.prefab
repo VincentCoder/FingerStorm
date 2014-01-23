@@ -61,7 +61,7 @@ MonoBehaviour:
   atlasWidth: 64
   atlasHeight: 64
   forceSquareAtlas: 0
-  atlasWastage: 38.9648438
+  atlasWastage: 46.484375
   allowMultipleAtlases: 0
   removeDuplicates: 1
   textureParams:
@@ -69,7 +69,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 553ada1490abe4594be4769ef3a64c01, type: 3}
+    texture: {fileID: 2800000, guid: c65327f79b68bc943b60e179bd8d37d8, type: 3}
     materialId: 0
     anchor: 3
     anchorX: 0
@@ -105,7 +105,47 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  spriteCollection: {fileID: 11400000, guid: a1b56397373964b558efc2c123c4c4a4, type: 2}
+  - name: HpBarBkg
+    disableTrimming: 0
+    additive: 0
+    scale: {x: 1, y: 1, z: 1}
+    texture: {fileID: 2800000, guid: 8a0c2bed170671c4cab194fdbcb78306, type: 3}
+    materialId: 0
+    anchor: 4
+    anchorX: 0
+    anchorY: 0
+    overrideMesh: {fileID: 0}
+    doubleSidedSprite: 0
+    customSpriteGeometry: 0
+    geometryIslands: []
+    dice: 0
+    diceUnitX: 64
+    diceUnitY: 64
+    diceFilter: 0
+    pad: 0
+    extraPadding: 0
+    source: 0
+    fromSpriteSheet: 0
+    hasSpriteSheetId: 0
+    spriteSheetId: 0
+    spriteSheetX: 0
+    spriteSheetY: 0
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    regionId: 0
+    colliderType: 0
+    boxColliderMin: {x: 0, y: 0}
+    boxColliderMax: {x: 0, y: 0}
+    polyColliderIslands: []
+    polyColliderCap: 1
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    colliderColor: 0
+    attachPoints: []
+  spriteCollection: {fileID: 11400000, guid: d9f1786737c51cf41ab64798076f3b59, type: 2}
   premultipliedAlpha: 0
   altMaterials:
   - {fileID: 2100000, guid: f1de1d5dc973e4a14a9649eac60b1c7a, type: 2}

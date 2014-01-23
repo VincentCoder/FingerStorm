@@ -736,19 +736,6 @@ MonoBehaviour:
     loadable: 0
     assetName: 
     version: 3
-  - name: OtherCollection
-    spriteCollectionGUID: 2b20ee65f47034555adca2f13d54aed1
-    spriteCollectionDataGUID: a1b56397373964b558efc2c123c4c4a4
-    spriteNames:
-    - HpBar
-    spriteTextureGUIDs:
-    - 553ada1490abe4594be4769ef3a64c01
-    spriteTextureTimeStamps:
-    - 1390348109
-    managedSpriteCollection: 0
-    loadable: 0
-    assetName: 
-    version: 3
   - name: PlayerSkillBloodlustCollection
     spriteCollectionGUID: a8ad878c42dab48a58ce82e13921106a
     spriteCollectionDataGUID: 3029991702167490e9f39ddba3b9a481
@@ -2814,6 +2801,22 @@ MonoBehaviour:
     - 1389779688
     - 1389779688
     - 1389779688
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: OtherCollection
+    spriteCollectionGUID: 6a6e4ef4a134f1a47bccb3e5550fa6a9
+    spriteCollectionDataGUID: d9f1786737c51cf41ab64798076f3b59
+    spriteNames:
+    - HpBar
+    - HpBarBkg
+    spriteTextureGUIDs:
+    - c65327f79b68bc943b60e179bd8d37d8
+    - 8a0c2bed170671c4cab194fdbcb78306
+    spriteTextureTimeStamps:
+    - 1390473996
+    - 1390473841
     managedSpriteCollection: 0
     loadable: 0
     assetName: 

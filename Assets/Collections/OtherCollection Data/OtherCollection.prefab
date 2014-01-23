@@ -44,28 +44,66 @@ MonoBehaviour:
   spriteDefinitions:
   - name: HpBar
     boundsData:
-    - {x: 32, y: 0, z: 0}
-    - {x: 46, y: 46, z: 0}
+    - {x: 32, y: -.5, z: 0}
+    - {x: 46, y: 15, z: 0}
     untrimmedBoundsData:
     - {x: 32, y: 0, z: 0}
-    - {x: 64, y: 64, z: 0}
+    - {x: 64, y: 32, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: 9, y: -23, z: 0}
-    - {x: 55, y: -23, z: 0}
-    - {x: 9, y: 23, z: 0}
-    - {x: 55, y: 23, z: 0}
+    - {x: 9, y: -8, z: 0}
+    - {x: 55, y: -8, z: 0}
+    - {x: 9, y: 7, z: 0}
+    - {x: 55, y: 7, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .0312656239, y: .390640616}
+    - {x: .749984384, y: .390640616}
+    - {x: .0312656239, y: .624984384}
+    - {x: .749984384, y: .624984384}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: f1de1d5dc973e4a14a9649eac60b1c7a, type: 2}
+    materialId: 0
+    sourceTextureGUID: c65327f79b68bc943b60e179bd8d37d8
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    attachPoints: []
+  - name: HpBarBkg
+    boundsData:
+    - {x: 0, y: -.5, z: 0}
+    - {x: 50, y: 19, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 32, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -25, y: -10, z: 0}
+    - {x: 25, y: -10, z: 0}
+    - {x: -25, y: 9, z: 0}
+    - {x: 25, y: 9, z: 0}
     normals: []
     tangents: []
     uvs:
     - {x: .0312656239, y: .0312656239}
-    - {x: .749984384, y: .0312656239}
-    - {x: .0312656239, y: .749984384}
-    - {x: .749984384, y: .749984384}
+    - {x: .812484384, y: .0312656239}
+    - {x: .0312656239, y: .328109384}
+    - {x: .812484384, y: .328109384}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: f1de1d5dc973e4a14a9649eac60b1c7a, type: 2}
     materialId: 0
-    sourceTextureGUID: 553ada1490abe4594be4769ef3a64c01
+    sourceTextureGUID: 8a0c2bed170671c4cab194fdbcb78306
     extractRegion: 0
     regionX: 0
     regionY: 0
@@ -87,14 +125,14 @@ MonoBehaviour:
   textures:
   - {fileID: 2800000, guid: 5b45f063ebe414bdc9fa2360b9accd9a, type: 3}
   allowMultipleAtlases: 0
-  spriteCollectionGUID: 2b20ee65f47034555adca2f13d54aed1
+  spriteCollectionGUID: 6a6e4ef4a134f1a47bccb3e5550fa6a9
   spriteCollectionName: OtherCollection
   assetName: 
   loadable: 0
   invOrthoSize: 2
   halfTargetHeight: .5
-  buildKey: 1396537194
-  dataGuid: a1b56397373964b558efc2c123c4c4a4
+  buildKey: 699704785
+  dataGuid: d9f1786737c51cf41ab64798076f3b59
   managedSpriteCollection: 0
   hasPlatformData: 0
   spriteCollectionPlatforms: []
