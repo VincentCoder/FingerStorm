@@ -23,6 +23,10 @@ public class ActorController : BaseGameEntity
 
     private tk2dSpriteAnimator _selfAnimator;
 
+    private tk2dSpriteAnimator stunEffectAnimator;
+
+    private tk2dSpriteAnimator bleedEffectAnimator;
+
     private tk2dSlicedSprite hpBarSprite;
 
     private float hpbarLength;
@@ -45,7 +49,36 @@ public class ActorController : BaseGameEntity
 
     public int BloodSuckingRatio { get; set; }
 
-    public bool IsBleed { get; set; }
+    public bool IsBleed
+    {
+        get
+        {
+            return this.isBleed;
+        }
+        set
+        {
+            this.isBleed = value;
+            if (this.isBleed)
+            {
+                if (this.bleedEffectAnimator == null)
+                {
+                    GameObject bleedEffect = (GameObject)Instantiate(Resources.Load("GameScene/ActorSkillEffect"));
+                    bleedEffect.name = "BleedEffect";
+                    bleedEffect.transform.parent = this.myTransform;
+                    bleedEffect.transform.localPosition = new Vector3(0,0,0);
+                    this.bleedEffectAnimator = bleedEffect.GetComponent<tk2dSpriteAnimator>();
+                    this.bleedEffectAnimator.Play("Bleed");
+                }
+            }
+            else
+            {
+                if (this.bleedEffectAnimator  != null)
+                {
+                    Destroy(this.bleedEffectAnimator.gameObject);
+                }
+            }
+        }
+    }
 
     public bool IsStun
     {
@@ -63,12 +96,25 @@ public class ActorController : BaseGameEntity
                     this.SelfAnimator.Pause();
                     this.ShowTip("Stun");
                 }
+                if (this.stunEffectAnimator == null)
+                {
+                    GameObject stunEffect = (GameObject)Instantiate(Resources.Load("GameScene/ActorSkillEffect"));
+                    stunEffect.name = "StunEffect";
+                    stunEffect.transform.parent = this.myTransform;
+                    stunEffect.transform.localPosition = new Vector3(0, 0, 0);
+                    this.bleedEffectAnimator = stunEffect.GetComponent<tk2dSpriteAnimator>();
+                    this.bleedEffectAnimator.Play("Dizzy");
+                }
             }
             else
             {
                 if (this.SelfAnimator.Paused)
                 {
                     this.SelfAnimator.Resume();
+                }
+                if (this.stunEffectAnimator  != null)
+                {
+                    Destroy(this.stunEffectAnimator.gameObject);
                 }
             }
         }

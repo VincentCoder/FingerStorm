@@ -1,6 +1,5 @@
 ﻿#region
 
-using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
@@ -46,33 +45,33 @@ public class Actor_GlobalState : State<ActorController>
             if (entityType.StunDuration <= 0)
             {
                 entityType.IsStun = false;
-				entityType.StunDuration = 0;
+                entityType.StunDuration = 0;
             }
             return;
         }
-		
-		if(entityType.IsBleed)
-		{
-			entityType.BleedDuration -= Time.deltaTime;
-			Damage bleedDamage = new Damage();
-			bleedDamage.DamageValue = entityType.BleedDps * Time.deltaTime;
-			entityType.TakeDamage(bleedDamage);
-			if(entityType.BleedDuration <= 0)
-			{
-				entityType.IsBleed = false;
-				entityType.BleedDps = 0;
-				entityType.BleedDuration = 0;
-			}
-		}
-		
+
+        if (entityType.IsBleed)
+        {
+            entityType.BleedDuration -= Time.deltaTime;
+            Damage bleedDamage = new Damage();
+            bleedDamage.DamageValue = entityType.BleedDps * Time.deltaTime;
+            entityType.TakeDamage(bleedDamage);
+            if (entityType.BleedDuration <= 0)
+            {
+                entityType.IsBleed = false;
+                entityType.BleedDps = 0;
+                entityType.BleedDuration = 0;
+            }
+        }
+
         if (this.releaseCounterDictionary != null && this.activeSpellDictionary != null)
         {
             //foreach (KeyValuePair<ActorSpellName, float> kv in this.releaseCounterDictionary)
-			ActorSpellName[] actorSpellArray = new ActorSpellName[this.releaseCounterDictionary.Keys.Count];
-			float[] counterArray = new float[this.releaseCounterDictionary.Keys.Count];
-			this.releaseCounterDictionary.Keys.CopyTo(actorSpellArray, 0);
-			this.releaseCounterDictionary.Values.CopyTo(counterArray, 0);
-			for(int i = 0; i < counterArray.Length; i ++)	
+            ActorSpellName[] actorSpellArray = new ActorSpellName[this.releaseCounterDictionary.Keys.Count];
+            float[] counterArray = new float[this.releaseCounterDictionary.Keys.Count];
+            this.releaseCounterDictionary.Keys.CopyTo(actorSpellArray, 0);
+            this.releaseCounterDictionary.Values.CopyTo(counterArray, 0);
+            for (int i = 0; i < counterArray.Length; i ++)
             {
                 float temp = counterArray[i] + Time.deltaTime;
                 ActorSpell spell = this.activeSpellDictionary[actorSpellArray[i]];
@@ -94,7 +93,7 @@ public class Actor_GlobalState : State<ActorController>
     {
         if (telegram.Msg == FSMessageType.FSMessageAttack)
         {
-			if (telegram.Parameters.ContainsKey("Damage"))
+            if (telegram.Parameters.ContainsKey("Damage"))
             {
                 entityType.TakeDamage((Damage)telegram.Parameters["Damage"]);
                 return true;
@@ -112,14 +111,24 @@ public class Actor_GlobalState : State<ActorController>
                     List<GameObject> enemies = entityType.SeekAndGetEnemiesInDistance(40);
                     if (enemies != null && enemies.Count != 0)
                     {
-						Damage motarAttackDamage = new Damage();
-						motarAttackDamage.DamageValue = 21;
-						motarAttackDamage.ShowCrit = true;
-						enemies.ForEach(enemy => 
-						{
-							ActorController actorCtrl = enemy.GetComponent<ActorController>();
-							entityType.SendDamage(actorCtrl, motarAttackDamage);
-						});
+                        Damage motarAttackDamage = new Damage();
+                        motarAttackDamage.DamageValue = 21;
+                        motarAttackDamage.ShowCrit = true;
+                        enemies.ForEach(
+                            enemy =>
+                                {
+                                    GameObject maEffect =
+                                        (GameObject)Object.Instantiate(Resources.Load("GameScene/ActorSkillEffect"));
+                                    maEffect.transform.position = enemy.transform.position + new Vector3(0, 0, -1);
+                                    tk2dSpriteAnimator animator = maEffect.GetComponent<tk2dSpriteAnimator>();
+                                    animator.Play("Bombard");
+                                    animator.AnimationCompleted = delegate
+                                    {
+                                        ActorController actorCtrl = enemy.GetComponent<ActorController>();
+                                        entityType.SendDamage(actorCtrl, motarAttackDamage);
+                                        Object.Destroy(maEffect);
+                                    };
+                                });
                     }
                     break;
                 }
@@ -129,28 +138,50 @@ public class Actor_GlobalState : State<ActorController>
                     if (enemies != null && enemies.Count != 0)
                     {
                         Damage motarAttackDamage = new Damage();
-						motarAttackDamage.DamageValue = 27;
-						motarAttackDamage.ShowCrit = true;
-						enemies.ForEach(enemy => 
-						{
-							ActorController actorCtrl = enemy.GetComponent<ActorController>();
-							entityType.SendDamage(actorCtrl, motarAttackDamage);
-						});
+                        motarAttackDamage.DamageValue = 27;
+                        motarAttackDamage.ShowCrit = true;
+                        enemies.ForEach(
+                            enemy =>
+                                {
+                                    GameObject aeEffect =
+                                        (GameObject)Object.Instantiate(Resources.Load("GameScene/ActorSkillEffect"));
+                                    aeEffect.transform.position = enemy.transform.position + new Vector3(0, 0, -1);
+                                    tk2dSpriteAnimator animator = aeEffect.GetComponent<tk2dSpriteAnimator>();
+                                    animator.Play("ArcaneExplosion");
+                                    animator.AnimationCompleted = delegate
+                                        {
+                                            ActorController actorCtrl = enemy.GetComponent<ActorController>();
+                                            entityType.SendDamage(actorCtrl, motarAttackDamage);
+                                            Object.Destroy(aeEffect);
+                                        };
+                                });
                     }
                     break;
                 }
-			case ActorSpellName.HolyLight:
-			{
-				List<GameObject> myActors = ActorsManager.GetInstance().GetActorsOfFaction(entityType.MyActor.FactionType);
-				if(myActors != null && myActors.Count != 0)
-				{
-					GameObject targetActor = myActors[Random.Range(0, myActors.Count)];
-					Damage zapDamage = new Damage();
-					zapDamage.DamageValue = -300;
-					entityType.SendDamage(targetActor.GetComponent<ActorController>(), zapDamage);
-				}
-				break;
-			}
+            case ActorSpellName.HolyLight:
+                {
+                    List<GameObject> myActors =
+                        ActorsManager.GetInstance().GetActorsOfFaction(entityType.MyActor.FactionType);
+                    if (myActors != null && myActors.Count != 0)
+                    {
+                        GameObject targetActor = myActors[Random.Range(0, myActors.Count)];
+                        Damage zapDamage = new Damage();
+                        zapDamage.DamageValue = -300;
+
+                        GameObject hlEffect =
+                                        (GameObject)Object.Instantiate(Resources.Load("GameScene/ActorSkillEffect"));
+                        hlEffect.transform.position = targetActor.transform.position + new Vector3(0, 0, -1);
+                        tk2dSpriteAnimator animator = hlEffect.GetComponent<tk2dSpriteAnimator>();
+                        animator.Play("HolyLight");
+                        animator.AnimationCompleted = delegate
+                        {
+                            ActorController actorCtrl = targetActor.GetComponent<ActorController>();
+                            entityType.SendDamage(targetActor.GetComponent<ActorController>(), zapDamage);
+                            Object.Destroy(hlEffect);
+                        };
+                    }
+                    break;
+                }
         }
     }
 
@@ -159,11 +190,7 @@ public class Actor_GlobalState : State<ActorController>
 
 public class Actor_StateWalk : State<ActorController>
 {
-    #region Static Fields
-
     //private static Actor_StateWalk instance;
-
-    #endregion
 
     #region Fields
 
@@ -193,29 +220,31 @@ public class Actor_StateWalk : State<ActorController>
 
     public override void Execute(ActorController entityType)
     {
-        if(entityType.IsStun)
+        if (entityType.IsStun)
+        {
             return;
+        }
         Vector3 moveDistance = entityType.moveSpeed * Time.deltaTime
-                               * (entityType.ActorPath.CurrentNode() - entityType.myTransform.position)
-                                     .normalized;
-		entityType.myTransform.Translate(moveDistance, Space.World);
-		if(entityType.ActorPath.CurrentIndex == entityType.ActorPath.NodesCount() - 1)
-		{
-			if(Vector3.Distance(entityType.ActorPath.CurrentNode(), entityType.myTransform.position) <= entityType.MyActor.ActorAttack.AttackRange)
-			{
-				entityType.TargetEnemy = entityType.TargetBuilding.GetComponent<BuildingController>();
-				entityType.GetFSM().ChangeState(Actor_StateFight.Instance());
-				return;
-			}
-		}
-		if((entityType.ActorPath.CurrentNode() - entityType.myTransform.position).sqrMagnitude <= 0.5)
-		{
-		    if (entityType.ActorPath.HasNext())
-		    {
+                               * (entityType.ActorPath.CurrentNode() - entityType.myTransform.position).normalized;
+        entityType.myTransform.Translate(moveDistance, Space.World);
+        if (entityType.ActorPath.CurrentIndex == entityType.ActorPath.NodesCount() - 1)
+        {
+            if (Vector3.Distance(entityType.ActorPath.CurrentNode(), entityType.myTransform.position)
+                <= entityType.MyActor.ActorAttack.AttackRange)
+            {
+                entityType.TargetEnemy = entityType.TargetBuilding.GetComponent<BuildingController>();
+                entityType.GetFSM().ChangeState(Actor_StateFight.Instance());
+                return;
+            }
+        }
+        if ((entityType.ActorPath.CurrentNode() - entityType.myTransform.position).sqrMagnitude <= 0.5)
+        {
+            if (entityType.ActorPath.HasNext())
+            {
                 entityType.ActorPath.NextNode();
                 this.ResetRotation(entityType);
-		    }
-		}
+            }
+        }
 
         this.seekEnemyCounter += Time.deltaTime;
         if (this.seekEnemyCounter >= this.seekEnemyInterval)
@@ -224,15 +253,16 @@ public class Actor_StateWalk : State<ActorController>
             {
                 entityType.GetFSM().ChangeState(Actor_StateBeforeFight.Instance());
             }
-			else 
-			{	
-				List<GameObject> enemies = entityType.SeekAndGetEnemiesInDistance(entityType.MyActor.ActorAttack.AttackRange, true);
-				if(enemies.Count != 0)
-				{
-					entityType.TargetEnemy = enemies[0].GetComponent<ActorController>();
-					entityType.GetFSM().ChangeState(Actor_StateFight.Instance());
-				}
-			}
+            else
+            {
+                List<GameObject> enemies =
+                    entityType.SeekAndGetEnemiesInDistance(entityType.MyActor.ActorAttack.AttackRange, true);
+                if (enemies.Count != 0)
+                {
+                    entityType.TargetEnemy = enemies[0].GetComponent<ActorController>();
+                    entityType.GetFSM().ChangeState(Actor_StateFight.Instance());
+                }
+            }
             this.seekEnemyCounter = 0.0f;
         }
     }
@@ -247,7 +277,11 @@ public class Actor_StateWalk : State<ActorController>
         return base.OnMessage(entityType, telegram);
     }
 
-    private void ResetRotation ( ActorController entityType )
+    #endregion
+
+    #region Methods
+
+    private void ResetRotation(ActorController entityType)
     {
         Quaternion newQuaternion = Quaternion.Euler(0, 0, 0);
         if (entityType.ActorPath.CurrentNode().x < entityType.myTransform.position.x)
@@ -271,12 +305,12 @@ public class Actor_StateBeforeFight : State<ActorController>
 
     public static Actor_StateBeforeFight Instance()
     {
-		return new Actor_StateBeforeFight();
+        return new Actor_StateBeforeFight();
     }
 
     public override void Enter(ActorController entityType)
     {
-		StringBuilder animName = new StringBuilder("Terran_");
+        StringBuilder animName = new StringBuilder("Terran_");
         animName.Append(entityType.MyActor.ActorType);
         animName.Append("_Walk_");
         animName.Append(entityType.MyActor.FactionType);
@@ -286,15 +320,11 @@ public class Actor_StateBeforeFight : State<ActorController>
         if (enemies == null || enemies.Count == 0)
         {
             enemies = entityType.SeekAndGetEnemyBuildings();
-            if(enemies == null || enemies.Count == 0)
+            if (enemies == null || enemies.Count == 0)
             {
                 entityType.GetFSM().ChangeState(Actor_StateWalk.Instance());
-                return;
             }
-            else
-            {
-                entityType.TargetEnemy = enemies[0].GetComponent<BuildingController>();
-            }
+            entityType.TargetEnemy = enemies[0].GetComponent<BuildingController>();
         }
         else
         {
@@ -304,8 +334,10 @@ public class Actor_StateBeforeFight : State<ActorController>
 
     public override void Execute(ActorController entityType)
     {
-        if(entityType.IsStun)
+        if (entityType.IsStun)
+        {
             return;
+        }
 
         if (entityType.TargetEnemy == null)
         {
@@ -340,7 +372,7 @@ public class Actor_StateBeforeFight : State<ActorController>
 
 public class Actor_StateFight : State<ActorController>
 {
-    #region Static Fields
+    #region Fields
 
     private float attackSpeedCounter;
 
@@ -352,7 +384,7 @@ public class Actor_StateFight : State<ActorController>
 
     public static Actor_StateFight Instance()
     {
-		return new Actor_StateFight();
+        return new Actor_StateFight();
     }
 
     public override void Enter(ActorController entityType)
@@ -368,18 +400,22 @@ public class Actor_StateFight : State<ActorController>
         animName.Append("_Attack_");
         animName.Append(entityType.MyActor.FactionType);
         entityType.SelfAnimator.Play(animName.ToString());
-        entityType.SelfAnimator.AnimationCompleted = delegate 
+        entityType.SelfAnimator.AnimationCompleted = delegate
             {
                 entityType.SelfAnimator.SetFrame(0);
-				entityType.SendDamage(entityType.TargetEnemy, entityType.CalculateCommonAttackDamage(entityType.TargetEnemy));
+                entityType.SendDamage(
+                    entityType.TargetEnemy,
+                    entityType.CalculateCommonAttackDamage(entityType.TargetEnemy));
             };
         this.PlayVampireAnimation(entityType);
     }
 
     public override void Execute(ActorController entityType)
     {
-        if(entityType.IsStun)
+        if (entityType.IsStun)
+        {
             return;
+        }
         if (entityType.TargetEnemy == null)
         {
             entityType.GetFSM().ChangeState(Actor_StateBeforeFight.Instance());
@@ -393,7 +429,9 @@ public class Actor_StateFight : State<ActorController>
             entityType.SelfAnimator.AnimationCompleted = delegate
                 {
                     entityType.SelfAnimator.SetFrame(0);
-					entityType.SendDamage(entityType.TargetEnemy, entityType.CalculateCommonAttackDamage(entityType.TargetEnemy));
+                    entityType.SendDamage(
+                        entityType.TargetEnemy,
+                        entityType.CalculateCommonAttackDamage(entityType.TargetEnemy));
                 };
             this.PlayVampireAnimation(entityType);
             this.attackSpeedCounter = 0f;
@@ -410,20 +448,23 @@ public class Actor_StateFight : State<ActorController>
         return base.OnMessage(entityType, telegram);
     }
 
+    #endregion
+
+    #region Methods
+
     private void PlayVampireAnimation(ActorController entityType)
     {
         if (entityType.BloodSuckingRatio > 0)
         {
             if (this.bloodBustVampire == null)
-                bloodBustVampire = (GameObject)Object.Instantiate(Resources.Load("GameScene/PlayerSkillBloodlust"));
-            bloodBustVampire.SetActive(true);
-            bloodBustVampire.transform.parent = entityType.myTransform;
-            tk2dSpriteAnimator vampireAnimator = bloodBustVampire.GetComponent<tk2dSpriteAnimator>();
-            vampireAnimator.Play("Vampire");
-            vampireAnimator.AnimationCompleted = delegate
             {
-                bloodBustVampire.SetActive(false);
-            };
+                this.bloodBustVampire = (GameObject)Object.Instantiate(Resources.Load("GameScene/PlayerSkillBloodlust"));
+            }
+            this.bloodBustVampire.SetActive(true);
+            this.bloodBustVampire.transform.parent = entityType.myTransform;
+            tk2dSpriteAnimator vampireAnimator = this.bloodBustVampire.GetComponent<tk2dSpriteAnimator>();
+            vampireAnimator.Play("Vampire");
+            vampireAnimator.AnimationCompleted = delegate { this.bloodBustVampire.SetActive(false); };
         }
         else
         {
@@ -436,18 +477,14 @@ public class Actor_StateFight : State<ActorController>
 
 public class Actor_StateBeforeDie : State<ActorController>
 {
-    #region Static Fields
-
     //private static Actor_StateBeforeDie instance;
-
-    #endregion
 
     #region Public Methods and Operators
 
     public static Actor_StateBeforeDie Instance()
     {
         //return instance ?? (instance = new Actor_StateBeforeDie());
-		return new Actor_StateBeforeDie();
+        return new Actor_StateBeforeDie();
     }
 
     public override void Enter(ActorController entityType)
@@ -479,18 +516,14 @@ public class Actor_StateBeforeDie : State<ActorController>
 
 public class Actor_StateDie : State<ActorController>
 {
-    #region Static Fields
-
     //private static Actor_StateDie instance;
-
-    #endregion
 
     #region Public Methods and Operators
 
     public static Actor_StateDie Instance()
     {
         //return instance ?? (instance = new Actor_StateDie());
-		return new Actor_StateDie();
+        return new Actor_StateDie();
     }
 
     public override void Enter(ActorController entityType)
