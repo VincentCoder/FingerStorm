@@ -139,7 +139,7 @@ public class Actor_GlobalState : State<ActorController>
                     }
                     break;
                 }
-			case ActorSpellName.Zap:
+			case ActorSpellName.HolyLight:
 			{
 				List<GameObject> myActors = ActorsManager.GetInstance().GetActorsOfFaction(entityType.MyActor.FactionType);
 				if(myActors != null && myActors.Count != 0)

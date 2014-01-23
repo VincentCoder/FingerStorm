@@ -512,11 +512,11 @@ public class Actor
                 case "ChainLightning":
                     actorSpell = new ActorSpell(ActorSpellName.ChainLightning, this.ActorType);
                     break;
-                case "DivineBlessing":
-                    actorSpell = new ActorSpell(ActorSpellName.DivineBlessing, this.ActorType);
+                case "GodBless":
+                    actorSpell = new ActorSpell(ActorSpellName.GodBless, this.ActorType);
                     break;
-                case "Zap":
-                    actorSpell = new ActorSpell(ActorSpellName.Zap, this.ActorType);
+                case "HolyLight":
+                    actorSpell = new ActorSpell(ActorSpellName.HolyLight, this.ActorType);
                     break;
                 default:
                     actorSpell = new ActorSpell(ActorSpellName.None, this.ActorType);

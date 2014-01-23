@@ -53,6 +53,10 @@ MonoBehaviour:
     dataGUID: 
     managed: 0
     loadable: 0
+  - assetGUID: 76273825d740fa648bd60c3cbf2b4130
+    dataGUID: 
+    managed: 0
+    loadable: 0
   fontIndex:
   - assetGUID: 063b15d80dbb4604d890600a64c79cf8
     dataGUID: e7a6b09a73c6b2b4f8060096ddbd3b5e
@@ -2817,6 +2821,190 @@ MonoBehaviour:
     spriteTextureTimeStamps:
     - 1390473996
     - 1390473841
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: ActorSkillEffectsCollection
+    spriteCollectionGUID: 2cc3c21f3c7ce0e41abb7d38f8d22cf6
+    spriteCollectionDataGUID: 390404dc7710af3419dd70d66f274d0c
+    spriteNames:
+    - ArcaneExplosion0001
+    - ArcaneExplosion0002
+    - ArcaneExplosion0003
+    - ArcaneExplosion0004
+    - ArcaneExplosion0005
+    - ArcaneExplosion0006
+    - ArcaneExplosion0007
+    - ArcaneExplosion0008
+    - Bleed_0001
+    - Bleed_0002
+    - Bleed_0003
+    - Bleed_0004
+    - Bleed_0005
+    - Bleed_0006
+    - Boom_40AOE_0001
+    - Boom_40AOE_0002
+    - Boom_40AOE_0003
+    - Boom_40AOE_0004
+    - Boom_40AOE_0005
+    - Boom_40AOE_0006
+    - Boom_40AOE_0007
+    - ChainLightning_A_0001
+    - ChainLightning_A_0002
+    - ChainLightning_A_0003
+    - ChainLightning_A_0004
+    - ChainLightning_B_0001
+    - ChainLightning_B_0002
+    - ChainLightning_B_0003
+    - ChainLightning_B_0004
+    - Dizzy_0001
+    - Dizzy_0002
+    - Dizzy_0003
+    - GodBless_0001
+    - GodBless_0002
+    - GodBless_0003
+    - GodBless_0004
+    - GodBless_0005
+    - GodBless_0006
+    - GodBless_0007
+    - GodBless_0008
+    - HolyLight_0001
+    - HolyLight_0002
+    - HolyLight_0003
+    - HolyLight_0004
+    - HolyLight_0005
+    - HolyLight_0006
+    - HolyLight_0007
+    - HolyLight_0008
+    - HolyLight_0009
+    - HolyLight_0010
+    - HolyLight_0011
+    - HolyLight_0012
+    - HolyLight_0013
+    - HolyLight_0014
+    - Boom_Small_0001
+    - Boom_Small_0002
+    - Boom_Small_0003
+    - Boom_Small_0004
+    spriteTextureGUIDs:
+    - 615fa7a38262bcf498742ec9d4eefb1d
+    - ee9052a53a0e28849a36ef7fd33b3ff7
+    - 7189feb97c95caf45a8c0b974fb5b9b1
+    - a4ceed357f92fb940a5828b31e9299a7
+    - 72c3b79ff8359e040a87c3458b2bdf78
+    - f3d31aafa760b4646aee5393099c0b0e
+    - 59f9fb6363613d547a5df723c9589618
+    - fa5539dbbb063ab45a40fb514bfa5319
+    - 3e5fbd127f7108a49843656f95be0449
+    - e2aa12c5fd817af41a18b98f9a473728
+    - e02a181e21dcf2143869b2ea7149ea98
+    - a636d89a6375e70409529c94af2c0e34
+    - 1c1844e6e9de9b340bf7828af877f843
+    - a4ffef36ef271fc428308c04d4f26f88
+    - 8488a3419191caa448bb49ff53c50f89
+    - 6556d3388c349a445a6e626e458b9c23
+    - 41e54af6b7f27664797efaa8da28f7ae
+    - a39b9aaa88d2c7b4dbc78b619eb458e4
+    - 6645aa38bfff18449a71571dc44868ff
+    - 4df5e34e44e3a72428f997c8a6952dae
+    - 5bea48b708c276d4c8eb4c1e8e7b0ac8
+    - 8cf93a01acb61a5479eb3a63699bac0e
+    - 81046694e3d96314c8f544b5018916a1
+    - b05d26b73fec31542acd97ffcb0d5722
+    - 1960ce90636167b40a94a43e4e25c4bc
+    - 1c13d4e2ea2bc2745b15cf7ae3a953fc
+    - dfcdf918614ed6742bf5538709a8f8d3
+    - b963cc2354ef1a740a2ba132c24b9bd2
+    - 8c79d26c2c1405c4ca303ad282045090
+    - 8b7acd27d76417f4abcc5439f174bde2
+    - f0deb0e6a8878e0499b205faea5b9a10
+    - 5e98889c131a4964780d571cc1c510f3
+    - c9f7abc2407f6384cb1f8eb70bf113e5
+    - 732d6f4f4d049bc439ada5aadf9995b2
+    - 10a22636d767ea24bb80d349f86544d6
+    - 864c9f968ac375741bffeef1341e9526
+    - 9314489e9ca21964695c8e594c763e1c
+    - b8c5802e44b95234aa50b7d28656c0a3
+    - 4205ad79ee8648e4e8b06bc1bf75c27d
+    - 273ce21e27ffebb4086b35a4ea2d9bfe
+    - f510f859d92389f41b9ef151d9c6f4c7
+    - a4d3e3e564399714a865472bf82e423b
+    - 2a0a3e4fe584bba448bf5137683e3375
+    - 5975bed52ed9d4a42839cde94650e960
+    - aa2b4e7e94a51f94e8e360953a3dd534
+    - c920c186845956b48a22a19e4bb92b8e
+    - b0bcc3cc4f7fd054ca4a196c7043130f
+    - 5a0ece0b9cb82ae4990ae3cac5d09faf
+    - c44563d28edeab14c8516eb7330e4c4a
+    - 95af7b5466b56284280eaa738eeb91ab
+    - 72e2aaab7f0047b41bb528f70b5047f7
+    - 2bc2a9c1382069c41a205d92a1f7e4d7
+    - 789e57e3189e3ef4185bc17d85baa080
+    - fbc795b32b87b6749bb9404811c86a1d
+    - d6e939ae60e90534d9e7655d8073c153
+    - 66b26538216a4ed4e921cf4c3cfb8928
+    - 567d3c936f374844da5d44cbed160623
+    - 30f21bab4df70c7458062c082d5dbaba
+    spriteTextureTimeStamps:
+    - 1390304409
+    - 1390304409
+    - 1390304409
+    - 1390304409
+    - 1390304409
+    - 1390304409
+    - 1390304409
+    - 1390304409
+    - 1390311807
+    - 1390311807
+    - 1390311807
+    - 1390311807
+    - 1390311807
+    - 1390311807
+    - 1390303209
+    - 1390303209
+    - 1390303209
+    - 1390303209
+    - 1390303209
+    - 1390303209
+    - 1390303209
+    - 1390319132
+    - 1390319132
+    - 1390319132
+    - 1390319132
+    - 1390319358
+    - 1390319358
+    - 1390319358
+    - 1390319358
+    - 1390315899
+    - 1390316417
+    - 1390316418
+    - 1390318511
+    - 1390318511
+    - 1390318511
+    - 1390318512
+    - 1390318512
+    - 1390318512
+    - 1390318512
+    - 1390318512
+    - 1390318052
+    - 1390318052
+    - 1390318052
+    - 1390318052
+    - 1390318052
+    - 1390318052
+    - 1390318052
+    - 1390318052
+    - 1390318052
+    - 1390318052
+    - 1390318052
+    - 1390318052
+    - 1390318052
+    - 1390318052
+    - 1390301661
+    - 1390301661
+    - 1390301661
+    - 1390301662
     managedSpriteCollection: 0
     loadable: 0
     assetName: 

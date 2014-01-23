@@ -834,11 +834,11 @@ public static class TerranActorPastorConfig
                         {
                             {
                                 ActorSpellName
-                                .Zap,
+                                .HolyLight,
                                 new ActorSpell
                                 (
                                 ActorSpellName
-                                .Zap,
+                                .HolyLight,
                                 ActorType
                                 .Pastor)
                             }
@@ -920,11 +920,11 @@ public static class TerranActorKnightConfig
                         {
                             {
                                 ActorSpellName
-                                .DivineBlessing,
+                                .GodBless,
                                 new ActorSpell
                                 (
                                 ActorSpellName
-                                .DivineBlessing,
+                                .GodBless,
                                 ActorType
                                 .Knight)
                             }
@@ -963,11 +963,11 @@ public static class TerranActorPaladinConfig
                         {
                             {
                                 ActorSpellName
-                                .DivineBlessing,
+                                .GodBless,
                                 new ActorSpell
                                 (
                                 ActorSpellName
-                                .DivineBlessing,
+                                .GodBless,
                                 ActorType
                                 .Paladin)
                             }

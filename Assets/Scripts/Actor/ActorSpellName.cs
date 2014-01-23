@@ -11,8 +11,8 @@ public enum ActorSpellName
     ArcaneExplosion,                                         //奥术爆炸
     Bash,                                                                      //重击
     ChainLightning,                                              //闪电链
-    DivineBlessing,                                               //天赐祝福
-    Zap,                                                                         //圣光术
+    GodBless,                                               //天赐祝福
+    HolyLight,                                                                         //圣光术
 
     Parry,                                                                        //格挡
     Bleed,                                                                       //流血
