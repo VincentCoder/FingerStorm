@@ -2,12 +2,14 @@
 
 public class ActorPath
 {
+    public ActorPathType pathType;
 	private Vector3[] pathNodes;
 	public int CurrentIndex {get;set;}
 	
-	public ActorPath(Vector3[] nodes)
-	{
+	public ActorPath(Vector3[] nodes, ActorPathType actorPathType)
+	{ 
 		this.pathNodes = nodes;
+	    this.pathType = actorPathType;
 		this.CurrentIndex = 1;
 	}
 	

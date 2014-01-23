@@ -87,18 +87,26 @@ public class Building_StateBeforeBuilt : State<BuildingController>
     #endregion
 }
 
-public class Building_StateBuilding : State<BuildingController>
+public class Building_StateUpgrade : State<BuildingController>
 {
     #region Public Methods and Operators
 
-    public static Building_StateBuilding Instance()
+    public static Building_StateUpgrade Instance ()
     {
-        return new Building_StateBuilding();
+        return new Building_StateUpgrade();
     }
 
     public override void Enter(BuildingController entityType)
     {
-        entityType.GetFSM().ChangeState(Building_StateDispatching.Instance());
+        if (entityType.Building.CurrentLevel == BuildingLevel.BuildingLevel1)
+        {
+            entityType.Building.CurrentLevel = BuildingLevel.BuildingLevel2;
+            entityType.GetFSM().ChangeState(Building_StateBeforeBuilt.Instance());
+        }
+        else
+        {
+            entityType.GetFSM().ChangeState(Building_StateDispatching.Instance());
+        }
     }
 
     public override void Execute(BuildingController entityType)
@@ -112,6 +120,38 @@ public class Building_StateBuilding : State<BuildingController>
     }
 
     public override bool OnMessage(BuildingController entityType, Telegram telegram)
+    {
+        return base.OnMessage(entityType, telegram);
+    }
+
+    #endregion
+}
+
+public class Building_StateBuilding : State<BuildingController>
+{
+    #region Public Methods and Operators
+
+    public static Building_StateBuilding Instance ()
+    {
+        return new Building_StateBuilding();
+    }
+
+    public override void Enter ( BuildingController entityType )
+    {
+        entityType.GetFSM().ChangeState(Building_StateDispatching.Instance());
+    }
+
+    public override void Execute ( BuildingController entityType )
+    {
+        base.Execute(entityType);
+    }
+
+    public override void Exit ( BuildingController entityType )
+    {
+        base.Exit(entityType);
+    }
+
+    public override bool OnMessage ( BuildingController entityType, Telegram telegram )
     {
         return base.OnMessage(entityType, telegram);
     }

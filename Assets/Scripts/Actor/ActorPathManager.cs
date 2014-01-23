@@ -86,7 +86,7 @@ public class ActorPathManager
 			}
 		}
 		pathNodes[pathNodes.Length-1] = endPos;
-		return new ActorPath(pathNodes);
+        return new ActorPath(pathNodes, pathType);
 	}
 	
 	private Vector3 NearestPointInY(Vector3 pos, Vector3[] points)

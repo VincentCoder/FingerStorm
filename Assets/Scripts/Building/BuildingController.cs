@@ -96,6 +96,7 @@ public class BuildingController : BaseGameEntity
         {
             this.Building.CurrentHp -= damage.DamageValue;
         }
+        this.RefreshHpBar();
 	}
 
     #endregion

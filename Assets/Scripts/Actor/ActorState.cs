@@ -320,7 +320,7 @@ public class Actor_StateBeforeFight : State<ActorController>
         entityType.myTransform.Translate(moveDistance, Space.World);
 
         if ((entityType.TargetEnemy.transform.position - entityType.myTransform.position).sqrMagnitude
-            <= Mathf.Max(Mathf.Pow(entityType.MyActor.ActorAttack.AttackRange, 2), Mathf.Pow(20, 2)))
+            <= Mathf.Max(Mathf.Pow(entityType.MyActor.ActorAttack.AttackRange, 2), Mathf.Pow(30, 2)))
         {
             entityType.GetFSM().ChangeState(Actor_StateFight.Instance());
         }

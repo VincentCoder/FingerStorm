@@ -61,7 +61,7 @@ public class UIPlayerSkillController : MonoBehaviour
 				break;
 			case "RoadblocksSurgery":
 		        {
-		            if (this.gameSceneController.Mp >= 60)
+		            if (this.gameSceneController.Mp >= 60000)
 		            {
 		                this.gameSceneController.Mp -= 60;
                         GameObject roadblocksSurgery =

@@ -122,7 +122,7 @@ public class ActorController : BaseGameEntity
         if (dodgeSpell != null)
         {
             int randomIndex = Random.Range(1, 101);
-            if (randomIndex <= dodgeSpell.EvasiveProbability)
+            if (targetActor.MyActor.ActorType == ActorType.Supporter && randomIndex <= 15)
             {
                 this.ShowTip("Miss");
                 damage.DamageValue = 0;
@@ -428,6 +428,15 @@ public class ActorController : BaseGameEntity
 		}
 		this.MyActor.CurrentHp = Mathf.Min(this.MyActor.CurrentHp, this.MyActor.TotalHp);
         this.RefreshHpBar();
+    }
+
+    public RoadBlockController HasRoadBlockInFront()
+    {
+        if (this.ActorPath.pathType == ActorPathType.FirstPath)
+        {
+            
+        }
+        return null;
     }
 
     #endregion
