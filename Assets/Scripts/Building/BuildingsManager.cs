@@ -2,6 +2,8 @@
 
 using System.Collections.Generic;
 
+using AnimationOrTween;
+
 using UnityEngine;
 
 #endregion
@@ -131,8 +133,39 @@ public class BuildingsManager
 		}
 		return result;
 	}
-	
-	private int GenerateNewBuildingId()
+
+    public List<GameObject> GetEnemyBuildingsInDistanceAndSortByDistance(BaseGameEntity gameEntity, float distance)
+    {
+        List<GameObject> result = new List<GameObject>();
+        foreach (KeyValuePair<int, GameObject> kv in this.allBuildingsDictionary)
+        {
+            BuildingController buildingCtrl = kv.Value.GetComponent<BuildingController>();
+            FactionType faction;
+            if (gameEntity.GetType().IsInstanceOfType(typeof(BuildingController)))
+            {
+                faction = ((BuildingController)gameEntity).Building.FactionType;
+            }
+            else
+            {
+                faction = ((ActorController)gameEntity).MyActor.FactionType;
+            }
+            if (buildingCtrl.Building.FactionType != faction)
+            {
+                if ((kv.Value.transform.position - gameEntity.transform.position).sqrMagnitude <= Mathf.Pow(distance, 2))
+                {
+                    result.Add(kv.Value);
+                }
+            }
+        }
+        
+        result.Sort(
+            ( obj1, obj2 ) =>
+            (obj1.transform.position - gameEntity.transform.position).sqrMagnitude.CompareTo(
+                (obj2.transform.position - gameEntity.transform.position).sqrMagnitude));
+        return result;
+    }
+
+    private int GenerateNewBuildingId()
     {
         int result;
         lock (_lock)

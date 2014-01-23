@@ -1,5 +1,6 @@
 ﻿#region
 
+using System.Security.Cryptography;
 using System.Text;
 
 using UnityEngine;
@@ -273,6 +274,10 @@ public class Building_StateBeforeDestroy : State<BuildingController>
             gameCtrl.ViewController.ShowGameResultView(entityType.Building.FactionType != gameCtrl.MyFactionType);
 			Time.timeScale = 0;
         }
+        else
+        {
+            entityType.GetFSM().ChangeState(Building_StateDestroy.Instance());
+        }
     }
 
     public override void Execute(BuildingController entityType)
@@ -304,7 +309,7 @@ public class Building_StateDestroy : State<BuildingController>
 
     public override void Enter(BuildingController entityType)
     {
-        base.Enter(entityType);
+        Object.Destroy(entityType.gameObject);
     }
 
     public override void Execute(BuildingController entityType)

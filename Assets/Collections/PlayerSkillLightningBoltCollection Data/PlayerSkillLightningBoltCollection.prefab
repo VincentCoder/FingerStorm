@@ -44,17 +44,17 @@ MonoBehaviour:
   spriteDefinitions:
   - name: PlayersSkills_LightningBolt_0001
     boundsData:
-    - {x: -3.00000191, y: -149, z: 0}
+    - {x: .999998093, y: 3, z: 0}
     - {x: 90, y: 102, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: 4, y: 152, z: 0}
     - {x: 150, y: 400, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -48, y: -200, z: 0}
-    - {x: 41.9999962, y: -200, z: 0}
-    - {x: -48, y: -98, z: 0}
-    - {x: 41.9999962, y: -98, z: 0}
+    - {x: -44, y: -48, z: 0}
+    - {x: 45.9999962, y: -48, z: 0}
+    - {x: -44, y: 54, z: 0}
+    - {x: 45.9999962, y: 54, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -82,17 +82,17 @@ MonoBehaviour:
     attachPoints: []
   - name: PlayersSkills_LightningBolt_0002
     boundsData:
-    - {x: -13, y: -19.5000076, z: 0}
+    - {x: -9, y: 132.5, z: 0}
     - {x: 120, y: 361, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: 4, y: 152, z: 0}
     - {x: 150, y: 400, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -73, y: -200, z: 0}
-    - {x: 47, y: -200, z: 0}
-    - {x: -73, y: 160.999985, z: 0}
-    - {x: 47, y: 160.999985, z: 0}
+    - {x: -69, y: -48, z: 0}
+    - {x: 51, y: -48, z: 0}
+    - {x: -69, y: 313, z: 0}
+    - {x: 51, y: 313, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -120,17 +120,17 @@ MonoBehaviour:
     attachPoints: []
   - name: PlayersSkills_LightningBolt_0003
     boundsData:
-    - {x: -3, y: -5.49999237, z: 0}
+    - {x: 1, y: 146.5, z: 0}
     - {x: 144, y: 389, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: 4, y: 152, z: 0}
     - {x: 150, y: 400, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -75, y: -200, z: 0}
-    - {x: 69, y: -200, z: 0}
-    - {x: -75, y: 189.000015, z: 0}
-    - {x: 69, y: 189.000015, z: 0}
+    - {x: -71, y: -48, z: 0}
+    - {x: 73, y: -48, z: 0}
+    - {x: -71, y: 341, z: 0}
+    - {x: 73, y: 341, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -158,17 +158,17 @@ MonoBehaviour:
     attachPoints: []
   - name: PlayersSkills_LightningBolt_0004
     boundsData:
-    - {x: -4.00000191, y: -25, z: 0}
+    - {x: -1.90734863e-06, y: 127, z: 0}
     - {x: 90, y: 350, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: 4, y: 152, z: 0}
     - {x: 150, y: 400, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -49, y: -200, z: 0}
-    - {x: 40.9999962, y: -200, z: 0}
-    - {x: -49, y: 150, z: 0}
-    - {x: 40.9999962, y: 150, z: 0}
+    - {x: -45, y: -48, z: 0}
+    - {x: 44.9999962, y: -48, z: 0}
+    - {x: -45, y: 302, z: 0}
+    - {x: 44.9999962, y: 302, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -196,17 +196,17 @@ MonoBehaviour:
     attachPoints: []
   - name: PlayersSkills_LightningBolt_0005
     boundsData:
-    - {x: -9.00000191, y: -41.4999924, z: 0}
+    - {x: -5.00000191, y: 110.5, z: 0}
     - {x: 102, y: 309, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: 4, y: 152, z: 0}
     - {x: 150, y: 400, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -60, y: -196, z: 0}
-    - {x: 41.9999962, y: -196, z: 0}
-    - {x: -60, y: 113.000015, z: 0}
-    - {x: 41.9999962, y: 113.000015, z: 0}
+    - {x: -56, y: -44, z: 0}
+    - {x: 45.9999962, y: -44, z: 0}
+    - {x: -56, y: 265, z: 0}
+    - {x: 45.9999962, y: 265, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -234,17 +234,17 @@ MonoBehaviour:
     attachPoints: []
   - name: PlayersSkills_LightningBolt_0006
     boundsData:
-    - {x: -7, y: -137.5, z: 0}
+    - {x: -3, y: 14.5, z: 0}
     - {x: 88, y: 103, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: 4, y: 152, z: 0}
     - {x: 150, y: 400, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -51, y: -189, z: 0}
-    - {x: 37, y: -189, z: 0}
-    - {x: -51, y: -86, z: 0}
-    - {x: 37, y: -86, z: 0}
+    - {x: -47, y: -37, z: 0}
+    - {x: 41, y: -37, z: 0}
+    - {x: -47, y: 66, z: 0}
+    - {x: 41, y: 66, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -272,17 +272,17 @@ MonoBehaviour:
     attachPoints: []
   - name: PlayersSkills_LightningBolt_0007
     boundsData:
-    - {x: -5.49999809, y: -123.5, z: 0}
+    - {x: -1.49999809, y: 28.5, z: 0}
     - {x: 99, y: 103, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: 4, y: 152, z: 0}
     - {x: 150, y: 400, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -55, y: -175, z: 0}
-    - {x: 44.0000038, y: -175, z: 0}
-    - {x: -55, y: -72, z: 0}
-    - {x: 44.0000038, y: -72, z: 0}
+    - {x: -51, y: -23, z: 0}
+    - {x: 48.0000038, y: -23, z: 0}
+    - {x: -51, y: 80, z: 0}
+    - {x: 48.0000038, y: 80, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -310,17 +310,17 @@ MonoBehaviour:
     attachPoints: []
   - name: PlayersSkills_LightningBolt_0008
     boundsData:
-    - {x: -4.50000191, y: -116, z: 0}
+    - {x: -.500001907, y: 36, z: 0}
     - {x: 107, y: 112, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: 4, y: 152, z: 0}
     - {x: 150, y: 400, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -58, y: -172, z: 0}
-    - {x: 48.9999962, y: -172, z: 0}
-    - {x: -58, y: -60.0000038, z: 0}
-    - {x: 48.9999962, y: -60.0000038, z: 0}
+    - {x: -54, y: -20, z: 0}
+    - {x: 52.9999962, y: -20, z: 0}
+    - {x: -54, y: 92, z: 0}
+    - {x: 52.9999962, y: 92, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -348,17 +348,17 @@ MonoBehaviour:
     attachPoints: []
   - name: PlayersSkills_LightningBolt_0009
     boundsData:
-    - {x: -3.49999809, y: -109, z: 0}
+    - {x: .500001907, y: 43, z: 0}
     - {x: 115, y: 124, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: 4, y: 152, z: 0}
     - {x: 150, y: 400, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -61, y: -171, z: 0}
-    - {x: 54.0000038, y: -171, z: 0}
-    - {x: -61, y: -47.0000038, z: 0}
-    - {x: 54.0000038, y: -47.0000038, z: 0}
+    - {x: -57, y: -19, z: 0}
+    - {x: 58.0000038, y: -19, z: 0}
+    - {x: -57, y: 105, z: 0}
+    - {x: 58.0000038, y: 105, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -386,17 +386,17 @@ MonoBehaviour:
     attachPoints: []
   - name: PlayersSkills_LightningBolt_0010
     boundsData:
-    - {x: -8, y: -103, z: 0}
+    - {x: -4, y: 49, z: 0}
     - {x: 106, y: 128, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: 4, y: 152, z: 0}
     - {x: 150, y: 400, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -61, y: -167, z: 0}
-    - {x: 45, y: -167, z: 0}
-    - {x: -61, y: -39, z: 0}
-    - {x: 45, y: -39, z: 0}
+    - {x: -57, y: -14.999999, z: 0}
+    - {x: 49, y: -14.999999, z: 0}
+    - {x: -57, y: 113, z: 0}
+    - {x: 49, y: 113, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -435,7 +435,7 @@ MonoBehaviour:
   loadable: 0
   invOrthoSize: 2
   halfTargetHeight: .5
-  buildKey: 1054707861
+  buildKey: 852573768
   dataGuid: f8ae38d8beef64aa4a6dce695d442406
   managedSpriteCollection: 0
   hasPlatformData: 0

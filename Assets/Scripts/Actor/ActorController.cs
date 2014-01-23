@@ -24,12 +24,12 @@ public class ActorController : BaseGameEntity
     private tk2dSpriteAnimator _selfAnimator;
 
     private tk2dSlicedSprite hpBarSprite;
-	
-	private float hpbarLength;
-	
+
+    private float hpbarLength;
+
+    private bool isBleed;
+
     private StateMachine<ActorController> m_PStateMachine;
-	
-	private bool isBleed;
 
     #endregion
 
@@ -39,13 +39,13 @@ public class ActorController : BaseGameEntity
 
     public float AttackPlusRatio { get; set; }
 
+    public float BleedDps { get; set; }
+
+    public float BleedDuration { get; set; }
+
     public int BloodSuckingRatio { get; set; }
-	
-	public bool IsBleed {get;set;}
-	
-	public float BleedDps {get;set;}
-	
-	public float BleedDuration {get;set;}
+
+    public bool IsBleed { get; set; }
 
     public bool IsStun
     {
@@ -114,10 +114,12 @@ public class ActorController : BaseGameEntity
         Damage damage = new Damage();
         damage.DamageValue = this.MyActor.ActorAttack.Dps / this.AttackSpeed;
         damage.DamageValue *= this.AttackPlusRatio;
-		if(!targetEntity.GetType().IsInstanceOfType(typeof(ActorController)))
-			return damage;
-		
-		ActorController targetActor = (ActorController)targetEntity;
+        if (!targetEntity.GetType().IsInstanceOfType(typeof(ActorController)))
+        {
+            return damage;
+        }
+
+        ActorController targetActor = (ActorController)targetEntity;
         ActorSpell dodgeSpell = targetActor.MyActor.GetSpell(ActorSpellName.Dodge);
         if (dodgeSpell != null)
         {
@@ -356,15 +358,57 @@ public class ActorController : BaseGameEntity
         return this.m_PStateMachine.HandleMessage(telegram);
     }
 
-    public List<GameObject> SeekAndGetEnemies(bool ignoreObstacles = true)
+    public RoadBlockController HasRoadBlockInFront()
     {
-        return ActorsManager.GetInstance()
-            .GetEnemyActorsInDistanceAndSortByDistance(this, this.MyActor.ActorAttack.ViewDistance, ignoreObstacles);
+        if (this.ActorPath.pathType == ActorPathType.FirstPath)
+        {
+        }
+        return null;
     }
 
-    public List<GameObject> SeekAndGetEnemiesInDistance(int distance, bool ignoreObstacles = true)
+    public List<GameObject> SeekAndGetEnemies(bool ignoreObstacles = true, bool ignoreAir = true)
     {
-        return ActorsManager.GetInstance().GetEnemyActorsInDistanceAndSortByDistance(this, distance, ignoreObstacles);
+        List<GameObject> result = ActorsManager.GetInstance()
+            .GetEnemyActorsInDistanceAndSortByDistance(this, this.MyActor.ActorAttack.ViewDistance, ignoreObstacles);
+        if (!ignoreAir && !this.MyActor.AttackAirForce)
+        {
+            for (int i = 0; i < result.Count; i ++)
+            {
+                ActorController actorCtrl = result[i].GetComponent<ActorController>();
+                if (actorCtrl.MyActor.IsAirForce)
+                {
+                    result.RemoveAt(i);
+                }
+            }
+        }
+        return result;
+    }
+
+    public List<GameObject> SeekAndGetEnemiesInDistance(
+        int distance,
+        bool ignoreObstacles = true,
+        bool ignoreAir = true)
+    {
+        List<GameObject> result = ActorsManager.GetInstance()
+            .GetEnemyActorsInDistanceAndSortByDistance(this, distance, ignoreObstacles);
+        if (!ignoreAir && !this.MyActor.AttackAirForce)
+        {
+            for (int i = 0; i < result.Count; i++)
+            {
+                ActorController actorCtrl = result[i].GetComponent<ActorController>();
+                if (actorCtrl.MyActor.IsAirForce)
+                {
+                    result.RemoveAt(i);
+                }
+            }
+        }
+        return result;
+    }
+
+    public List<GameObject> SeekAndGetEnemyBuildings()
+    {
+        return BuildingsManager.GetInstance()
+            .GetEnemyBuildingsInDistanceAndSortByDistance(this, this.MyActor.ActorAttack.ViewDistance);
     }
 
     public bool SeekEnemies()
@@ -386,22 +430,23 @@ public class ActorController : BaseGameEntity
 
     public void TakeDamage(Damage damage)
     {
+        //Debug.Log(this.MyActor.FactionType + " DamageValue " + damage.DamageValue);
         if (damage.ShowCrit)
         {
             this.ShowTip((-damage.DamageValue).ToString());
         }
-		
-		if(damage.Stun)
-		{
-			this.IsStun = true;
-			this.StunDuration = Mathf.Max(damage.StunDuration, this.StunDuration);
-		}
-		if(damage.Bleed)
-		{
-			this.IsBleed = true;
-			this.BleedDps = Mathf.Max(damage.BleedDps, this.BleedDps);
-			this.BleedDuration = Mathf.Max(damage.BleedDuration, this.BleedDuration);
-		}
+
+        if (damage.Stun)
+        {
+            this.IsStun = true;
+            this.StunDuration = Mathf.Max(damage.StunDuration, this.StunDuration);
+        }
+        if (damage.Bleed)
+        {
+            this.IsBleed = true;
+            this.BleedDps = Mathf.Max(damage.BleedDps, this.BleedDps);
+            this.BleedDuration = Mathf.Max(damage.BleedDuration, this.BleedDuration);
+        }
 
         if (this.MyActor.ActorArmor.ArmorAmount > 0f)
         {
@@ -416,27 +461,19 @@ public class ActorController : BaseGameEntity
                 damage.DamageValue = Mathf.Abs(dValue);
             }
         }
-        
+
         if (this.MyActor.CurrentHp <= damage.DamageValue)
         {
-			this.MyActor.CurrentHp = 0;
+            this.MyActor.CurrentHp = 0;
             this.m_PStateMachine.ChangeState(Actor_StateBeforeDie.Instance());
         }
-		else
-		{
-			this.MyActor.CurrentHp -= damage.DamageValue;
-		}
-		this.MyActor.CurrentHp = Mathf.Min(this.MyActor.CurrentHp, this.MyActor.TotalHp);
-        this.RefreshHpBar();
-    }
-
-    public RoadBlockController HasRoadBlockInFront()
-    {
-        if (this.ActorPath.pathType == ActorPathType.FirstPath)
+        else
         {
-            
+            this.MyActor.CurrentHp -= damage.DamageValue;
         }
-        return null;
+        this.MyActor.CurrentHp = Mathf.Min(this.MyActor.CurrentHp, this.MyActor.TotalHp);
+        this.RefreshHpBar();
+        //Debug.Log(this.MyActor.FactionType + " " + this.MyActor.CurrentHp);
     }
 
     #endregion
@@ -455,7 +492,7 @@ public class ActorController : BaseGameEntity
         this.AttackPlusRatio = 1;
         this.BloodSuckingRatio = 0;
         this.AttackSpeed = 1;
-		this.hpbarLength = 200;
+        this.hpbarLength = 200;
         this.RefreshHpBar();
 
         this.m_PStateMachine = new StateMachine<ActorController>(this);
@@ -470,10 +507,12 @@ public class ActorController : BaseGameEntity
             Transform hpBarTran = this.transform.FindChild("HpBar");
             this.hpBarSprite = hpBarTran.gameObject.GetComponent<tk2dSlicedSprite>();
         }
-		else
-		{
-			this.hpBarSprite.dimensions = new Vector2(this.MyActor.CurrentHp/this.MyActor.TotalHp*this.hpbarLength, this.hpBarSprite.dimensions.y);
-		}
+        else
+        {
+            this.hpBarSprite.dimensions = new Vector2(
+                this.MyActor.CurrentHp / this.MyActor.TotalHp * this.hpbarLength,
+                this.hpBarSprite.dimensions.y);
+        }
     }
 
     private void ShowTip(string tip)

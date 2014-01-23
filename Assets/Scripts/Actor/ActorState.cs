@@ -220,7 +220,7 @@ public class Actor_StateWalk : State<ActorController>
         this.seekEnemyCounter += Time.deltaTime;
         if (this.seekEnemyCounter >= this.seekEnemyInterval)
         {
-            if (entityType.SeekAndGetEnemies(false).Count != 0)
+            if (entityType.SeekAndGetEnemies(false).Count != 0 || entityType.SeekAndGetEnemyBuildings().Count != 0)
             {
                 entityType.GetFSM().ChangeState(Actor_StateBeforeFight.Instance());
             }
@@ -235,12 +235,10 @@ public class Actor_StateWalk : State<ActorController>
 			}
             this.seekEnemyCounter = 0.0f;
         }
-        //base.Execute(entityType);
     }
 
     public override void Exit(ActorController entityType)
     {
-		//Debug.Log("Exit Walk");
         base.Exit(entityType);
     }
 
@@ -269,24 +267,15 @@ public class Actor_StateWalk : State<ActorController>
 
 public class Actor_StateBeforeFight : State<ActorController>
 {
-    #region Static Fields
-
-    //private static Actor_StateBeforeFight instance;
-
-    #endregion
-
     #region Public Methods and Operators
 
     public static Actor_StateBeforeFight Instance()
     {
-        //return instance ?? (instance = new Actor_StateBeforeFight());
 		return new Actor_StateBeforeFight();
     }
 
     public override void Enter(ActorController entityType)
     {
-		//Debug.Log("Enter BeforeFight");
-		
 		StringBuilder animName = new StringBuilder("Terran_");
         animName.Append(entityType.MyActor.ActorType);
         animName.Append("_Walk_");
@@ -296,11 +285,21 @@ public class Actor_StateBeforeFight : State<ActorController>
         List<GameObject> enemies = entityType.SeekAndGetEnemies();
         if (enemies == null || enemies.Count == 0)
         {
-            entityType.GetFSM().ChangeState(Actor_StateWalk.Instance());
-            return;
+            enemies = entityType.SeekAndGetEnemyBuildings();
+            if(enemies == null || enemies.Count == 0)
+            {
+                entityType.GetFSM().ChangeState(Actor_StateWalk.Instance());
+                return;
+            }
+            else
+            {
+                entityType.TargetEnemy = enemies[0].GetComponent<BuildingController>();
+            }
         }
-        entityType.TargetEnemy = enemies[0].GetComponent<ActorController>();
-        //base.Enter(entityType);
+        else
+        {
+            entityType.TargetEnemy = enemies[0].GetComponent<ActorController>();
+        }
     }
 
     public override void Execute(ActorController entityType)
@@ -324,13 +323,10 @@ public class Actor_StateBeforeFight : State<ActorController>
         {
             entityType.GetFSM().ChangeState(Actor_StateFight.Instance());
         }
-
-        //base.Execute(entityType);
     }
 
     public override void Exit(ActorController entityType)
     {
-		//Debug.Log("Exit BeforeFight");
         base.Exit(entityType);
     }
 
@@ -346,7 +342,6 @@ public class Actor_StateFight : State<ActorController>
 {
     #region Static Fields
 
-    //private static Actor_StateFight instance;
     private float attackSpeedCounter;
 
     private GameObject bloodBustVampire;
@@ -357,7 +352,6 @@ public class Actor_StateFight : State<ActorController>
 
     public static Actor_StateFight Instance()
     {
-        //return instance ?? (instance = new Actor_StateFight());
 		return new Actor_StateFight();
     }
 
@@ -408,7 +402,6 @@ public class Actor_StateFight : State<ActorController>
 
     public override void Exit(ActorController entityType)
     {
-		//Debug.Log("Exit Fight");
         base.Exit(entityType);
     }
 

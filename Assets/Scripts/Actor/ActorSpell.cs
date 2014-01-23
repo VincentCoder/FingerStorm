@@ -109,6 +109,8 @@ public class ActorSpell
 			case ActorType.Pastor:
                 {
                     this.IncreaseOneFriendlyUnitHp = 300;
+                    this.ReleaseInterval = 15;
+                    this.ActorSpellType = ActorSpellType.ActiveSpell;
                     break;
                 }
 			case ActorType.Sage:
