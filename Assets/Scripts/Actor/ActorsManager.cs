@@ -107,9 +107,11 @@ public class ActorsManager
 		List<GameObject> result = new List<GameObject>(this.actorsDictionary.Values.ToArray());
 		for(int i = 0; i < result.Count; i ++)
 		{
-			ActorController actorCtrl = result[i].GetComponent<ActorController>();
-			if(actorCtrl.MyActor.FactionType == factionType)
-				result.RemoveAt(i);
+		    if (result[i] != null)
+		    {
+		        ActorController actorCtrl = result[i].GetComponent<ActorController>();
+		        if (actorCtrl.MyActor.FactionType == factionType) result.RemoveAt(i);
+		    }
 		}
 		return result;
 	}
@@ -218,11 +220,14 @@ public class ActorsManager
 	
 	public void DestroyAllActors()
 	{
-		foreach(KeyValuePair<int, GameObject> kv in this.actorsDictionary)
-		{
-			if(kv.Value != null)
+        List<GameObject> allActors = new List<GameObject>();
+        allActors.AddRange(this.actorsDictionary.Values);
+        for (int i = 0; i < allActors.Count; i ++)
+        {
+            GameObject actor = allActors[i];
+            if(actor != null)
 			{
-				ActorController actorCtrl = kv.Value.GetComponent<ActorController>();
+                ActorController actorCtrl = actor.GetComponent<ActorController>();
 				actorCtrl.DestroySelf();
 			}
 		}

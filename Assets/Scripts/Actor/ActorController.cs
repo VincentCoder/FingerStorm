@@ -218,10 +218,14 @@ public class ActorController : BaseGameEntity
                                 enemies.ForEach(
                                     enemy =>
                                         {
-                                            ActorController actorCtrl = enemy.GetComponent<ActorController>();
-                                            if (actorCtrl != null && actorCtrl.gameObject != this.TargetEnemy.gameObject)
+                                            if (enemy != null)
                                             {
-                                                this.SendDamage(actorCtrl, splashDamage);
+                                                ActorController actorCtrl = enemy.GetComponent<ActorController>();
+                                                if (actorCtrl != null
+                                                    && actorCtrl.gameObject != this.TargetEnemy.gameObject)
+                                                {
+                                                    this.SendDamage(actorCtrl, splashDamage);
+                                                }
                                             }
                                         });
                             }
@@ -422,10 +426,13 @@ public class ActorController : BaseGameEntity
         {
             for (int i = 0; i < result.Count; i ++)
             {
-                ActorController actorCtrl = result[i].GetComponent<ActorController>();
-                if (actorCtrl.MyActor.IsAirForce)
+                if (result[i] != null)
                 {
-                    result.RemoveAt(i);
+                    ActorController actorCtrl = result[i].GetComponent<ActorController>();
+                    if (actorCtrl.MyActor.IsAirForce)
+                    {
+                        result.RemoveAt(i);
+                    }
                 }
             }
         }
@@ -443,10 +450,13 @@ public class ActorController : BaseGameEntity
         {
             for (int i = 0; i < result.Count; i++)
             {
-                ActorController actorCtrl = result[i].GetComponent<ActorController>();
-                if (actorCtrl.MyActor.IsAirForce)
+                if (result[i] != null)
                 {
-                    result.RemoveAt(i);
+                    ActorController actorCtrl = result[i].GetComponent<ActorController>();
+                    if (actorCtrl.MyActor.IsAirForce)
+                    {
+                        result.RemoveAt(i);
+                    }
                 }
             }
         }

@@ -47,7 +47,8 @@ public class UIPlayerSkillController : MonoBehaviour
                                 {
                                     GameObject lightningBolt =
                                         (GameObject)Instantiate(Resources.Load("GameScene/PlayerSkillLightningBolt"));
-                                    lightningBolt.transform.position = enemyActor.transform.position;
+                                    lightningBolt.transform.parent = enemyActor.transform;
+                                    lightningBolt.transform.localPosition = new Vector3(0,0,0);
                                     tk2dSpriteAnimator animator = lightningBolt.GetComponent<tk2dSpriteAnimator>();
                                     animator.AnimationCompleted = delegate
                                         {
@@ -120,13 +121,17 @@ public class UIPlayerSkillController : MonoBehaviour
                                 {
                                     GameObject heal =
                                         (GameObject)Instantiate(Resources.Load("GameScene/PlayerSkillHeal"));
-                                    heal.transform.position = actor.transform.position;
+                                    heal.transform.parent = actor.transform;
+                                    heal.transform.localPosition = new Vector3(0,0,0);
                                     tk2dSpriteAnimator animator = heal.GetComponent<tk2dSpriteAnimator>();
                                     animator.AnimationCompleted = delegate
                                         {
-                                            ActorController actorCtrl = actor.GetComponent<ActorController>();
-                                            actorCtrl.TakeDamage(healDamage);
-                                            Destroy(heal);
+                                            if (actor != null)
+                                            {
+                                                ActorController actorCtrl = actor.GetComponent<ActorController>();
+                                                actorCtrl.TakeDamage(healDamage);
+                                                Destroy(heal);
+                                            }
                                         };
                                 });
                     }
@@ -145,20 +150,24 @@ public class UIPlayerSkillController : MonoBehaviour
                                 {
                                     GameObject bloodlust =
                                         (GameObject)Instantiate(Resources.Load("GameScene/PlayerSkillBloodlust"));
-                                    bloodlust.transform.position = actor.transform.position;
+                                    bloodlust.transform.parent = actor.transform;
+                                    bloodlust.transform.localPosition = new Vector3(0,0,0);
                                     tk2dSpriteAnimator animator = bloodlust.GetComponent<tk2dSpriteAnimator>();
                                     animator.Play("Release");
                                     animator.AnimationCompleted = delegate
                                         {
                                             Destroy(bloodlust);
-                                            ActorController actorCtrl = actor.GetComponent<ActorController>();
-                                            actorCtrl.BloodSuckingRatio = 30;
-                                            actorCtrl.AttackPlusRatio = 1.5f;
-                                            GameObject bloodBustHalo =
-                                                (GameObject)
-                                                Instantiate(Resources.Load("GameScene/PlayerSkillBloodlust"));
-                                            bloodBustHalo.transform.parent = actor.transform;
-                                            bloodBustHalo.GetComponent<tk2dSpriteAnimator>().Play("Halo");
+                                            if (actor != null)
+                                            {
+                                                ActorController actorCtrl = actor.GetComponent<ActorController>();
+                                                actorCtrl.BloodSuckingRatio = 30;
+                                                actorCtrl.AttackPlusRatio = 1.5f;
+                                                GameObject bloodBustHalo =
+                                                    (GameObject)
+                                                    Instantiate(Resources.Load("GameScene/PlayerSkillBloodlust"));
+                                                bloodBustHalo.transform.parent = actor.transform;
+                                                bloodBustHalo.GetComponent<tk2dSpriteAnimator>().Play("Halo");
+                                            }
                                         };
                                 });
                     }
@@ -189,8 +198,11 @@ public class UIPlayerSkillController : MonoBehaviour
                         enemies.ForEach(
                             enemy =>
                                 {
-                                    ActorController actorCtrl = enemy.GetComponent<ActorController>();
-                                    actorCtrl.TakeDamage(fireBallDamage);
+                                    if (enemy != null)
+                                    {
+                                        ActorController actorCtrl = enemy.GetComponent<ActorController>();
+                                        actorCtrl.TakeDamage(fireBallDamage);
+                                    }
                                 });
                         Destroy(fireBall);
                     };

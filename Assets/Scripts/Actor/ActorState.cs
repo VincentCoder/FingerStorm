@@ -125,9 +125,12 @@ public class Actor_GlobalState : State<ActorController>
                                     animator.Play("Bombard");
                                     animator.AnimationCompleted = delegate
                                     {
-                                        ActorController actorCtrl = enemy.GetComponent<ActorController>();
-                                        entityType.SendDamage(actorCtrl, motarAttackDamage);
-                                        Object.Destroy(maEffect);
+                                        if (enemy != null)
+                                        {
+                                            ActorController actorCtrl = enemy.GetComponent<ActorController>();
+                                            entityType.SendDamage(actorCtrl, motarAttackDamage);
+                                            Object.Destroy(maEffect);
+                                        }
                                     };
                                 });
                     }
@@ -181,9 +184,12 @@ public class Actor_GlobalState : State<ActorController>
                         animator.Play("HolyLight");
                         animator.AnimationCompleted = delegate
                         {
-                            ActorController actorCtrl = targetActor.GetComponent<ActorController>();
-                            entityType.SendDamage(targetActor.GetComponent<ActorController>(), zapDamage);
-                            Object.Destroy(hlEffect);
+                            if (targetActor != null)
+                            {
+                                ActorController actorCtrl = targetActor.GetComponent<ActorController>();
+                                entityType.SendDamage(targetActor.GetComponent<ActorController>(), zapDamage);
+                                Object.Destroy(hlEffect);
+                            }
                         };
                     }
                     break;
@@ -268,8 +274,11 @@ public class Actor_StateWalk : State<ActorController>
                     entityType.SeekAndGetEnemiesInDistance(entityType.MyActor.ActorAttack.AttackRange, false);
                 if (enemies.Count != 0)
                 {
-                    entityType.TargetEnemy = enemies[0].GetComponent<ActorController>();
-                    entityType.GetFSM().ChangeState(Actor_StateFight.Instance());
+                    if (enemies[0] != null)
+                    {
+                        entityType.TargetEnemy = enemies[0].GetComponent<ActorController>();
+                        entityType.GetFSM().ChangeState(Actor_StateFight.Instance());
+                    }
                 }
             }
             this.seekEnemyCounter = 0.0f;
@@ -347,12 +356,18 @@ public class Actor_StateBeforeFight : State<ActorController>
             }
 			else
 			{
-				entityType.TargetEnemy = enemies[0].GetComponent<BuildingController>();
+			    if (enemies[0] != null)
+			    {
+			        entityType.TargetEnemy = enemies[0].GetComponent<BuildingController>();
+			    }
 			}
         }
         else
         {
-            entityType.TargetEnemy = enemies[0].GetComponent<ActorController>();
+            if (enemies[0] != null)
+            {
+                entityType.TargetEnemy = enemies[0].GetComponent<ActorController>();
+            }
         }
     }
 
