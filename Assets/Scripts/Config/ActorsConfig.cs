@@ -428,7 +428,7 @@ public static class TerranActorSniperConfig
 
     public static ActorArmor ActorArmor = new ActorArmor(ActorArmorType.LightArmor, 0);
 
-    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Pierce, 50, 22);
+    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Pierce, 150, 22);
 
     public static ActorType ActorType = ActorType.Sniper;
 
@@ -471,7 +471,7 @@ public static class TerranActorMarksmanConfig
 
     public static ActorArmor ActorArmor = new ActorArmor(ActorArmorType.LightArmor, 1);
 
-    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Pierce, 60, 61);
+    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Pierce, 160, 61);
 
     public static ActorType ActorType = ActorType.Marksman;
 
@@ -514,7 +514,7 @@ public static class TerranActorHeavyGunnerConfig
 
     public static ActorArmor ActorArmor = new ActorArmor(ActorArmorType.LightArmor, 3);
 
-    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Siege, 55, 53);
+    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Siege, 155, 53);
 
     public static ActorType ActorType = ActorType.HeavyGunner;
 
@@ -557,7 +557,7 @@ public static class TerranActorMortarTeamConfig
 
     public static ActorArmor ActorArmor = new ActorArmor(ActorArmorType.LightArmor, 0);
 
-    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Pierce, 100, 21);
+    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Pierce, 200, 21);
 
     public static ActorType ActorType = ActorType.MortarTeam;
 
@@ -600,7 +600,7 @@ public static class TerranActorWarlockConfig
 
     public static ActorArmor ActorArmor = new ActorArmor(ActorArmorType.LightArmor, 1);
 
-    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Confuse, 20, 17);
+    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Confuse, 120, 17);
 
     public static ActorType ActorType = ActorType.Warlock;
 
@@ -643,7 +643,7 @@ public static class TerranActorGryphonRiderConfig
 
     public static ActorArmor ActorArmor = new ActorArmor(ActorArmorType.LightArmor, 2);
 
-    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Magic, 45, 23);
+    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Magic, 145, 23);
 
     public static ActorType ActorType = ActorType.GryphonRider;
 
@@ -686,7 +686,7 @@ public static class TerranActorSeniorGryphonRiderConfig
 
     public static ActorArmor ActorArmor = new ActorArmor(ActorArmorType.LightArmor, 5);
 
-    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Magic, 50, 30);
+    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Magic, 150, 30);
 
     public static ActorType ActorType = ActorType.SeniorGryphonRider;
 
@@ -815,7 +815,7 @@ public static class TerranActorPastorConfig
 
     public static ActorArmor ActorArmor = new ActorArmor(ActorArmorType.LightArmor, 1);
 
-    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Magic, 50, 20);
+    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Magic, 150, 20);
 
     public static ActorType ActorType = ActorType.Pastor;
 
@@ -858,7 +858,7 @@ public static class TerranActorSageConfig
 
     public static ActorArmor ActorArmor = new ActorArmor(ActorArmorType.LightArmor, 3);
 
-    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Magic, 60, 45);
+    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Magic, 160, 45);
 
     public static ActorType ActorType = ActorType.Sage;
 
@@ -1007,19 +1007,621 @@ public static class OrcActorGruntConfig
         new Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>>
             {
                 {
+                    ActorSpellType.ActiveSpell,
+                    new Dictionary
+                    <ActorSpellName, ActorSpell>
+                        {
+                            {
+                                ActorSpellName
+                                .None,
+                                new ActorSpell
+                                (
+                                ActorSpellName
+                                .None,
+                                ActorType
+                                .Grunt)
+                            }
+                        }
+                }
+            };
+
+    #endregion
+}
+
+public static class OrcActorOldGruntConfig
+{
+    #region Static Fields
+
+    public static ActorArmor ActorArmor = new ActorArmor(ActorArmorType.HeavyArmor, 6);
+
+    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Normal, 0, 25);
+
+    public static ActorType ActorType = ActorType.OldGrunt;
+
+    public static bool AttackAirForce = false;
+
+    public static int Hp = 550;
+
+    public static bool IsAirForce = false;
+
+    public static ActorLevel ActorLevel = ActorLevel.Senior;
+
+    public static Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>> SpellDictionary =
+        new Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>>
+            {
+                {
+                    ActorSpellType.PassiveSpell,
+                    new Dictionary
+                    <ActorSpellName, ActorSpell>
+                        {
+                            {
+                                ActorSpellName
+                                .CirticalStrike,
+                                new ActorSpell
+                                (
+                                ActorSpellName
+                                .CirticalStrike,
+                                ActorType
+                                .OldGrunt)
+                            }
+                        }
+                }
+            };
+
+    #endregion
+}
+
+public static class OrcActorTrollBerserkerConfig
+{
+    #region Static Fields
+
+    public static ActorArmor ActorArmor = new ActorArmor(ActorArmorType.LightArmor, 3);
+
+    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Normal, 130, 30);
+
+    public static ActorType ActorType = ActorType.TrollBerserker;
+
+    public static bool AttackAirForce = true;
+
+    public static int Hp = 450;
+
+    public static bool IsAirForce = false;
+
+    public static ActorLevel ActorLevel = ActorLevel.Normal;
+
+    public static Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>> SpellDictionary =
+        new Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>>
+            {
+                {
+                    ActorSpellType.PassiveSpell,
+                    new Dictionary
+                    <ActorSpellName, ActorSpell>
+                        {
+                            {
+                                ActorSpellName
+                                .Rage,
+                                new ActorSpell
+                                (
+                                ActorSpellName
+                                .Rage,
+                                ActorType
+                                .TrollBerserker)
+                            }
+                        }
+                }
+            };
+
+    #endregion
+}
+
+public static class OrcActorTrollHunterConfig
+{
+    #region Static Fields
+
+    public static ActorArmor ActorArmor = new ActorArmor(ActorArmorType.LightArmor, 4);
+
+    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Normal, 135, 38);
+
+    public static ActorType ActorType = ActorType.TrollHunter;
+
+    public static bool AttackAirForce = true;
+
+    public static int Hp = 650;
+
+    public static bool IsAirForce = false;
+
+    public static ActorLevel ActorLevel = ActorLevel.Senior;
+
+    public static Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>> SpellDictionary =
+        new Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>>
+            {
+                {
+                    ActorSpellType.PassiveSpell,
+                    new Dictionary
+                    <ActorSpellName, ActorSpell>
+                        {
+                            {
+                                ActorSpellName
+                                .Rage,
+                                new ActorSpell
+                                (
+                                ActorSpellName
+                                .Rage,
+                                ActorType
+                                .TrollHunter)
+                            }
+                        }
+                }
+            };
+
+    #endregion
+}
+
+public static class OrcActorBatRiderConfig
+{
+    #region Static Fields
+
+    public static ActorArmor ActorArmor = new ActorArmor(ActorArmorType.LightArmor, 2);
+
+    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Pierce, 140, 28);
+
+    public static ActorType ActorType = ActorType.BatRider;
+
+    public static bool AttackAirForce = true;
+
+    public static int Hp = 420;
+
+    public static bool IsAirForce = true;
+
+    public static ActorLevel ActorLevel = ActorLevel.Normal;
+
+    public static Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>> SpellDictionary =
+        new Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>>
+            {
+                {
+                    ActorSpellType.PassiveSpell,
+                    new Dictionary
+                    <ActorSpellName, ActorSpell>
+                        {
+                            {
+                                ActorSpellName
+                                .FireBomb,
+                                new ActorSpell
+                                (
+                                ActorSpellName
+                                .FireBomb,
+                                ActorType
+                                .BatRider)
+                            }
+                        }
+                }
+            };
+
+    #endregion
+}
+
+public static class OrcActorSeniorBatRiderConfig
+{
+    #region Static Fields
+
+    public static ActorArmor ActorArmor = new ActorArmor(ActorArmorType.LightArmor, 4);
+
+    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Pierce, 160, 35);
+
+    public static ActorType ActorType = ActorType.SeniorBatRider;
+
+    public static bool AttackAirForce = true;
+
+    public static int Hp = 450;
+
+    public static bool IsAirForce = true;
+
+    public static ActorLevel ActorLevel = ActorLevel.Senior;
+
+    public static Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>> SpellDictionary =
+        new Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>>
+            {
+                {
+                    ActorSpellType.PassiveSpell,
+                    new Dictionary
+                    <ActorSpellName, ActorSpell>
+                        {
+                            {
+                                ActorSpellName
+                                .FireBomb,
+                                new ActorSpell
+                                (
+                                ActorSpellName
+                                .FireBomb,
+                                ActorType
+                                .SeniorBatRider)
+                            }
+                        }
+                }
+            };
+
+    #endregion
+}
+
+public static class OrcActorShamanConfig
+{
+    #region Static Fields
+
+    public static ActorArmor ActorArmor = new ActorArmor(ActorArmorType.LightArmor, 1);
+
+    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Magic, 135, 26);
+
+    public static ActorType ActorType = ActorType.Shaman;
+
+    public static bool AttackAirForce = false;
+
+    public static int Hp = 340;
+
+    public static bool IsAirForce = false;
+
+    public static ActorLevel ActorLevel = ActorLevel.Normal;
+
+    public static Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>> SpellDictionary =
+        new Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>>
+            {
+                {
+                    ActorSpellType.ActiveSpell,
+                    new Dictionary
+                    <ActorSpellName, ActorSpell>
+                        {
+                            {
+                                ActorSpellName
+                                .ShamanBless,
+                                new ActorSpell
+                                (
+                                ActorSpellName
+                                .ShamanBless,
+                                ActorType
+                                .Shaman)
+                            }
+                        }
+                }
+            };
+
+    #endregion
+}
+
+public static class OrcActorWitchDoctorConfig
+{
+    #region Static Fields
+
+    public static ActorArmor ActorArmor = new ActorArmor(ActorArmorType.LightArmor, 4);
+
+    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Magic, 140, 35);
+
+    public static ActorType ActorType = ActorType.WitchDoctor;
+
+    public static bool AttackAirForce = true;
+
+    public static int Hp = 600;
+
+    public static bool IsAirForce = false;
+
+    public static ActorLevel ActorLevel = ActorLevel.Senior;
+
+    public static Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>> SpellDictionary =
+        new Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>>
+            {
+                {
+                    ActorSpellType.ActiveSpell,
+                    new Dictionary
+                    <ActorSpellName, ActorSpell>
+                        {
+                            {
+                                ActorSpellName
+                                .ChainHeal,
+                                new ActorSpell
+                                (
+                                ActorSpellName
+                                .ChainHeal,
+                                ActorType
+                                .WitchDoctor)
+                            }
+                        }
+                }
+            };
+
+    #endregion
+}
+
+public static class OrcActorRaiderConfig
+{
+    #region Static Fields
+
+    public static ActorArmor ActorArmor = new ActorArmor(ActorArmorType.LightArmor, 6);
+
+    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Normal, 0, 24);
+
+    public static ActorType ActorType = ActorType.Raider;
+
+    public static bool AttackAirForce = false;
+
+    public static int Hp = 1100;
+
+    public static bool IsAirForce = false;
+
+    public static ActorLevel ActorLevel = ActorLevel.Normal;
+
+    public static Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>> SpellDictionary =
+        new Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>>
+            {
+                {
+                    ActorSpellType.ActiveSpell,
+                    new Dictionary
+                    <ActorSpellName, ActorSpell>
+                        {
+                            {
+                                ActorSpellName
+                                .Ensnare,
+                                new ActorSpell
+                                (
+                                ActorSpellName
+                                .Ensnare,
+                                ActorType
+                                .Raider)
+                            }
+                        }
+                }
+            };
+
+    #endregion
+}
+
+public static class OrcActorKodoConfig
+{
+    #region Static Fields
+
+    public static ActorArmor ActorArmor = new ActorArmor(ActorArmorType.LightArmor, 7);
+
+    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Pierce, 120, 33);
+
+    public static ActorType ActorType = ActorType.Kodo;
+
+    public static bool AttackAirForce = true;
+
+    public static int Hp = 1200;
+
+    public static bool IsAirForce = false;
+
+    public static ActorLevel ActorLevel = ActorLevel.Senior;
+
+    public static Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>> SpellDictionary =
+        new Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>>
+            {
+                {
                     ActorSpellType.BuffSpell,
                     new Dictionary
                     <ActorSpellName, ActorSpell>
                         {
                             {
                                 ActorSpellName
-                                .GodBless,
+                                .SongOfOffense,
                                 new ActorSpell
                                 (
                                 ActorSpellName
-                                .GodBless,
+                                .SongOfOffense,
                                 ActorType
-                                .Paladin)
+                                .Kodo)
+                            }
+                        }
+                }
+            };
+
+    #endregion
+}
+
+public static class OrcActorWyvernConfig
+{
+    #region Static Fields
+
+    public static ActorArmor ActorArmor = new ActorArmor(ActorArmorType.LightArmor, 2);
+
+    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Pierce, 140, 23);
+
+    public static ActorType ActorType = ActorType.Wyvern;
+
+    public static bool AttackAirForce = true;
+
+    public static int Hp = 400;
+
+    public static bool IsAirForce = true;
+
+    public static ActorLevel ActorLevel = ActorLevel.Normal;
+
+    public static Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>> SpellDictionary =
+        new Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>>
+            {
+                {
+                    ActorSpellType.PassiveSpell,
+                    new Dictionary
+                    <ActorSpellName, ActorSpell>
+                        {
+                            {
+                                ActorSpellName
+                                .PoisonAttack,
+                                new ActorSpell
+                                (
+                                ActorSpellName
+                                .PoisonAttack,
+                                ActorType
+                                .Wyvern)
+                            }
+                        }
+                }
+            };
+
+    #endregion
+}
+
+public static class OrcActorWindRiderConfig
+{
+    #region Static Fields
+
+    public static ActorArmor ActorArmor = new ActorArmor(ActorArmorType.LightArmor, 5);
+
+    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Pierce, 140, 30);
+
+    public static ActorType ActorType = ActorType.WindRider;
+
+    public static bool AttackAirForce = true;
+
+    public static int Hp = 550;
+
+    public static bool IsAirForce = true;
+
+    public static ActorLevel ActorLevel = ActorLevel.Senior;
+
+    public static Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>> SpellDictionary =
+        new Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>>
+            {
+                {
+                    ActorSpellType.PassiveSpell,
+                    new Dictionary
+                    <ActorSpellName, ActorSpell>
+                        {
+                            {
+                                ActorSpellName
+                                .PoisonAttack,
+                                new ActorSpell
+                                (
+                                ActorSpellName
+                                .PoisonAttack,
+                                ActorType
+                                .WindRider)
+                            }
+                        }
+                }
+            };
+
+    #endregion
+}
+
+public static class OrcActorCatapultConfig
+{
+    #region Static Fields
+
+    public static ActorArmor ActorArmor = new ActorArmor(ActorArmorType.HeavyArmor, 5);
+
+    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Siege, 200, 48);
+
+    public static ActorType ActorType = ActorType.Catapult;
+
+    public static bool AttackAirForce = false;
+
+    public static int Hp = 475;
+
+    public static bool IsAirForce = false;
+
+    public static ActorLevel ActorLevel = ActorLevel.Normal;
+
+    public static Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>> SpellDictionary =
+        new Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>>
+            {
+                {
+                    ActorSpellType.ActiveSpell,
+                    new Dictionary
+                    <ActorSpellName, ActorSpell>
+                        {
+                            {
+                                ActorSpellName
+                                .BurningOil,
+                                new ActorSpell
+                                (
+                                ActorSpellName
+                                .BurningOil,
+                                ActorType
+                                .Catapult)
+                            }
+                        }
+                }
+            };
+
+    #endregion
+}
+
+public static class OrcActorSpiritWalkerConfig
+{
+    #region Static Fields
+
+    public static ActorArmor ActorArmor = new ActorArmor(ActorArmorType.HeavyArmor, 5);
+
+    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Normal, 0, 50);
+
+    public static ActorType ActorType = ActorType.SpiritWalker;
+
+    public static bool AttackAirForce = false;
+
+    public static int Hp = 900;
+
+    public static bool IsAirForce = false;
+
+    public static ActorLevel ActorLevel = ActorLevel.Normal;
+
+    public static Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>> SpellDictionary =
+        new Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>>
+            {
+                {
+                    ActorSpellType.ActiveSpell,
+                    new Dictionary
+                    <ActorSpellName, ActorSpell>
+                        {
+                            {
+                                ActorSpellName
+                                .SpiritLink,
+                                new ActorSpell
+                                (
+                                ActorSpellName
+                                .SpiritLink,
+                                ActorType
+                                .SpiritWalker)
+                            }
+                        }
+                }
+            };
+
+    #endregion
+}
+
+public static class OrcActorTaurenConfig
+{
+    #region Static Fields
+
+    public static ActorArmor ActorArmor = new ActorArmor(ActorArmorType.HeavyArmor, 9);
+
+    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.HeroAttack, 0, 60);
+
+    public static ActorType ActorType = ActorType.Tauren;
+
+    public static bool AttackAirForce = false;
+
+    public static int Hp = 1000;
+
+    public static bool IsAirForce = false;
+
+    public static ActorLevel ActorLevel = ActorLevel.Senior;
+
+    public static Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>> SpellDictionary =
+        new Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>>
+            {
+                {
+                    ActorSpellType.PassiveSpell,
+                    new Dictionary
+                    <ActorSpellName, ActorSpell>
+                        {
+                            {
+                                ActorSpellName
+                                .Smash,
+                                new ActorSpell
+                                (
+                                ActorSpellName
+                                .Smash,
+                                ActorType
+                                .Tauren)
                             }
                         }
                 }

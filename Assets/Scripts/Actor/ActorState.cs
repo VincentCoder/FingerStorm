@@ -108,7 +108,7 @@ public class Actor_GlobalState : State<ActorController>
         {
             case ActorSpellName.MortarAttack:
                 {
-                    List<GameObject> enemies = entityType.SeekAndGetEnemiesInDistance(40);
+                    List<GameObject> enemies = entityType.SeekAndGetEnemiesInDistance(120);
                     if (enemies != null && enemies.Count != 0)
                     {
                         Damage motarAttackDamage = new Damage();
@@ -138,7 +138,7 @@ public class Actor_GlobalState : State<ActorController>
                 }
             case ActorSpellName.ArcaneExplosion:
                 {
-                    List<GameObject> enemies = entityType.SeekAndGetEnemiesInDistance(50);
+                    List<GameObject> enemies = entityType.SeekAndGetEnemiesInDistance(120);
                     if (enemies != null && enemies.Count != 0)
                     {
                         Damage motarAttackDamage = new Damage();
@@ -170,20 +170,22 @@ public class Actor_GlobalState : State<ActorController>
                 {
                     List<GameObject> myActors =
                         ActorsManager.GetInstance().GetActorsOfFaction(entityType.MyActor.FactionType);
+                    Debug.Log(myActors.Count);
                     if (myActors != null && myActors.Count != 0)
                     {
                         GameObject targetActor = myActors[Random.Range(0, myActors.Count)];
                         Damage zapDamage = new Damage();
                         zapDamage.DamageValue = -300;
-
+                        zapDamage.ShowCrit = true;
                         GameObject hlEffect =
                                         (GameObject)Object.Instantiate(Resources.Load("GameScene/ActorSkillEffect"));
 						hlEffect.transform.parent = targetActor.transform;
-						hlEffect.transform.localPosition = new Vector3(0, 0, 0);
+						hlEffect.transform.localPosition = new Vector3(11, 38, 0);
                         tk2dSpriteAnimator animator = hlEffect.GetComponent<tk2dSpriteAnimator>();
                         animator.Play("HolyLight");
                         animator.AnimationCompleted = delegate
                         {
+                            Debug.Log("HolyLight");
                             if (targetActor != null)
                             {
                                 ActorController actorCtrl = targetActor.GetComponent<ActorController>();
@@ -446,7 +448,7 @@ public class Actor_StateFight : State<ActorController>
                     entityType.TargetEnemy,
                     entityType.CalculateCommonAttackDamage(entityType.TargetEnemy));
             };
-        this.PlayVampireAnimation(entityType);
+        
     }
 
     public override void Execute(ActorController entityType)
@@ -472,6 +474,7 @@ public class Actor_StateFight : State<ActorController>
                         entityType.TargetEnemy,
                         entityType.CalculateCommonAttackDamage(entityType.TargetEnemy));
                 };
+            this.SendBulletToEnemy(entityType);
             this.PlayVampireAnimation(entityType);
             this.attackSpeedCounter = 0f;
         }
@@ -490,6 +493,31 @@ public class Actor_StateFight : State<ActorController>
     #endregion
 
     #region Methods
+
+    private void SendBulletToEnemy(ActorController entityType)
+    {
+        if (entityType.MyActor.ActorType == ActorType.Sniper || entityType.MyActor.ActorType == ActorType.Marksman)
+        {
+            entityType.SendBullet(entityType.TargetEnemy, BulletType.Line_White);
+        }
+        else if (entityType.MyActor.ActorType == ActorType.HeavyGunner || entityType.MyActor.ActorType == ActorType.MortarTeam)
+        {
+            entityType.SendBullet(entityType.TargetEnemy, BulletType.Shell);
+        }
+        else if (entityType.MyActor.ActorType == ActorType.GryphonRider || entityType.MyActor.ActorType == ActorType.SeniorGryphonRider)
+        {
+            entityType.SendBullet(entityType.TargetEnemy, BulletType.Magic_GryphonRider);
+        }
+        else if (entityType.MyActor.ActorType == ActorType.Pastor || entityType.MyActor.ActorType == ActorType.Sage)
+        {
+            entityType.SendBullet(entityType.TargetEnemy, BulletType.Magic_Pastor);
+        }
+        else if (entityType.MyActor.ActorType == ActorType.Warlock)
+        {
+            entityType.SendBullet(entityType.TargetEnemy, BulletType.Sphere_Warlock);
+        }
+        this.PlayVampireAnimation(entityType);
+    }
 
     private void PlayVampireAnimation(ActorController entityType)
     {

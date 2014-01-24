@@ -1637,7 +1637,7 @@ MonoBehaviour:
     fps: 12
     loopStart: 0
     wrapMode: 0
-  - name: Terran_MotarTeam_Attack_Blue
+  - name: Terran_MortarTeam_Attack_Blue
     frames:
     - spriteCollection: {fileID: 11400000, guid: 43f3657e4c85d4b32ae701c04f76f120,
         type: 2}
@@ -1684,7 +1684,7 @@ MonoBehaviour:
     fps: 12
     loopStart: 0
     wrapMode: 2
-  - name: Terran_MotarTeam_Attack_Red
+  - name: Terran_MortarTeam_Attack_Red
     frames:
     - spriteCollection: {fileID: 11400000, guid: 43f3657e4c85d4b32ae701c04f76f120,
         type: 2}
@@ -1731,7 +1731,7 @@ MonoBehaviour:
     fps: 12
     loopStart: 0
     wrapMode: 2
-  - name: Terran_MotarTeam_Die_Blue
+  - name: Terran_MortarTeam_Die_Blue
     frames:
     - spriteCollection: {fileID: 11400000, guid: 43f3657e4c85d4b32ae701c04f76f120,
         type: 2}
@@ -1778,7 +1778,7 @@ MonoBehaviour:
     fps: 12
     loopStart: 0
     wrapMode: 2
-  - name: Terran_MotarTeam_Die_Red
+  - name: Terran_MortarTeam_Die_Red
     frames:
     - spriteCollection: {fileID: 11400000, guid: 43f3657e4c85d4b32ae701c04f76f120,
         type: 2}

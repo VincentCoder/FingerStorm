@@ -209,8 +209,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 64
-  mHeight: 64
+  mWidth: 44
+  mHeight: 44
   mDepth: 1
   autoResizeBoxCollider: 1
   mAtlas: {fileID: 11400000, guid: 10a6be158609a84429fcc3379affccf4, type: 2}
@@ -233,8 +233,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 64
-  mHeight: 64
+  mWidth: 44
+  mHeight: 44
   mDepth: 1
   autoResizeBoxCollider: 1
   mAtlas: {fileID: 11400000, guid: 10a6be158609a84429fcc3379affccf4, type: 2}
@@ -289,8 +289,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 64
-  mHeight: 64
+  mWidth: 44
+  mHeight: 44
   mDepth: 1
   autoResizeBoxCollider: 1
   mAtlas: {fileID: 11400000, guid: 10a6be158609a84429fcc3379affccf4, type: 2}

@@ -70,7 +70,7 @@ TerranActorSupporterHp = 575                                  --人族拥护者�
 TerranActorSupporterSpell = "Dodge"                           --人族拥护者技能：闪避
 
 TerranActorSniperAttackType = "Pierce"					      --人族狙击兵攻击类型：穿刺
-TerranActorSniperAttackRange = 50                             --人族狙击兵攻击射程
+TerranActorSniperAttackRange = 150                             --人族狙击兵攻击射程
 TerranActorSniperDps = 22                                     --人族狙击兵每秒输出
 TerranActorSniperArmorType = "LightArmor"                     --人族狙击兵护甲类型
 TerranActorSniperDef = 0                                      --人族狙击兵防御值
@@ -78,7 +78,7 @@ TerranActorSniperHp = 270                                     --人族狙击兵�
 TerranActorSniperSpell = "CirticalStrike"                     --人族狙击兵技能：致命一击
 
 TerranActorMarksmanAttackType = "Pierce"					      --人族神射手攻击类型：穿刺
-TerranActorMarksmanAttackRange = 60                               --人族神射手攻击射程
+TerranActorMarksmanAttackRange = 160                               --人族神射手攻击射程
 TerranActorMarksmanDps = 61                                       --人族神射手每秒输出
 TerranActorMarksmanArmorType = "LightArmor"                       --人族神射手护甲类型
 TerranActorMarksmanDef = 1                                        --人族神射手防御值
@@ -86,7 +86,7 @@ TerranActorMarksmanHp = 450                                       --人族神射
 TerranActorMarksmanSpell = "HeadShot"                             --人族神射手技能：爆头
 
 TerranActorHeavyGunnerAttackType = "Pierce"					         --人族重装炮兵攻击类型：穿刺
-TerranActorHeavyGunnerAttackRange = 55                               --人族重装炮兵攻击射程
+TerranActorHeavyGunnerAttackRange = 155                               --人族重装炮兵攻击射程
 TerranActorHeavyGunnerDps = 53                                       --人族重装炮兵每秒输出
 TerranActorHeavyGunnerArmorType = "LightArmor"                       --人族重装炮兵护甲类型
 TerranActorHeavyGunnerDef = 3                                        --人族重装炮兵防御值
@@ -94,7 +94,7 @@ TerranActorHeavyGunnerHp = 500                                       --人族重
 TerranActorHeavyGunnerSpell = "SplashDamage"                         --人族重装炮兵技能：溅射伤害
 
 TerranActorMortarTeamAttackType = "Siege"					       --人族迫击炮小队攻击类型：攻城
-TerranActorMortarTeamAttackRange = 100                              --人族迫击炮小队攻击射程
+TerranActorMortarTeamAttackRange = 200                              --人族迫击炮小队攻击射程
 TerranActorMortarTeamDps = 21                                       --人族迫击炮小队每秒输出
 TerranActorMortarTeamArmorType = "LightArmor"                       --人族迫击炮小队护甲类型
 TerranActorMortarTeamDef = 0                                        --人族迫击炮小队防御值
@@ -102,7 +102,7 @@ TerranActorMortarTeamHp = 260                                       --人族迫�
 TerranActorMortarTeamSpell = "MortarAttack"                         --人族迫击炮小队技能：迫击轰炸
 
 TerranActorWarlockAttackType = "Confuse"					     --人族术士攻击类型：混乱
-TerranActorWarlockAttackRange = 20                               --人族术士攻击射程
+TerranActorWarlockAttackRange = 120                               --人族术士攻击射程
 TerranActorWarlockDps = 17                                       --人族术士每秒输出
 TerranActorWarlockArmorType = "LightArmor"                       --人族术士护甲类型
 TerranActorWarlockDef = 1                                        --人族术士防御值
@@ -110,7 +110,7 @@ TerranActorWarlockHp = 320                                       --人族术士�
 TerranActorWarlockSpell = "ArcaneExplosion"                      --人族术士技能：奥术爆炸
 
 TerranActorGryphonRiderAttackType = "Magic"					          --人族狮鹫骑士攻击类型：魔法
-TerranActorGryphonRiderAttackRange = 45                               --人族狮鹫骑士攻击射程
+TerranActorGryphonRiderAttackRange = 145                               --人族狮鹫骑士攻击射程
 TerranActorGryphonRiderDps = 23                                       --人族狮鹫骑士每秒输出
 TerranActorGryphonRiderArmorType = "LightArmor"                       --人族狮鹫骑士护甲类型
 TerranActorGryphonRiderDef = 2                                        --人族狮鹫骑士防御值
@@ -118,7 +118,7 @@ TerranActorGryphonRiderHp = 500                                       --人族�
 TerranActorGryphonRiderSpell = "Bash/ChainLightning"                  --人族狮鹫骑士技能：重击/闪电链
 
 TerranActorSeniorGryphonRiderAttackType = "Magic"					        --人族高级狮鹫骑士攻击类型：魔法
-TerranActorSeniorGryphonRiderAttackRange = 50                               --人族高级狮鹫骑士攻击射程
+TerranActorSeniorGryphonRiderAttackRange = 150                               --人族高级狮鹫骑士攻击射程
 TerranActorSeniorGryphonRiderDps = 30                                       --人族高级狮鹫骑士每秒输出
 TerranActorSeniorGryphonRiderArmorType = "LightArmor"                       --人族高级狮鹫骑士护甲类型
 TerranActorSeniorGryphonRiderDef = 5                                        --人族高级狮鹫骑士防御值

@@ -153,7 +153,7 @@ public class BuildingController : BaseGameEntity
 		}
     }
 
-    void OnFingerUp ( FingerUpEvent e )
+    void OnFingerDown ( FingerDownEvent e )
     {
         if (e.Selection == this.gameObject)
         {

@@ -435,7 +435,7 @@ MonoBehaviour:
       eventFloat: 0
     - spriteCollection: {fileID: 11400000, guid: 390404dc7710af3419dd70d66f274d0c,
         type: 2}
-      spriteId: 22
+      spriteId: 58
       triggerEvent: 0
       eventInfo: 
       eventInt: 0
@@ -449,6 +449,13 @@ MonoBehaviour:
       eventFloat: 0
     - spriteCollection: {fileID: 11400000, guid: 390404dc7710af3419dd70d66f274d0c,
         type: 2}
+      spriteId: 22
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 11400000, guid: 390404dc7710af3419dd70d66f274d0c,
+        type: 2}
       spriteId: 24
       triggerEvent: 0
       eventInfo: 
@@ -456,7 +463,7 @@ MonoBehaviour:
       eventFloat: 0
     fps: 12
     loopStart: 0
-    wrapMode: 0
+    wrapMode: 2
   - name: ChainLightningB
     frames:
     - spriteCollection: {fileID: 11400000, guid: 390404dc7710af3419dd70d66f274d0c,

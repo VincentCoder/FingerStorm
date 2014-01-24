@@ -170,6 +170,33 @@ public class ActorsManager
 		return result;
     }
 
+    public List<GameObject> GetFriendlyActorsInDistance ( FactionType factionType, Vector3 position, int distance, bool ignoreObstacles = true )
+    {
+        List<GameObject> result = (from kv in this.actorsDictionary
+                                   let actorCtrl = kv.Value.GetComponent<ActorController>()
+                                   where actorCtrl.MyActor.FactionType == factionType
+                                   where
+                                       (position - kv.Value.transform.position).sqrMagnitude
+                    <= Mathf.Pow(distance, 2)
+                                   select kv.Value).ToList();
+        if (!ignoreObstacles)
+        {
+            for (int i = 0; i < result.Count; i++)
+            {
+                GameObject enemy = result[i];
+                RaycastHit hit;
+                if (Physics.Raycast(enemy.transform.position, position, out hit))
+                {
+                    if (hit.collider.gameObject.tag.Equals("Obstacle"))
+                    {
+                        result.RemoveAt(i);
+                    }
+                }
+            }
+        }
+        return result;
+    }
+
     public List<GameObject> GetEnemyActorsInDistanceAndSortByDistance(ActorController actorController, int distance, bool ignoreObstacles)
     {
         List<GameObject> result = (from kv in this.actorsDictionary

@@ -205,7 +205,8 @@ public class Building_StateDispatching : State<BuildingController>
             this.dispatchIntervalCounterLevel1 += Time.deltaTime;
             if (this.dispatchIntervalCounterLevel1 >= this.dispatchIntervalLevel1)
             {
-                this.DispatchActor(entityType, BuildingLevel.BuildingLevel1);
+                if(entityType.Building.FactionType == FactionType.Red)
+                    this.DispatchActor(entityType, BuildingLevel.BuildingLevel1);
                 this.dispatchIntervalCounterLevel1 = 0f;
             }
         }

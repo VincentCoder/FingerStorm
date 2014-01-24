@@ -6,7 +6,7 @@
     {
         this.ActorAttackType = attackType;
         this.AttackRange = range;
-        this.ViewDistance = 100;
+        this.ViewDistance = 200;
         this.Dps = dps;
     }
 

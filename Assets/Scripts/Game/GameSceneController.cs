@@ -128,27 +128,33 @@ public class GameSceneController : MonoBehaviour
             {
                 BuildingsManager.GetInstance()
                     .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(910, 530, 0));
+                BuildingsManager.GetInstance()
+                    .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(890, 530, 0));
+                BuildingsManager.GetInstance()
+                    .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(870, 530, 0));
+                BuildingsManager.GetInstance()
+                    .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(850, 530, 0));
 
                 BuildingsManager.GetInstance()
                     .CreateNewBuilding(BuildingType.Terran_Fortress, FactionType.Red, new Vector3(910, 270, 0));
 				
 				BuildingsManager.GetInstance()
-                    .CreateNewBuilding(BuildingType.Terran_Aviary, FactionType.Red, new Vector3(810, 530, 0));
+                    .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(810, 530, 0));
 				
-				BuildingsManager.GetInstance()
-                    .CreateNewBuilding(BuildingType.Terran_ArtilleryLab, FactionType.Red, new Vector3(810, 400, 0));
+				//BuildingsManager.GetInstance()
+                //    .CreateNewBuilding(BuildingType.Terran_ArtilleryLab, FactionType.Red, new Vector3(810, 400, 0));
 				
-				BuildingsManager.GetInstance()
-                    .CreateNewBuilding(BuildingType.Terran_MysterySchool, FactionType.Red, new Vector3(810, 270, 0));
+				//BuildingsManager.GetInstance()
+               //     .CreateNewBuilding(BuildingType.Terran_MysterySchool, FactionType.Red, new Vector3(810, 270, 0));
 
-                BuildingsManager.GetInstance()
-                    .CreateNewBuilding(BuildingType.Terran_Church, FactionType.Red, new Vector3(710, 400, 0));
+                //BuildingsManager.GetInstance()
+                  //  .CreateNewBuilding(BuildingType.Terran_Church, FactionType.Red, new Vector3(710, 400, 0));
 
-                BuildingsManager.GetInstance()
-                    .CreateNewBuilding(BuildingType.Terran_SniperHouse, FactionType.Red, new Vector3(710, 530, 0));
+                //BuildingsManager.GetInstance()
+                  //  .CreateNewBuilding(BuildingType.Terran_SniperHouse, FactionType.Red, new Vector3(710, 530, 0));
 				
-				BuildingsManager.GetInstance()
-                    .CreateNewBuilding(BuildingType.Terran_Temple, FactionType.Red, new Vector3(710, 270, 0));
+				//BuildingsManager.GetInstance()
+                  //  .CreateNewBuilding(BuildingType.Terran_Temple, FactionType.Red, new Vector3(710, 270, 0));
             }
 
             gameCtrl.ViewController.ShowBuildingsSelectorPanel();
