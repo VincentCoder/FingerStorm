@@ -245,7 +245,7 @@ public class UIViewController : MonoBehaviour
 		else
 			Destroy(gameResult);
 	}
-	
+
     public GameController GameController
     {
         get
