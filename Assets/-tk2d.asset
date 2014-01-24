@@ -2819,12 +2819,36 @@ MonoBehaviour:
     spriteNames:
     - HpBar
     - HpBarBkg
+    - Icon_Repair_Down
+    - Icon_Upgrade_Down
+    - Icon_Sell_Up
+    - UI_Ring
+    - Icon_Upgrade_Up
+    - Icon_Sell_Down
+    - Icon_Repair_Up
+    - Icon_Inoperable
     spriteTextureGUIDs:
     - c65327f79b68bc943b60e179bd8d37d8
     - 8a0c2bed170671c4cab194fdbcb78306
+    - 0d845166c5ce7044b94db070fa0c2390
+    - 73cce37dcda9ed24daa5e6d175036a8f
+    - 96fd279856bc05447b118e211516f3cd
+    - c2198101f10bd104da81e78a799bee3e
+    - c57ae928eacb7a242b571f038bf1ac3c
+    - dec4cba66f3d71a4a922e71c5f3453e8
+    - e0a7b960d9e6f1d4283452615ef20fb8
+    - e9186414b4aebbe41a2a66233139621c
     spriteTextureTimeStamps:
     - 1390473996
     - 1390473841
+    - 1389222949
+    - 1389222805
+    - 1389219245
+    - 1389219349
+    - 1389219179
+    - 1389222903
+    - 1389219097
+    - 1389219224
     managedSpriteCollection: 0
     loadable: 0
     assetName: 
@@ -4735,6 +4759,70 @@ MonoBehaviour:
     - 1390509282
     - 1390509282
     - 1390509282
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: OrcBuildingsCollection
+    spriteCollectionGUID: 49a74142602ddc04a97809b8d2edb445
+    spriteCollectionDataGUID: eb984734e5a5dc24792bc5018a813977
+    spriteNames:
+    - Orc_AnimalFarm_Blue
+    - Orc_AnimalFarm_Red
+    - Orc_OrcFactory_Blue
+    - Orc_OrcFactory_Red
+    - Orc_ShamanTent_Blue
+    - Orc_ShamanTent_Red
+    - Orc_TheMainCity_Blue
+    - Orc_TheMainCity_Red
+    - Orc_ThePound_Blue
+    - Orc_ThePound_Red
+    - Orc_TheTaurenVine_Blue
+    - Orc_TheTaurenVine_Red
+    - Orc_TrollHouse_Blue
+    - Orc_TrollHouse_Red
+    - Orc_WarriorHall_Blue
+    - Orc_WarriorHall_Red
+    - Orc_WyvernCamp_Blue
+    - Orc_WyvernCamp_Red
+    spriteTextureGUIDs:
+    - fd3330549ab057b43bea60163ea1807b
+    - e9d9452a9cadd184aa17339dcddb98ae
+    - 2cfa932628c2c6f429e45442780b501d
+    - 638e904fdfd7b63488f7c08ae600487d
+    - 5bed506dbd0d70d4bb9905d08edacb62
+    - 75f0181f74bd3c94fa8b858c5bb4602d
+    - 9af6a7850e72bbb48b78f32b2bab5d87
+    - d563338e52a40d3428c329cb210d7a0d
+    - 4537190a7084de146af94022a70e2c5b
+    - 90187233fc5bd6242bbca52d9a9de022
+    - c1f9379e05a3d4c41afb00ba79d987eb
+    - c23b164ce69a6584eae90d43151255f3
+    - 7b50360c934ffab4ca48d1e90532bd4f
+    - 32af4e8f3cea3764ca590716fe60561e
+    - 39a9e02cbbc9c8643ba8e5e5c82e79fe
+    - 8b81b202a24673c48b9ad922cb5f68d8
+    - 00ee9ff85271d7e468b2275ecee00c3e
+    - 84f9fe8814b6a2643a1804f0a36d579d
+    spriteTextureTimeStamps:
+    - 1390432381
+    - 1390431919
+    - 1390432396
+    - 1390431975
+    - 1390432371
+    - 1390431889
+    - 1390475529
+    - 1390475546
+    - 1390432363
+    - 1390431852
+    - 1390432403
+    - 1390432012
+    - 1390432329
+    - 1390431783
+    - 1390432320
+    - 1390431728
+    - 1390432389
+    - 1390431947
     managedSpriteCollection: 0
     loadable: 0
     assetName: 

@@ -333,6 +333,9 @@ public static class ActorsConfig
     #endregion
 }
 
+/// <summary>
+/// 人族
+/// </summary>
 public static class TerranActorInfantryConfig
 {
     #region Static Fields
@@ -952,6 +955,53 @@ public static class TerranActorPaladinConfig
     public static bool IsAirForce = false;
 
     public static ActorLevel ActorLevel = ActorLevel.Senior;
+
+    public static Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>> SpellDictionary =
+        new Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>>
+            {
+                {
+                    ActorSpellType.BuffSpell,
+                    new Dictionary
+                    <ActorSpellName, ActorSpell>
+                        {
+                            {
+                                ActorSpellName
+                                .GodBless,
+                                new ActorSpell
+                                (
+                                ActorSpellName
+                                .GodBless,
+                                ActorType
+                                .Paladin)
+                            }
+                        }
+                }
+            };
+
+    #endregion
+}
+
+/// <summary>
+/// 兽族
+/// </summary>
+
+public static class OrcActorGruntConfig
+{
+    #region Static Fields
+
+    public static ActorArmor ActorArmor = new ActorArmor(ActorArmorType.HeavyArmor, 4);
+
+    public static ActorAttack ActorAttack = new ActorAttack(ActorAttackType.Normal, 0, 18);
+
+    public static ActorType ActorType = ActorType.Grunt;
+
+    public static bool AttackAirForce = false;
+
+    public static int Hp = 325;
+
+    public static bool IsAirForce = false;
+
+    public static ActorLevel ActorLevel = ActorLevel.Normal;
 
     public static Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>> SpellDictionary =
         new Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>>

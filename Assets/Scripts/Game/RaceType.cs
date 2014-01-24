@@ -1,5 +1,6 @@
 ﻿
 public enum RaceType 
 {
-    Terran
+    Terran,
+    Orc
 }
