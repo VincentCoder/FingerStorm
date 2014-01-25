@@ -27,6 +27,8 @@ public class ActorController : BaseGameEntity
 
     private tk2dSpriteAnimator bleedEffectAnimator;
 
+    private tk2dSpriteAnimator shamanBlessAnimator;
+
     private tk2dSlicedSprite hpBarSprite;
 
     private float hpbarLength;
@@ -34,6 +36,8 @@ public class ActorController : BaseGameEntity
     private bool isBleed;
 
     private bool isRaging;
+
+    private bool isShamanBlessing;
 
     private StateMachine<ActorController> m_PStateMachine;
 
@@ -150,6 +154,40 @@ public class ActorController : BaseGameEntity
     }
 
     public float RagingDuration { get; set; }
+
+    public bool IsShamanBlessing
+    {
+        get
+        {
+            return this.isShamanBlessing;
+        }
+        set
+        {
+            if (value)
+            {
+                if (!this.isShamanBlessing)
+                {
+                    this.ShamanBlessingDuration = 60f;
+                    this.AttackInterval = Mathf.Max(this.AttackInterval * 0.67f, 0.5f);
+                    this.MyActor.ActorArmor.ArmorAmount += 4;
+                    GameObject shamanBlessEffect = (GameObject)Instantiate(Resources.Load("GameScene/ActorSkillEffect"));
+                    shamanBlessEffect.transform.parent = this.myTransform;
+                    shamanBlessEffect.transform.localPosition = new Vector3(0,0,0);
+                    this.shamanBlessAnimator = shamanBlessEffect.GetComponent<tk2dSpriteAnimator>();
+                    this.shamanBlessAnimator.Play("ShamanBless");
+                }
+            }
+            else
+            {
+                this.ShamanBlessingDuration = 0f;
+                this.AttackInterval = 1;
+                Destroy(this.shamanBlessAnimator.gameObject);
+            }
+            this.isShamanBlessing = value;
+        }
+    }
+
+    public float ShamanBlessingDuration { get; set; }
 
     public Actor MyActor
     {
@@ -701,7 +739,7 @@ public class ActorController : BaseGameEntity
         GameObject damageEffect = (GameObject)Instantiate(Resources.Load("GameScene/ActorSkillEffect"));
         damageEffect.name = "ShortRangeWeaponDamageEffect";
         damageEffect.transform.parent = this.myTransform;
-        damageEffect.transform.localPosition = new Vector3(0,0,-1);
+        damageEffect.transform.localPosition = this.myTransform.localScale.y == 0 ? new Vector3(0, 0, -1) : new Vector3(0, 0, 1);
         tk2dSpriteAnimator animator = damageEffect.GetComponent<tk2dSpriteAnimator>();
 
 		if(damage.ActorSpellName == ActorSpellName.CirticalStrike || damage.ActorSpellName == ActorSpellName.HeadShot)
@@ -714,7 +752,7 @@ public class ActorController : BaseGameEntity
 		}
         animator.AnimationCompleted = delegate
         {
-            //Destroy(damageEffect);
+            Destroy(damageEffect);
         };
 
         if (damage.Stun)
@@ -758,7 +796,6 @@ public class ActorController : BaseGameEntity
         }
         this.MyActor.CurrentHp = Mathf.Min(this.MyActor.CurrentHp, this.MyActor.TotalHp);
         this.RefreshHpBar();
-        //Debug.Log(this.MyActor.FactionType + " " + this.MyActor.CurrentHp);
     }
 
     public void SendBullet(BaseGameEntity gameEntity, BulletType bulletType)

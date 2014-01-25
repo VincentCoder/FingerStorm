@@ -114,7 +114,7 @@ public class BulletState_Arrival : State<BulletController>
             {
                 GameObject effect = (GameObject)Object.Instantiate(Resources.Load("GameScene/ActorSkillEffect"));
                 effect.transform.parent = entityType.Target.transform;
-                effect.transform.localPosition = new Vector3(10,0,-1);
+                effect.transform.localPosition = entityType.Target.transform.localScale.y == 0 ? new Vector3(10, 0, -1) : new Vector3(10, 0, 1);
                 tk2dSpriteAnimator animator = effect.GetComponent<tk2dSpriteAnimator>();
                 animator.Play("FireBomb");
                 animator.AnimationCompleted = delegate

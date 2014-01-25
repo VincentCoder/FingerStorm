@@ -15,6 +15,8 @@ public class Actor_GlobalState : State<ActorController>
 
     private Dictionary<ActorSpellName, float> releaseCounterDictionary;
 
+    private float ShamanBlessCounter = 0.0f;
+
     #endregion
 
     #region Public Methods and Operators
@@ -71,6 +73,25 @@ public class Actor_GlobalState : State<ActorController>
             {
                 entityType.IsRaging = false;
                 entityType.RagingDuration = 0;
+            }
+        }
+
+        if (entityType.IsShamanBlessing)
+        {
+            entityType.ShamanBlessingDuration -= Time.deltaTime;
+            this.ShamanBlessCounter += Time.deltaTime;
+            if (this.ShamanBlessCounter >= 1)
+            {
+                Damage blessDamage = new Damage();
+                blessDamage.DamageValue = -3;
+                blessDamage.ShowCrit = true;
+                entityType.TakeDamage(blessDamage);
+                this.ShamanBlessCounter = 0f;
+            }
+            if (entityType.ShamanBlessingDuration <= 0)
+            {
+                entityType.IsShamanBlessing = false;
+                this.ShamanBlessCounter = 0f;
             }
         }
 
@@ -180,7 +201,6 @@ public class Actor_GlobalState : State<ActorController>
                 {
                     List<GameObject> myActors =
                         ActorsManager.GetInstance().GetActorsOfFaction(entityType.MyActor.FactionType);
-                    Debug.Log(myActors.Count);
                     if (myActors != null && myActors.Count != 0)
                     {
                         GameObject targetActor = myActors[Random.Range(0, myActors.Count)];
@@ -203,6 +223,18 @@ public class Actor_GlobalState : State<ActorController>
                                 Object.Destroy(hlEffect);
                             }
                         };
+                    }
+                    break;
+                }
+            case ActorSpellName.ShamanBless:
+                {
+                    List<GameObject> myActors =
+                        ActorsManager.GetInstance().GetActorsOfFaction(entityType.MyActor.FactionType);
+                    if (myActors != null && myActors.Count != 0)
+                    {
+                        GameObject targetActor = myActors[Random.Range(0, myActors.Count)];
+                        ActorController actorCtrl = targetActor.GetComponent<ActorController>();
+                        actorCtrl.IsShamanBlessing = true;
                     }
                     break;
                 }
