@@ -144,6 +144,7 @@ public class FSClient : LoadBalancingClient
                         }
                         
                     }
+                    break;
                 }
         }
     }
