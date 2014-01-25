@@ -10,246 +10,468 @@ public static class ActorsConfig
 
     public static ActorArmor GetActorArmor(RaceType raceType, ActorType actorType)
     {
-        if (raceType == RaceType.Terran)
+        switch (raceType)
         {
-            switch (actorType)
-            {
-                case ActorType.Infantry:
-                    return TerranActorInfantryConfig.ActorArmor;
-                case ActorType.Supporter:
-                    return TerranActorSupporterConfig.ActorArmor;
-                case ActorType.Sniper:
-                    return TerranActorSniperConfig.ActorArmor;
-                case ActorType.Marksman:
-                    return TerranActorMarksmanConfig.ActorArmor;
-                case ActorType.HeavyGunner:
-                    return TerranActorHeavyGunnerConfig.ActorArmor;
-                case ActorType.MortarTeam:
-                    return TerranActorMortarTeamConfig.ActorArmor;
-                case ActorType.Warlock:
-                    return TerranActorWarlockConfig.ActorArmor;
-                case ActorType.GryphonRider:
-                    return TerranActorGryphonRiderConfig.ActorArmor;
-                case ActorType.SeniorGryphonRider:
-                    return TerranActorSeniorGryphonRiderConfig.ActorArmor;
-                case ActorType.Crusader:
-                    return TerranActorCrusaderConfig.ActorArmor;
-                case ActorType.TemplarWarrior:
-                    return TerranActorTemplarWarriorConfig.ActorArmor;
-                case ActorType.Pastor:
-                    return TerranActorPastorConfig.ActorArmor;
-                case ActorType.Sage:
-                    return TerranActorSageConfig.ActorArmor;
-                case ActorType.Knight:
-                    return TerranActorKnightConfig.ActorArmor;
-                case ActorType.Paladin:
-                    return TerranActorPaladinConfig.ActorArmor;
-            }
+            case RaceType.Terran:
+                switch (actorType)
+                {
+                    case ActorType.Infantry:
+                        return TerranActorInfantryConfig.ActorArmor;
+                    case ActorType.Supporter:
+                        return TerranActorSupporterConfig.ActorArmor;
+                    case ActorType.Sniper:
+                        return TerranActorSniperConfig.ActorArmor;
+                    case ActorType.Marksman:
+                        return TerranActorMarksmanConfig.ActorArmor;
+                    case ActorType.HeavyGunner:
+                        return TerranActorHeavyGunnerConfig.ActorArmor;
+                    case ActorType.MortarTeam:
+                        return TerranActorMortarTeamConfig.ActorArmor;
+                    case ActorType.Warlock:
+                        return TerranActorWarlockConfig.ActorArmor;
+                    case ActorType.GryphonRider:
+                        return TerranActorGryphonRiderConfig.ActorArmor;
+                    case ActorType.SeniorGryphonRider:
+                        return TerranActorSeniorGryphonRiderConfig.ActorArmor;
+                    case ActorType.Crusader:
+                        return TerranActorCrusaderConfig.ActorArmor;
+                    case ActorType.TemplarWarrior:
+                        return TerranActorTemplarWarriorConfig.ActorArmor;
+                    case ActorType.Pastor:
+                        return TerranActorPastorConfig.ActorArmor;
+                    case ActorType.Sage:
+                        return TerranActorSageConfig.ActorArmor;
+                    case ActorType.Knight:
+                        return TerranActorKnightConfig.ActorArmor;
+                    case ActorType.Paladin:
+                        return TerranActorPaladinConfig.ActorArmor;
+                }
+                break;
+            case RaceType.Orc:
+                switch (actorType)
+                {
+                    case ActorType.Grunt:
+                        return OrcActorGruntConfig.ActorArmor;
+                    case ActorType.OldGrunt:
+                        return OrcActorOldGruntConfig.ActorArmor;
+                    case ActorType.TrollBerserker:
+                        return OrcActorTrollBerserkerConfig.ActorArmor;
+                    case ActorType.TrollHunter:
+                        return OrcActorTrollHunterConfig.ActorArmor;
+                    case ActorType.BatRider:
+                        return OrcActorBatRiderConfig.ActorArmor;
+                    case ActorType.SeniorBatRider:
+                        return OrcActorSeniorBatRiderConfig.ActorArmor;
+                    case ActorType.Shaman:
+                        return OrcActorShamanConfig.ActorArmor;
+                    case ActorType.WitchDoctor:
+                        return OrcActorWitchDoctorConfig.ActorArmor;
+                    case ActorType.Raider:
+                        return OrcActorRaiderConfig.ActorArmor;
+                    case ActorType.Kodo:
+                        return OrcActorKodoConfig.ActorArmor;
+                    case ActorType.Wyvern:
+                        return OrcActorWyvernConfig.ActorArmor;
+                    case ActorType.WindRider:
+                        return OrcActorWindRiderConfig.ActorArmor;
+                    case ActorType.Catapult:
+                        return OrcActorCatapultConfig.ActorArmor;
+                    case ActorType.SpiritWalker:
+                        return OrcActorSpiritWalkerConfig.ActorArmor;
+                    case ActorType.Tauren:
+                        return OrcActorTaurenConfig.ActorArmor;
+                }
+                break;
         }
         return null;
     }
 
     public static ActorAttack GetActorAttack ( RaceType raceType, ActorType actorType )
     {
-        if (raceType == RaceType.Terran)
+        switch (raceType)
         {
-            switch (actorType)
-            {
-                case ActorType.Infantry:
-                    return TerranActorInfantryConfig.ActorAttack;
-                case ActorType.Supporter:
-                    return TerranActorSupporterConfig.ActorAttack;
-                case ActorType.Sniper:
-                    return TerranActorSniperConfig.ActorAttack;
-                case ActorType.Marksman:
-                    return TerranActorMarksmanConfig.ActorAttack;
-                case ActorType.HeavyGunner:
-                    return TerranActorHeavyGunnerConfig.ActorAttack;
-                case ActorType.MortarTeam:
-                    return TerranActorMortarTeamConfig.ActorAttack;
-                case ActorType.Warlock:
-                    return TerranActorWarlockConfig.ActorAttack;
-                case ActorType.GryphonRider:
-                    return TerranActorGryphonRiderConfig.ActorAttack;
-                case ActorType.SeniorGryphonRider:
-                    return TerranActorSeniorGryphonRiderConfig.ActorAttack;
-                case ActorType.Crusader:
-                    return TerranActorCrusaderConfig.ActorAttack;
-                case ActorType.TemplarWarrior:
-                    return TerranActorTemplarWarriorConfig.ActorAttack;
-                case ActorType.Pastor:
-                    return TerranActorPastorConfig.ActorAttack;
-                case ActorType.Sage:
-                    return TerranActorSageConfig.ActorAttack;
-                case ActorType.Knight:
-                    return TerranActorKnightConfig.ActorAttack;
-                case ActorType.Paladin:
-                    return TerranActorPaladinConfig.ActorAttack;
-            }
+            case RaceType.Terran:
+                switch (actorType)
+                {
+                    case ActorType.Infantry:
+                        return TerranActorInfantryConfig.ActorAttack;
+                    case ActorType.Supporter:
+                        return TerranActorSupporterConfig.ActorAttack;
+                    case ActorType.Sniper:
+                        return TerranActorSniperConfig.ActorAttack;
+                    case ActorType.Marksman:
+                        return TerranActorMarksmanConfig.ActorAttack;
+                    case ActorType.HeavyGunner:
+                        return TerranActorHeavyGunnerConfig.ActorAttack;
+                    case ActorType.MortarTeam:
+                        return TerranActorMortarTeamConfig.ActorAttack;
+                    case ActorType.Warlock:
+                        return TerranActorWarlockConfig.ActorAttack;
+                    case ActorType.GryphonRider:
+                        return TerranActorGryphonRiderConfig.ActorAttack;
+                    case ActorType.SeniorGryphonRider:
+                        return TerranActorSeniorGryphonRiderConfig.ActorAttack;
+                    case ActorType.Crusader:
+                        return TerranActorCrusaderConfig.ActorAttack;
+                    case ActorType.TemplarWarrior:
+                        return TerranActorTemplarWarriorConfig.ActorAttack;
+                    case ActorType.Pastor:
+                        return TerranActorPastorConfig.ActorAttack;
+                    case ActorType.Sage:
+                        return TerranActorSageConfig.ActorAttack;
+                    case ActorType.Knight:
+                        return TerranActorKnightConfig.ActorAttack;
+                    case ActorType.Paladin:
+                        return TerranActorPaladinConfig.ActorAttack;
+                }
+                break;
+            case RaceType.Orc:
+                switch (actorType)
+                {
+                    case ActorType.Grunt:
+                        return OrcActorGruntConfig.ActorAttack;
+                    case ActorType.OldGrunt:
+                        return OrcActorOldGruntConfig.ActorAttack;
+                    case ActorType.TrollBerserker:
+                        return OrcActorTrollBerserkerConfig.ActorAttack;
+                    case ActorType.TrollHunter:
+                        return OrcActorTrollHunterConfig.ActorAttack;
+                    case ActorType.BatRider:
+                        return OrcActorBatRiderConfig.ActorAttack;
+                    case ActorType.SeniorBatRider:
+                        return OrcActorSeniorBatRiderConfig.ActorAttack;
+                    case ActorType.Shaman:
+                        return OrcActorShamanConfig.ActorAttack;
+                    case ActorType.WitchDoctor:
+                        return OrcActorWitchDoctorConfig.ActorAttack;
+                    case ActorType.Raider:
+                        return OrcActorRaiderConfig.ActorAttack;
+                    case ActorType.Kodo:
+                        return OrcActorKodoConfig.ActorAttack;
+                    case ActorType.Wyvern:
+                        return OrcActorWyvernConfig.ActorAttack;
+                    case ActorType.WindRider:
+                        return OrcActorWindRiderConfig.ActorAttack;
+                    case ActorType.Catapult:
+                        return OrcActorCatapultConfig.ActorAttack;
+                    case ActorType.SpiritWalker:
+                        return OrcActorSpiritWalkerConfig.ActorAttack;
+                    case ActorType.Tauren:
+                        return OrcActorTaurenConfig.ActorAttack;
+                }
+                break;
         }
         return null;
     }
 
     public static bool GetAttackAirForce ( RaceType raceType, ActorType actorType )
     {
-        if (raceType == RaceType.Terran)
+        switch (raceType)
         {
-            switch (actorType)
-            {
-                case ActorType.Infantry:
-                    return TerranActorInfantryConfig.AttackAirForce;
-                case ActorType.Supporter:
-                    return TerranActorSupporterConfig.AttackAirForce;
-                case ActorType.Sniper:
-                    return TerranActorSniperConfig.AttackAirForce;
-                case ActorType.Marksman:
-                    return TerranActorMarksmanConfig.AttackAirForce;
-                case ActorType.HeavyGunner:
-                    return TerranActorHeavyGunnerConfig.AttackAirForce;
-                case ActorType.MortarTeam:
-                    return TerranActorMortarTeamConfig.AttackAirForce;
-                case ActorType.Warlock:
-                    return TerranActorWarlockConfig.AttackAirForce;
-                case ActorType.GryphonRider:
-                    return TerranActorGryphonRiderConfig.AttackAirForce;
-                case ActorType.SeniorGryphonRider:
-                    return TerranActorSeniorGryphonRiderConfig.AttackAirForce;
-                case ActorType.Crusader:
-                    return TerranActorCrusaderConfig.AttackAirForce;
-                case ActorType.TemplarWarrior:
-                    return TerranActorTemplarWarriorConfig.AttackAirForce;
-                case ActorType.Pastor:
-                    return TerranActorPastorConfig.AttackAirForce;
-                case ActorType.Sage:
-                    return TerranActorSageConfig.AttackAirForce;
-                case ActorType.Knight:
-                    return TerranActorKnightConfig.AttackAirForce;
-                case ActorType.Paladin:
-                    return TerranActorPaladinConfig.AttackAirForce;
-            }
+            case RaceType.Terran:
+                switch (actorType)
+                {
+                    case ActorType.Infantry:
+                        return TerranActorInfantryConfig.AttackAirForce;
+                    case ActorType.Supporter:
+                        return TerranActorSupporterConfig.AttackAirForce;
+                    case ActorType.Sniper:
+                        return TerranActorSniperConfig.AttackAirForce;
+                    case ActorType.Marksman:
+                        return TerranActorMarksmanConfig.AttackAirForce;
+                    case ActorType.HeavyGunner:
+                        return TerranActorHeavyGunnerConfig.AttackAirForce;
+                    case ActorType.MortarTeam:
+                        return TerranActorMortarTeamConfig.AttackAirForce;
+                    case ActorType.Warlock:
+                        return TerranActorWarlockConfig.AttackAirForce;
+                    case ActorType.GryphonRider:
+                        return TerranActorGryphonRiderConfig.AttackAirForce;
+                    case ActorType.SeniorGryphonRider:
+                        return TerranActorSeniorGryphonRiderConfig.AttackAirForce;
+                    case ActorType.Crusader:
+                        return TerranActorCrusaderConfig.AttackAirForce;
+                    case ActorType.TemplarWarrior:
+                        return TerranActorTemplarWarriorConfig.AttackAirForce;
+                    case ActorType.Pastor:
+                        return TerranActorPastorConfig.AttackAirForce;
+                    case ActorType.Sage:
+                        return TerranActorSageConfig.AttackAirForce;
+                    case ActorType.Knight:
+                        return TerranActorKnightConfig.AttackAirForce;
+                    case ActorType.Paladin:
+                        return TerranActorPaladinConfig.AttackAirForce;
+                }
+                break;
+            case RaceType.Orc:
+                switch (actorType)
+                {
+                    case ActorType.Grunt:
+                        return OrcActorGruntConfig.AttackAirForce;
+                    case ActorType.OldGrunt:
+                        return OrcActorOldGruntConfig.AttackAirForce;
+                    case ActorType.TrollBerserker:
+                        return OrcActorTrollBerserkerConfig.AttackAirForce;
+                    case ActorType.TrollHunter:
+                        return OrcActorTrollHunterConfig.AttackAirForce;
+                    case ActorType.BatRider:
+                        return OrcActorBatRiderConfig.AttackAirForce;
+                    case ActorType.SeniorBatRider:
+                        return OrcActorSeniorBatRiderConfig.AttackAirForce;
+                    case ActorType.Shaman:
+                        return OrcActorShamanConfig.AttackAirForce;
+                    case ActorType.WitchDoctor:
+                        return OrcActorWitchDoctorConfig.AttackAirForce;
+                    case ActorType.Raider:
+                        return OrcActorRaiderConfig.AttackAirForce;
+                    case ActorType.Kodo:
+                        return OrcActorKodoConfig.AttackAirForce;
+                    case ActorType.Wyvern:
+                        return OrcActorWyvernConfig.AttackAirForce;
+                    case ActorType.WindRider:
+                        return OrcActorWindRiderConfig.AttackAirForce;
+                    case ActorType.Catapult:
+                        return OrcActorCatapultConfig.AttackAirForce;
+                    case ActorType.SpiritWalker:
+                        return OrcActorSpiritWalkerConfig.AttackAirForce;
+                    case ActorType.Tauren:
+                        return OrcActorTaurenConfig.AttackAirForce;
+                }
+                break;
         }
         return false;
     }
 
     public static bool GetIsAirForce ( RaceType raceType, ActorType actorType )
     {
-        if (raceType == RaceType.Terran)
+        switch (raceType)
         {
-            switch (actorType)
-            {
-                case ActorType.Infantry:
-                    return TerranActorInfantryConfig.IsAirForce;
-                case ActorType.Supporter:
-                    return TerranActorSupporterConfig.IsAirForce;
-                case ActorType.Sniper:
-                    return TerranActorSniperConfig.IsAirForce;
-                case ActorType.Marksman:
-                    return TerranActorMarksmanConfig.IsAirForce;
-                case ActorType.HeavyGunner:
-                    return TerranActorHeavyGunnerConfig.IsAirForce;
-                case ActorType.MortarTeam:
-                    return TerranActorMortarTeamConfig.IsAirForce;
-                case ActorType.Warlock:
-                    return TerranActorWarlockConfig.IsAirForce;
-                case ActorType.GryphonRider:
-                    return TerranActorGryphonRiderConfig.IsAirForce;
-                case ActorType.SeniorGryphonRider:
-                    return TerranActorSeniorGryphonRiderConfig.IsAirForce;
-                case ActorType.Crusader:
-                    return TerranActorCrusaderConfig.IsAirForce;
-                case ActorType.TemplarWarrior:
-                    return TerranActorTemplarWarriorConfig.IsAirForce;
-                case ActorType.Pastor:
-                    return TerranActorPastorConfig.IsAirForce;
-                case ActorType.Sage:
-                    return TerranActorSageConfig.IsAirForce;
-                case ActorType.Knight:
-                    return TerranActorKnightConfig.IsAirForce;
-                case ActorType.Paladin:
-                    return TerranActorPaladinConfig.IsAirForce;
-            }
+            case RaceType.Terran:
+                switch (actorType)
+                {
+                    case ActorType.Infantry:
+                        return TerranActorInfantryConfig.IsAirForce;
+                    case ActorType.Supporter:
+                        return TerranActorSupporterConfig.IsAirForce;
+                    case ActorType.Sniper:
+                        return TerranActorSniperConfig.IsAirForce;
+                    case ActorType.Marksman:
+                        return TerranActorMarksmanConfig.IsAirForce;
+                    case ActorType.HeavyGunner:
+                        return TerranActorHeavyGunnerConfig.IsAirForce;
+                    case ActorType.MortarTeam:
+                        return TerranActorMortarTeamConfig.IsAirForce;
+                    case ActorType.Warlock:
+                        return TerranActorWarlockConfig.IsAirForce;
+                    case ActorType.GryphonRider:
+                        return TerranActorGryphonRiderConfig.IsAirForce;
+                    case ActorType.SeniorGryphonRider:
+                        return TerranActorSeniorGryphonRiderConfig.IsAirForce;
+                    case ActorType.Crusader:
+                        return TerranActorCrusaderConfig.IsAirForce;
+                    case ActorType.TemplarWarrior:
+                        return TerranActorTemplarWarriorConfig.IsAirForce;
+                    case ActorType.Pastor:
+                        return TerranActorPastorConfig.IsAirForce;
+                    case ActorType.Sage:
+                        return TerranActorSageConfig.IsAirForce;
+                    case ActorType.Knight:
+                        return TerranActorKnightConfig.IsAirForce;
+                    case ActorType.Paladin:
+                        return TerranActorPaladinConfig.IsAirForce;
+                }
+                break;
+            case RaceType.Orc:
+                switch (actorType)
+                {
+                    case ActorType.Grunt:
+                        return OrcActorGruntConfig.IsAirForce;
+                    case ActorType.OldGrunt:
+                        return OrcActorOldGruntConfig.IsAirForce;
+                    case ActorType.TrollBerserker:
+                        return OrcActorTrollBerserkerConfig.IsAirForce;
+                    case ActorType.TrollHunter:
+                        return OrcActorTrollHunterConfig.IsAirForce;
+                    case ActorType.BatRider:
+                        return OrcActorBatRiderConfig.IsAirForce;
+                    case ActorType.SeniorBatRider:
+                        return OrcActorSeniorBatRiderConfig.IsAirForce;
+                    case ActorType.Shaman:
+                        return OrcActorShamanConfig.IsAirForce;
+                    case ActorType.WitchDoctor:
+                        return OrcActorWitchDoctorConfig.IsAirForce;
+                    case ActorType.Raider:
+                        return OrcActorRaiderConfig.IsAirForce;
+                    case ActorType.Kodo:
+                        return OrcActorKodoConfig.IsAirForce;
+                    case ActorType.Wyvern:
+                        return OrcActorWyvernConfig.IsAirForce;
+                    case ActorType.WindRider:
+                        return OrcActorWindRiderConfig.IsAirForce;
+                    case ActorType.Catapult:
+                        return OrcActorCatapultConfig.IsAirForce;
+                    case ActorType.SpiritWalker:
+                        return OrcActorSpiritWalkerConfig.IsAirForce;
+                    case ActorType.Tauren:
+                        return OrcActorTaurenConfig.IsAirForce;
+                }
+                break;
         }
         return false;
     }
 
     public static int GetHp ( RaceType raceType, ActorType actorType )
     {
-        if (raceType == RaceType.Terran)
+        switch (raceType)
         {
-            switch (actorType)
-            {
-                case ActorType.Infantry:
-                    return TerranActorInfantryConfig.Hp;
-                case ActorType.Supporter:
-                    return TerranActorSupporterConfig.Hp;
-                case ActorType.Sniper:
-                    return TerranActorSniperConfig.Hp;
-                case ActorType.Marksman:
-                    return TerranActorMarksmanConfig.Hp;
-                case ActorType.HeavyGunner:
-                    return TerranActorHeavyGunnerConfig.Hp;
-                case ActorType.MortarTeam:
-                    return TerranActorMortarTeamConfig.Hp;
-                case ActorType.Warlock:
-                    return TerranActorWarlockConfig.Hp;
-                case ActorType.GryphonRider:
-                    return TerranActorGryphonRiderConfig.Hp;
-                case ActorType.SeniorGryphonRider:
-                    return TerranActorSeniorGryphonRiderConfig.Hp;
-                case ActorType.Crusader:
-                    return TerranActorCrusaderConfig.Hp;
-                case ActorType.TemplarWarrior:
-                    return TerranActorTemplarWarriorConfig.Hp;
-                case ActorType.Pastor:
-                    return TerranActorPastorConfig.Hp;
-                case ActorType.Sage:
-                    return TerranActorSageConfig.Hp;
-                case ActorType.Knight:
-                    return TerranActorKnightConfig.Hp;
-                case ActorType.Paladin:
-                    return TerranActorPaladinConfig.Hp;
-            }
+            case RaceType.Terran:
+                switch (actorType)
+                {
+                    case ActorType.Infantry:
+                        return TerranActorInfantryConfig.Hp;
+                    case ActorType.Supporter:
+                        return TerranActorSupporterConfig.Hp;
+                    case ActorType.Sniper:
+                        return TerranActorSniperConfig.Hp;
+                    case ActorType.Marksman:
+                        return TerranActorMarksmanConfig.Hp;
+                    case ActorType.HeavyGunner:
+                        return TerranActorHeavyGunnerConfig.Hp;
+                    case ActorType.MortarTeam:
+                        return TerranActorMortarTeamConfig.Hp;
+                    case ActorType.Warlock:
+                        return TerranActorWarlockConfig.Hp;
+                    case ActorType.GryphonRider:
+                        return TerranActorGryphonRiderConfig.Hp;
+                    case ActorType.SeniorGryphonRider:
+                        return TerranActorSeniorGryphonRiderConfig.Hp;
+                    case ActorType.Crusader:
+                        return TerranActorCrusaderConfig.Hp;
+                    case ActorType.TemplarWarrior:
+                        return TerranActorTemplarWarriorConfig.Hp;
+                    case ActorType.Pastor:
+                        return TerranActorPastorConfig.Hp;
+                    case ActorType.Sage:
+                        return TerranActorSageConfig.Hp;
+                    case ActorType.Knight:
+                        return TerranActorKnightConfig.Hp;
+                    case ActorType.Paladin:
+                        return TerranActorPaladinConfig.Hp;
+                }
+                break;
+            case RaceType.Orc:
+                switch (actorType)
+                {
+                    case ActorType.Grunt:
+                        return OrcActorGruntConfig.Hp;
+                    case ActorType.OldGrunt:
+                        return OrcActorOldGruntConfig.Hp;
+                    case ActorType.TrollBerserker:
+                        return OrcActorTrollBerserkerConfig.Hp;
+                    case ActorType.TrollHunter:
+                        return OrcActorTrollHunterConfig.Hp;
+                    case ActorType.BatRider:
+                        return OrcActorBatRiderConfig.Hp;
+                    case ActorType.SeniorBatRider:
+                        return OrcActorSeniorBatRiderConfig.Hp;
+                    case ActorType.Shaman:
+                        return OrcActorShamanConfig.Hp;
+                    case ActorType.WitchDoctor:
+                        return OrcActorWitchDoctorConfig.Hp;
+                    case ActorType.Raider:
+                        return OrcActorRaiderConfig.Hp;
+                    case ActorType.Kodo:
+                        return OrcActorKodoConfig.Hp;
+                    case ActorType.Wyvern:
+                        return OrcActorWyvernConfig.Hp;
+                    case ActorType.WindRider:
+                        return OrcActorWindRiderConfig.Hp;
+                    case ActorType.Catapult:
+                        return OrcActorCatapultConfig.Hp;
+                    case ActorType.SpiritWalker:
+                        return OrcActorSpiritWalkerConfig.Hp;
+                    case ActorType.Tauren:
+                        return OrcActorTaurenConfig.Hp;
+                }
+                break;
         }
         return 0;
     }
 
     public static ActorLevel GetActorLevel(RaceType raceType, ActorType actorType)
     {
-        if (raceType == RaceType.Terran)
+        switch (raceType)
         {
-            switch (actorType)
-            {
-                case ActorType.Infantry:
-                    return TerranActorInfantryConfig.ActorLevel;
-                case ActorType.Supporter:
-                    return TerranActorSupporterConfig.ActorLevel;
-                case ActorType.Sniper:
-                    return TerranActorSniperConfig.ActorLevel;
-                case ActorType.Marksman:
-                    return TerranActorMarksmanConfig.ActorLevel;
-                case ActorType.HeavyGunner:
-                    return TerranActorHeavyGunnerConfig.ActorLevel;
-                case ActorType.MortarTeam:
-                    return TerranActorMortarTeamConfig.ActorLevel;
-                case ActorType.Warlock:
-                    return TerranActorWarlockConfig.ActorLevel;
-                case ActorType.GryphonRider:
-                    return TerranActorGryphonRiderConfig.ActorLevel;
-                case ActorType.SeniorGryphonRider:
-                    return TerranActorSeniorGryphonRiderConfig.ActorLevel;
-                case ActorType.Crusader:
-                    return TerranActorCrusaderConfig.ActorLevel;
-                case ActorType.TemplarWarrior:
-                    return TerranActorTemplarWarriorConfig.ActorLevel;
-                case ActorType.Pastor:
-                    return TerranActorPastorConfig.ActorLevel;
-                case ActorType.Sage:
-                    return TerranActorSageConfig.ActorLevel;
-                case ActorType.Knight:
-                    return TerranActorKnightConfig.ActorLevel;
-                case ActorType.Paladin:
-                    return TerranActorPaladinConfig.ActorLevel;
-            }
+            case RaceType.Terran:
+                switch (actorType)
+                {
+                    case ActorType.Infantry:
+                        return TerranActorInfantryConfig.ActorLevel;
+                    case ActorType.Supporter:
+                        return TerranActorSupporterConfig.ActorLevel;
+                    case ActorType.Sniper:
+                        return TerranActorSniperConfig.ActorLevel;
+                    case ActorType.Marksman:
+                        return TerranActorMarksmanConfig.ActorLevel;
+                    case ActorType.HeavyGunner:
+                        return TerranActorHeavyGunnerConfig.ActorLevel;
+                    case ActorType.MortarTeam:
+                        return TerranActorMortarTeamConfig.ActorLevel;
+                    case ActorType.Warlock:
+                        return TerranActorWarlockConfig.ActorLevel;
+                    case ActorType.GryphonRider:
+                        return TerranActorGryphonRiderConfig.ActorLevel;
+                    case ActorType.SeniorGryphonRider:
+                        return TerranActorSeniorGryphonRiderConfig.ActorLevel;
+                    case ActorType.Crusader:
+                        return TerranActorCrusaderConfig.ActorLevel;
+                    case ActorType.TemplarWarrior:
+                        return TerranActorTemplarWarriorConfig.ActorLevel;
+                    case ActorType.Pastor:
+                        return TerranActorPastorConfig.ActorLevel;
+                    case ActorType.Sage:
+                        return TerranActorSageConfig.ActorLevel;
+                    case ActorType.Knight:
+                        return TerranActorKnightConfig.ActorLevel;
+                    case ActorType.Paladin:
+                        return TerranActorPaladinConfig.ActorLevel;
+                }
+                break;
+            case RaceType.Orc:
+                switch (actorType)
+                {
+                    case ActorType.Grunt:
+                        return OrcActorGruntConfig.ActorLevel;
+                    case ActorType.OldGrunt:
+                        return OrcActorOldGruntConfig.ActorLevel;
+                    case ActorType.TrollBerserker:
+                        return OrcActorTrollBerserkerConfig.ActorLevel;
+                    case ActorType.TrollHunter:
+                        return OrcActorTrollHunterConfig.ActorLevel;
+                    case ActorType.BatRider:
+                        return OrcActorBatRiderConfig.ActorLevel;
+                    case ActorType.SeniorBatRider:
+                        return OrcActorSeniorBatRiderConfig.ActorLevel;
+                    case ActorType.Shaman:
+                        return OrcActorShamanConfig.ActorLevel;
+                    case ActorType.WitchDoctor:
+                        return OrcActorWitchDoctorConfig.ActorLevel;
+                    case ActorType.Raider:
+                        return OrcActorRaiderConfig.ActorLevel;
+                    case ActorType.Kodo:
+                        return OrcActorKodoConfig.ActorLevel;
+                    case ActorType.Wyvern:
+                        return OrcActorWyvernConfig.ActorLevel;
+                    case ActorType.WindRider:
+                        return OrcActorWindRiderConfig.ActorLevel;
+                    case ActorType.Catapult:
+                        return OrcActorCatapultConfig.ActorLevel;
+                    case ActorType.SpiritWalker:
+                        return OrcActorSpiritWalkerConfig.ActorLevel;
+                    case ActorType.Tauren:
+                        return OrcActorTaurenConfig.ActorLevel;
+                }
+                break;
         }
         return 0;
     }
@@ -292,6 +514,42 @@ public static class ActorsConfig
                     return TerranActorPaladinConfig.SpellDictionary;
             }
         }
+        else if (raceType == RaceType.Orc)
+        {
+            switch (actorType)
+            {
+                case ActorType.Grunt:
+                    return OrcActorGruntConfig.SpellDictionary;
+                case ActorType.OldGrunt:
+                    return OrcActorOldGruntConfig.SpellDictionary;
+                case ActorType.TrollBerserker:
+                    return OrcActorTrollBerserkerConfig.SpellDictionary;
+                case ActorType.TrollHunter:
+                    return OrcActorTrollHunterConfig.SpellDictionary;
+                case ActorType.BatRider:
+                    return OrcActorBatRiderConfig.SpellDictionary;
+                case ActorType.SeniorBatRider:
+                    return OrcActorSeniorBatRiderConfig.SpellDictionary;
+                case ActorType.Shaman:
+                    return OrcActorShamanConfig.SpellDictionary;
+                case ActorType.WitchDoctor:
+                    return OrcActorWitchDoctorConfig.SpellDictionary;
+                case ActorType.Raider:
+                    return OrcActorRaiderConfig.SpellDictionary;
+                case ActorType.Kodo:
+                    return OrcActorKodoConfig.SpellDictionary;
+                case ActorType.Wyvern:
+                    return OrcActorWyvernConfig.SpellDictionary;
+                case ActorType.WindRider:
+                    return OrcActorWindRiderConfig.SpellDictionary;
+                case ActorType.Catapult:
+                    return OrcActorCatapultConfig.SpellDictionary;
+                case ActorType.SpiritWalker:
+                    return OrcActorSpiritWalkerConfig.SpellDictionary;
+                case ActorType.Tauren:
+                    return OrcActorTaurenConfig.SpellDictionary;
+            }
+        }
         return null;
     }
 
@@ -319,6 +577,25 @@ public static class ActorsConfig
                     result.Add(ActorType.Paladin);
                     break;
                 }
+            case RaceType.Orc:
+                {
+                    result.Add(ActorType.BatRider);
+                    result.Add(ActorType.Catapult);
+                    result.Add(ActorType.Grunt);
+                    result.Add(ActorType.Kodo); 
+                    result.Add(ActorType.OldGrunt);
+                    result.Add(ActorType.Raider);
+                    result.Add(ActorType.SeniorBatRider);
+                    result.Add(ActorType.Shaman);
+                    result.Add(ActorType.SpiritWalker);
+                    result.Add(ActorType.Tauren);
+                    result.Add(ActorType.TrollBerserker);
+                    result.Add(ActorType.TrollHunter);
+                    result.Add(ActorType.WindRider);
+                    result.Add(ActorType.WitchDoctor);
+                    result.Add(ActorType.Wyvern);
+                    break;
+                }
         }
         return result;
     }
@@ -327,6 +604,7 @@ public static class ActorsConfig
     {
         string temp = actorType + "";
         if (temp.Contains("Terran")) return RaceType.Terran;
+        if (temp.Contains("Orc")) return RaceType.Orc;
         return 0;
     }
 

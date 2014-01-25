@@ -61,11 +61,9 @@ public class BuildingsManager
         buildingObj.transform.position = pos;
         BuildingController buildingCtrl = buildingObj.GetComponent<BuildingController>();
         buildingCtrl.Building = new Building(this.GenerateNewBuildingId(), buildingType, factionType);
-		string buildingTypeStr = buildingType + "";
-        if (buildingTypeStr.Contains("TheMainCity"))
+        if (buildingCtrl.Building.IsMainCity)
         {
             this.baseBuildingDictionary.Add(factionType, buildingObj);
-			buildingCtrl.Building.IsMainCity = true;
         }
         this.allBuildingsDictionary.Add(buildingCtrl.Building.BuildingId, buildingObj);
 		return buildingObj;

@@ -27,14 +27,14 @@ public static class BuildingsConfig
                 break;
             case RaceType.Orc:
                 {
-                    result.Add(BuildingType.Orc_AnimalFarm);
-                    result.Add(BuildingType.Orc_OrcFactory);
-                    result.Add(BuildingType.Orc_ShamanTent);
-                    result.Add(BuildingType.Orc_ThePound); 
-                    result.Add(BuildingType.Orc_TheTaurenVine);
-                    result.Add(BuildingType.Orc_TrollHouse);
                     result.Add(BuildingType.Orc_WarriorHall);
+                    result.Add(BuildingType.Orc_TrollHouse);
+                    result.Add(BuildingType.Orc_ThePound);
+                    result.Add(BuildingType.Orc_ShamanTent); 
+                    result.Add(BuildingType.Orc_AnimalFarm);
                     result.Add(BuildingType.Orc_WyvernCamp);
+                    result.Add(BuildingType.Orc_OrcFactory);
+                    result.Add(BuildingType.Orc_TheTaurenVine);
                 }
                 break;
         }

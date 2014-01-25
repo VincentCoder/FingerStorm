@@ -66,6 +66,18 @@ public class GameSceneController : MonoBehaviour
 
     #endregion
 
+    #region Public Methods and Operators
+
+    public void ClearGameScene()
+    {
+        BuildingsManager.GetInstance().DestroyAllBuildings();
+        ActorsManager.GetInstance().DestroyAllActors();
+        Destroy(this.battleFieldMap);
+        Destroy(GameObject.FindGameObjectWithTag("Obstacle"));
+    }
+
+    #endregion
+
     #region Methods
 
     /// <summary>
@@ -116,50 +128,68 @@ public class GameSceneController : MonoBehaviour
     private void Start()
     {
         this.CreateBattleFieldMap();
-        BuildingsManager.GetInstance()
-            .CreateNewBuilding(BuildingType.Terran_TheMainCity, FactionType.Blue, new Vector3(50, 400, 0));
-        BuildingsManager.GetInstance()
-            .CreateNewBuilding(BuildingType.Terran_TheMainCity, FactionType.Red, new Vector3(910, 400, 0));
 
         GameController gameCtrl = GameObject.Find("GameController").GetComponent<GameController>();
         if (gameCtrl != null)
         {
-            if (gameCtrl.GameType == GameType.PVE)
+            if (this.MyRaceType == RaceType.Terran)
             {
                 BuildingsManager.GetInstance()
-                    .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(910, 530, 0));
+                    .CreateNewBuilding(BuildingType.Terran_TheMainCity, FactionType.Blue, new Vector3(50, 400, 0));
                 BuildingsManager.GetInstance()
-                    .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(890, 530, 0));
-                BuildingsManager.GetInstance()
-                    .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(870, 530, 0));
-                BuildingsManager.GetInstance()
-                    .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(850, 530, 0));
+                    .CreateNewBuilding(BuildingType.Terran_TheMainCity, FactionType.Red, new Vector3(910, 400, 0));
 
-                BuildingsManager.GetInstance()
-                    .CreateNewBuilding(BuildingType.Terran_Fortress, FactionType.Red, new Vector3(910, 270, 0));
-				
-				BuildingsManager.GetInstance()
-                    .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(810, 530, 0));
-				
-				//BuildingsManager.GetInstance()
-                //    .CreateNewBuilding(BuildingType.Terran_ArtilleryLab, FactionType.Red, new Vector3(810, 400, 0));
-				
-				//BuildingsManager.GetInstance()
-               //     .CreateNewBuilding(BuildingType.Terran_MysterySchool, FactionType.Red, new Vector3(810, 270, 0));
+                if (gameCtrl.GameType == GameType.PVE)
+                {
+                    BuildingsManager.GetInstance()
+                        .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(910, 530, 0));
+                    BuildingsManager.GetInstance()
+                        .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(890, 530, 0));
+                    BuildingsManager.GetInstance()
+                        .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(870, 530, 0));
+                    BuildingsManager.GetInstance()
+                        .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(850, 530, 0));
 
-                //BuildingsManager.GetInstance()
-                  //  .CreateNewBuilding(BuildingType.Terran_Church, FactionType.Red, new Vector3(710, 400, 0));
+                    BuildingsManager.GetInstance()
+                        .CreateNewBuilding(BuildingType.Terran_Fortress, FactionType.Red, new Vector3(910, 270, 0));
 
-                //BuildingsManager.GetInstance()
-                  //  .CreateNewBuilding(BuildingType.Terran_SniperHouse, FactionType.Red, new Vector3(710, 530, 0));
-				
-				//BuildingsManager.GetInstance()
-                  //  .CreateNewBuilding(BuildingType.Terran_Temple, FactionType.Red, new Vector3(710, 270, 0));
+                    BuildingsManager.GetInstance()
+                        .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(810, 530, 0));
+
+                    //BuildingsManager.GetInstance()
+                    //    .CreateNewBuilding(BuildingType.Terran_ArtilleryLab, FactionType.Red, new Vector3(810, 400, 0));
+
+                    //BuildingsManager.GetInstance()
+                    //     .CreateNewBuilding(BuildingType.Terran_MysterySchool, FactionType.Red, new Vector3(810, 270, 0));
+
+                    //BuildingsManager.GetInstance()
+                    //  .CreateNewBuilding(BuildingType.Terran_Church, FactionType.Red, new Vector3(710, 400, 0));
+
+                    //BuildingsManager.GetInstance()
+                    //  .CreateNewBuilding(BuildingType.Terran_SniperHouse, FactionType.Red, new Vector3(710, 530, 0));
+
+                    //BuildingsManager.GetInstance()
+                    //  .CreateNewBuilding(BuildingType.Terran_Temple, FactionType.Red, new Vector3(710, 270, 0));
+                }
             }
+            else if (this.MyRaceType == RaceType.Orc)
+            {
+                BuildingsManager.GetInstance()
+                    .CreateNewBuilding(BuildingType.Orc_TheMainCity, FactionType.Blue, new Vector3(50, 400, 0));
+                BuildingsManager.GetInstance()
+                    .CreateNewBuilding(BuildingType.Orc_TheMainCity, FactionType.Red, new Vector3(910, 400, 0));
 
+                if (gameCtrl.GameType == GameType.PVE)
+                {
+                    BuildingsManager.GetInstance()
+                        .CreateNewBuilding(BuildingType.Orc_AnimalFarm, FactionType.Red, new Vector3(910, 530, 0));
+                    BuildingsManager.GetInstance()
+                        .CreateNewBuilding(BuildingType.Orc_OrcFactory, FactionType.Red, new Vector3(810, 530, 0));
+                }
+            }
             gameCtrl.ViewController.ShowBuildingsSelectorPanel();
             gameCtrl.ViewController.ShowBuildingDetailPanel();
-			gameCtrl.ViewController.ShowPlayerSkillPanel();
+            gameCtrl.ViewController.ShowPlayerSkillPanel();
             this.menuBar = gameCtrl.ViewController.ShowMenuBar();
         }
 
@@ -182,14 +212,6 @@ public class GameSceneController : MonoBehaviour
             this.MpIncreaseCounter = 0f;
         }
     }
-	
-	public void ClearGameScene()
-	{
-		BuildingsManager.GetInstance().DestroyAllBuildings();
-		ActorsManager.GetInstance().DestroyAllActors();
-		Destroy(this.battleFieldMap);
-		Destroy(GameObject.FindGameObjectWithTag("Obstacle"));
-	}
 
     #endregion
 }

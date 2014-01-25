@@ -52,7 +52,7 @@ MonoBehaviour:
   - name: 
     spriteCollection: {fileID: 0}
   managedSpriteCollection: 0
-  loadable: 0
+  loadable: 1
   maxTextureSize: 1024
   forceTextureSize: 0
   forcedTextureWidth: 1024
@@ -978,7 +978,7 @@ MonoBehaviour:
   autoUpdate: 1
   editorDisplayScale: 1
   version: 4
-  assetName: 
+  assetName: TerranBuildingsCollection
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -6,7 +6,7 @@ TagManager:
   - HomePage
   - HomePageStartGameButton
   - HomePageOptionsButton
-  - 
+  - HomePageRaceSelectButton
   - GameSceneBuildingCard
   - GameSceneBuildingsSelectorPanel
   - GameSceneBuildingDetailPanel

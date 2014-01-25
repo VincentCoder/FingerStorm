@@ -2787,31 +2787,31 @@ MonoBehaviour:
     - d602c02cf77ac0f41906518f235cc120
     - 879ec2414062f0c40b2cc34104ec307e
     spriteTextureTimeStamps:
-    - 1389779688
-    - 1389779688
-    - 1390429667
-    - 1390429667
-    - 1390429667
-    - 1390429667
-    - 1389779688
-    - 1389779688
-    - 1389779688
-    - 1389779688
-    - 1389779688
-    - 1389779688
-    - 1389779688
-    - 1389779688
-    - 1390429667
-    - 1390429667
-    - 1389779688
-    - 1389779688
-    - 1389779688
-    - 1389779688
-    - 1389779688
-    - 1389779688
+    - 1390153518.93379
+    - 1390153518.93379
+    - 1390391877
+    - 1390390717
+    - 1390391922
+    - 1390391928
+    - 1390153518.93379
+    - 1390153518.93379
+    - 1390153518.93379
+    - 1390153518.93879
+    - 1390153518.93879
+    - 1390153518.93879
+    - 1390153518.93879
+    - 1390153518.93879
+    - 1390391887
+    - 1390390735
+    - 1390153518.93879
+    - 1390153518.93879
+    - 1390153518.93879
+    - 1390153518.94379
+    - 1390153518.94379
+    - 1390153518.94379
     managedSpriteCollection: 0
-    loadable: 0
-    assetName: 
+    loadable: 1
+    assetName: TerranBuildingsCollection
     version: 3
   - name: OtherCollection
     spriteCollectionGUID: 6a6e4ef4a134f1a47bccb3e5550fa6a9
@@ -2916,6 +2916,120 @@ MonoBehaviour:
     - Boom_Small_0003
     - Boom_Small_0004
     - ChainLightning_A_0002
+    - CommonDamageEffect_0005
+    - CommonDamageEffect_0004
+    - CommonDamageEffect_0002
+    - CommonDamageEffect_0003
+    - CommonDamageEffect_0006
+    - CommonDamageEffect_0001
+    - BurningOil_A_0000
+    - BurningOil_A_0001
+    - BurningOil_A_0002
+    - BurningOil_A_0003
+    - BurningOil_A_0004
+    - BurningOil_A_0005
+    - BurningOil_A_0006
+    - BurningOil_A_0007
+    - BurningOil_A_0008
+    - BurningOil_A_0009
+    - BurningOil_A_0010
+    - BurningOil_A_0011
+    - BurningOil_A_0012
+    - BurningOil_A_0013
+    - BurningOil_A_0014
+    - BurningOil_A_0015
+    - BurningOil_A_0016
+    - BurningOil_A_0017
+    - BurningOil_A_0018
+    - BurningOil_A_0019
+    - BurningOil_B_0001
+    - BurningOil_B_0002
+    - BurningOil_B_0003
+    - BurningOil_B_0004
+    - BurningOil_B_0005
+    - BurningOil_B_0006
+    - BurningOil_B_0007
+    - BurningOil_B_0008
+    - BurningOil_B_0009
+    - BurningOil_B_0010
+    - BurningOil_B_0011
+    - BurningOil_B_0012
+    - BurningOil_B_0013
+    - BurningOil_B_0014
+    - BurningOil_B_0015
+    - BurningOil_B_0016
+    - BurningOil_B_0017
+    - BurningOil_B_0018
+    - BurningOil_B_0019
+    - BurningOil_B_0020
+    - ChainHeal_0001
+    - ChainHeal_0002
+    - ChainHeal_0003
+    - ChainHeal_0004
+    - ChainHeal_0005
+    - ChainHeal_0006
+    - ChainHeal_0007
+    - ChainHeal_0008
+    - ChainHeal_0009
+    - ChainHeal_0010
+    - ChainHeal_0011
+    - ChainHeal_0012
+    - ChainHeal_0013
+    - Ensnare_A_001
+    - Ensnare_A_002
+    - Ensnare_A_003
+    - Ensnare_A_004
+    - Ensnare_A_005
+    - Ensnare_A_006
+    - Ensnare_B_001
+    - Ensnare_B_002
+    - Ensnare_B_003
+    - Ensnare_B_004
+    - Ensnare_B_005
+    - Ensnare_B_006
+    - Ensnare_B_007
+    - Ensnare_B_008
+    - FireBomb_001
+    - FireBomb_002
+    - FireBomb_003
+    - FireBomb_004
+    - FireBomb_005
+    - FireBomb_006
+    - FireBomb_007
+    - FireBomb_008
+    - FireBomb_009
+    - FireBomb_010
+    - PoisonAttack001
+    - PoisonAttack002
+    - PoisonAttack003
+    - PoisonAttack004
+    - PoisonAttack005
+    - PoisonAttack006
+    - ShamanBless_001
+    - ShamanBless_002
+    - ShamanBless_003
+    - ShamanBless_004
+    - ShamanBless_005
+    - ShamanBless_006
+    - ShamanBless_007
+    - ShamanBless_008
+    - ShamanBless_009
+    - ShamanBless_010
+    - ShamanBless_011
+    - ShamanBless_012
+    - HaloOfOffense_001
+    - HaloOfOffense_002
+    - HaloOfOffense_003
+    - HaloOfOffense_004
+    - HaloOfOffense_005
+    - HaloOfOffense_006
+    - HaloOfOffense_007
+    - HaloOfOffense_008
+    - HaloOfOffense_009
+    - HaloOfOffense_010
+    - HaloOfOffense_011
+    - HaloOfOffense_012
+    - HaloOfOffense_013
     spriteTextureGUIDs:
     - 615fa7a38262bcf498742ec9d4eefb1d
     - ee9052a53a0e28849a36ef7fd33b3ff7
@@ -2976,6 +3090,120 @@ MonoBehaviour:
     - 567d3c936f374844da5d44cbed160623
     - 30f21bab4df70c7458062c082d5dbaba
     - d9827f591021ae44d9124e5f211f3135
+    - 0893d6ff107a07c48b00a62b409e6499
+    - 15ddcd587bea0184190df22a02cd32fc
+    - 270052f98892f584482d2e94bcefffc9
+    - 946c3d5a9f8acaa448a31e65f33ab253
+    - c453c2bbef75b85439e097000dd0ad47
+    - c7543aacb2e51e744a76e7c599540f97
+    - c9efdf9ddcabb304c99adc104fb0372e
+    - f69209e3fb28f414d96ce45695734af1
+    - 2ac2d7e1e4d021f47bdb63bda806d6fc
+    - 4518a53da8faa6f489e32f0ee2222d9b
+    - 5563d6b9492de1f4397477731b3de84d
+    - ec31a466138fbf1489ef5513667f79ab
+    - 2e6948fd1642ffd4e92063d4525b0626
+    - 1b98a2650ea37f04f86ef3ed65f73c6c
+    - a6a48fb8c914e334c8a5b790f610fddb
+    - 090424a6cb6b29f47aa704a2fd267afc
+    - e2400404fe9bae7418c161fb9669dbfb
+    - 52de6caf3cbebf245ae4e00cdb0901a0
+    - b4cff801c7b2059479ac80c069f6afd2
+    - 054a4a03d3bb5de4ba910462a8de344e
+    - 1e23d0117916f084189a46c3b0221c0e
+    - 9154ed53cdae5ef4d877e8cee70575ad
+    - 3177749211f767b4fa79a7b4ced5ed75
+    - 14dd64fd84fe2964cb906427b86e78ff
+    - 45a9958e7b06b684681b645925123f00
+    - 28aa69982209c9f48adf2109725273d0
+    - bef39150adc100e468ef689f46f1b531
+    - bd05ff73ebecd7d4b899b532e4b8b108
+    - 071b885662f4ed2409974bb576137377
+    - 0858bf36a36a6354bb7200750d353f1b
+    - af3a7f608919cc2428ca3773c3f3af1e
+    - a881d361a6ab2634ca6686fa43ea1d13
+    - bd0c99113ea24f34390c07a07a499cea
+    - a44dbc38c34418749bafca94a4405dfc
+    - 42cbdc058ae4795429b66088728dfd04
+    - e479b42723487044e8117ad3eacaa877
+    - 546796c7e49e9a64c8edef2d59fec484
+    - f4d9d722209ba8843a6491ab21f32a14
+    - e71c2e9d3053de740b158443f0ec2989
+    - ce3e4515cc50da847813748ce10b331e
+    - 8d54d7db01346704fa29b7dce6de7357
+    - f21531177c201db419e18debc491fbd5
+    - 5de3ab738a5f9564798b7f7c8b247238
+    - 78baec97b7c1a2248a1db11d8bf2f9b0
+    - 88f9d912838402c479731e96bb192dfb
+    - 57e666392e3d67d48bc2ddcec3d7ffa8
+    - a0a0e7161657fdd4e928b553dd52e19e
+    - f926f58cfa89dea45a76a6b3b9860931
+    - b2be82e895a059246bb5b92c15c395a7
+    - d3a29e46d19a10045859fa1964e9c510
+    - b0cc505f30bc7fa479833a6deace8372
+    - 3ebcb3a48daa4c446865782249d8c149
+    - 075e073421e2997498c815857676fdf7
+    - 159dfb2ff1d401b46829d35095f9d9f7
+    - f6f48176440250c42b275dd7ae357bce
+    - 348b6aa8adec4ec42ae3ac76da6659ad
+    - a787511fe36dce342bc31d3ca8bffa80
+    - 427eee8a2a836bb46a40aed09e862b29
+    - 637f10fd6c590d447976ba801be6a31f
+    - 16eca39236f1b9a4ba6a563fda42c054
+    - 37cde22c8e0e577449f61649a69f2c51
+    - baebec5910b6f9b46988ce6eb0428c0e
+    - e3d2483b3a55c6e4d9e353f1092f681e
+    - aeef9674a7376f54a948357364ce07fc
+    - 539839de8363e4e48a78680807e98c89
+    - c1f0019cbb909044c87cad0ed53e96ef
+    - dff79d68fc649d846ad7ba9debb4c573
+    - 3e7b52ce8e893dd499937a087c6839a8
+    - 6815ab0083e80794eb36c64b22fe60ee
+    - 1b73239d3a443334ba7e5ffbc9e1712c
+    - 67d7c04dafb342442ac25bb974e8f85b
+    - 0b9670564a2a07449a464de6233aa058
+    - 73d17ce47fa95ce44810523ceadb2c70
+    - 601bf90ba0df2ba4e8ab289155e53951
+    - bd8ecc8dbf42c7845a902962a4b566fc
+    - 6ab8f727fa2800b4999805aede632ba7
+    - dbf57170d91d28f4f8a46f0db05e01ee
+    - fe71adb0391136844958c0328b971a02
+    - 11838b8d6bf437f409491f1cdf1b5b40
+    - 72bc59623b4a0754981506e53170ab96
+    - 61147bf1d9a17fb499b377e7599055f9
+    - f5c4ca701b56fe245bb1b84794764db2
+    - a2f18ad42f2082b48b3fbe2bbd237504
+    - 7eaaa527a649ff54f885c8bacee7aa86
+    - 10cc6262e0787394ca70bf9b6d6e4bf7
+    - 3f341a51cf178f94c8777c894860853f
+    - 3ab7acf3aeac78c468d16bde8ce994ca
+    - bc5a0a17b14e76d4eadefb283ccd2402
+    - 594c0f66206e9be4aa6ec29e9e982a31
+    - 7f591d2c7eedc9b4d8aaf9f64bec1459
+    - f4a138ec4911d2d4f872173c52b9d242
+    - bfeb60b9b2405f74190fca108a98901a
+    - e2162830f4f538947a6cfd388621e265
+    - 137ef1d3463bebd46a4be4339315db35
+    - e92b4c3a6d6f8704696fdda641e993cb
+    - 205a3766efd487d41b887f919d2121a0
+    - 8db0ffde93b4e6a4a93d83794b123559
+    - be0be229007a67148a4a643dfb94df06
+    - aade82ad7e867d84cb3e6802ac211fb2
+    - 3b34744ae3ae53d4d86df857e4929536
+    - 8b5635f239d49c0438d0001de3903611
+    - 81de3781cb311d742b61f5ed748f8389
+    - 0148e63235e3ec74eb51af1d0d99ca7d
+    - 751e28e575115fe4591d0f3fe37f322f
+    - 5e9001ec242c7b44898fb473cf43af95
+    - 4853e93ad03ff5746b8700e26f3c9dcc
+    - 69fcf9b14f096ff4fa6731fbb5533538
+    - cdea9d36a0f32f94e91613ae7d922ff7
+    - 3434cca3b571f4043bfca6b22b3d2a04
+    - 977d8207ac74a564bae818eee1a2be05
+    - 3fa2e794e9f2b974c8d4fd8554ba24df
+    - f8e7d3099d6fc10459b990fd399b24ae
+    - a06064119ed5ffe43b925d54e526b264
+    - be3f214217a11e848aebaff7ece1b36c
     spriteTextureTimeStamps:
     - 1390304409
     - 1390304409
@@ -3036,6 +3264,120 @@ MonoBehaviour:
     - 1390301661
     - 1390301662
     - 1390614015
+    - 1390579908
+    - 1390579908
+    - 1390579908
+    - 1390579908
+    - 1390579908
+    - 1390579908
+    - 1390579244
+    - 1390579244
+    - 1390579244
+    - 1390579244
+    - 1390579244
+    - 1390579244
+    - 1390579245
+    - 1390579245
+    - 1390579245
+    - 1390579245
+    - 1390579245
+    - 1390579245
+    - 1390579245
+    - 1390579245
+    - 1390579245
+    - 1390579245
+    - 1390579245
+    - 1390579245
+    - 1390579246
+    - 1390579246
+    - 1390663523
+    - 1390663523
+    - 1390663523
+    - 1390663523
+    - 1390663523
+    - 1390663523
+    - 1390663523
+    - 1390663523
+    - 1390663524
+    - 1390663524
+    - 1390663524
+    - 1390663523
+    - 1390663523
+    - 1390663523
+    - 1390663523
+    - 1390663523
+    - 1390663523
+    - 1390663523
+    - 1390663523
+    - 1390663524
+    - 1390577392
+    - 1390577392
+    - 1390577392
+    - 1390577392
+    - 1390577392
+    - 1390577392
+    - 1390577392
+    - 1390577392
+    - 1390577393
+    - 1390577393
+    - 1390577393
+    - 1390577393
+    - 1390577393
+    - 1390662180
+    - 1390662180
+    - 1390662180
+    - 1390662181
+    - 1390662181
+    - 1390662181
+    - 1390662232
+    - 1390662232
+    - 1390662232
+    - 1390662233
+    - 1390662233
+    - 1390662233
+    - 1390662233
+    - 1390662233
+    - 1390576277
+    - 1390576277
+    - 1390576277
+    - 1390576277
+    - 1390576277
+    - 1390576277
+    - 1390576277
+    - 1390576277
+    - 1390576277
+    - 1390576277
+    - 1390578533
+    - 1390578533
+    - 1390578533
+    - 1390578533
+    - 1390578533
+    - 1390578533
+    - 1390574235
+    - 1390576504
+    - 1390576504
+    - 1390576504
+    - 1390576504
+    - 1390576504
+    - 1390576504
+    - 1390576504
+    - 1390576504
+    - 1390576504
+    - 1390576504
+    - 1390576370
+    - 1390577832
+    - 1390577832
+    - 1390577832
+    - 1390577832
+    - 1390577832
+    - 1390577832
+    - 1390577832
+    - 1390577832
+    - 1390577832
+    - 1390577832
+    - 1390577832
+    - 1390577832
+    - 1390577832
     managedSpriteCollection: 0
     loadable: 0
     assetName: 
@@ -4827,8 +5169,8 @@ MonoBehaviour:
     - 1390592010.90658
     - 1390592010.91559
     managedSpriteCollection: 0
-    loadable: 0
-    assetName: 
+    loadable: 1
+    assetName: OrcBuildingsCollection
     version: 3
   - name: BulletCollection
     spriteCollectionGUID: 06bbfc523037fcd42bdc479f422baac1
@@ -4839,18 +5181,30 @@ MonoBehaviour:
     - Magic_Pastor
     - Shell
     - Sphere_Warlock
+    - Axe
+    - Javelin
+    - SiegeStone
+    - PoisonBullet
     spriteTextureGUIDs:
     - e4911cd895c75b149844fc0c2f6ee649
     - 269a6c3e8dd744940b1ae87a7a573a7d
     - 1fccf94f1fb5b2543b1f322eeef54c1a
     - 9e4965bddb89af445935889b97114ed6
     - 86deef8bb373822479c82fb7cb26e196
+    - 8181aaea5cc379542854f90ab6bb4f64
+    - a2f8c4b23d9901043bc4476606b08aa9
+    - eb14aaf5abe1187489d60f7b7c24c401
+    - 1451b48f8ae43ac48915c81f04137ccb
     spriteTextureTimeStamps:
     - 1390506310
     - 1390337159
     - 1390337073
     - 1390337050
     - 1390337119
+    - 1390573787
+    - 1390573806
+    - 1390575047
+    - 1390665271
     managedSpriteCollection: 0
     loadable: 0
     assetName: 

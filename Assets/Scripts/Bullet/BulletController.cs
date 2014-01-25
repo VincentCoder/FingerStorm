@@ -86,9 +86,18 @@ public class BulletController : BaseGameEntity
             case BulletType.Line_White:
                 this.MoveSpeed = 400;
                 break;
-           //case BulletType.ChainLightning:
-            //    this.MoveSpeed = 5;
-            //    break;
+           case BulletType.Shell:
+                this.MoveSpeed = 200;
+                break;
+           case BulletType.Magic_GryphonRider:
+                this.MoveSpeed = 300;
+                break;
+           case BulletType.Magic_Pastor:
+                this.MoveSpeed = 300;
+                break;
+            case BulletType.Sphere_Warlock:
+                this.MoveSpeed = 300;
+                break;
             default:
                 this.MoveSpeed = 200;
                 break;

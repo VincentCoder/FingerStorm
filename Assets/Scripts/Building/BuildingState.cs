@@ -61,11 +61,14 @@ public class Building_StateBeforeBuilt : State<BuildingController>
 
     public override void Enter(BuildingController entityType)
     {
+        tk2dSpriteCollectionData data =
+            tk2dSystem.LoadResourceByName<tk2dSpriteCollectionData>(entityType.Building.Race + "BuildingsCollection");
+            
         StringBuilder spriteName = new StringBuilder(string.Empty);
         spriteName.Append(entityType.Building.BuildingType);
         spriteName.Append("_");
         spriteName.Append(entityType.Building.FactionType);
-        entityType.SelfSprite.SetSprite(spriteName.ToString());
+        entityType.SelfSprite.SetSprite(data, spriteName.ToString());
 
         entityType.GetFSM().ChangeState(Building_StateBuilding.Instance());
     }
@@ -205,7 +208,7 @@ public class Building_StateDispatching : State<BuildingController>
             this.dispatchIntervalCounterLevel1 += Time.deltaTime;
             if (this.dispatchIntervalCounterLevel1 >= this.dispatchIntervalLevel1)
             {
-                if(entityType.Building.FactionType == FactionType.Red)
+                //if(entityType.Building.FactionType == FactionType.Red)
                     this.DispatchActor(entityType, BuildingLevel.BuildingLevel1);
                 this.dispatchIntervalCounterLevel1 = 0f;
             }
@@ -248,7 +251,7 @@ public class Building_StateDispatching : State<BuildingController>
     {
         ActorsManager.GetInstance()
             .CreateNewActor(
-                entityType.Building.FactionType,
+                entityType.Building.FactionType, entityType.Building.Race,
                 buildingLevel == BuildingLevel.BuildingLevel1 ? entityType.Building.ProducedActorTypeLevel1 : entityType.Building.ProducedActorTypeLevel2,
                 entityType.MyTransform.position);
     }

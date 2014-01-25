@@ -8,7 +8,15 @@
 
     Shell,
 
-    Sphere_Warlock
+    Sphere_Warlock,
+
+    Axe,
+
+    Javalin,
+
+    SiegeStone,
+
+    PoisonBullet
 
     //ChainLightning
 }

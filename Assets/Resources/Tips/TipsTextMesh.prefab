@@ -88,7 +88,7 @@ MonoBehaviour:
     color: {r: 1, g: 1, b: 1, a: 1}
     color2: {r: 1, g: 1, b: 1, a: 1}
     useGradient: 0
-    textureGradient: 3
+    textureGradient: 1
     anchor: 4
     renderLayer: 0
     scale: {x: 100, y: 100, z: 1}

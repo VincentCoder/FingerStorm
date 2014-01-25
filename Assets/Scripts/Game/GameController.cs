@@ -54,6 +54,22 @@ public class GameController : BaseGameEntity
         this.GameSceneController.MyRaceType = this.MyRaceType;
     }
 
+    public void OnRaceSelect()
+    {
+        if (UIPopupList.current != null)
+        {
+            string raceType = UIPopupList.current.value;
+            if (raceType == "人族")
+            {
+                this.MyRaceType = RaceType.Terran;
+            }
+            else if (raceType == "兽族")
+            {
+                this.MyRaceType = RaceType.Orc;
+            }
+        }
+    }
+
     #endregion
 
     #region Methods

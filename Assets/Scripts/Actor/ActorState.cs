@@ -64,6 +64,16 @@ public class Actor_GlobalState : State<ActorController>
             }
         }
 
+        if (entityType.IsRaging)
+        {
+            entityType.RagingDuration -= Time.deltaTime;
+            if (entityType.RagingDuration <= 0)
+            {
+                entityType.IsRaging = false;
+                entityType.RagingDuration = 0;
+            }
+        }
+
         if (this.releaseCounterDictionary != null && this.activeSpellDictionary != null)
         {
             //foreach (KeyValuePair<ActorSpellName, float> kv in this.releaseCounterDictionary)
@@ -95,7 +105,7 @@ public class Actor_GlobalState : State<ActorController>
         {
             if (telegram.Parameters.ContainsKey("Damage"))
             {
-                entityType.TakeDamage((Damage)telegram.Parameters["Damage"]);
+                entityType.TakeDamage((Damage)telegram.Parameters["Damage"], telegram.Sender);
                 return true;
             }
         }
@@ -223,7 +233,7 @@ public class Actor_StateWalk : State<ActorController>
 
     public override void Enter(ActorController entityType)
     {
-        StringBuilder animName = new StringBuilder("Terran_");
+        StringBuilder animName = new StringBuilder(entityType.MyActor.RaceType + "_");
         animName.Append(entityType.MyActor.ActorType);
         animName.Append("_Walk_");
         animName.Append(entityType.MyActor.FactionType);
@@ -342,7 +352,7 @@ public class Actor_StateBeforeFight : State<ActorController>
 
     public override void Enter(ActorController entityType)
     {
-        StringBuilder animName = new StringBuilder("Terran_");
+        StringBuilder animName = new StringBuilder(entityType.MyActor.RaceType + "_");
         animName.Append(entityType.MyActor.ActorType);
         animName.Append("_Walk_");
         animName.Append(entityType.MyActor.FactionType);
@@ -436,7 +446,7 @@ public class Actor_StateFight : State<ActorController>
             entityType.GetFSM().ChangeState(Actor_StateBeforeFight.Instance());
             return;
         }
-        StringBuilder animName = new StringBuilder("Terran_");
+        StringBuilder animName = new StringBuilder(entityType.MyActor.RaceType + "_");
         animName.Append(entityType.MyActor.ActorType);
         animName.Append("_Attack_");
         animName.Append(entityType.MyActor.FactionType);
@@ -464,7 +474,7 @@ public class Actor_StateFight : State<ActorController>
         }
 
         this.attackSpeedCounter += Time.deltaTime;
-        if (this.attackSpeedCounter >= entityType.AttackSpeed)
+        if (this.attackSpeedCounter >= entityType.AttackInterval)
         {
             entityType.SelfAnimator.Play();
             entityType.SelfAnimator.AnimationCompleted = delegate
@@ -516,6 +526,26 @@ public class Actor_StateFight : State<ActorController>
         {
             entityType.SendBullet(entityType.TargetEnemy, BulletType.Sphere_Warlock);
         }
+        else if (entityType.MyActor.ActorType == ActorType.TrollBerserker
+                 || entityType.MyActor.ActorType == ActorType.TrollHunter || entityType.MyActor.ActorType == ActorType.Kodo)
+        {
+            entityType.SendBullet(entityType.TargetEnemy, BulletType.Axe);
+        }
+        else if (entityType.MyActor.ActorType == ActorType.BatRider
+                 || entityType.MyActor.ActorType == ActorType.SeniorBatRider
+                 || entityType.MyActor.ActorType == ActorType.Catapult)
+        {
+            entityType.SendBullet(entityType.TargetEnemy, BulletType.SiegeStone);
+        }
+        else if (entityType.MyActor.ActorType == ActorType.Shaman
+                 || entityType.MyActor.ActorType == ActorType.WitchDoctor)
+        {
+            entityType.SendBullet(entityType.TargetEnemy, BulletType.Sphere_Warlock);
+        }
+        else if (entityType.MyActor.ActorType == ActorType.Wyvern || entityType.MyActor.ActorType == ActorType.WindRider)
+        {
+            entityType.SendBullet(entityType.TargetEnemy, BulletType.Javalin);
+        }
         this.PlayVampireAnimation(entityType);
     }
 
@@ -556,7 +586,7 @@ public class Actor_StateBeforeDie : State<ActorController>
 
     public override void Enter(ActorController entityType)
     {
-        StringBuilder animName = new StringBuilder("Terran_");
+        StringBuilder animName = new StringBuilder(entityType.MyActor.RaceType + "_");
         animName.Append(entityType.MyActor.ActorType);
         animName.Append("_Die_");
         animName.Append(entityType.MyActor.FactionType);

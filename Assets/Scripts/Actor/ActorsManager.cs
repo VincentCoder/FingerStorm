@@ -50,7 +50,7 @@ public class ActorsManager
         return instance;
     }
 
-    public void CreateNewActor(FactionType factionType, ActorType actorType, Vector3 pos)
+    public void CreateNewActor(FactionType factionType,RaceType raceType, ActorType actorType, Vector3 pos)
     {
         GameObject actorObj = (GameObject)Object.Instantiate(Resources.Load("GameScene/Actor"));
         int actorId = this.GenerateNewActorId();
@@ -58,7 +58,7 @@ public class ActorsManager
         actorObj.transform.localScale = new Vector3(1, 1, 1);
         actorObj.transform.position = pos;
         ActorController actorCtrl = actorObj.GetComponent<ActorController>();
-		Actor actor = new Actor(actorId, actorType, factionType);
+		Actor actor = new Actor(actorId, raceType, actorType, factionType);
 		actorCtrl.TargetBuilding =
             BuildingsManager.GetInstance()
                 .GetBaseBuildingOfFaction(actor.FactionType == FactionType.Blue ? FactionType.Red : FactionType.Blue);

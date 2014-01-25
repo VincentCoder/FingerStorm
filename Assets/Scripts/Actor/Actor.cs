@@ -10,12 +10,12 @@ public class Actor
 {
     #region Constructors and Destructors
 
-    public Actor(int actorId, ActorType type, FactionType faction)
+    public Actor(int actorId, RaceType raceType, ActorType type, FactionType faction)
     {
         this.ActorId = actorId;
         this.ActorType = type;
         this.FactionType = faction;
-        this.RaceType = ActorsConfig.GetActorRaceType(this.ActorType);
+        this.RaceType = raceType;
         this.ActorArmor = ActorsConfig.GetActorArmor(this.RaceType, this.ActorType);
         this.ActorAttack = ActorsConfig.GetActorAttack(this.RaceType, this.ActorType);
         this.AttackAirForce = ActorsConfig.GetAttackAirForce(this.RaceType, this.ActorType);

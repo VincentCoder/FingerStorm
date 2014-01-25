@@ -887,11 +887,11 @@ MonoBehaviour:
   allowMultipleAtlases: 0
   spriteCollectionGUID: 9bb5ebc2e9a1f344989bc34119de077b
   spriteCollectionName: TerranBuildingsCollection
-  assetName: 
-  loadable: 0
+  assetName: TerranBuildingsCollection
+  loadable: 1
   invOrthoSize: 2
   halfTargetHeight: .5
-  buildKey: 870716280
+  buildKey: 642774103
   dataGuid: 7f52110206776c84189eeef673035000
   managedSpriteCollection: 0
   hasPlatformData: 0

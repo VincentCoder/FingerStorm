@@ -33,7 +33,14 @@
             BuildingLevel.BuildingLevel2);
 
         this.CurrentHp = this.CurrentLevel == BuildingLevel.BuildingLevel1 ? this.TotalHpLevel1 : this.TotalHpLevel2;
-        this.IsMainCity = this.BuildingType == BuildingType.Terran_TheMainCity;
+        if (this.BuildingType == BuildingType.Terran_TheMainCity || this.BuildingType == BuildingType.Orc_TheMainCity)
+        {
+            this.IsMainCity = true;
+        }
+        else
+        {
+            this.IsMainCity = false;
+        }
     }
 
     #endregion

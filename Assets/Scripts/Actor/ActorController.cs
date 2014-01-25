@@ -11,7 +11,7 @@ public class ActorController : BaseGameEntity
 {
     #region Fields
 
-    public float AttackSpeed;
+    public float AttackInterval;
 
     public float moveSpeed;
 
@@ -32,6 +32,8 @@ public class ActorController : BaseGameEntity
     private float hpbarLength;
 
     private bool isBleed;
+
+    private bool isRaging;
 
     private StateMachine<ActorController> m_PStateMachine;
 
@@ -120,6 +122,33 @@ public class ActorController : BaseGameEntity
         }
     }
 
+    public bool IsRaging
+    {
+        get
+        {
+            return this.isRaging;
+        }
+        set
+        {
+            this.isRaging = value;
+            if (this.isRaging)
+            {
+                this.myTransform.localScale = new Vector3(1.2f, 1.2f, 1f);
+                this.RagingDuration = 6;
+                this.AttackInterval = 0.5f;
+                this.moveSpeed *= 1.25f;
+            }
+            else
+            {
+                this.myTransform.localScale = new Vector3(1,1,1);
+                this.AttackInterval = 1f;
+                this.moveSpeed *= 1.25f;
+            }
+        }
+    }
+
+    public float RagingDuration { get; set; }
+
     public Actor MyActor
     {
         get
@@ -159,7 +188,7 @@ public class ActorController : BaseGameEntity
     {
         
         Damage damage = new Damage();
-        damage.DamageValue = this.MyActor.ActorAttack.Dps / this.AttackSpeed;
+        damage.DamageValue = this.MyActor.ActorAttack.Dps / this.AttackInterval;
         Debug.Log("Damage " + damage.DamageValue);
         damage.DamageValue *= this.AttackPlusRatio;
         Debug.Log("After plus Ratio " + damage.DamageValue);
@@ -293,7 +322,7 @@ public class ActorController : BaseGameEntity
                             {
                                 if (Random.Range(1, 101) <= 25 && this.TargetEnemy != null)
                                 {
-                                    Debug.Log("闪电链");
+                                    /*Debug.Log("闪电链");
                                     GameObject chainLightningAEffect = (GameObject)Instantiate(Resources.Load("GameScene/ActorSkillEffect"));
                                     chainLightningAEffect.name = "ChainLightningAEffect";
                                     chainLightningAEffect.transform.position = this.myTransform.position;
@@ -384,11 +413,32 @@ public class ActorController : BaseGameEntity
                                                         }
                                                     };
                                             }
-                                        };
+                                        };*/
                                 }
                             }
                             break;
                         }
+                    case ActorSpellName.FireBomb:
+                        {
+                            Debug.Log("燃烧弹 " + targetActor);
+                            if (targetActor != null)
+                            {
+                                if (this.MyActor.ActorType == ActorType.BatRider)
+                                {
+                                    targetActor.AttackInterval *= 1.6f;
+                                    targetActor.MyActor.ActorArmor.ArmorAmount =
+                                    Mathf.Max(targetActor.MyActor.ActorArmor.ArmorAmount - 3, 0);
+                                }
+                                else
+                                {
+                                    targetActor.AttackInterval *= 1.6f;
+                                    targetActor.MyActor.ActorArmor.ArmorAmount =
+                                    Mathf.Max(targetActor.MyActor.ActorArmor.ArmorAmount - 6, 0);
+                                }
+                            }
+                            break;
+                        }
+                        
                 }
             }
         }
@@ -628,25 +678,39 @@ public class ActorController : BaseGameEntity
         }
     }
 
-    public void TakeDamage(Damage damage)
+    public void TakeDamage(Damage damage, BaseGameEntity fromGameEntity = null)
     {
         //Debug.Log(this.MyActor.FactionType + " DamageValue " + damage.DamageValue);
         if (damage.ShowCrit)
         {
-            this.ShowTip((Mathf.RoundToInt(-damage.DamageValue)).ToString());
+            int temp = Mathf.RoundToInt(-damage.DamageValue);
+            if (temp < 0)
+            {
+                this.ShowTip(temp.ToString());
+            }
+            else
+            {
+                this.ShowTip("+" + temp.ToString(), 1);
+            }
         }
-		
+
+        GameObject damageEffect = (GameObject)Instantiate(Resources.Load("GameScene/ActorSkillEffect"));
+        damageEffect.name = "ShortRangeWeaponDamageEffect";
+        damageEffect.transform.parent = this.myTransform;
+        tk2dSpriteAnimator animator = damageEffect.GetComponent<tk2dSpriteAnimator>();
+
 		if(damage.ActorSpellName == ActorSpellName.CirticalStrike || damage.ActorSpellName == ActorSpellName.HeadShot)
 		{
-			GameObject shortRangeEffect = (GameObject)Instantiate(Resources.Load("GameScene/ActorSkillEffect"));
-            shortRangeEffect.name = "ShortRangeWeaponDamageEffect";
-		    shortRangeEffect.transform.parent = this.myTransform;
-            tk2dSpriteAnimator animator = shortRangeEffect.GetComponent<tk2dSpriteAnimator>();
             animator.Play("ShortRangeWeaponDamage"); 
-			animator.AnimationCompleted = delegate {
-				Destroy(shortRangeEffect);
-			};
 		}
+		else
+		{
+            animator.Play("CommonDamageEffect"); 
+		}
+        animator.AnimationCompleted = delegate
+        {
+            Destroy(damageEffect);
+        };
 
         if (damage.Stun)
         {
@@ -676,6 +740,10 @@ public class ActorController : BaseGameEntity
 
         if (this.MyActor.CurrentHp <= damage.DamageValue)
         {
+            if (fromGameEntity != null && fromGameEntity is ActorController)
+            {
+                ((ActorController)fromGameEntity).KilledSomeEntity(this);
+            }
             this.MyActor.CurrentHp = 0;
             this.m_PStateMachine.ChangeState(Actor_StateBeforeDie.Instance());
         }
@@ -701,6 +769,14 @@ public class ActorController : BaseGameEntity
         }
     }
 
+    public void KilledSomeEntity(BaseGameEntity killedEntity)
+    {
+        if (this.MyActor.HasSpell(ActorSpellName.Rage))
+        {
+            this.IsRaging = true;
+        }
+    }
+
     #endregion
 
     #region Methods
@@ -716,13 +792,21 @@ public class ActorController : BaseGameEntity
         this.moveSpeed = 22.5f;
         this.AttackPlusRatio = 1;
         this.BloodSuckingRatio = 0;
-        this.AttackSpeed = 1;
+        this.AttackInterval = 1;
         this.hpbarLength = 200;
         this.RefreshHpBar();
+        this.SwitchAnimation();
 
         this.m_PStateMachine = new StateMachine<ActorController>(this);
         this.m_PStateMachine.SetCurrentState(Actor_StateWalk.Instance());
         this.m_PStateMachine.SetGlobalState(Actor_GlobalState.Instance());
+    }
+
+    private void SwitchAnimation()
+    {
+        this.SelfAnimator.Library =
+            Resources.Load("Animation/" + this.MyActor.RaceType + "ActorAnimation", typeof(tk2dSpriteAnimation)) as
+            tk2dSpriteAnimation;
     }
 
     private void RefreshHpBar()
@@ -740,12 +824,14 @@ public class ActorController : BaseGameEntity
         }
     }
 
-    private void ShowTip(string tip)
+    private void ShowTip(string tip, int gradient = 7)
     {
         GameObject tipObj = (GameObject)Instantiate(Resources.Load("Tips/TipsTextMesh"));
         tipObj.transform.parent = this.myTransform;
         tipObj.transform.localPosition = new Vector3(6, 20, -1);
-        tipObj.GetComponent<tk2dTextMesh>().text = tip;
+        tk2dTextMesh textMesh = tipObj.GetComponent<tk2dTextMesh>();
+        textMesh.text = tip;
+        textMesh.textureGradient = gradient;
         tipObj.GetComponent<ActorTip>().Show();
     }
 

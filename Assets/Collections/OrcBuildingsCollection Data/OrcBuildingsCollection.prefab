@@ -735,11 +735,11 @@ MonoBehaviour:
   allowMultipleAtlases: 0
   spriteCollectionGUID: 49a74142602ddc04a97809b8d2edb445
   spriteCollectionName: OrcBuildingsCollection
-  assetName: 
-  loadable: 0
+  assetName: OrcBuildingsCollection
+  loadable: 1
   invOrthoSize: 2
   halfTargetHeight: .5
-  buildKey: 206115806
+  buildKey: 926090788
   dataGuid: eb984734e5a5dc24792bc5018a813977
   managedSpriteCollection: 0
   hasPlatformData: 0

@@ -52,7 +52,7 @@ MonoBehaviour:
   - name: 
     spriteCollection: {fileID: 0}
   managedSpriteCollection: 0
-  loadable: 0
+  loadable: 1
   maxTextureSize: 2048
   forceTextureSize: 0
   forcedTextureWidth: 2048
@@ -818,7 +818,7 @@ MonoBehaviour:
   autoUpdate: 1
   editorDisplayScale: 1
   version: 4
-  assetName: 
+  assetName: OrcBuildingsCollection
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
