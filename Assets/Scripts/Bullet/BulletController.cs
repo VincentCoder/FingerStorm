@@ -65,6 +65,7 @@ public class BulletController : BaseGameEntity
             string spriteName = string.Empty + this.BulletType;
             this.SelfSprite.SetSprite(spriteName);
         //}
+        Debug.Log(spriteName);
 
         this.m_PStateMachine = new StateMachine<BulletController>(this);
         this.m_PStateMachine.SetCurrentState(BulletState_MoveToTarget.Instance());

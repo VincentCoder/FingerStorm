@@ -15,7 +15,11 @@ public class Actor_GlobalState : State<ActorController>
 
     private Dictionary<ActorSpellName, float> releaseCounterDictionary;
 
-    private float ShamanBlessCounter = 0.0f;
+    private float shamanBlessCounter = 0f;
+
+    private float poisionCounter = 0f;
+
+    private float burningOilCounter = 0f;
 
     #endregion
 
@@ -79,19 +83,60 @@ public class Actor_GlobalState : State<ActorController>
         if (entityType.IsShamanBlessing)
         {
             entityType.ShamanBlessingDuration -= Time.deltaTime;
-            this.ShamanBlessCounter += Time.deltaTime;
-            if (this.ShamanBlessCounter >= 1)
+            this.shamanBlessCounter += Time.deltaTime;
+            if (this.shamanBlessCounter >= 1)
             {
                 Damage blessDamage = new Damage();
                 blessDamage.DamageValue = -3;
                 blessDamage.ShowCrit = true;
                 entityType.TakeDamage(blessDamage);
-                this.ShamanBlessCounter = 0f;
+                this.shamanBlessCounter = 0f;
             }
             if (entityType.ShamanBlessingDuration <= 0)
             {
                 entityType.IsShamanBlessing = false;
-                this.ShamanBlessCounter = 0f;
+                this.shamanBlessCounter = 0f;
+            }
+        }
+
+        if (entityType.IsCaught)
+        {
+            entityType.CaughtDuration -= Time.deltaTime;
+            if (entityType.CaughtDuration <= 0)
+            {
+                entityType.IsCaught = false;
+            }
+        }
+
+        if (entityType.IsPoisioning)
+        {
+            this.poisionCounter += Time.deltaTime;
+            if (this.poisionCounter >= 1f)
+            {
+                Damage poisionDamage = new Damage();
+                poisionDamage.DamageValue = entityType.PoisionDps;
+                poisionDamage.ShowCrit = true;
+                entityType.TakeDamage(poisionDamage);
+                this.poisionCounter = 0f;
+            }
+        }
+
+        if (entityType.IsBurningOilAttacked)
+        {
+            this.burningOilCounter += Time.deltaTime;
+            if (this.burningOilCounter >= 1f)
+            {
+                Damage burningOilDamage = new Damage();
+                burningOilDamage.DamageValue = entityType.BurningOilDps;
+                burningOilDamage.ShowCrit = true;
+                entityType.TakeDamage(burningOilDamage);
+                this.burningOilCounter = 0f;
+            }
+            entityType.BurningOilDuration -= Time.deltaTime;
+            if (entityType.BurningOilDuration <= 0)
+            {
+                entityType.IsBurningOilAttacked = false;
+                this.burningOilCounter = 0f;
             }
         }
 
@@ -238,6 +283,49 @@ public class Actor_GlobalState : State<ActorController>
                     }
                     break;
                 }
+            case ActorSpellName.Ensnare:
+                {
+                    List<GameObject> airForceActors =
+                        ActorsManager.GetInstance().GetEnemyAirForceActorsOfFactionInDistance(entityType, 70);
+                    if (airForceActors != null && airForceActors.Count != 0)
+                    {
+                        GameObject targetActor = airForceActors[Random.Range(0, airForceActors.Count)];
+                        ActorController actorCtrl = targetActor.GetComponent<ActorController>();
+                        GameObject ensnareEffectA =
+                            (GameObject)Object.Instantiate(Resources.Load("GameScene/ActorSkillEffect"));
+                        ensnareEffectA.transform.localPosition = entityType.myTransform.position;
+                        float scale = Vector3.Distance(entityType.myTransform.position, targetActor.transform.position)
+                                      / 60f;
+                        ensnareEffectA.transform.localScale = new Vector3(scale, 1f, 1f);
+                        tk2dSpriteAnimator animator = ensnareEffectA.GetComponent<tk2dSpriteAnimator>();
+                        animator.Play("EnsnareA");
+                        animator.AnimationCompleted = delegate
+                            {
+                                Object.Destroy(ensnareEffectA.gameObject);
+                            };
+                        actorCtrl.IsCaught = true;
+                    }
+                    break;
+                }
+            case ActorSpellName.GodBless:
+                {
+                    List<GameObject> myActors =
+                        ActorsManager.GetInstance()
+                            .GetFriendlyActorsInDistance(
+                                entityType.MyActor.FactionType,
+                                entityType.myTransform.position,
+                                actorSpell.AttackRange);
+                    if (myActors != null && myActors.Count != 0)
+                    {
+                        myActors.ForEach(
+                            actor =>
+                                {
+                                    ActorController actorCtrl = actor.GetComponent<ActorController>();
+                                    actorCtrl.MyActor.ActorArmor.ArmorAmount += actorSpell.IncreaseFriendlyForcesArmor;
+                                });
+                    }
+                    break;
+                }
         }
     }
 
@@ -276,7 +364,7 @@ public class Actor_StateWalk : State<ActorController>
 
     public override void Execute(ActorController entityType)
     {
-        if (entityType.IsStun)
+        if (entityType.IsStun || entityType.IsCaught)
         {
             return;
         }
@@ -417,7 +505,7 @@ public class Actor_StateBeforeFight : State<ActorController>
 
     public override void Execute(ActorController entityType)
     {
-        if (entityType.IsStun)
+        if (entityType.IsStun || entityType.IsCaught)
         {
             return;
         }
@@ -495,7 +583,7 @@ public class Actor_StateFight : State<ActorController>
 
     public override void Execute(ActorController entityType)
     {
-        if (entityType.IsStun)
+        if (entityType.IsStun || entityType.IsCaught)
         {
             return;
         }
@@ -559,7 +647,7 @@ public class Actor_StateFight : State<ActorController>
             entityType.SendBullet(entityType.TargetEnemy, BulletType.Sphere_Warlock);
         }
         else if (entityType.MyActor.ActorType == ActorType.TrollBerserker
-                 || entityType.MyActor.ActorType == ActorType.TrollHunter || entityType.MyActor.ActorType == ActorType.Kodo)
+                 || entityType.MyActor.ActorType == ActorType.Kodo)
         {
             entityType.SendBullet(entityType.TargetEnemy, BulletType.Axe);
         }
@@ -574,9 +662,13 @@ public class Actor_StateFight : State<ActorController>
         {
             entityType.SendBullet(entityType.TargetEnemy, BulletType.Sphere_Warlock);
         }
+        else if (entityType.MyActor.ActorType == ActorType.TrollHunter)
+        {
+            entityType.SendBullet(entityType.TargetEnemy, BulletType.Javelin);
+        }
         else if (entityType.MyActor.ActorType == ActorType.Wyvern || entityType.MyActor.ActorType == ActorType.WindRider)
         {
-            entityType.SendBullet(entityType.TargetEnemy, BulletType.Javalin);
+            entityType.SendBullet(entityType.TargetEnemy, BulletType.PoisonBullet);
         }
         this.PlayVampireAnimation(entityType);
     }

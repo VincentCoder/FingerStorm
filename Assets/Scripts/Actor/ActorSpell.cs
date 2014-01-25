@@ -1,5 +1,7 @@
 ﻿#region
 
+using UnityEditor.VersionControl;
+
 using UnityEngine;
 
 #endregion
@@ -122,13 +124,40 @@ public class ActorSpell
 			case ActorType.Knight:
                 {
                     this.IncreaseFriendlyForcesArmor = 6;
-					this.AttackRange = 40;
+					this.AttackRange = 160;
+                    this.ReleaseInterval = 10;
                     break;
                 }
 			case ActorType.Paladin:
                 {
                     this.IncreaseFriendlyForcesArmor = 9;
-					this.AttackRange = 40;
+					this.AttackRange = 200;
+                    this.ReleaseInterval = 8;
+                    break;
+                }
+            case ActorType.Shaman:
+                {
+                    this.ReleaseInterval = 16;
+                    break;
+                }
+            case ActorType.WitchDoctor:
+                {
+                    this.ReleaseInterval = 10;
+                    break;
+                }
+            case ActorType.Raider:
+                {
+                    this.ReleaseInterval = 8;
+                    break;
+                }
+            case ActorType.Catapult:
+                {
+                    this.ReleaseInterval = 3;
+                    break;
+                }
+            case ActorType.SpiritWalker:
+                {
+                    this.ReleaseInterval = 10;
                     break;
                 }
         }

@@ -1195,7 +1195,7 @@ public static class TerranActorKnightConfig
         new Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>>
             {
                 {
-                    ActorSpellType.BuffSpell,
+                    ActorSpellType.ActiveSpell,
                     new Dictionary
                     <ActorSpellName, ActorSpell>
                         {
@@ -1238,7 +1238,7 @@ public static class TerranActorPaladinConfig
         new Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>>
             {
                 {
-                    ActorSpellType.BuffSpell,
+                    ActorSpellType.ActiveSpell,
                     new Dictionary
                     <ActorSpellName, ActorSpell>
                         {
@@ -1801,7 +1801,7 @@ public static class OrcActorCatapultConfig
         new Dictionary<ActorSpellType, Dictionary<ActorSpellName, ActorSpell>>
             {
                 {
-                    ActorSpellType.ActiveSpell,
+                    ActorSpellType.PassiveSpell,
                     new Dictionary
                     <ActorSpellName, ActorSpell>
                         {

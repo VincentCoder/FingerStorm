@@ -12,7 +12,7 @@
 
     Axe,
 
-    Javalin,
+    Javelin,
 
     SiegeStone,
 

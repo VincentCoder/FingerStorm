@@ -144,11 +144,11 @@ public class GameSceneController : MonoBehaviour
                     BuildingsManager.GetInstance()
                         .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(910, 530, 0));
                     BuildingsManager.GetInstance()
-                        .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(890, 530, 0));
+                        .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(890, 500, 0));
                     BuildingsManager.GetInstance()
-                        .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(870, 530, 0));
+                        .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(870, 470, 0));
                     BuildingsManager.GetInstance()
-                        .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(850, 530, 0));
+                        .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(850, 350, 0));
 
                     BuildingsManager.GetInstance()
                         .CreateNewBuilding(BuildingType.Terran_Fortress, FactionType.Red, new Vector3(910, 270, 0));
@@ -182,9 +182,9 @@ public class GameSceneController : MonoBehaviour
                 if (gameCtrl.GameType == GameType.PVE)
                 {
                     BuildingsManager.GetInstance()
-                        .CreateNewBuilding(BuildingType.Orc_AnimalFarm, FactionType.Red, new Vector3(910, 530, 0));
+                        .CreateNewBuilding(BuildingType.Orc_WarriorHall, FactionType.Red, new Vector3(910, 530, 0));
                     BuildingsManager.GetInstance()
-                        .CreateNewBuilding(BuildingType.Orc_OrcFactory, FactionType.Red, new Vector3(810, 530, 0));
+                        .CreateNewBuilding(BuildingType.Orc_WarriorHall, FactionType.Red, new Vector3(810, 530, 0));
                 }
             }
             gameCtrl.ViewController.ShowBuildingsSelectorPanel();

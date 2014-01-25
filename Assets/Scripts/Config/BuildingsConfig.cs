@@ -949,9 +949,9 @@ public static class OrcBuildingWyvernCampConfig
 
     public static BuildingLevel MaxLevel = BuildingLevel.BuildingLevel2;
 
-    public static ActorType ProducedActorTypeLevel1 = ActorType.WindRider;
+    public static ActorType ProducedActorTypeLevel1 = ActorType.Wyvern;
 
-    public static ActorType ProducedActorTypeLevel2 = ActorType.Wyvern;
+    public static ActorType ProducedActorTypeLevel2 = ActorType.WindRider;
 
     public static int ProducedTimeLevel1 = 30;
 

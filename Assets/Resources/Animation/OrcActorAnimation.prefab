@@ -4081,7 +4081,7 @@ MonoBehaviour:
     fps: 12
     loopStart: 0
     wrapMode: 0
-  - name: Orc_Tauren_Attack_Blue
+  - name: Orc_Tauren_Attack1_Blue
     frames:
     - spriteCollection: {fileID: 11400000, guid: 0894aaca214c9344aa62ee72c85232e7,
         type: 2}
@@ -4128,7 +4128,7 @@ MonoBehaviour:
     fps: 12
     loopStart: 0
     wrapMode: 2
-  - name: Orc_Tauren_Attack_Red
+  - name: Orc_Tauren_Attack1_Red
     frames:
     - spriteCollection: {fileID: 11400000, guid: 0894aaca214c9344aa62ee72c85232e7,
         type: 2}
@@ -4175,7 +4175,7 @@ MonoBehaviour:
     fps: 12
     loopStart: 0
     wrapMode: 2
-  - name: Orc_Tauren_SkillAttack_Blue
+  - name: Orc_Tauren_Attack_Blue
     frames:
     - spriteCollection: {fileID: 11400000, guid: 0894aaca214c9344aa62ee72c85232e7,
         type: 2}
@@ -4292,7 +4292,7 @@ MonoBehaviour:
     fps: 12
     loopStart: 0
     wrapMode: 2
-  - name: Orc_Tauren_SkillAttack_Red
+  - name: Orc_Tauren_Attack_Red
     frames:
     - spriteCollection: {fileID: 11400000, guid: 0894aaca214c9344aa62ee72c85232e7,
         type: 2}

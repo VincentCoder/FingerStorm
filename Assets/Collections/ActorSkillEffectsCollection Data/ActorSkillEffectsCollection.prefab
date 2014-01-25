@@ -4528,17 +4528,17 @@ MonoBehaviour:
     attachPoints: []
   - name: Ensnare_A_001
     boundsData:
-    - {x: -14.5, y: 1.5, z: 0}
+    - {x: 12.5, y: 23.5, z: 0}
     - {x: 25, y: 47, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: 27, y: 22, z: 0}
     - {x: 128, y: 128, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -27, y: -22, z: 0}
-    - {x: -2, y: -22, z: 0}
-    - {x: -27, y: 25, z: 0}
-    - {x: -2, y: 25, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 25, y: 0, z: 0}
+    - {x: 0, y: 47, z: 0}
+    - {x: 25, y: 47, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4566,17 +4566,17 @@ MonoBehaviour:
     attachPoints: []
   - name: Ensnare_A_002
     boundsData:
-    - {x: -2, y: 11, z: 0}
+    - {x: 25, y: 33, z: 0}
     - {x: 44, y: 54, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: 27, y: 22, z: 0}
     - {x: 128, y: 128, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -24, y: -16, z: 0}
-    - {x: 20, y: -16, z: 0}
-    - {x: -24, y: 38, z: 0}
-    - {x: 20, y: 38, z: 0}
+    - {x: 3, y: 6, z: 0}
+    - {x: 47, y: 6, z: 0}
+    - {x: 3, y: 60, z: 0}
+    - {x: 47, y: 60, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4604,17 +4604,17 @@ MonoBehaviour:
     attachPoints: []
   - name: Ensnare_A_003
     boundsData:
-    - {x: 2, y: 1.5, z: 0}
+    - {x: 29, y: 23.5, z: 0}
     - {x: 44, y: 43, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: 27, y: 22, z: 0}
     - {x: 128, y: 128, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -20, y: -20, z: 0}
-    - {x: 24, y: -20, z: 0}
-    - {x: -20, y: 23, z: 0}
-    - {x: 24, y: 23, z: 0}
+    - {x: 7, y: 2, z: 0}
+    - {x: 51, y: 2, z: 0}
+    - {x: 7, y: 45, z: 0}
+    - {x: 51, y: 45, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4642,17 +4642,17 @@ MonoBehaviour:
     attachPoints: []
   - name: Ensnare_A_004
     boundsData:
-    - {x: 3.5, y: -8, z: 0}
+    - {x: 30.5, y: 14, z: 0}
     - {x: 45, y: 44, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: 27, y: 22, z: 0}
     - {x: 128, y: 128, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -19, y: -30, z: 0}
-    - {x: 26, y: -30, z: 0}
-    - {x: -19, y: 14, z: 0}
-    - {x: 26, y: 14, z: 0}
+    - {x: 8, y: -8, z: 0}
+    - {x: 53, y: -8, z: 0}
+    - {x: 8, y: 36, z: 0}
+    - {x: 53, y: 36, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4680,17 +4680,17 @@ MonoBehaviour:
     attachPoints: []
   - name: Ensnare_A_005
     boundsData:
-    - {x: 6.5, y: -18, z: 0}
+    - {x: 33.5, y: 4, z: 0}
     - {x: 53, y: 42, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: 27, y: 22, z: 0}
     - {x: 128, y: 128, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -20, y: -39, z: 0}
-    - {x: 33, y: -39, z: 0}
-    - {x: -20, y: 3, z: 0}
-    - {x: 33, y: 3, z: 0}
+    - {x: 7, y: -17, z: 0}
+    - {x: 60, y: -17, z: 0}
+    - {x: 7, y: 25, z: 0}
+    - {x: 60, y: 25, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4718,17 +4718,17 @@ MonoBehaviour:
     attachPoints: []
   - name: Ensnare_A_006
     boundsData:
-    - {x: 2.5, y: -18, z: 0}
+    - {x: 29.5, y: 4, z: 0}
     - {x: 45, y: 42, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: 0, z: 0}
+    - {x: 27, y: 22, z: 0}
     - {x: 128, y: 128, z: 0}
     texelSize: {x: 1, y: 1}
     positions:
-    - {x: -20, y: -39, z: 0}
-    - {x: 25, y: -39, z: 0}
-    - {x: -20, y: 3, z: 0}
-    - {x: 25, y: 3, z: 0}
+    - {x: 7, y: -17, z: 0}
+    - {x: 52, y: -17, z: 0}
+    - {x: 7, y: 25, z: 0}
+    - {x: 52, y: 25, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -6629,7 +6629,7 @@ MonoBehaviour:
   loadable: 0
   invOrthoSize: 2
   halfTargetHeight: .5
-  buildKey: 149870512
+  buildKey: 2120202338
   dataGuid: 390404dc7710af3419dd70d66f274d0c
   managedSpriteCollection: 0
   hasPlatformData: 0
