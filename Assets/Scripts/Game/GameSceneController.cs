@@ -171,6 +171,8 @@ public class GameSceneController : MonoBehaviour
                 if (this.GameController.GameType == GameType.PVE)
                 {
                     BuildingsManager.GetInstance()
+                        .CreateNewBuilding(BuildingType.Terran_TheMainCity, FactionType.Red, new Vector3(910, 400, 0));
+                    BuildingsManager.GetInstance()
                         .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(910, 530, 0));
                     BuildingsManager.GetInstance()
                         .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(890, 500, 0));
@@ -197,6 +199,8 @@ public class GameSceneController : MonoBehaviour
 
                 if (this.GameController.GameType == GameType.PVE)
                 {
+                    BuildingsManager.GetInstance()
+                        .CreateNewBuilding(BuildingType.Orc_TheMainCity, FactionType.Red, new Vector3(910, 400, 0));
                     BuildingsManager.GetInstance()
                         .CreateNewBuilding(BuildingType.Orc_WarriorHall, FactionType.Red, new Vector3(910, 530, 0));
                     BuildingsManager.GetInstance()
