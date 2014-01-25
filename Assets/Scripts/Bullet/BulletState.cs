@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Reflection;
+
+using UnityEngine;
 
 public class Bullet_GlobalState : State<BulletController>
 {
@@ -106,6 +108,21 @@ public class BulletState_Arrival : State<BulletController>
 
     public override void Enter ( BulletController entityType )
     {
+        if (entityType.Target != null && entityType.Target is ActorController)
+        {
+            if (entityType.BulletType == BulletType.SiegeStone)
+            {
+                GameObject effect = (GameObject)Object.Instantiate(Resources.Load("GameScene/ActorSkillEffect"));
+                effect.transform.parent = entityType.Target.transform;
+                effect.transform.localPosition = new Vector3(10,0,-1);
+                tk2dSpriteAnimator animator = effect.GetComponent<tk2dSpriteAnimator>();
+                animator.Play("FireBomb");
+                animator.AnimationCompleted = delegate
+                    {
+                        Object.Destroy(effect);
+                    };
+            }
+        }
         entityType.GetFSM().ChangeState(BulletState_Destroy.Instance());
     }
 

@@ -51,6 +51,8 @@ public class ActorController : BaseGameEntity
 
     public int BloodSuckingRatio { get; set; }
 
+    public bool FireBombAttacked { get; set; }
+
     public bool IsBleed
     {
         get
@@ -421,19 +423,21 @@ public class ActorController : BaseGameEntity
                     case ActorSpellName.FireBomb:
                         {
                             Debug.Log("燃烧弹 " + targetActor);
-                            if (targetActor != null)
+                            if (targetActor != null && !targetActor.FireBombAttacked)
                             {
                                 if (this.MyActor.ActorType == ActorType.BatRider)
                                 {
                                     targetActor.AttackInterval *= 1.6f;
                                     targetActor.MyActor.ActorArmor.ArmorAmount =
                                     Mathf.Max(targetActor.MyActor.ActorArmor.ArmorAmount - 3, 0);
+                                    targetActor.FireBombAttacked = true;
                                 }
-                                else
+                                else if(this.MyActor.ActorType == ActorType.SeniorBatRider)
                                 {
                                     targetActor.AttackInterval *= 1.6f;
                                     targetActor.MyActor.ActorArmor.ArmorAmount =
                                     Mathf.Max(targetActor.MyActor.ActorArmor.ArmorAmount - 6, 0);
+                                    targetActor.FireBombAttacked = true;
                                 }
                             }
                             break;
@@ -697,6 +701,7 @@ public class ActorController : BaseGameEntity
         GameObject damageEffect = (GameObject)Instantiate(Resources.Load("GameScene/ActorSkillEffect"));
         damageEffect.name = "ShortRangeWeaponDamageEffect";
         damageEffect.transform.parent = this.myTransform;
+        damageEffect.transform.localPosition = new Vector3(0,0,-1);
         tk2dSpriteAnimator animator = damageEffect.GetComponent<tk2dSpriteAnimator>();
 
 		if(damage.ActorSpellName == ActorSpellName.CirticalStrike || damage.ActorSpellName == ActorSpellName.HeadShot)
@@ -709,7 +714,7 @@ public class ActorController : BaseGameEntity
 		}
         animator.AnimationCompleted = delegate
         {
-            Destroy(damageEffect);
+            //Destroy(damageEffect);
         };
 
         if (damage.Stun)
