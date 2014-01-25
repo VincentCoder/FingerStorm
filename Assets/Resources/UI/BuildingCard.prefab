@@ -304,7 +304,7 @@ MonoBehaviour:
   mHeight: 45
   mDepth: 1
   autoResizeBoxCollider: 0
-  mAtlas: {fileID: 11400000, guid: 1cbca524c9ac3ab4ca23e125438503ad, type: 2}
+  mAtlas: {fileID: 11400000, guid: 274848d1db9c118479c4969a55be02fe, type: 2}
   mSpriteName: Terran_ArtilleryHall_Blue
   mFillCenter: 1
   mType: 0
