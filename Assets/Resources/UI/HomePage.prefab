@@ -790,9 +790,6 @@ MonoBehaviour:
   - mTarget: {fileID: 11400026}
     mMethodName: SetCurrentSelection
     oneShot: 0
-  - mTarget: {fileID: 0}
-    mMethodName: OnRaceSelect
-    oneShot: 0
   mSelectedItem: "\u4EBA\u65CF"
   eventReceiver: {fileID: 0}
   functionName: 

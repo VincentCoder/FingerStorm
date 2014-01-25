@@ -44,6 +44,19 @@ public class GameController : BaseGameEntity
 
     public void StartGame()
     {
+        Transform raceSelect = GameObject.Find("HomePage").transform.FindChild("RaceSelect");
+        if (raceSelect != null)
+        {
+            UIPopupList popupList = raceSelect.gameObject.GetComponent<UIPopupList>();
+            if (popupList.value == "人族")
+            {
+                this.MyRaceType = RaceType.Terran;
+            }
+            else if (popupList.value == "兽族")
+            {
+                this.MyRaceType = RaceType.Orc;
+            }
+        }
         this.ViewController.DestroyHomePage(true);
         this.ViewController.DestroyShadowCover(true);
         GameObject gameSceneCtrl = (GameObject)Instantiate(Resources.Load("GameScene/GameSceneController"));
