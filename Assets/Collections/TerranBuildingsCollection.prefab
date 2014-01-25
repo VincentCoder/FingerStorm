@@ -61,95 +61,15 @@ MonoBehaviour:
   atlasWidth: 256
   atlasHeight: 512
   forceSquareAtlas: 0
-  atlasWastage: 40.0978088
+  atlasWastage: 51.2832642
   allowMultipleAtlases: 0
   removeDuplicates: 1
   textureParams:
-  - name: Terran_ArtilleryHall_Blue
-    disableTrimming: 0
-    additive: 0
-    scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 8b7a71b44a9dc874fa32d376791029de, type: 3}
-    materialId: 0
-    anchor: 4
-    anchorX: 0
-    anchorY: 0
-    overrideMesh: {fileID: 0}
-    doubleSidedSprite: 0
-    customSpriteGeometry: 0
-    geometryIslands: []
-    dice: 0
-    diceUnitX: 64
-    diceUnitY: 64
-    diceFilter: 0
-    pad: 0
-    extraPadding: 0
-    source: 0
-    fromSpriteSheet: 0
-    hasSpriteSheetId: 0
-    spriteSheetId: 0
-    spriteSheetX: 0
-    spriteSheetY: 0
-    extractRegion: 0
-    regionX: 0
-    regionY: 0
-    regionW: 0
-    regionH: 0
-    regionId: 0
-    colliderType: 0
-    boxColliderMin: {x: 0, y: 0}
-    boxColliderMax: {x: 0, y: 0}
-    polyColliderIslands: []
-    polyColliderCap: 1
-    colliderConvex: 0
-    colliderSmoothSphereCollisions: 0
-    colliderColor: 0
-    attachPoints: []
-  - name: Terran_ArtilleryHall_Red
-    disableTrimming: 0
-    additive: 0
-    scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: f83dd61ef8a317f40a2f76b1cf621be5, type: 3}
-    materialId: 0
-    anchor: 4
-    anchorX: 0
-    anchorY: 0
-    overrideMesh: {fileID: 0}
-    doubleSidedSprite: 0
-    customSpriteGeometry: 0
-    geometryIslands: []
-    dice: 0
-    diceUnitX: 64
-    diceUnitY: 64
-    diceFilter: 0
-    pad: 0
-    extraPadding: 0
-    source: 0
-    fromSpriteSheet: 0
-    hasSpriteSheetId: 0
-    spriteSheetId: 0
-    spriteSheetX: 0
-    spriteSheetY: 0
-    extractRegion: 0
-    regionX: 0
-    regionY: 0
-    regionW: 0
-    regionH: 0
-    regionId: 0
-    colliderType: 0
-    boxColliderMin: {x: 0, y: 0}
-    boxColliderMax: {x: 0, y: 0}
-    polyColliderIslands: []
-    polyColliderCap: 1
-    colliderConvex: 0
-    colliderSmoothSphereCollisions: 0
-    colliderColor: 0
-    attachPoints: []
   - name: Terran_ArtilleryLab_Blue
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: b3ce21c125eea034089957bc901b7570, type: 3}
+    texture: {fileID: 2800000, guid: 4d885303a661e8442975a74b92b1e766, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -189,7 +109,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 69e86439f5b0c9c42961a231c41db6d1, type: 3}
+    texture: {fileID: 2800000, guid: e88acba75eed6b74abf4da2843bd5aab, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -229,7 +149,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 84aea00bae349ca42855e23ac7499b96, type: 3}
+    texture: {fileID: 2800000, guid: 194bda5c9ec98dc46b2458e70dfe6fa6, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -269,7 +189,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: f7ced18c52edbaf40977068b58745a25, type: 3}
+    texture: {fileID: 2800000, guid: b162a389146fd6f418d97a2dfee80bfc, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -309,7 +229,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 657addf0e30cffd47bc554fcc822339e, type: 3}
+    texture: {fileID: 2800000, guid: b3b325a97ada290419619d6d09f61f84, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -349,7 +269,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 24bcdf62c46aaad428beefa32da4ec78, type: 3}
+    texture: {fileID: 2800000, guid: 88249f281e2fe98479f426baa24fb124, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -389,7 +309,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 4ceaf33a1c35367479363f9da47fba48, type: 3}
+    texture: {fileID: 2800000, guid: ef4050221219cd148982210188867891, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -429,7 +349,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: e879f45f97c6d684a8e9744bf5b9b8a0, type: 3}
+    texture: {fileID: 2800000, guid: 7a80159a7f36aa34aae1176fc7943e4d, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -469,7 +389,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: bd1dda4ed17815742bd502c8bd98b545, type: 3}
+    texture: {fileID: 2800000, guid: d90ec5c0b729336499c0c67ce6d1e8ad, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -509,87 +429,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 20d912ae47a09f9468c35fe61f167d89, type: 3}
-    materialId: 0
-    anchor: 4
-    anchorX: 0
-    anchorY: 0
-    overrideMesh: {fileID: 0}
-    doubleSidedSprite: 0
-    customSpriteGeometry: 0
-    geometryIslands: []
-    dice: 0
-    diceUnitX: 64
-    diceUnitY: 64
-    diceFilter: 0
-    pad: 0
-    extraPadding: 0
-    source: 0
-    fromSpriteSheet: 0
-    hasSpriteSheetId: 0
-    spriteSheetId: 0
-    spriteSheetX: 0
-    spriteSheetY: 0
-    extractRegion: 0
-    regionX: 0
-    regionY: 0
-    regionW: 0
-    regionH: 0
-    regionId: 0
-    colliderType: 0
-    boxColliderMin: {x: 0, y: 0}
-    boxColliderMax: {x: 0, y: 0}
-    polyColliderIslands: []
-    polyColliderCap: 1
-    colliderConvex: 0
-    colliderSmoothSphereCollisions: 0
-    colliderColor: 0
-    attachPoints: []
-  - name: Terran_MarksmanCamp_Blue
-    disableTrimming: 0
-    additive: 0
-    scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 0eb9a7510ca764643b1e0aff58856e03, type: 3}
-    materialId: 0
-    anchor: 4
-    anchorX: 0
-    anchorY: 0
-    overrideMesh: {fileID: 0}
-    doubleSidedSprite: 0
-    customSpriteGeometry: 0
-    geometryIslands: []
-    dice: 0
-    diceUnitX: 64
-    diceUnitY: 64
-    diceFilter: 0
-    pad: 0
-    extraPadding: 0
-    source: 0
-    fromSpriteSheet: 0
-    hasSpriteSheetId: 0
-    spriteSheetId: 0
-    spriteSheetX: 0
-    spriteSheetY: 0
-    extractRegion: 0
-    regionX: 0
-    regionY: 0
-    regionW: 0
-    regionH: 0
-    regionId: 0
-    colliderType: 0
-    boxColliderMin: {x: 0, y: 0}
-    boxColliderMax: {x: 0, y: 0}
-    polyColliderIslands: []
-    polyColliderCap: 1
-    colliderConvex: 0
-    colliderSmoothSphereCollisions: 0
-    colliderColor: 0
-    attachPoints: []
-  - name: Terran_MarksmanCamp_Red
-    disableTrimming: 0
-    additive: 0
-    scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 32bb52c5e3b3c97448537e732591d57d, type: 3}
+    texture: {fileID: 2800000, guid: de53a3693cfbcab45bc7681e35947a56, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -629,7 +469,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 8cbff117f8160014c85f187d8eb56102, type: 3}
+    texture: {fileID: 2800000, guid: bfd51196da3c4b84ea51dcb26efe4d22, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -669,7 +509,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 2e7139968fb9b4d43b5b6378d4c936f5, type: 3}
+    texture: {fileID: 2800000, guid: f2960ce933ad32e49938e36b4d79e5d5, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -709,7 +549,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 6cd7af7a69b9050408e98e689a7b0eb9, type: 3}
+    texture: {fileID: 2800000, guid: 5360cf3986be138428a2a794f402ad06, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -749,7 +589,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: f2997e178d364e845961226bf1bbdf6c, type: 3}
+    texture: {fileID: 2800000, guid: 8554c174ca8ac87459c73a3d394cbaa1, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -789,7 +629,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: efcabeaced0af2b4baf51961234b668d, type: 3}
+    texture: {fileID: 2800000, guid: 95fea8973d0237541b013f5748ed8bfb, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -829,7 +669,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 820fcaa664377ec47a4a7202d7ac42d2, type: 3}
+    texture: {fileID: 2800000, guid: bad5e269ac4475249b7ce193cbd74da2, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -869,7 +709,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: d602c02cf77ac0f41906518f235cc120, type: 3}
+    texture: {fileID: 2800000, guid: 59f70cea06d690e47b77ead366a5d48f, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -909,7 +749,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 879ec2414062f0c40b2cc34104ec307e, type: 3}
+    texture: {fileID: 2800000, guid: 6fcc4013b43f93647950776dcb47615a, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0

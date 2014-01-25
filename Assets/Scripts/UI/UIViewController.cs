@@ -59,7 +59,7 @@ public class UIViewController : MonoBehaviour
 		selectorPanel.tag = "GameSceneBuildingsSelectorPanel";
 		selectorPanel.transform.parent = this.RootPanel.transform;
 		selectorPanel.transform.localScale = new Vector3(1,1,1);
-		selectorPanel.transform.localPosition = new Vector3(-142,-272, 0);
+		selectorPanel.transform.localPosition = new Vector3(-150,-270, 0);
 	    List<BuildingType> buildingTypes = BuildingsConfig.GetAllBuildingTypesOfRaceType(this.GameController.MyRaceType);
 	    for (int i = 0; i < buildingTypes.Count; i ++)
 	    {
@@ -94,7 +94,7 @@ public class UIViewController : MonoBehaviour
 		detailPanel.tag = "GameSceneBuildingDetailPanel";
 		detailPanel.transform.parent = this.RootPanel.transform;
 		detailPanel.transform.localScale = new Vector3(1,1,1);
-		detailPanel.transform.localPosition = new Vector3(355, -240, 0);
+		detailPanel.transform.localPosition = new Vector3(330, -235, 0);
 	}
 	
 	public void DestroyBuildingDetailPanel(bool now)
@@ -113,7 +113,7 @@ public class UIViewController : MonoBehaviour
 		buildingCard.tag = "GameSceneBuildingCard";
 		buildingCard.transform.parent = GameObject.FindWithTag("GameSceneBuildingsSelectorPanel").transform.FindChild("UIGrid").transform;
 		buildingCard.transform.localScale = new Vector3(1,1,1);
-		buildingCard.transform.localPosition = new Vector3(index*84,0,0);
+		buildingCard.transform.localPosition = new Vector3(index*81,0,0);
 
 	    string atlasName = building.Race + "BuildingAtlas";
 	    UIAtlas buildingAtlas = Resources.Load("Atlas/" + atlasName, typeof(UIAtlas)) as UIAtlas;
@@ -135,7 +135,7 @@ public class UIViewController : MonoBehaviour
                 buildingCardCtrl.Description = "兵营：\n    生产兵种：步兵\n    生产时间：20秒/个\n    血量：1200\n步兵：\n    攻击类型：普通近战\n    攻击力：18\n    防御力：重甲4\n    技能：格档";
 				break;
 			case BuildingType.Terran_Fortress:
-				buildingCardCtrl.Description = "要塞：\n    生产兵种：拥护者\n    生产时间：20秒/个\n    血量：1300\n拥护者：\n    攻击类型：普通近战\n    攻击力：38\n    防御力：重甲7\n    技能：闪避";
+                buildingCardCtrl.Description = "要塞：\n    生产兵种：十字军\n    生产时间：20秒/个\n    血量：1200\n十字军：\n    攻击类型：普通近战\n    攻击力：42\n    防御力：重甲6\n    技能：重击";
 				break;
 			case BuildingType.Terran_SniperHouse:
 				buildingCardCtrl.Description = "狙击兵小屋：\n    生产兵种：狙击兵\n    生产时间：22秒/个\n    血量：1200\n狙击兵：\n    攻击类型：穿刺\n    攻击力：22\n    防御力：轻甲0\n    技能：致命一击";
@@ -144,16 +144,16 @@ public class UIViewController : MonoBehaviour
 				buildingCardCtrl.Description = "神秘学院：\n    生产兵种：术士\n    生产时间：30秒/个\n    血量：1300\n术士：\n    攻击类型：混乱\n    攻击力：17\n    防御力：轻甲1\n    技能：奥术爆炸";
 				break;
 			case BuildingType.Terran_ArtilleryLab:
-				buildingCardCtrl.Description = "火炮实验室：\n    生产兵种：迫击炮小队\n    生产时间：25秒/个\n    血量：1200\n迫击炮小队：\n    攻击类型：攻城\n    攻击力：21\n    防御力：轻甲0\n    技能：迫击轰炸";
+                buildingCardCtrl.Description = "火炮实验室：\n    生产兵种：火箭炮兵\n    生产时间：25秒/个\n    血量：1200\n火箭炮兵：\n    攻击类型：攻城\n    攻击力：53\n    防御力：轻甲3\n    技能：溅射伤害";
 				break;
 			case BuildingType.Terran_Aviary:
-				buildingCardCtrl.Description = "狮鹫笼：\n    生产兵种：狮鹫骑士\n    生产时间：28秒/个\n    血量：1200\n狮鹫骑士：\n    攻击类型：魔法\n    攻击力：23\n    防御力：轻甲2\n    技能：重击/闪电链";
+				buildingCardCtrl.Description = "狮鹫笼：\n    生产兵种：狮鹫骑士\n    生产时间：28秒/个\n    血量：1200\n狮鹫骑士：\n    攻击类型：魔法\n    攻击力：23\n    防御力：轻甲2\n    技能：流血";
 				break;
 			case BuildingType.Terran_Church:
-				buildingCardCtrl.Description = "教堂：\n    生产兵种：十字军\n    生产时间：29秒/个\n    血量：1200\n十字军：\n    攻击类型：普通近战\n    攻击力：42\n    防御力：重甲6\n    技能：重击/天赐祝福";
+                buildingCardCtrl.Description = "教堂：\n    生产兵种：牧师\n    生产时间：30秒/个\n    血量：1200\n牧师：\n    攻击类型：魔法\n    攻击力：20\n    防御力：轻甲1\n    技能：圣光术";
 				break;
 			case BuildingType.Terran_Temple:
-				buildingCardCtrl.Description = "圣殿：\n    生产兵种：圣堂勇士\n    生产时间：36秒/个\n    血量：1500\n圣堂勇士：\n    攻击类型：英雄攻击\n    攻击力：67\n    防御力：重甲9\n    技能：重击/天赐祝福/圣光术";
+                buildingCardCtrl.Description = "宫殿：\n    生产兵种：骑士\n    生产时间：40秒/个\n    血量：1200\n骑士：\n    攻击类型：普通近战\n    攻击力：50\n    防御力：重甲7\n    技能：天赐祝福";
 				break;
             case BuildingType.Orc_AnimalFarm:
                 buildingCardCtrl.Description = "野兽农场：\n    生产兵种：狼骑兵\n    生产时间：28秒/个\n    血量：1200\n狼骑兵：\n    攻击类型：普通近战\n    攻击力：24\n    防御力：轻甲6\n    技能：诱捕";
@@ -210,7 +210,7 @@ public class UIViewController : MonoBehaviour
 		playerSkillPanel.tag = "GameScenePlayerSkillPanel";
 		playerSkillPanel.transform.parent = this.RootPanel.transform;
 		playerSkillPanel.transform.localScale = new Vector3(1, 1, 1);
-		playerSkillPanel.transform.localPosition = new Vector3(-155, 290, 0);
+		playerSkillPanel.transform.localPosition = new Vector3(-327, -187, 0);
 		
 		this.GameController.EventController.RegisterInHierarchy(playerSkillPanel);
 	}

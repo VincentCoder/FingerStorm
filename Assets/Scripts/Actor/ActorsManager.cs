@@ -124,24 +124,6 @@ public class ActorsManager
                 select kv.Value).ToList();
     }
 
-    public List<GameObject> GetEnemyAirForceActorsOfFaction ( FactionType factionType )
-    {
-        return (from kv in this.actorsDictionary
-                let actorCtrl = kv.Value.GetComponent<ActorController>()
-                where actorCtrl.MyActor.FactionType != factionType && actorCtrl.MyActor.IsAirForce
-                select kv.Value).ToList();
-    }
-
-    public List<GameObject> GetEnemyAirForceActorsOfFactionInDistance ( ActorController actorController, int distance )
-    {
-        return (from kv in this.actorsDictionary
-                let actorCtrl = kv.Value.GetComponent<ActorController>()
-                where actorCtrl.MyActor.FactionType != actorController.MyActor.FactionType && actorCtrl.MyActor.IsAirForce
-                where (actorController.gameObject.transform.position - kv.Value.transform.position)
-                                           .sqrMagnitude <= Mathf.Pow(distance, 2)
-                select kv.Value).ToList();
-    }
-
     public List<GameObject> GetAllActors()
     {
         return new List<GameObject>(this.actorsDictionary.Values.ToArray());
@@ -149,19 +131,11 @@ public class ActorsManager
 
     public List<GameObject> GetAllEnemyActors(FactionType factionType)
     {
-        List<GameObject> result = new List<GameObject>(this.actorsDictionary.Values.ToArray());
-        for (int i = 0; i < result.Count; i ++)
-        {
-            if (result[i] != null)
-            {
-                ActorController actorCtrl = result[i].GetComponent<ActorController>();
-                if (actorCtrl.MyActor.FactionType == factionType)
-                {
-                    result.RemoveAt(i);
-                }
-            }
-        }
-        return result;
+        return (from kv in this.actorsDictionary
+                where kv.Value != null
+                let actorCtrl = kv.Value.GetComponent<ActorController>()
+                where actorCtrl.MyActor.FactionType != factionType
+                select kv.Value).ToList();
     }
 
     public List<GameObject> GetEnemyActorsInDistance(
@@ -255,6 +229,26 @@ public class ActorsManager
             (actor1.transform.position - actorController.gameObject.transform.position).sqrMagnitude.CompareTo(
                 (actor2.transform.position - actorController.gameObject.transform.position).sqrMagnitude));
         return result;
+    }
+
+    public List<GameObject> GetEnemyAirForceActorsOfFaction(FactionType factionType)
+    {
+        return (from kv in this.actorsDictionary
+                let actorCtrl = kv.Value.GetComponent<ActorController>()
+                where actorCtrl.MyActor.FactionType != factionType && actorCtrl.MyActor.IsAirForce
+                select kv.Value).ToList();
+    }
+
+    public List<GameObject> GetEnemyAirForceActorsOfFactionInDistance(ActorController actorController, int distance)
+    {
+        return (from kv in this.actorsDictionary
+                let actorCtrl = kv.Value.GetComponent<ActorController>()
+                where
+                    actorCtrl.MyActor.FactionType != actorController.MyActor.FactionType && actorCtrl.MyActor.IsAirForce
+                where
+                    (actorController.gameObject.transform.position - kv.Value.transform.position).sqrMagnitude
+                    <= Mathf.Pow(distance, 2)
+                select kv.Value).ToList();
     }
 
     public List<GameObject> GetFriendlyActorsInDistance(

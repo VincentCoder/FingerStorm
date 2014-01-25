@@ -40,84 +40,201 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 900095883351b4246b34687bb76be5f6, type: 2}
   mSprites:
-  - name: PlayersSkills_00
-    x: 43
-    y: 213
-    width: 42
-    height: 43
+  - name: PlayersSkills_Bloodlust_001
+    x: 122
+    y: 196
+    width: 61
+    height: 60
     borderLeft: 0
     borderRight: 0
     borderTop: 0
     borderBottom: 0
-    paddingLeft: 11
-    paddingRight: 11
-    paddingTop: 11
-    paddingBottom: 10
-  - name: PlayersSkills_01
+    paddingLeft: 1
+    paddingRight: 2
+    paddingTop: 3
+    paddingBottom: 1
+  - name: PlayersSkills_Bloodlust_002
+    x: 122
+    y: 136
+    width: 61
+    height: 60
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 2
+    paddingTop: 3
+    paddingBottom: 1
+  - name: PlayersSkills_Bloodlust_003
+    x: 61
+    y: 16
+    width: 61
+    height: 60
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 2
+    paddingTop: 3
+    paddingBottom: 1
+  - name: PlayersSkills_BraySurgery_001
+    x: 122
+    y: 16
+    width: 61
+    height: 60
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 2
+    paddingTop: 3
+    paddingBottom: 1
+  - name: PlayersSkills_BraySurgery_002
     x: 0
-    y: 169
-    width: 42
-    height: 43
+    y: 196
+    width: 61
+    height: 60
     borderLeft: 0
     borderRight: 0
     borderTop: 0
     borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: PlayersSkills_02
-    x: 43
-    y: 169
-    width: 42
-    height: 43
+    paddingLeft: 1
+    paddingRight: 2
+    paddingTop: 3
+    paddingBottom: 1
+  - name: PlayersSkills_BraySurgery_003
+    x: 61
+    y: 76
+    width: 61
+    height: 60
     borderLeft: 0
     borderRight: 0
     borderTop: 0
     borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: PlayersSkills_03
+    paddingLeft: 1
+    paddingRight: 2
+    paddingTop: 3
+    paddingBottom: 1
+  - name: PlayersSkills_FireBall_0001
+    x: 183
+    y: 196
+    width: 61
+    height: 60
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 2
+    paddingTop: 3
+    paddingBottom: 1
+  - name: PlayersSkills_FireBall_0002
+    x: 122
+    y: 76
+    width: 61
+    height: 60
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 2
+    paddingTop: 3
+    paddingBottom: 1
+  - name: PlayersSkills_FireBall_0003
     x: 0
-    y: 213
-    width: 42
-    height: 43
+    y: 76
+    width: 61
+    height: 60
     borderLeft: 0
     borderRight: 0
     borderTop: 0
     borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: PlayersSkills_04
-    x: 43
-    y: 125
-    width: 42
-    height: 43
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: PlayersSkills_05
+    paddingLeft: 1
+    paddingRight: 2
+    paddingTop: 3
+    paddingBottom: 1
+  - name: PlayersSkills_Heal_001
     x: 0
-    y: 125
-    width: 42
-    height: 43
+    y: 16
+    width: 61
+    height: 60
     borderLeft: 0
     borderRight: 0
     borderTop: 0
     borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
+    paddingLeft: 1
+    paddingRight: 2
+    paddingTop: 3
+    paddingBottom: 1
+  - name: PlayersSkills_Heal_002
+    x: 183
+    y: 136
+    width: 61
+    height: 60
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 2
+    paddingTop: 3
+    paddingBottom: 1
+  - name: PlayersSkills_Heal_003
+    x: 0
+    y: 136
+    width: 61
+    height: 60
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 2
+    paddingTop: 3
+    paddingBottom: 1
+  - name: PlayersSkills_LightningBolt_001
+    x: 183
+    y: 76
+    width: 61
+    height: 60
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 2
+    paddingTop: 3
+    paddingBottom: 1
+  - name: PlayersSkills_LightningBolt_002
+    x: 61
+    y: 196
+    width: 61
+    height: 60
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 2
+    paddingTop: 3
+    paddingBottom: 1
+  - name: PlayersSkills_LightningBolt_003
+    x: 61
+    y: 136
+    width: 61
+    height: 60
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 2
+    paddingTop: 3
+    paddingBottom: 1
   mPixelSize: 1
   mReplacement: {fileID: 0}
   mCoordinates: 0

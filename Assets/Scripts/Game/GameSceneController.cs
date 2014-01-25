@@ -74,6 +74,11 @@ public class GameSceneController : MonoBehaviour
         ActorsManager.GetInstance().DestroyAllActors();
         Destroy(this.battleFieldMap);
         Destroy(GameObject.FindGameObjectWithTag("Obstacle"));
+        GameObject[] torchs = GameObject.FindGameObjectsWithTag("GameSceneTorch");
+        for (int i = 0; i < torchs.Length; i ++)
+        {
+            Destroy(torchs[i]);
+        }
     }
 
     #endregion
@@ -96,6 +101,20 @@ public class GameSceneController : MonoBehaviour
         obstacle.transform.parent = GameObject.Find("tkAnchor").transform;
         obstacle.transform.localScale = new Vector3(1, 1, 1);
         obstacle.transform.localPosition = new Vector3(0, 80, -1);
+
+        Vector3[] pos =
+            {
+                new Vector3(215, 34, -2), new Vector3(215, 140, -2), new Vector3(-209, 140, -2),
+                new Vector3(-209, 34, -2)
+            };
+        for (int i = 0; i < 4; i ++)
+        {
+            GameObject torch = (GameObject)Instantiate(Resources.Load("Map/Torch"));
+            torch.name = "Torch" + i;
+            torch.transform.parent = GameObject.Find("tkAnchor").transform;
+            torch.transform.localScale = new Vector3(1, 1, 1);
+            torch.transform.localPosition = pos[i];
+        }
     }
 
     private void RefreshCoinCount()
@@ -132,12 +151,21 @@ public class GameSceneController : MonoBehaviour
         GameController gameCtrl = GameObject.Find("GameController").GetComponent<GameController>();
         if (gameCtrl != null)
         {
+            Vector3 mainCityPos;
+            if (this.MyFactionType == FactionType.Blue)
+            {
+                mainCityPos = new Vector3(50, 400, 0);
+            }
+            else
+            {
+                mainCityPos = new Vector3(910, 400, 0);
+            }
             if (this.MyRaceType == RaceType.Terran)
             {
                 BuildingsManager.GetInstance()
-                    .CreateNewBuilding(BuildingType.Terran_TheMainCity, FactionType.Blue, new Vector3(50, 400, 0));
-                BuildingsManager.GetInstance()
-                    .CreateNewBuilding(BuildingType.Terran_TheMainCity, FactionType.Red, new Vector3(910, 400, 0));
+                    .CreateNewBuilding(BuildingType.Terran_TheMainCity, this.MyFactionType, mainCityPos);
+                //BuildingsManager.GetInstance()
+                //    .CreateNewBuilding(BuildingType.Terran_TheMainCity, FactionType.Red, new Vector3(910, 400, 0));
 
                 if (gameCtrl.GameType == GameType.PVE)
                 {
@@ -155,29 +183,16 @@ public class GameSceneController : MonoBehaviour
 
                     BuildingsManager.GetInstance()
                         .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(810, 530, 0));
-
-                    //BuildingsManager.GetInstance()
-                    //    .CreateNewBuilding(BuildingType.Terran_ArtilleryLab, FactionType.Red, new Vector3(810, 400, 0));
-
-                    //BuildingsManager.GetInstance()
-                    //     .CreateNewBuilding(BuildingType.Terran_MysterySchool, FactionType.Red, new Vector3(810, 270, 0));
-
-                    //BuildingsManager.GetInstance()
-                    //  .CreateNewBuilding(BuildingType.Terran_Church, FactionType.Red, new Vector3(710, 400, 0));
-
-                    //BuildingsManager.GetInstance()
-                    //  .CreateNewBuilding(BuildingType.Terran_SniperHouse, FactionType.Red, new Vector3(710, 530, 0));
-
-                    //BuildingsManager.GetInstance()
-                    //  .CreateNewBuilding(BuildingType.Terran_Temple, FactionType.Red, new Vector3(710, 270, 0));
+                }
+                else if (gameCtrl.GameType == GameType.PVP)
+                {
+                    gameCtrl.Client.SendCreateBuilding(mainCityPos, BuildingType.Terran_TheMainCity);
                 }
             }
             else if (this.MyRaceType == RaceType.Orc)
             {
                 BuildingsManager.GetInstance()
-                    .CreateNewBuilding(BuildingType.Orc_TheMainCity, FactionType.Blue, new Vector3(50, 400, 0));
-                BuildingsManager.GetInstance()
-                    .CreateNewBuilding(BuildingType.Orc_TheMainCity, FactionType.Red, new Vector3(910, 400, 0));
+                    .CreateNewBuilding(BuildingType.Orc_TheMainCity, this.MyFactionType, mainCityPos);
 
                 if (gameCtrl.GameType == GameType.PVE)
                 {
@@ -185,6 +200,10 @@ public class GameSceneController : MonoBehaviour
                         .CreateNewBuilding(BuildingType.Orc_WarriorHall, FactionType.Red, new Vector3(910, 530, 0));
                     BuildingsManager.GetInstance()
                         .CreateNewBuilding(BuildingType.Orc_WarriorHall, FactionType.Red, new Vector3(810, 530, 0));
+                }
+                else if (gameCtrl.GameType == GameType.PVP)
+                {
+                    gameCtrl.Client.SendCreateBuilding(mainCityPos, BuildingType.Orc_TheMainCity);
                 }
             }
             gameCtrl.ViewController.ShowBuildingsSelectorPanel();

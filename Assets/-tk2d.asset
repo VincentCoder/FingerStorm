@@ -61,6 +61,10 @@ MonoBehaviour:
     dataGUID: 
     managed: 0
     loadable: 0
+  - assetGUID: b24ab6f228216374d9cd1ef2e9ac095e
+    dataGUID: 
+    managed: 0
+    loadable: 0
   fontIndex:
   - assetGUID: 063b15d80dbb4604d890600a64c79cf8
     dataGUID: e7a6b09a73c6b2b4f8060096ddbd3b5e
@@ -732,14 +736,32 @@ MonoBehaviour:
     spriteCollectionGUID: 4f60a13a8703b67429e857e6d7f538d1
     spriteCollectionDataGUID: 4c070311a85cff741ba92c4db703e913
     spriteNames:
-    - Map00
-    - Obstacle01
+    - Map_00
+    - Obstacle02
+    - Torch1_0002
+    - Torch1_0003
+    - Torch1_0005
+    - Torch1_0001
+    - Torch1_0004
+    - Torch1_0006
     spriteTextureGUIDs:
-    - c7d838ec766b4ac47ad6f2adb6bef43b
-    - d6da8a1467b1dcb48af91fc2f403d724
+    - f1bfc766091d79d4697ded8e061fa406
+    - 8932f0e828aecdf4e84f51092d81ab29
+    - 2fa8a068e198d2f47aa84323af4462f2
+    - 46a4e0d4f17e1454792342d1fdcc227f
+    - 59093f0b5add0ae45bedfbc283c92e47
+    - 8bd192ebde0529948ab2f93df84121a2
+    - d70875101af15504aa116bcaa265d676
+    - e38bde180bc14da468e4c51c01535be1
     spriteTextureTimeStamps:
-    - 1389779688
-    - 1390083051
+    - 1390687358
+    - 1390233330
+    - 1390401456
+    - 1390401456
+    - 1390401456
+    - 1390401456
+    - 1390401456
+    - 1390401456
     managedSpriteCollection: 0
     loadable: 0
     assetName: 
@@ -2741,8 +2763,6 @@ MonoBehaviour:
     spriteCollectionGUID: 9bb5ebc2e9a1f344989bc34119de077b
     spriteCollectionDataGUID: 7f52110206776c84189eeef673035000
     spriteNames:
-    - Terran_ArtilleryHall_Blue
-    - Terran_ArtilleryHall_Red
     - Terran_ArtilleryLab_Blue
     - Terran_ArtilleryLab_Red
     - Terran_Aviary_Blue
@@ -2753,8 +2773,6 @@ MonoBehaviour:
     - Terran_Church_Red
     - Terran_Fortress_Blue
     - Terran_Fortress_Red
-    - Terran_MarksmanCamp_Blue
-    - Terran_MarksmanCamp_Red
     - Terran_MysterySchool_Blue
     - Terran_MysterySchool_Red
     - Terran_SniperHouse_Blue
@@ -2764,51 +2782,43 @@ MonoBehaviour:
     - Terran_TheMainCity_Blue
     - Terran_TheMainCity_Red
     spriteTextureGUIDs:
-    - 8b7a71b44a9dc874fa32d376791029de
-    - f83dd61ef8a317f40a2f76b1cf621be5
-    - b3ce21c125eea034089957bc901b7570
-    - 69e86439f5b0c9c42961a231c41db6d1
-    - 84aea00bae349ca42855e23ac7499b96
-    - f7ced18c52edbaf40977068b58745a25
-    - 657addf0e30cffd47bc554fcc822339e
-    - 24bcdf62c46aaad428beefa32da4ec78
-    - 4ceaf33a1c35367479363f9da47fba48
-    - e879f45f97c6d684a8e9744bf5b9b8a0
-    - bd1dda4ed17815742bd502c8bd98b545
-    - 20d912ae47a09f9468c35fe61f167d89
-    - 0eb9a7510ca764643b1e0aff58856e03
-    - 32bb52c5e3b3c97448537e732591d57d
-    - 8cbff117f8160014c85f187d8eb56102
-    - 2e7139968fb9b4d43b5b6378d4c936f5
-    - 6cd7af7a69b9050408e98e689a7b0eb9
-    - f2997e178d364e845961226bf1bbdf6c
-    - efcabeaced0af2b4baf51961234b668d
-    - 820fcaa664377ec47a4a7202d7ac42d2
-    - d602c02cf77ac0f41906518f235cc120
-    - 879ec2414062f0c40b2cc34104ec307e
+    - 4d885303a661e8442975a74b92b1e766
+    - e88acba75eed6b74abf4da2843bd5aab
+    - 194bda5c9ec98dc46b2458e70dfe6fa6
+    - b162a389146fd6f418d97a2dfee80bfc
+    - b3b325a97ada290419619d6d09f61f84
+    - 88249f281e2fe98479f426baa24fb124
+    - ef4050221219cd148982210188867891
+    - 7a80159a7f36aa34aae1176fc7943e4d
+    - d90ec5c0b729336499c0c67ce6d1e8ad
+    - de53a3693cfbcab45bc7681e35947a56
+    - bfd51196da3c4b84ea51dcb26efe4d22
+    - f2960ce933ad32e49938e36b4d79e5d5
+    - 5360cf3986be138428a2a794f402ad06
+    - 8554c174ca8ac87459c73a3d394cbaa1
+    - 95fea8973d0237541b013f5748ed8bfb
+    - bad5e269ac4475249b7ce193cbd74da2
+    - 59f70cea06d690e47b77ead366a5d48f
+    - 6fcc4013b43f93647950776dcb47615a
     spriteTextureTimeStamps:
-    - 1390153518.93379
-    - 1390153518.93379
     - 1390391877
     - 1390390717
     - 1390391922
     - 1390391928
-    - 1390153518.93379
-    - 1390153518.93379
-    - 1390153518.93379
-    - 1390153518.93879
-    - 1390153518.93879
-    - 1390153518.93879
-    - 1390153518.93879
-    - 1390153518.93879
+    - 1390391836
+    - 1390390664
+    - 1390391948
+    - 1390390794
+    - 1390391939
+    - 1390390775
     - 1390391887
     - 1390390735
-    - 1390153518.93879
-    - 1390153518.93879
-    - 1390153518.93879
-    - 1390153518.94379
-    - 1390153518.94379
-    - 1390153518.94379
+    - 1390391867
+    - 1390390686
+    - 1390391958
+    - 1390390808
+    - 1390391816
+    - 1390390337
     managedSpriteCollection: 0
     loadable: 1
     assetName: TerranBuildingsCollection

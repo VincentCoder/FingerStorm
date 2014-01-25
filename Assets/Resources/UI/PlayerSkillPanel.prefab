@@ -51,7 +51,7 @@ GameObject:
   - 65: {fileID: 6500004}
   - 114: {fileID: 11400028}
   m_Layer: 8
-  m_Name: RoadblocksSurgery
+  m_Name: BraySurgery
   m_TagString: PlayerSkillRoadblocksSurgery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,7 +119,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 100, y: 0, z: 0}
+  m_LocalPosition: {x: 122, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400010}
@@ -141,7 +141,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 50, y: 0, z: 0}
+  m_LocalPosition: {x: 61, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400010}
@@ -152,7 +152,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -50, y: 0, z: 0}
+  m_LocalPosition: {x: -61, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400010}
@@ -163,7 +163,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -100, y: 0, z: 0}
+  m_LocalPosition: {x: -122, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400010}
@@ -174,7 +174,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -119.239792, y: -142.747559, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400008}
@@ -193,8 +193,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 42, y: 42.9767456, z: 0}
-  m_Center: {x: 0, y: -.511628151, z: 0}
+  m_Size: {x: 58.140625, y: 56.25, z: 0}
+  m_Center: {x: -.4765625, y: -.9375, z: 0}
 --- !u!65 &6500002
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -205,8 +205,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 42, y: 42.9767456, z: 0}
-  m_Center: {x: 0, y: -.511628151, z: 0}
+  m_Size: {x: 58.140625, y: 56.25, z: 0}
+  m_Center: {x: -.4765625, y: -.9375, z: 0}
 --- !u!65 &6500004
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -217,8 +217,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 42, y: 42.9767456, z: 0}
-  m_Center: {x: 0, y: -.511628151, z: 0}
+  m_Size: {x: 58.140625, y: 56.25, z: 0}
+  m_Center: {x: -.4765625, y: -.9375, z: 0}
 --- !u!65 &6500006
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -229,8 +229,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 42, y: 42.9767456, z: 0}
-  m_Center: {x: 0, y: -.511628151, z: 0}
+  m_Size: {x: 58.140625, y: 56.25, z: 0}
+  m_Center: {x: -.4765625, y: -.9375, z: 0}
 --- !u!65 &6500008
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -241,8 +241,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 42, y: 42, z: 0}
-  m_Center: {x: 0, y: -.5, z: 0}
+  m_Size: {x: 58.140625, y: 56.25, z: 0}
+  m_Center: {x: -.4765625, y: -.9375, z: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -255,10 +255,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 11400002}
-  normalSprite: PlayersSkills_05
-  hoverSprite: PlayersSkills_05
-  pressedSprite: PlayersSkills_05
-  disabledSprite: PlayersSkills_05
+  normalSprite: PlayersSkills_Bloodlust_002
+  hoverSprite: PlayersSkills_Bloodlust_003
+  pressedSprite: PlayersSkills_Bloodlust_003
+  disabledSprite: PlayersSkills_Bloodlust_001
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -272,12 +272,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 42
-  mHeight: 44
+  mWidth: 61
+  mHeight: 60
   mDepth: 0
   autoResizeBoxCollider: 1
   mAtlas: {fileID: 11400000, guid: e7ada7a4740cb46509287f0b41ac874b, type: 2}
-  mSpriteName: PlayersSkills_05
+  mSpriteName: PlayersSkills_Bloodlust_002
   mFillCenter: 1
   mType: 0
   mFillDirection: 4
@@ -296,12 +296,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 42
-  mHeight: 44
+  mWidth: 61
+  mHeight: 60
   mDepth: 0
   autoResizeBoxCollider: 1
   mAtlas: {fileID: 11400000, guid: e7ada7a4740cb46509287f0b41ac874b, type: 2}
-  mSpriteName: PlayersSkills_03
+  mSpriteName: PlayersSkills_Heal_002
   mFillCenter: 1
   mType: 0
   mFillDirection: 4
@@ -319,10 +319,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 11400004}
-  normalSprite: PlayersSkills_03
-  hoverSprite: PlayersSkills_03
-  pressedSprite: PlayersSkills_03
-  disabledSprite: PlayersSkills_03
+  normalSprite: PlayersSkills_Heal_002
+  hoverSprite: PlayersSkills_Heal_003
+  pressedSprite: PlayersSkills_Heal_003
+  disabledSprite: PlayersSkills_Heal_001
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -335,10 +335,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 11400010}
-  normalSprite: PlayersSkills_04
-  hoverSprite: PlayersSkills_04
-  pressedSprite: PlayersSkills_04
-  disabledSprite: PlayersSkills_04
+  normalSprite: PlayersSkills_BraySurgery_002
+  hoverSprite: PlayersSkills_BraySurgery_003
+  pressedSprite: PlayersSkills_BraySurgery_003
+  disabledSprite: PlayersSkills_BraySurgery_001
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -352,12 +352,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 42
-  mHeight: 44
+  mWidth: 61
+  mHeight: 60
   mDepth: 0
   autoResizeBoxCollider: 1
   mAtlas: {fileID: 11400000, guid: e7ada7a4740cb46509287f0b41ac874b, type: 2}
-  mSpriteName: PlayersSkills_04
+  mSpriteName: PlayersSkills_BraySurgery_002
   mFillCenter: 1
   mType: 0
   mFillDirection: 4
@@ -376,12 +376,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 42
-  mHeight: 44
+  mWidth: 61
+  mHeight: 60
   mDepth: 0
   autoResizeBoxCollider: 1
   mAtlas: {fileID: 11400000, guid: e7ada7a4740cb46509287f0b41ac874b, type: 2}
-  mSpriteName: PlayersSkills_02
+  mSpriteName: PlayersSkills_LightningBolt_002
   mFillCenter: 1
   mType: 0
   mFillDirection: 4
@@ -399,10 +399,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 11400012}
-  normalSprite: PlayersSkills_02
-  hoverSprite: PlayersSkills_02
-  pressedSprite: PlayersSkills_02
-  disabledSprite: PlayersSkills_02
+  normalSprite: PlayersSkills_LightningBolt_002
+  hoverSprite: PlayersSkills_LightningBolt_003
+  pressedSprite: PlayersSkills_LightningBolt_003
+  disabledSprite: PlayersSkills_LightningBolt_001
 --- !u!114 &11400016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -415,10 +415,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 11400018}
-  normalSprite: PlayersSkills_01
-  hoverSprite: PlayersSkills_01
-  pressedSprite: PlayersSkills_01
-  disabledSprite: PlayersSkills_01
+  normalSprite: PlayersSkills_FireBall_0002
+  hoverSprite: PlayersSkills_FireBall_0003
+  pressedSprite: PlayersSkills_FireBall_0003
+  disabledSprite: PlayersSkills_FireBall_0001
 --- !u!114 &11400018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -432,12 +432,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 42
-  mHeight: 43
+  mWidth: 61
+  mHeight: 60
   mDepth: 0
   autoResizeBoxCollider: 1
   mAtlas: {fileID: 11400000, guid: e7ada7a4740cb46509287f0b41ac874b, type: 2}
-  mSpriteName: PlayersSkills_01
+  mSpriteName: PlayersSkills_FireBall_0002
   mFillCenter: 1
   mType: 0
   mFillDirection: 4
@@ -527,7 +527,7 @@ MonoBehaviour:
   ClusterManager: {fileID: 0}
   Delegate: {fileID: 0}
   UseSendMessage: 1
-  EventMessageName: 
+  EventMessageName: OnTap
   EventMessageTarget: {fileID: 0}
   SendMessageToSelection: 0
   IsExclusive: 0

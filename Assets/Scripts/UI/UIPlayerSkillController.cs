@@ -69,7 +69,7 @@ public class UIPlayerSkillController : MonoBehaviour
                     }
                     break;
                 }
-            case "RoadblocksSurgery":
+            case "BraySurgery":
                 {
                     if (this.gameSceneController.Mp >= 60000)
                     {
@@ -218,7 +218,7 @@ public class UIPlayerSkillController : MonoBehaviour
 
         UIEventListener.Get(this.myTranform.FindChild("FireBall").gameObject).onClick = this.HandleEvent;
         UIEventListener.Get(this.myTranform.FindChild("LightningBolt").gameObject).onClick = this.HandleEvent;
-        UIEventListener.Get(this.myTranform.FindChild("RoadblocksSurgery").gameObject).onClick = this.HandleEvent;
+        UIEventListener.Get(this.myTranform.FindChild("BraySurgery").gameObject).onClick = this.HandleEvent;
         UIEventListener.Get(this.myTranform.FindChild("Heal").gameObject).onClick = this.HandleEvent;
         UIEventListener.Get(this.myTranform.FindChild("Bloodlust").gameObject).onClick = this.HandleEvent;
     }
