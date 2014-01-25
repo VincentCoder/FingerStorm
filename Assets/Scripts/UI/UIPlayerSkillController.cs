@@ -203,7 +203,7 @@ public class UIPlayerSkillController : MonoBehaviour
                 this.toReleaseFireBall = false;
                 if (this.gameSceneController.GameController.GameType == GameType.PVP)
                 {
-                    this.gameSceneController.GameController.Client.SendReleasePlayerSkill("FireBall", Vector3.zero);
+                    this.gameSceneController.GameController.Client.SendReleasePlayerSkill("FireBall", gesture.Position);
                 }
                 this.ReleaseFireBall(gesture.Position, this.gameSceneController.MyFactionType);
             }
