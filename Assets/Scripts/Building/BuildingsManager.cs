@@ -164,6 +164,15 @@ public class BuildingsManager
         return result;
     }
 
+    public GameObject GetBuildingById(int buildingId)
+    {
+        if (this.allBuildingsDictionary.ContainsKey(buildingId))
+        {
+            return this.allBuildingsDictionary[buildingId];
+        }
+        return null;
+    }
+
     private int GenerateNewBuildingId()
     {
         int result;

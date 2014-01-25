@@ -30,6 +30,8 @@ public class GameSceneController : MonoBehaviour
 
     private int mp;
 
+    public GameController GameController;
+
     #endregion
 
     #region Public Properties
@@ -148,8 +150,7 @@ public class GameSceneController : MonoBehaviour
     {
         this.CreateBattleFieldMap();
 
-        GameController gameCtrl = GameObject.Find("GameController").GetComponent<GameController>();
-        if (gameCtrl != null)
+        if (this.GameController != null)
         {
             Vector3 mainCityPos;
             if (this.MyFactionType == FactionType.Blue)
@@ -167,7 +168,7 @@ public class GameSceneController : MonoBehaviour
                 //BuildingsManager.GetInstance()
                 //    .CreateNewBuilding(BuildingType.Terran_TheMainCity, FactionType.Red, new Vector3(910, 400, 0));
 
-                if (gameCtrl.GameType == GameType.PVE)
+                if (this.GameController.GameType == GameType.PVE)
                 {
                     BuildingsManager.GetInstance()
                         .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(910, 530, 0));
@@ -184,9 +185,9 @@ public class GameSceneController : MonoBehaviour
                     BuildingsManager.GetInstance()
                         .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(810, 530, 0));
                 }
-                else if (gameCtrl.GameType == GameType.PVP)
+                else if (this.GameController.GameType == GameType.PVP)
                 {
-                    gameCtrl.Client.SendCreateBuilding(mainCityPos, BuildingType.Terran_TheMainCity);
+                    this.GameController.Client.SendCreateBuilding(mainCityPos, BuildingType.Terran_TheMainCity);
                 }
             }
             else if (this.MyRaceType == RaceType.Orc)
@@ -194,22 +195,22 @@ public class GameSceneController : MonoBehaviour
                 BuildingsManager.GetInstance()
                     .CreateNewBuilding(BuildingType.Orc_TheMainCity, this.MyFactionType, mainCityPos);
 
-                if (gameCtrl.GameType == GameType.PVE)
+                if (this.GameController.GameType == GameType.PVE)
                 {
                     BuildingsManager.GetInstance()
                         .CreateNewBuilding(BuildingType.Orc_WarriorHall, FactionType.Red, new Vector3(910, 530, 0));
                     BuildingsManager.GetInstance()
                         .CreateNewBuilding(BuildingType.Orc_WarriorHall, FactionType.Red, new Vector3(810, 530, 0));
                 }
-                else if (gameCtrl.GameType == GameType.PVP)
+                else if (this.GameController.GameType == GameType.PVP)
                 {
-                    gameCtrl.Client.SendCreateBuilding(mainCityPos, BuildingType.Orc_TheMainCity);
+                    this.GameController.Client.SendCreateBuilding(mainCityPos, BuildingType.Orc_TheMainCity);
                 }
             }
-            gameCtrl.ViewController.ShowBuildingsSelectorPanel();
-            gameCtrl.ViewController.ShowBuildingDetailPanel();
-            gameCtrl.ViewController.ShowPlayerSkillPanel();
-            this.menuBar = gameCtrl.ViewController.ShowMenuBar();
+            this.GameController.ViewController.ShowBuildingsSelectorPanel();
+            this.GameController.ViewController.ShowBuildingDetailPanel();
+            this.GameController.ViewController.ShowPlayerSkillPanel();
+            this.menuBar = this.GameController.ViewController.ShowMenuBar();
         }
 
         this.CoinCount = 30000;

@@ -91,6 +91,60 @@ public class FSClient : LoadBalancingClient
                     Time.timeScale = 0;
                 }
                 break;
+             case EventCode.UpgradeBuilding:
+                {
+                    Hashtable contentUpgrade = photonEvent.Parameters[ParameterCode.CustomEventContent] as Hashtable;
+                    FactionType faction3 = (FactionType)contentUpgrade[(byte)1];
+                    if (faction3 != this.gameController.MyFactionType)
+                    {
+                        int buildingId = (int)contentUpgrade[(byte)2];
+                        GameObject building = BuildingsManager.GetInstance().GetBuildingById(buildingId);
+                        if (building != null)
+                        {
+                            BuildingController buildingCtrl = building.GetComponent<BuildingController>();
+                            buildingCtrl.UpgradeBuilding();
+                        }
+                    }
+                }
+                break;
+            case EventCode.ReleasePlayerSkill:
+                {
+                    Hashtable contentPlayerSkill = photonEvent.Parameters[ParameterCode.CustomEventContent] as Hashtable;
+                    FactionType faction4 = (FactionType)contentPlayerSkill[(byte)1];
+                    if (faction4 != this.gameController.MyFactionType)
+                    {
+                        string skillName = (string)contentPlayerSkill[(byte)2];
+                        GameObject playerSkillPanel = GameObject.Find("PlayerSkillPanel");
+                        if (playerSkillPanel != null)
+                        {
+                            UIPlayerSkillController playerSkillCtrl =
+                                playerSkillPanel.GetComponent<UIPlayerSkillController>();
+
+                            switch (skillName)
+                            {
+                                case "FireBall":
+                                    {
+                                        Vector3 pos = (Vector3)contentPlayerSkill[(byte)3];
+                                        playerSkillCtrl.ReleaseFireBall(pos,faction4);
+                                    }
+                                    break;
+                                case "LightningBolt":
+                                    playerSkillCtrl.ReleaseLightningBolt(faction4);
+                                    break;
+                                case "BraySurgery":
+                                    playerSkillCtrl.ReleaseBraySurgery(faction4);
+                                    break;
+                                case "Heal":
+                                    playerSkillCtrl.ReleaseHeal(faction4);
+                                    break;
+                                case "Bloodlust":
+                                    playerSkillCtrl.ReleaseBloodlust(faction4);
+                                    break;
+                            }
+                        }
+                        
+                    }
+                }
         }
     }
 
@@ -176,6 +230,23 @@ public class FSClient : LoadBalancingClient
         evData[(byte)2] = pos;
         evData[(byte)3] = (int)buildingType;
         this.loadBalancingPeer.OpRaiseEvent(EventCode.CreateBuilding, evData, true, 0);
+    }
+
+    public void SendUpgradeBuilding(int buildingId)
+    {
+        Hashtable evData = new Hashtable();
+        evData[(byte)1] = this.gameController.MyFactionType;
+        evData[(byte)2] = buildingId;
+        this.loadBalancingPeer.OpRaiseEvent(EventCode.UpgradeBuilding, evData, true, 0);
+    }
+
+    public void SendReleasePlayerSkill(string skillName, Vector3 position)
+    {
+        Hashtable evData = new Hashtable();
+        evData[(byte)1] = this.gameController.MyFactionType;
+        evData[(byte)2] = skillName;
+        evData[(byte)3] = position;
+        this.loadBalancingPeer.OpRaiseEvent(EventCode.ReleasePlayerSkill, evData, true, 0);
     }
 
     public void SendGameResult()

@@ -210,14 +210,13 @@ public class BuildingController : BaseGameEntity
                 break;
             case "UpgradeButton":
                 {
-                    if ((int)this.Building.MaxLevel > (int)this.Building.CurrentLevel && this.Building.CurrentLevel == BuildingLevel.BuildingLevel1)
+                    if (this.UpgradeBuilding())
                     {
-                        int dValue = this.gameSceneController.CoinCount - this.Building.CoinCostLevel2;
-                        if (dValue >= 0)
+                        evObj.GetComponent<UIImageButton>().isEnabled = false;
+                        GameController gameCtrl = GameObject.Find("GameController").GetComponent<GameController>();
+                        if (gameCtrl.GameType == GameType.PVP)
                         {
-                            this.gameSceneController.CoinCount = dValue;
-                            this.Building.CurrentLevel = BuildingLevel.BuildingLevel2;
-                            evObj.GetComponent<UIImageButton>().isEnabled = false;
+                            gameCtrl.Client.SendUpgradeBuilding(this.Building.BuildingId);
                         }
                     }
                 }
@@ -228,6 +227,22 @@ public class BuildingController : BaseGameEntity
                 }
                 break;
         }
+    }
+
+    public bool UpgradeBuilding()
+    {
+        if ((int)this.Building.MaxLevel > (int)this.Building.CurrentLevel
+            && this.Building.CurrentLevel == BuildingLevel.BuildingLevel1)
+        {
+            int dValue = this.gameSceneController.CoinCount - this.Building.CoinCostLevel2;
+            if (dValue >= 0)
+            {
+                this.gameSceneController.CoinCount = dValue;
+                this.Building.CurrentLevel = BuildingLevel.BuildingLevel2;
+                return true;
+            }
+        }
+        return false;
     }
 
     #endregion

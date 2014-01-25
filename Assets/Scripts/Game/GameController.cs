@@ -50,6 +50,7 @@ public class GameController : BaseGameEntity
         gameSceneCtrl.transform.localPosition = new Vector3(0, 0, 0);
         gameSceneCtrl.name = "GameSceneController";
         this.GameSceneController = gameSceneCtrl.GetComponent<GameSceneController>();
+        this.GameSceneController.GameController = this;
         this.GameSceneController.MyFactionType = this.MyFactionType;
         this.GameSceneController.MyRaceType = this.MyRaceType;
     }
