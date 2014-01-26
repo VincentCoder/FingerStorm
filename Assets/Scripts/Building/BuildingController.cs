@@ -24,7 +24,7 @@ public class BuildingController : BaseGameEntity
 
     private GameObject buildingMenu;
 
-    private GameSceneController gameSceneController;
+    public GameSceneController gameSceneController;
 
     private StateMachine<BuildingController> m_PStateMachine;
 

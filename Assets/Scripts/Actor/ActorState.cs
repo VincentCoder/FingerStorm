@@ -260,7 +260,6 @@ public class Actor_GlobalState : State<ActorController>
                         animator.Play("HolyLight");
                         animator.AnimationCompleted = delegate
                         {
-                            Debug.Log("HolyLight");
                             if (targetActor != null)
                             {
                                 ActorController actorCtrl = targetActor.GetComponent<ActorController>();

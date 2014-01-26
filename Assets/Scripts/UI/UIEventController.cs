@@ -105,12 +105,8 @@ public class UIEventController : MonoBehaviour
 			case "GameResultBackToMenuButton":
 			{
 				Time.timeScale = 1;
-				this.GameController.ViewController.DestroyMenuBar(true);
-				this.GameController.ViewController.DestroyBuildingDetailPanel(true);
-				this.GameController.ViewController.DestroyBuildingsSelectorPanel(true);
-				this.GameController.ViewController.DestroyGameResultView(true);
 				GameSceneController gameSceneCtrl = GameObject.Find("GameSceneController").GetComponent<GameSceneController>();
-				gameSceneCtrl.ClearGameScene();
+				gameSceneCtrl.BackToMainMenu();
 				this.GameController.GetFSM().ChangeState(GameState_HomePage.Instance());
 				break;
 			}

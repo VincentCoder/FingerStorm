@@ -24,7 +24,7 @@ TagManager:
   - PlayerSkillLightningBoltButton
   - PlayerSkillHealButton
   - PlayerSkillBloodlustButton
-  - PlayerSkillRoadblocksSurgery
+  - PlayerSkillBraySurgeryButton
   - BuildingMenu
   - GameSceneTorch
   - 

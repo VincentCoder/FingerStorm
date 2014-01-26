@@ -2106,7 +2106,7 @@ MonoBehaviour:
       eventFloat: 0
     fps: 12
     loopStart: 0
-    wrapMode: 2
+    wrapMode: 0
   - name: Orc_Shaman_Attack_Blue
     frames:
     - spriteCollection: {fileID: 11400000, guid: 0894aaca214c9344aa62ee72c85232e7,

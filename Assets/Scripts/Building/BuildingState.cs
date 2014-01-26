@@ -275,7 +275,7 @@ public class Building_StateBeforeDestroy : State<BuildingController>
             GameController gameCtrl = GameObject.Find("GameController").GetComponent<GameController>();
             if(gameCtrl.GameType == GameType.PVP)
                 gameCtrl.Client.SendGameResult();
-            gameCtrl.ViewController.ShowGameResultView(entityType.Building.FactionType != gameCtrl.MyFactionType);
+            entityType.gameSceneController.ShowGameResult(entityType.Building.FactionType != gameCtrl.MyFactionType);
         }
         entityType.GetFSM().ChangeState(Building_StateDestroy.Instance());
     }

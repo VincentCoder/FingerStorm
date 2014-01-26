@@ -71,17 +71,20 @@ public class BuildingsManager
 
     public void DestroyAllBuildings()
     {
-        GameObject tempObj = null;
-        BuildingController tempCtrl = null;
-        foreach (KeyValuePair<int, GameObject> kv in this.allBuildingsDictionary)
+        List<GameObject> allBuildings = new List<GameObject>();
+        allBuildings.AddRange(this.allBuildingsDictionary.Values);
+        for (int i = 0; i < allBuildings.Count; i++)
         {
-            tempObj = kv.Value;
-            tempCtrl = tempObj.GetComponent<BuildingController>();
-            tempCtrl.DestroySelf();
+            GameObject building = allBuildings[i];
+            if (building != null)
+            {
+                BuildingController buildingCtrl = building.GetComponent<BuildingController>();
+                buildingCtrl.DestroySelf();
+            }
         }
         this.allBuildingsDictionary.Clear();
         this.baseBuildingDictionary.Clear();
-		this.buildingIdSeq = 0;
+        this.buildingIdSeq = 0;
     }
 	
 	public void DestroyBuilding(GameObject building)

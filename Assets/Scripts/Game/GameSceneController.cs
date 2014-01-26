@@ -72,8 +72,8 @@ public class GameSceneController : MonoBehaviour
 
     public void ClearGameScene()
     {
-        BuildingsManager.GetInstance().DestroyAllBuildings();
         ActorsManager.GetInstance().DestroyAllActors();
+        BuildingsManager.GetInstance().DestroyAllBuildings();
         Destroy(this.battleFieldMap);
         Destroy(GameObject.FindGameObjectWithTag("Obstacle"));
         GameObject[] torchs = GameObject.FindGameObjectsWithTag("GameSceneTorch");
@@ -235,6 +235,13 @@ public class GameSceneController : MonoBehaviour
 
         this.CoinCount = 1000;
         this.Mp = 200;
+
+        this.Invoke("Test", 30);
+    }
+
+    private void Test()
+    {
+        
     }
 
     private void Update()
@@ -251,6 +258,21 @@ public class GameSceneController : MonoBehaviour
             this.Mp ++;
             this.MpIncreaseCounter = 0f;
         }
+    }
+
+    public void ShowGameResult(bool win)
+    {
+        this.GameController.ViewController.ShowGameResultView(win);
+    }
+
+    public void BackToMainMenu()
+    {
+        this.ClearGameScene();
+        this.GameController.ViewController.DestroyMenuBar(true);
+        this.GameController.ViewController.DestroyBuildingDetailPanel(true);
+        this.GameController.ViewController.DestroyBuildingsSelectorPanel(true);
+        this.GameController.ViewController.DestroyPlayerSkillPanel(true);
+        this.GameController.ViewController.DestroyGameResultView(true);
     }
 
     #endregion

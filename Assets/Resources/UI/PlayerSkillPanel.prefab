@@ -52,7 +52,7 @@ GameObject:
   - 114: {fileID: 11400028}
   m_Layer: 8
   m_Name: BraySurgery
-  m_TagString: PlayerSkillRoadblocksSurgery
+  m_TagString: PlayerSkillBraySurgeryButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

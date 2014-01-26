@@ -111,7 +111,7 @@ public class UIViewController : MonoBehaviour
 		GameObject buildingCard = (GameObject)Instantiate(Resources.Load("UI/BuildingCard"));
 		buildingCard.name = building.BuildingType + "";
 		buildingCard.tag = "GameSceneBuildingCard";
-		buildingCard.transform.parent = GameObject.FindWithTag("GameSceneBuildingsSelectorPanel").transform.FindChild("UIGrid").transform;
+		buildingCard.transform.parent = GameObject.FindWithTag("GameSceneBuildingsSelectorPanel").transform.FindChild("ScrollView").transform.FindChild("UIGrid");
 		buildingCard.transform.localScale = new Vector3(1,1,1);
 		buildingCard.transform.localPosition = new Vector3(index*81,0,0);
 
@@ -218,6 +218,7 @@ public class UIViewController : MonoBehaviour
 	public void DestroyPlayerSkillPanel(bool now)
 	{
 		GameObject playerSkillPanel = GameObject.FindWithTag("GameScenePlayerSkillPanel");
+        Debug.Log(playerSkillPanel);
 		if(now)
 			DestroyImmediate(playerSkillPanel);
 		else
