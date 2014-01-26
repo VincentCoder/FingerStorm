@@ -1,6 +1,7 @@
 ﻿#region
 
 using System.Collections.Generic;
+using System.ComponentModel;
 
 using AnimationOrTween;
 
@@ -111,8 +112,13 @@ public class BuildingsManager
         }
         return baseBuilding;
     }
-	
-	public List<GameObject> GetAllEnemyBuildings(FactionType factionType)
+
+    public Dictionary<FactionType, GameObject> GetAllBaseBuildings ()
+    {
+        return new Dictionary<FactionType, GameObject>(this.baseBuildingDictionary);
+    }
+
+    public List<GameObject> GetAllEnemyBuildings(FactionType factionType)
 	{
 		List<GameObject> result = new List<GameObject>(this.allBuildingsDictionary.Values);
 		for(int i = 0; i < result.Count; i ++)
@@ -123,6 +129,11 @@ public class BuildingsManager
 		}
 		return result;
 	}
+
+    public List<GameObject> GetAllBuildings()
+    {
+        return new List<GameObject>(this.allBuildingsDictionary.Values);
+    }
 	
 	public List<GameObject> GetBuildingsOfFaction(FactionType factionType)
 	{

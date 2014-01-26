@@ -3422,7 +3422,7 @@ MonoBehaviour:
       eventFloat: 0
     fps: 12
     loopStart: 0
-    wrapMode: 0
+    wrapMode: 2
   - name: Terran_Knight_Die_Blue
     frames:
     - spriteCollection: {fileID: 11400000, guid: 43f3657e4c85d4b32ae701c04f76f120,

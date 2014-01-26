@@ -27,6 +27,7 @@ public class UIPlayerSkillController : MonoBehaviour
             actor =>
                 {
                     GameObject bloodlust = (GameObject)Instantiate(Resources.Load("GameScene/PlayerSkillBloodlust"));
+                    bloodlust.name = "BloodLustRelease";
                     bloodlust.transform.parent = actor.transform;
                     bloodlust.transform.localPosition = new Vector3(0, 0, 0);
                     tk2dSpriteAnimator animator = bloodlust.GetComponent<tk2dSpriteAnimator>();
@@ -41,7 +42,9 @@ public class UIPlayerSkillController : MonoBehaviour
                                 actorCtrl.AttackPlusRatio = 1.5f;
                                 GameObject bloodBustHalo =
                                     (GameObject)Instantiate(Resources.Load("GameScene/PlayerSkillBloodlust"));
+                                bloodBustHalo.name = "BloodBustHalo";
                                 bloodBustHalo.transform.parent = actor.transform;
+                                bloodBustHalo.transform.localPosition = new Vector3(10,-5,0);
                                 bloodBustHalo.GetComponent<tk2dSpriteAnimator>().Play("Halo");
                             }
                         };

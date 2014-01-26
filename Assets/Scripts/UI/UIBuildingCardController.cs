@@ -90,7 +90,7 @@ public class UIBuildingCardController : MonoBehaviour
         else if (this.IsDragging)
         {
             if (this.CheckBuildingPositionValid()
-                && BuildingsManager.GetInstance().PayForTheBuilding(this.Building.CoinCostLevel1))
+                && BuildingsManager.GetInstance().PayForTheBuilding(this.Building.CoinCostLevel1) && !this.gameSceneCtrl.IsArmageddon)
             {
                 GameController gameCtrl = GameObject.Find("GameController")
                     .GetComponent<GameController>();

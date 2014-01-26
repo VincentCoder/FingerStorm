@@ -270,13 +270,13 @@ public class Building_StateBeforeDestroy : State<BuildingController>
 
     public override void Enter(BuildingController entityType)
     {
-        if (entityType.Building.IsMainCity)
+        /*if (!entityType.gameSceneController.IsArmageddon && entityType.Building.IsMainCity)
         {
             GameController gameCtrl = GameObject.Find("GameController").GetComponent<GameController>();
             if(gameCtrl.GameType == GameType.PVP)
                 gameCtrl.Client.SendGameResult();
             entityType.gameSceneController.ShowGameResult(entityType.Building.FactionType != gameCtrl.MyFactionType);
-        }
+        }*/
         entityType.GetFSM().ChangeState(Building_StateDestroy.Instance());
     }
 

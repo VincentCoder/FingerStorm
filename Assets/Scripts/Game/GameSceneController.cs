@@ -1,5 +1,7 @@
 ﻿#region
 
+using System.Collections.Generic;
+
 using UnityEngine;
 
 #endregion
@@ -11,7 +13,13 @@ public class GameSceneController : MonoBehaviour
 {
     #region Fields
 
+    public float ArmageddonCounter;
+
     public float CoinIncreaseSpeed = 20;
+
+    public GameController GameController;
+
+    public bool IsArmageddon;
 
     public float MpIncreaseSpeed = 1;
 
@@ -19,9 +27,6 @@ public class GameSceneController : MonoBehaviour
 
     private float MpIncreaseCounter;
 
-    /// <summary>
-    ///     The battle field map.
-    /// </summary>
     private GameObject battleFieldMap;
 
     private int coinCount;
@@ -30,7 +35,7 @@ public class GameSceneController : MonoBehaviour
 
     private int mp;
 
-    public GameController GameController;
+    private GameResultChecker GameResultChecker;
 
     #endregion
 
@@ -70,8 +75,20 @@ public class GameSceneController : MonoBehaviour
 
     #region Public Methods and Operators
 
+    public void BackToMainMenu()
+    {
+        this.ClearGameScene();
+        this.GameController.ViewController.DestroyMenuBar(true);
+        this.GameController.ViewController.DestroyBuildingDetailPanel(true);
+        this.GameController.ViewController.DestroyBuildingsSelectorPanel(true);
+        this.GameController.ViewController.DestroyPlayerSkillPanel(true);
+        this.GameController.ViewController.DestroyGameResultView(true);
+    }
+
     public void ClearGameScene()
     {
+        if(this.GameResultChecker != null)
+            Destroy(this.GameResultChecker.gameObject);
         ActorsManager.GetInstance().DestroyAllActors();
         BuildingsManager.GetInstance().DestroyAllBuildings();
         Destroy(this.battleFieldMap);
@@ -81,6 +98,51 @@ public class GameSceneController : MonoBehaviour
         {
             Destroy(torchs[i]);
         }
+    }
+
+    public void ShowGameResult(bool win)
+    {
+        this.GameController.ViewController.ShowGameResultView(win);
+    }
+
+    public void StartArmageddon()
+    {
+        this.IsArmageddon = true;
+        List<GameObject> allBuildings = BuildingsManager.GetInstance().GetAllBuildings();
+        allBuildings.ForEach(
+            building =>
+                {
+                    if (building != null)
+                    {
+                        BuildingController buildingCtrl = building.GetComponent<BuildingController>();
+                        if (!buildingCtrl.Building.IsMainCity)
+                        {
+                            ActorsManager actorsManager = ActorsManager.GetInstance();
+                            for (int i = 0; i < 4; i++)
+                            {
+                                if (buildingCtrl.Building.CurrentLevel == BuildingLevel.BuildingLevel1 || buildingCtrl.Building.CurrentLevel == BuildingLevel.BuildingLevel2 && i < 2)
+                                {
+                                    actorsManager.CreateNewActor(
+                                        buildingCtrl.Building.FactionType,
+                                        buildingCtrl.Building.Race,
+                                        buildingCtrl.Building.ProducedActorTypeLevel1,
+                                        building.transform.position
+                                    + new Vector3(Random.Range(-40, 40), Random.Range(-40, 40), 0));
+                                }
+                                else if (buildingCtrl.Building.CurrentLevel == BuildingLevel.BuildingLevel2)
+                                {
+                                    actorsManager.CreateNewActor(
+                                    buildingCtrl.Building.FactionType,
+                                    buildingCtrl.Building.Race,
+                                    buildingCtrl.Building.ProducedActorTypeLevel2,
+                                    building.transform.position
+                                    + new Vector3(Random.Range(-20, 20), Random.Range(-20, 20), 0));
+                                }
+                            }
+                            BuildingsManager.GetInstance().DestroyBuilding(building);
+                        }
+                    }
+                });
     }
 
     #endregion
@@ -235,13 +297,14 @@ public class GameSceneController : MonoBehaviour
 
         this.CoinCount = 1000;
         this.Mp = 200;
+        this.ArmageddonCounter = 60;
+        this.IsArmageddon = false;
 
         this.Invoke("Test", 30);
     }
 
     private void Test()
     {
-        
     }
 
     private void Update()
@@ -258,21 +321,17 @@ public class GameSceneController : MonoBehaviour
             this.Mp ++;
             this.MpIncreaseCounter = 0f;
         }
+        this.ArmageddonCounter -= Time.deltaTime;
+        if (this.ArmageddonCounter <= 0 && !this.IsArmageddon)
+        {
+            this.StartArmageddon();
+        }
     }
 
-    public void ShowGameResult(bool win)
+    private void StartCheckResult()
     {
-        this.GameController.ViewController.ShowGameResultView(win);
-    }
-
-    public void BackToMainMenu()
-    {
-        this.ClearGameScene();
-        this.GameController.ViewController.DestroyMenuBar(true);
-        this.GameController.ViewController.DestroyBuildingDetailPanel(true);
-        this.GameController.ViewController.DestroyBuildingsSelectorPanel(true);
-        this.GameController.ViewController.DestroyPlayerSkillPanel(true);
-        this.GameController.ViewController.DestroyGameResultView(true);
+        GameObject resultChecker = (GameObject)Instantiate(Resources.Load("GameScene/GameResultChecker"));
+        this.GameResultChecker = resultChecker.GetComponent<GameResultChecker>();
     }
 
     #endregion

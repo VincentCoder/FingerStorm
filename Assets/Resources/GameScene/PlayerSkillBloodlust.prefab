@@ -68,7 +68,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   library: {fileID: 11400000, guid: 0e1fec4ba3d9b42c09c80a57beedc12d, type: 2}
   defaultClipId: 0
-  playAutomatically: 1
+  playAutomatically: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
