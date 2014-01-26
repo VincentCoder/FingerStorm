@@ -172,20 +172,23 @@ public class GameSceneController : MonoBehaviour
                 {
                     BuildingsManager.GetInstance()
                         .CreateNewBuilding(BuildingType.Terran_TheMainCity, FactionType.Red, new Vector3(910, 400, 0));
-                    BuildingsManager.GetInstance()
-                        .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(910, 530, 0));
-                    BuildingsManager.GetInstance()
-                        .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(890, 500, 0));
-                    BuildingsManager.GetInstance()
-                        .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(870, 470, 0));
-                    BuildingsManager.GetInstance()
-                        .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(850, 350, 0));
 
                     BuildingsManager.GetInstance()
-                        .CreateNewBuilding(BuildingType.Terran_Fortress, FactionType.Red, new Vector3(910, 270, 0));
-
+                        .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(910, 250, 0));
                     BuildingsManager.GetInstance()
-                        .CreateNewBuilding(BuildingType.Terran_Barrack, FactionType.Red, new Vector3(810, 530, 0));
+                        .CreateNewBuilding(BuildingType.Terran_ArtilleryLab, FactionType.Red, new Vector3(910, 530, 0));
+                    BuildingsManager.GetInstance()
+                        .CreateNewBuilding(BuildingType.Terran_Aviary, FactionType.Red, new Vector3(830, 400, 0));
+                    BuildingsManager.GetInstance()
+                        .CreateNewBuilding(BuildingType.Terran_Church, FactionType.Red, new Vector3(830, 250, 0));
+                    BuildingsManager.GetInstance()
+                        .CreateNewBuilding(BuildingType.Terran_Fortress, FactionType.Red, new Vector3(830, 530, 0));
+                    BuildingsManager.GetInstance()
+                        .CreateNewBuilding(BuildingType.Terran_MysterySchool, FactionType.Red, new Vector3(750, 400, 0));
+                    BuildingsManager.GetInstance()
+                        .CreateNewBuilding(BuildingType.Terran_SniperHouse, FactionType.Red, new Vector3(750, 250, 0));
+                    BuildingsManager.GetInstance()
+                        .CreateNewBuilding(BuildingType.Terran_Temple, FactionType.Red, new Vector3(750, 530, 0));
                 }
                 else if (this.GameController.GameType == GameType.PVP)
                 {
@@ -201,10 +204,23 @@ public class GameSceneController : MonoBehaviour
                 {
                     BuildingsManager.GetInstance()
                         .CreateNewBuilding(BuildingType.Orc_TheMainCity, FactionType.Red, new Vector3(910, 400, 0));
+
                     BuildingsManager.GetInstance()
-                        .CreateNewBuilding(BuildingType.Orc_WarriorHall, FactionType.Red, new Vector3(910, 530, 0));
+                        .CreateNewBuilding(BuildingType.Orc_AnimalFarm, FactionType.Red, new Vector3(910, 250, 0));
                     BuildingsManager.GetInstance()
-                        .CreateNewBuilding(BuildingType.Orc_WarriorHall, FactionType.Red, new Vector3(810, 530, 0));
+                        .CreateNewBuilding(BuildingType.Orc_OrcFactory, FactionType.Red, new Vector3(910, 530, 0));
+                    BuildingsManager.GetInstance()
+                        .CreateNewBuilding(BuildingType.Orc_ShamanTent, FactionType.Red, new Vector3(830, 400, 0));
+                    BuildingsManager.GetInstance()
+                        .CreateNewBuilding(BuildingType.Orc_ThePound, FactionType.Red, new Vector3(830, 250, 0));
+                    BuildingsManager.GetInstance()
+                        .CreateNewBuilding(BuildingType.Orc_TheTaurenVine, FactionType.Red, new Vector3(830, 530, 0));
+                    BuildingsManager.GetInstance()
+                        .CreateNewBuilding(BuildingType.Orc_TrollHouse, FactionType.Red, new Vector3(750, 400, 0));
+                    BuildingsManager.GetInstance()
+                        .CreateNewBuilding(BuildingType.Orc_WarriorHall, FactionType.Red, new Vector3(750, 250, 0));
+                    BuildingsManager.GetInstance()
+                        .CreateNewBuilding(BuildingType.Orc_WyvernCamp, FactionType.Red, new Vector3(750, 530, 0));
                 }
                 else if (this.GameController.GameType == GameType.PVP)
                 {
@@ -217,8 +233,8 @@ public class GameSceneController : MonoBehaviour
             this.menuBar = this.GameController.ViewController.ShowMenuBar();
         }
 
-        this.CoinCount = 30000;
-        this.Mp = 10000;
+        this.CoinCount = 1000;
+        this.Mp = 200;
     }
 
     private void Update()
