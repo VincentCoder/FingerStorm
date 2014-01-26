@@ -361,9 +361,9 @@ public class ActorController : BaseGameEntity
     {
         Damage damage = new Damage();
         damage.DamageValue = this.MyActor.ActorAttack.Dps / this.AttackInterval;
-        Debug.Log("Damage " + damage.DamageValue);
+        //Debug.Log("Damage " + damage.DamageValue);
         damage.DamageValue *= this.AttackPlusRatio;
-        Debug.Log("After plus Ratio " + damage.DamageValue);
+        //Debug.Log("After plus Ratio " + damage.DamageValue);
         if (!(targetEntity is ActorController))
         {
             return damage;
@@ -396,11 +396,11 @@ public class ActorController : BaseGameEntity
                         {
                             if (Random.Range(1, 101) <= 10)
                             {
-                                Debug.Log("致命一击");
+                                //Debug.Log("致命一击");
                                 damage.DamageValue *= 1.5f;
                                 damage.ShowCrit = true;
                                 damage.ActorSpellName = ActorSpellName.CirticalStrike;
-                                Debug.Log("After Cirtical Strike " + damage.DamageValue);
+                                //Debug.Log("After Cirtical Strike " + damage.DamageValue);
                             }
                             break;
                         }
@@ -411,7 +411,7 @@ public class ActorController : BaseGameEntity
                                 damage.DamageValue *= 3f;
                                 damage.ShowCrit = true;
                                 damage.ActorSpellName = ActorSpellName.HeadShot;
-                                Debug.Log("After HeadShot" + damage.DamageValue);
+                                //Debug.Log("After HeadShot" + damage.DamageValue);
                             }
                             break;
                         }
@@ -422,7 +422,7 @@ public class ActorController : BaseGameEntity
                             {
                                 Damage splashDamage = new Damage();
                                 splashDamage.DamageValue = 0.5f * damage.DamageValue;
-                                Debug.Log("splash Damage " + splashDamage.DamageValue);
+                                //Debug.Log("splash Damage " + splashDamage.DamageValue);
                                 enemies.ForEach(
                                     enemy =>
                                         {
@@ -445,7 +445,7 @@ public class ActorController : BaseGameEntity
                             {
                                 if (Random.Range(1, 101) <= 25)
                                 {
-                                    Debug.Log("Bleed");
+                                    //Debug.Log("Bleed");
                                     damage.Bleed = true;
                                     damage.BleedDuration = 3;
                                     damage.BleedDps = 15;
@@ -468,7 +468,7 @@ public class ActorController : BaseGameEntity
                             {
                                 if (Random.Range(1, 101) <= 20)
                                 {
-                                    Debug.Log("重击");
+                                    //Debug.Log("重击");
                                     damage.Stun = true;
                                     damage.StunDuration = 2;
                                     damage.DamageValue += 25;
@@ -479,7 +479,7 @@ public class ActorController : BaseGameEntity
                             {
                                 if (Random.Range(1, 101) <= 25)
                                 {
-                                    Debug.Log("重击");
+                                    //Debug.Log("重击");
                                     damage.Stun = true;
                                     damage.StunDuration = 2;
                                     damage.DamageValue += 30;
@@ -494,7 +494,7 @@ public class ActorController : BaseGameEntity
                             {
                                 if (Random.Range(1, 101) <= 25 && targetActor != null)
                                 {
-                                    Debug.Log("闪电链");
+                                    //Debug.Log("闪电链");
                                     List<GameObject> enemies = this.SeekAndGetEnemiesInDistance(150);
                                     if (enemies != null && enemies.Count != 0)
                                     {
@@ -537,7 +537,7 @@ public class ActorController : BaseGameEntity
                         }
                     case ActorSpellName.FireBomb:
                         {
-                            Debug.Log("燃烧弹 " + targetActor);
+                            //Debug.Log("燃烧弹 " + targetActor);
                             if (targetActor != null && !targetActor.FireBombAttacked)
                             {
                                 if (this.MyActor.ActorType == ActorType.BatRider)
@@ -559,7 +559,7 @@ public class ActorController : BaseGameEntity
                         }
                     case ActorSpellName.PoisonAttack:
                         {
-                            Debug.Log("毒液攻击" + targetActor);
+                            //Debug.Log("毒液攻击" + targetActor);
                             if (targetActor != null && !targetActor.IsPoisioning)
                             {
                                 if (this.MyActor.ActorType == ActorType.Wyvern)
@@ -577,7 +577,7 @@ public class ActorController : BaseGameEntity
                         }
                     case ActorSpellName.BurningOil:
                         {
-                            Debug.Log("燃烧之油" + targetActor);
+                            //Debug.Log("燃烧之油" + targetActor);
                             if (targetActor != null && !targetActor.isBurningOilAttacked)
                             {
                                 if (this.MyActor.ActorType == ActorType.Catapult)
@@ -591,7 +591,7 @@ public class ActorController : BaseGameEntity
                         }
                     case ActorSpellName.Smash:
                         {
-                            Debug.Log("粉碎 " + targetActor);
+                            //Debug.Log("粉碎 " + targetActor);
                             if (targetActor != null)
                             {
                                 if (this.MyActor.ActorType == ActorType.Tauren && Random.Range(1,101) <= 25)
@@ -602,7 +602,7 @@ public class ActorController : BaseGameEntity
                                         Damage splashDamage = new Damage();
                                         splashDamage.DamageValue = 0.6f * damage.DamageValue;
                                         splashDamage.ShowCrit = true;
-                                        Debug.Log("splash Damage " + splashDamage.DamageValue);
+                                        //Debug.Log("splash Damage " + splashDamage.DamageValue);
                                         enemies.ForEach(
                                             enemy =>
                                                 {
@@ -731,7 +731,7 @@ public class ActorController : BaseGameEntity
                     break;
                 }
         }
-        Debug.Log("After armor " + damage.DamageValue);
+        //Debug.Log("After armor " + damage.DamageValue);
         return damage;
     }
 

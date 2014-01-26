@@ -35,10 +35,10 @@ public class ActorPathManager
         return instance;
     }
 	
-	private Vector3[] firstPathLeftNodes = new Vector3[3]{new Vector3(295,530,0), new Vector3(295, 485, 0), new Vector3(295,440,0)};
+	private Vector3[] firstPathLeftNodes = new Vector3[3]{new Vector3(295,530,0), new Vector3(295, 490, 0), new Vector3(295,450,0)};
 	private Vector3[] firstPathRightNodes = new Vector3[3]{new Vector3(665,530,0), new Vector3(665, 485, 0), new Vector3(665,440,0)};
-	private Vector3[] secondPathLeftNodes = new Vector3[3]{new Vector3(295,240,0), new Vector3(295, 290, 0), new Vector3(295,340,0)};
-	private Vector3[] secondPathRightNodes = new Vector3[3]{new Vector3(665,240,0), new Vector3(665, 290, 0), new Vector3(665,340,0)};
+    private Vector3[] secondPathLeftNodes = new Vector3[3] { new Vector3(295, 200, 0), new Vector3(295, 240, 0), new Vector3(295, 280, 0) };
+	private Vector3[] secondPathRightNodes = new Vector3[3]{new Vector3(665,200,0), new Vector3(665, 240, 0), new Vector3(665,280,0)};
 	
 	public ActorPath GenerateNewPath(Vector3 startPos, Vector3 endPos)
 	{

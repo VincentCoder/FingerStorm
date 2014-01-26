@@ -221,7 +221,7 @@ public static class BuildingsConfig
                                    ? TerranBuildingTempleConfig.HpLevel1
                                    : TerranBuildingTempleConfig.HpLevel2;
                     case BuildingType.Terran_TheMainCity:
-                        return 5000;
+                        return 20000;
                 }
                 break;
             case RaceType.Orc:
@@ -258,7 +258,7 @@ public static class BuildingsConfig
                                    ? OrcBuildingWyvernCampConfig.HpLevel1
                                    : OrcBuildingWyvernCampConfig.HpLevel2;
                     case BuildingType.Orc_TheMainCity:
-                        return 5000;
+                        return 20000;
                 }
                 break;
         }

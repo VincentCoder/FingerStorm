@@ -102,12 +102,12 @@ public class GameSceneController : MonoBehaviour
         obstacle.name = "Obstacle";
         obstacle.transform.parent = GameObject.Find("tkAnchor").transform;
         obstacle.transform.localScale = new Vector3(1, 1, 1);
-        obstacle.transform.localPosition = new Vector3(0, 80, -1);
+        obstacle.transform.localPosition = new Vector3(0, 53, -1);
 
         Vector3[] pos =
             {
-                new Vector3(215, 34, -2), new Vector3(215, 140, -2), new Vector3(-209, 140, -2),
-                new Vector3(-209, 34, -2)
+                new Vector3(215, 7, -2), new Vector3(215, 113, -2), new Vector3(-209, 113, -2),
+                new Vector3(-209, 7, -2)
             };
         for (int i = 0; i < 4; i ++)
         {
