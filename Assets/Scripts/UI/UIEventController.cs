@@ -103,13 +103,13 @@ public class UIEventController : MonoBehaviour
                     break;
                 }
 			case "GameResultBackToMenuButton":
-			{
-				Time.timeScale = 1;
-				GameSceneController gameSceneCtrl = GameObject.Find("GameSceneController").GetComponent<GameSceneController>();
-				gameSceneCtrl.BackToMainMenu();
-				this.GameController.GetFSM().ChangeState(GameState_HomePage.Instance());
-				break;
-			}
+			    {
+				    Time.timeScale = 1;
+				    GameSceneController gameSceneCtrl = GameObject.Find("GameSceneController").GetComponent<GameSceneController>();
+				    gameSceneCtrl.BackToMainMenu();
+				    this.GameController.GetFSM().ChangeState(GameState_HomePage.Instance());
+				    break;
+			    }
         }
     }
 }
