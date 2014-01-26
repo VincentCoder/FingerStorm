@@ -295,10 +295,19 @@ public class GameSceneController : MonoBehaviour
             this.menuBar = this.GameController.ViewController.ShowMenuBar();
         }
 
-        this.CoinCount = 1000;
-        this.Mp = 200;
-        this.ArmageddonCounter = 60;
+        this.CoinCount = 2000;
+        this.Mp = 500;
+        this.ArmageddonCounter = 300;
         this.IsArmageddon = false;
+		
+		if(this.GameController.GameType == GameType.PVE)
+		{
+			Invoke("StartCheckResult", 1f);
+		}
+		else
+		{
+			Invoke("StartCheckResult", 5f);
+		}
 
         this.Invoke("Test", 30);
     }
