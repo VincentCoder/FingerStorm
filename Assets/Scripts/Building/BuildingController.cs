@@ -157,7 +157,7 @@ public class BuildingController : BaseGameEntity
     {
         if (e.Selection == this.gameObject)
         {
-            if (!this.menuShowing)
+            if (!this.menuShowing && this.Building.FactionType == this.gameSceneController.MyFactionType)
             {
                 this.menuShowing = true;
                 if (this.buildingMenu == null)
